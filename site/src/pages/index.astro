@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getAllFoods } from '../lib/foods';
+
+const foods = getAllFoods();
+const byCategory = foods.reduce((acc, food) => {
+  (acc[food.category] ??= []).push(food);
+  return acc;
+}, {} as Record<string, typeof foods>);
+---
+<Layout
+  title="Real Cost of Food — what your groceries actually buy you"
+  description="Current grocery prices compared against protein, calories, and sustainability — sourced from BLS and USDA data, updated monthly."
+>
+  <main class="page">
+    <header class="masthead">
+      <h1>Real Cost of Food</h1>
+      <p class="masthead-sub">Price tells you what it costs. We show you what it's worth.</p>
+    </header>
+
+    {Object.entries(byCategory).map(([category, items]) => (
+      <section class="category">
+        <h2>{category}</h2>
+        <ul class="food-list">
+          {items.map((food) => (
+            <li>
+              <a href={`/foods/${food.slug}`} class="food-row">
+                <span class="food-name">{food.display_name}</span>
+                <span class="line-dots" aria-hidden="true"></span>
+                <span class="food-price">
+                  {food.price.price_source === 'bls_avg_price' && food.price.avg_price_usd != null
+                    ? `$${food.price.avg_price_usd.toFixed(2)}`
+                    : 'estimate pending'}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    <footer class="site-footer">
+      <p>Prices: U.S. Bureau of Labor Statistics. Nutrition: USDA FoodData Central. Updated monthly.</p>
+      <p><a href="/methodology">Methodology</a></p>
+    </footer>
+  </main>
+</Layout>
+
+<style>
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 4rem;
+  }
+  .masthead { text-align: center; margin-bottom: 3rem; }
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 2.2rem;
+    letter-spacing: -0.01em;
+  }
+  .masthead-sub {
+    color: var(--thermal-gray);
+    font-size: 0.95rem;
+    margin: 0.5rem 0 0;
+  }
+  .category { margin-bottom: 2rem; }
+  .category h2 {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--produce-green);
+    font-weight: 600;
+    border-bottom: 1px dashed var(--line-dotted);
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .food-list { list-style: none; margin: 0; padding: 0; }
+  .food-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.6rem 0;
+    color: var(--ink);
+  }
+  .food-row:hover { color: var(--stamp-red); }
+  .food-name { font-weight: 600; flex-shrink: 0; }
+  .line-dots {
+    flex: 1;
+    border-bottom: 1px dotted var(--line-dotted);
+    height: 0.6em;
+  }
+  .food-price { flex-shrink: 0; color: var(--thermal-gray); font-size: 0.9rem; }
+  .site-footer {
+    text-align: center;
+    margin-top: 2.5rem;
+    font-size: 0.72rem;
+    color: var(--thermal-gray);
+  }
+</style>

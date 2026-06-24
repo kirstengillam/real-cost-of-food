@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout
+  title="Methodology — Real Cost of Food"
+  description="Where our price, nutrition, and sustainability data comes from, and what we deliberately don't claim."
+>
+  <main class="page">
+    <h1>Methodology</h1>
+
+    <h2>Prices</h2>
+    <p>
+      Dollar prices come from the U.S. Bureau of Labor Statistics' Average Price series,
+      a U.S. city average. Year-over-year inflation percentages come from the matching
+      BLS Consumer Price Index series, not from the average-price series itself —
+      BLS explicitly recommends against using average prices to measure change over time.
+    </p>
+    <p>
+      Some foods on this site don't yet have a confirmed BLS price series. Rather than
+      estimate or guess, we mark those pages "estimate pending" and show no number until
+      we've sourced one we trust.
+    </p>
+
+    <h2>Nutrition</h2>
+    <p>
+      Nutrition figures come from USDA FoodData Central, generally the SR Legacy dataset,
+      which reports values per 100g of the raw or prepared food as specified on each page.
+    </p>
+
+    <h2>"Per dollar" metrics</h2>
+    <p>
+      Protein-per-dollar and calories-per-dollar are calculated by converting the BLS price
+      (which is usually denominated per pound, dozen, or gallon) into a price per 100g, then
+      dividing the USDA nutrient value by that price. We only calculate this when we have a
+      real BLS price — never for estimated prices.
+    </p>
+
+    <h2>Sustainability tiers</h2>
+    <p>
+      Water-use and storage-life tiers are intentionally coarse (low / medium / high) rather
+      than fake-precise numbers. They're drawn from published water-footprint research,
+      primarily Mekonnen &amp; Hoekstra's water footprint studies, cited on each food's page.
+    </p>
+
+    <h2>What we don't claim</h2>
+    <p>
+      We don't publish county- or city-level price data, because no federal source
+      publishes food prices at that granularity. National and regional figures are
+      genuinely more reliable than a confident-sounding local estimate would be.
+    </p>
+
+    <p><a href="/">← Back to all foods</a></p>
+  </main>
+</Layout>
+
+<style>
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 4rem;
+    line-height: 1.6;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+  }
+  h2 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-top: 1.75rem;
+    margin-bottom: 0.4rem;
+  }
+  p { font-size: 0.92rem; color: var(--ink-faded); margin: 0.4rem 0; }
+</style>

@@ -1,0 +1,282 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getAllFoods, getFoodBySlug } from '../../lib/foods';
+
+export function getStaticPaths() {
+  return getAllFoods().map((food) => ({
+    params: { slug: food.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const food = getFoodBySlug(slug as string);
+
+if (!food) {
+  throw new Error(`No food found for slug: ${slug}`);
+}
+
+const hasRealPrice = food.price.price_source === 'bls_avg_price' && food.price.avg_price_usd !== null;
+const trendDirection = food.price.yoy_pct_change == null ? null : food.price.yoy_pct_change >= 0 ? 'up' : 'down';
+
+const title = `${food.display_name} Price & Real Cost — Real Cost of Food`;
+const description = `What ${food.display_name} actually costs: current price, protein and calories per dollar, and inflation trend, sourced from BLS and USDA data.`;
+---
+<Layout title={title} description={description}>
+  <main class="page">
+    <header class="masthead">
+      <a href="/" class="masthead-link">Real Cost of Food</a>
+      <p class="masthead-sub">an itemized look at what your groceries actually buy you</p>
+    </header>
+
+    <article class="receipt">
+      <div class="receipt-header">
+        <span class="eyebrow">{food.category}</span>
+        <h1>{food.display_name}</h1>
+        <p class="serving-note">priced and measured per {food.serving_unit}</p>
+      </div>
+
+      <div class="line-item line-item--price">
+        <span class="line-label">Current price{food.price.avg_price_unit ? ` (${food.price.avg_price_unit})` : ''}</span>
+        <span class="line-dots" aria-hidden="true"></span>
+        <span class="line-value">
+          {hasRealPrice ? `$${food.price.avg_price_usd!.toFixed(2)}` : '— not yet priced —'}
+        </span>
+      </div>
+
+      {!hasRealPrice && (
+        <p class="disclosure">
+          We don't have a verified government price series for this item yet.
+          We'd rather show nothing than guess. <a href="/methodology">Why we do this →</a>
+        </p>
+      )}
+
+      {hasRealPrice && food.price.as_of && (
+        <p class="as-of">as of {food.price.as_of} · U.S. city average · source: BLS</p>
+      )}
+
+      {trendDirection && (
+        <div class={`stamp stamp--${trendDirection}`}>
+          {trendDirection === 'up' ? '▲' : '▼'} {Math.abs(food.price.yoy_pct_change!)}% vs last year
+        </div>
+      )}
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <h2 class="section-heading">What that price actually buys you</h2>
+
+      {food.nutrition_per_100g && (
+        <>
+          <div class="line-item">
+            <span class="line-label">Protein per dollar</span>
+            <span class="line-dots" aria-hidden="true"></span>
+            <span class="line-value">
+              {food.value_metrics.protein_g_per_dollar != null
+                ? `${food.value_metrics.protein_g_per_dollar} g`
+                : '—'}
+            </span>
+          </div>
+          <div class="line-item">
+            <span class="line-label">Calories per dollar</span>
+            <span class="line-dots" aria-hidden="true"></span>
+            <span class="line-value">
+              {food.value_metrics.calories_per_dollar != null
+                ? Math.round(food.value_metrics.calories_per_dollar)
+                : '—'}
+            </span>
+          </div>
+          <div class="line-item line-item--muted">
+            <span class="line-label">Protein per 100g</span>
+            <span class="line-dots" aria-hidden="true"></span>
+            <span class="line-value">{food.nutrition_per_100g.protein_g ?? '—'} g</span>
+          </div>
+          <div class="line-item line-item--muted">
+            <span class="line-label">Calories per 100g</span>
+            <span class="line-dots" aria-hidden="true"></span>
+            <span class="line-value">{food.nutrition_per_100g.energy_kcal ?? '—'} kcal</span>
+          </div>
+          <p class="as-of">nutrition source: USDA FoodData Central{food.nutrition_per_100g.source_fdc_id ? ` (FDC #${food.nutrition_per_100g.source_fdc_id})` : ''}</p>
+        </>
+      )}
+
+      {food.sustainability && (
+        <>
+          <div class="divider" aria-hidden="true"></div>
+          <h2 class="section-heading">Beyond the price tag</h2>
+          <div class="tier-row">
+            <span class="tier-label">Water use</span>
+            <span class={`tier-pill tier-pill--${food.sustainability.water_use_tier}`}>{food.sustainability.water_use_tier}</span>
+          </div>
+          <div class="tier-row">
+            <span class="tier-label">Storage life</span>
+            <span class={`tier-pill tier-pill--${food.sustainability.storage_life_tier}`}>{food.sustainability.storage_life_tier}</span>
+          </div>
+          {food.sustainability.typical_local_production && (
+            <p class="local-note">{food.sustainability.typical_local_production}</p>
+          )}
+          <p class="citation">source: {food.sustainability.source_citation}</p>
+        </>
+      )}
+    </article>
+
+    <footer class="site-footer">
+      <p>Prices: U.S. Bureau of Labor Statistics. Nutrition: USDA FoodData Central. Updated monthly.</p>
+      <p><a href="/methodology">Methodology</a> · <a href="/">All foods</a></p>
+    </footer>
+  </main>
+</Layout>
+
+<style>
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  .masthead {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .masthead-link {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .masthead-sub {
+    font-size: 0.8rem;
+    color: var(--thermal-gray);
+    margin: 0.25rem 0 0;
+  }
+
+  .receipt {
+    background: var(--paper);
+    border: 1px solid var(--paper-edge);
+    box-shadow: 0 2px 0 var(--paper-edge), 0 1px 18px rgba(0,0,0,0.06);
+    padding: 2rem 1.75rem;
+  }
+
+  .receipt-header { margin-bottom: 1.5rem; }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--produce-green);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+    font-weight: 900;
+    line-height: 1.05;
+  }
+
+  .serving-note {
+    font-size: 0.8rem;
+    color: var(--thermal-gray);
+    margin: 0.4rem 0 0;
+  }
+
+  .line-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.55rem 0;
+    font-size: 1rem;
+  }
+  .line-item--price {
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding-top: 1rem;
+  }
+  .line-item--muted {
+    color: var(--thermal-gray);
+    font-size: 0.88rem;
+  }
+  .line-label { flex-shrink: 0; }
+  .line-dots {
+    flex: 1;
+    border-bottom: 1px dotted var(--line-dotted);
+    height: 0.6em;
+    margin: 0 0.25rem;
+  }
+  .line-value { flex-shrink: 0; font-weight: 600; }
+  .line-item--muted .line-value { font-weight: 500; }
+
+  .disclosure {
+    font-size: 0.82rem;
+    color: var(--thermal-gray);
+    background: var(--paper-edge);
+    padding: 0.6rem 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .as-of, .citation {
+    font-size: 0.72rem;
+    color: var(--thermal-gray);
+    margin: 0.3rem 0 0;
+  }
+  .citation { font-style: italic; }
+
+  .stamp {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    padding: 0.3rem 0.7rem;
+    border: 2px solid currentColor;
+    border-radius: 3px;
+    transform: rotate(-2deg);
+  }
+  .stamp--up { color: var(--stamp-red); }
+  .stamp--down { color: var(--produce-green); }
+
+  .divider {
+    border-top: 1px dashed var(--line-dotted);
+    margin: 1.5rem 0 1.25rem;
+  }
+
+  .section-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  .tier-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.35rem 0;
+  }
+  .tier-label { width: 7rem; font-size: 0.85rem; color: var(--ink-faded); }
+  .tier-pill {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+  }
+  .tier-pill--low, .tier-pill--long { background: #E4EADC; color: var(--produce-green); }
+  .tier-pill--medium, .tier-pill--short { background: #F0E6D6; color: #8A5A2B; }
+  .tier-pill--high { background: #F4DCD8; color: var(--stamp-red); }
+
+  .local-note {
+    font-size: 0.85rem;
+    color: var(--ink-faded);
+    margin: 0.6rem 0 0.2rem;
+  }
+
+  .site-footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.72rem;
+    color: var(--thermal-gray);
+  }
+  .site-footer p { margin: 0.2rem 0; }
+</style>

@@ -1,0 +1,78 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{title}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Archivo:wght@500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <slot />
+</body>
+</html>
+
+<style is:global>
+  :root {
+    /* Receipt-paper / grocery-ledger palette -- grounded in the subject
+       (an itemized accounting of what food costs you), not a generic
+       dashboard or finance-app look. */
+    --paper: #FBF7EE;
+    --paper-edge: #EFE9DA;
+    --ink: #1A1A18;
+    --ink-faded: #5B5650;
+    --stamp-red: #C44536;
+    --produce-green: #5B6B4F;
+    --thermal-gray: #8A8478;
+    --line-dotted: #C7BFA9;
+
+    --font-display: 'Archivo', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', 'SF Mono', monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-mono);
+  }
+
+  body {
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,0.018) 28px);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    margin: 0;
+  }
+
+  a {
+    color: var(--stamp-red);
+    text-decoration: none;
+  }
+  a:hover, a:focus-visible {
+    text-decoration: underline;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--stamp-red);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>

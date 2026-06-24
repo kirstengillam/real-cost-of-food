@@ -1,0 +1,401 @@
+{
+  "generated_at": "2026-06-24T03:46:07.584698+00:00",
+  "foods": [
+    {
+      "slug": "eggs",
+      "display_name": "Eggs (Grade A, Large)",
+      "category": "protein",
+      "serving_unit": "100g (~2 large eggs)",
+      "price": {
+        "avg_price_usd": 2.58,
+        "avg_price_unit": "per dozen",
+        "price_source": "bls_avg_price",
+        "yoy_pct_change": null,
+        "as_of": "2026-01"
+      },
+      "nutrition_per_100g": {
+        "energy_kcal": 143.0,
+        "protein_g": 12.6,
+        "fat_g": 9.5,
+        "carbs_g": 0.7,
+        "fiber_g": 0.0,
+        "source_fdc_id": 999999
+      },
+      "value_metrics": {
+        "protein_g_per_dollar": 29.3,
+        "calories_per_dollar": 332.56,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+      },
+      "sustainability": {
+        "food_slug": "eggs",
+        "water_use_tier": "medium",
+        "storage_life_tier": "medium",
+        "typical_local_production": "Common in most US regions; backyard production widespread",
+        "source_citation": "Mekonnen & Hoekstra (2012), water footprint of animal products, UNESCO-IHE"
+      }
+    },
+    {
+      "slug": "whole-milk",
+      "display_name": "Milk (Whole, Fortified)",
+      "category": "dairy",
+      "serving_unit": "100g",
+      "price": {
+        "avg_price_usd": 4.02,
+        "avg_price_unit": "per gallon",
+        "price_source": "bls_avg_price",
+        "yoy_pct_change": null,
+        "as_of": "2026-01"
+      },
+      "nutrition_per_100g": {
+        "energy_kcal": 61.0,
+        "protein_g": 3.2,
+        "fat_g": 3.3,
+        "carbs_g": 4.8,
+        "fiber_g": 0.0,
+        "source_fdc_id": 999999
+      },
+      "value_metrics": {
+        "protein_g_per_dollar": 30.1,
+        "calories_per_dollar": 573.85,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+      },
+      "sustainability": {
+        "food_slug": "whole-milk",
+        "water_use_tier": "high",
+        "storage_life_tier": "short",
+        "typical_local_production": "Common in dairy-producing states (CA, WI, NY, ID)",
+        "source_citation": "Mekonnen & Hoekstra (2012), water footprint of animal products, UNESCO-IHE"
+      }
+    },
+    {
+      "slug": "ground-beef",
+      "display_name": "Ground Beef (100% Beef)",
+      "category": "protein",
+      "serving_unit": "100g",
+      "price": {
+        "avg_price_usd": 5.12,
+        "avg_price_unit": "per lb",
+        "price_source": "bls_avg_price",
+        "yoy_pct_change": null,
+        "as_of": "2026-01"
+      },
+      "nutrition_per_100g": {
+        "energy_kcal": 254.0,
+        "protein_g": 17.2,
+        "fat_g": 20.0,
+        "carbs_g": 0.0,
+        "fiber_g": 0.0,
+        "source_fdc_id": 999999
+      },
+      "value_metrics": {
+        "protein_g_per_dollar": 15.24,
+        "calories_per_dollar": 225.02,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+      },
+      "sustainability": {
+        "food_slug": "ground-beef",
+        "water_use_tier": "high",
+        "storage_life_tier": "short",
+        "typical_local_production": "Common in cattle-producing states (TX, NE, KS, OK)",
+        "source_citation": "Mekonnen & Hoekstra (2012), water footprint of animal products, UNESCO-IHE; beef has the highest water footprint per kg of common proteins"
+      }
+    },
+    {
+      "slug": "chicken-breast",
+      "display_name": "Chicken Breast (Boneless)",
+      "category": "protein",
+      "serving_unit": "100g",
+      "price": {
+        "avg_price_usd": null,
+        "avg_price_unit": "per lb",
+        "price_source": "estimate",
+        "yoy_pct_change": null,
+        "as_of": "2026-06"
+      },
+      "nutrition_per_100g": {
+        "energy_kcal": 120.0,
+        "protein_g": 22.5,
+        "fat_g": 2.6,
+        "carbs_g": 0.0,
+        "fiber_g": 0.0,
+        "source_fdc_id": 999999
+      },
+      "value_metrics": {
+        "protein_g_per_dollar": null,
+        "calories_per_dollar": null,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+      },
+      "sustainability": {
+        "food_slug": "chicken-breast",
+        "water_use_tier": "medium",
+        "storage_life_tier": "short",
+        "typical_local_production": "Common nationwide (broiler production widespread)",
+        "source_citation": "Mekonnen & Hoekstra (2012); poultry generally lower water footprint than beef per kg protein"
+      }
+    },
+    {
+      "slug": "bacon",
+      "display_name": "Bacon (Sliced)",
+      "category": "protein",
+      "serving_unit": "100g",
+      "price": {
+        "avg_price_usd": 7.21,
+        "avg_price_unit": "per lb",
+        "price_source": "bls_avg_price",
+        "yoy_pct_change": null,
+        "as_of": "2026-01"
+      },
+      "nutrition_per_100g": {
+        "energy_kcal": 541.0,
+        "protein_g": 37.0,
+        "fat_g": 42.0,
+        "carbs_g": 1.4,
+        "fiber_g": 0.0,
+        "source_fdc_id": 999999
+      },
+      "value_metrics": {
+        "protein_g_per_dollar": 23.28,
+        "calories_per_dollar": 340.36,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+      },
+      "sustainability": {
+        "food_slug": "bacon",
+        "water_use_tier": "medium",
+        "storage_life_tier": "medium",
+        "typical_local_production": "Common in pork-producing states (IA, NC, MN)",
+        "source_citation": "Mekonnen & Hoekstra (2012), water footprint of animal products, UNESCO-IHE"
+      }
+    },
+    {
+      "slug": "bananas",
+      "display_name": "Bananas",
+      "category": "produce",
+      "serving_unit": "100g",
+      "price": {
+        "avg_price_usd": 0.65,
+        "avg_price_unit": "per lb",
+        "price_source": "bls_avg_price",
+        "yoy_pct_change": null,
+        "as_of": "2026-01"
+      },
+      "nutrition_per_100g": {
+        "energy_kcal": 89.0,
+        "protein_g": 1.1,
+        "fat_g": 0.3,
+        "carbs_g": 22.8,
+        "fiber_g": 2.6,
+        "source_fdc_id": 999999
+      },
+      "value_metrics": {
+        "protein_g_per_dollar": 7.68,
+        "calories_per_dollar": 621.07,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+      },
+      "sustainability": {
+        "food_slug": "bananas",
+        "water_use_tier": "medium",
+        "storage_life_tier": "short",
+        "typical_local_production": "Not grown commercially in mainland US (imported, mainly from Latin America)",
+        "source_citation": "Mekonnen & Hoekstra (2010), water footprint of crops, UNESCO-IHE"
+      }
+    },
+    {
+      "slug": "tomatoes",
+      "display_name": "Tomatoes (Field Grown)",
+      "category": "produce",
+      "serving_unit": "100g",
+      "price": {
+        "avg_price_usd": 1.89,
+        "avg_price_unit": "per lb",
+        "price_source": "bls_avg_price",
+        "yoy_pct_change": null,
+        "as_of": "2026-01"
+      },
+      "nutrition_per_100g": {
+        "energy_kcal": 18.0,
+        "protein_g": 0.9,
+        "fat_g": 0.2,
+        "carbs_g": 3.9,
+        "fiber_g": 1.2,
+        "source_fdc_id": 999999
+      },
+      "value_metrics": {
+        "protein_g_per_dollar": 2.16,
+        "calories_per_dollar": 43.2,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+      },
+      "sustainability": {
+        "food_slug": "tomatoes",
+        "water_use_tier": "low",
+        "storage_life_tier": "short",
+        "typical_local_production": "Common in CA, FL; widely home-grown nationwide in season",
+        "source_citation": "Mekonnen & Hoekstra (2010), water footprint of crops, UNESCO-IHE"
+      }
+    },
+    {
+      "slug": "bread-white",
+      "display_name": "Bread (White, Pan)",
+      "category": "grain",
+      "serving_unit": "100g",
+      "price": {
+        "avg_price_usd": null,
+        "avg_price_unit": "per lb",
+        "price_source": "estimate",
+        "yoy_pct_change": null,
+        "as_of": "2026-06"
+      },
+      "nutrition_per_100g": {
+        "energy_kcal": 266.0,
+        "protein_g": 9.0,
+        "fat_g": 3.3,
+        "carbs_g": 49.4,
+        "fiber_g": 2.4,
+        "source_fdc_id": 999999
+      },
+      "value_metrics": {
+        "protein_g_per_dollar": null,
+        "calories_per_dollar": null,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+      },
+      "sustainability": {
+        "food_slug": "bread-white",
+        "water_use_tier": "low",
+        "storage_life_tier": "medium",
+        "typical_local_production": "Wheat grown widely in Midwest/Great Plains; bread itself manufactured nationwide",
+        "source_citation": "Mekonnen & Hoekstra (2010), water footprint of wheat, UNESCO-IHE"
+      }
+    },
+    {
+      "slug": "cheddar-cheese",
+      "display_name": "Cheddar Cheese (Natural)",
+      "category": "dairy",
+      "serving_unit": "100g",
+      "price": {
+        "avg_price_usd": null,
+        "avg_price_unit": "per lb",
+        "price_source": "estimate",
+        "yoy_pct_change": null,
+        "as_of": "2026-06"
+      },
+      "nutrition_per_100g": {
+        "energy_kcal": 404.0,
+        "protein_g": 23.0,
+        "fat_g": 33.0,
+        "carbs_g": 1.3,
+        "fiber_g": 0.0,
+        "source_fdc_id": 999999
+      },
+      "value_metrics": {
+        "protein_g_per_dollar": null,
+        "calories_per_dollar": null,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+      },
+      "sustainability": {
+        "food_slug": "cheddar-cheese",
+        "water_use_tier": "high",
+        "storage_life_tier": "long",
+        "typical_local_production": "Common in dairy states; aged cheese has long shelf life relative to fresh dairy",
+        "source_citation": "Mekonnen & Hoekstra (2012), water footprint of animal products, UNESCO-IHE"
+      }
+    },
+    {
+      "slug": "dry-beans",
+      "display_name": "Dry Beans (Pinto)",
+      "category": "protein",
+      "serving_unit": "100g dry",
+      "price": {
+        "avg_price_usd": null,
+        "avg_price_unit": "per lb",
+        "price_source": "estimate",
+        "yoy_pct_change": null,
+        "as_of": "2026-06"
+      },
+      "nutrition_per_100g": {
+        "energy_kcal": 347.0,
+        "protein_g": 21.4,
+        "fat_g": 1.2,
+        "carbs_g": 62.6,
+        "fiber_g": 15.5,
+        "source_fdc_id": 999999
+      },
+      "value_metrics": {
+        "protein_g_per_dollar": null,
+        "calories_per_dollar": null,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+      },
+      "sustainability": {
+        "food_slug": "dry-beans",
+        "water_use_tier": "low",
+        "storage_life_tier": "long",
+        "typical_local_production": "Common in ND, MI, MN; excellent shelf-stable storage life when kept dry",
+        "source_citation": "Mekonnen & Hoekstra (2010), water footprint of pulses, UNESCO-IHE; pulses have among the lowest water footprints per gram of protein"
+      }
+    },
+    {
+      "slug": "lentils",
+      "display_name": "Lentils (Dry)",
+      "category": "protein",
+      "serving_unit": "100g dry",
+      "price": {
+        "avg_price_usd": null,
+        "avg_price_unit": "per lb",
+        "price_source": "estimate",
+        "yoy_pct_change": null,
+        "as_of": "2026-06"
+      },
+      "nutrition_per_100g": {
+        "energy_kcal": 353.0,
+        "protein_g": 25.8,
+        "fat_g": 1.1,
+        "carbs_g": 60.1,
+        "fiber_g": 30.5,
+        "source_fdc_id": 999999
+      },
+      "value_metrics": {
+        "protein_g_per_dollar": null,
+        "calories_per_dollar": null,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+      },
+      "sustainability": {
+        "food_slug": "lentils",
+        "water_use_tier": "low",
+        "storage_life_tier": "long",
+        "typical_local_production": "Limited US production (mainly ID, WA, ND, MT); excellent dry storage life",
+        "source_citation": "Mekonnen & Hoekstra (2010), water footprint of pulses, UNESCO-IHE"
+      }
+    },
+    {
+      "slug": "tofu",
+      "display_name": "Tofu (Firm)",
+      "category": "protein",
+      "serving_unit": "100g",
+      "price": {
+        "avg_price_usd": null,
+        "avg_price_unit": "per lb",
+        "price_source": "estimate",
+        "yoy_pct_change": null,
+        "as_of": "2026-06"
+      },
+      "nutrition_per_100g": {
+        "energy_kcal": 144.0,
+        "protein_g": 15.8,
+        "fat_g": 8.7,
+        "carbs_g": 2.8,
+        "fiber_g": 1.2,
+        "source_fdc_id": 999999
+      },
+      "value_metrics": {
+        "protein_g_per_dollar": null,
+        "calories_per_dollar": null,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+      },
+      "sustainability": {
+        "food_slug": "tofu",
+        "water_use_tier": "low",
+        "storage_life_tier": "short",
+        "typical_local_production": "Soybeans widely grown in US Midwest, though tofu processing is regionally concentrated",
+        "source_citation": "Mekonnen & Hoekstra (2010), water footprint of soybean products, UNESCO-IHE"
+      }
+    }
+  ]
+}
