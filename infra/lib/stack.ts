@@ -80,13 +80,19 @@ export class RealCostOfFoodStack extends cdk.Stack {
       handler: 'lambda_handler.handler',
       code: lambda.Code.fromAsset(path.join(__dirname, '../../etl'), {
         bundling: {
-          // Docker-based bundling: installs requirements.txt into the asset dir
-          // so Lambda gets a self-contained zip. Requires Docker on your machine.
-          image: lambda.Runtime.PYTHON_3_12.bundlingImage,
-          command: [
-            'bash', '-c',
-            'pip install -r requirements.txt -t /asset-output && cp -r . /asset-output',
-          ],
+          // Local bundling: pip-installs into a temp dir alongside the ETL source,
+          // then CDK zips it. No Docker required. Works because 'requests' is pure
+          // Python — if a compiled C extension is ever added, switch back to Docker.
+          local: {
+            tryBundle(outputDir: string) {
+              const { execSync } = require('child_process');
+              const etlDir = path.join(__dirname, '../../etl');
+              execSync(`pip3 install -r ${etlDir}/requirements.txt -t ${outputDir} --quiet`);
+              execSync(`cp -r ${etlDir}/. ${outputDir}`);
+              return true;
+            },
+          },
+          image: lambda.Runtime.PYTHON_3_12.bundlingImage, // fallback (unused)
         },
       }),
       environment: {
