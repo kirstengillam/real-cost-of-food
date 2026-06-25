@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T03:46:07.584698+00:00",
+  "generated_at": "2026-06-25T00:46:47.612154+00:00",
   "foods": [
     {
       "slug": "eggs",
@@ -7,23 +7,23 @@
       "category": "protein",
       "serving_unit": "100g (~2 large eggs)",
       "price": {
-        "avg_price_usd": 2.58,
+        "avg_price_usd": 2.191,
         "avg_price_unit": "per dozen",
         "price_source": "bls_avg_price",
-        "yoy_pct_change": null,
-        "as_of": "2026-01"
+        "yoy_pct_change": -0.62,
+        "as_of": "2026-05"
       },
       "nutrition_per_100g": {
         "energy_kcal": 143.0,
-        "protein_g": 12.6,
-        "fat_g": 9.5,
-        "carbs_g": 0.7,
+        "protein_g": 12.56,
+        "fat_g": 9.51,
+        "carbs_g": 0.72,
         "fiber_g": 0.0,
-        "source_fdc_id": 999999
+        "source_fdc_id": 171287
       },
       "value_metrics": {
-        "protein_g_per_dollar": 29.3,
-        "calories_per_dollar": 332.56,
+        "protein_g_per_dollar": 34.39,
+        "calories_per_dollar": 391.57,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -40,23 +40,23 @@
       "category": "dairy",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 4.02,
+        "avg_price_usd": 4.217,
         "avg_price_unit": "per gallon",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-01"
+        "as_of": "2026-05"
       },
       "nutrition_per_100g": {
         "energy_kcal": 61.0,
-        "protein_g": 3.2,
-        "fat_g": 3.3,
+        "protein_g": 3.15,
+        "fat_g": 3.25,
         "carbs_g": 4.8,
         "fiber_g": 0.0,
-        "source_fdc_id": 999999
+        "source_fdc_id": 171265
       },
       "value_metrics": {
-        "protein_g_per_dollar": 30.1,
-        "calories_per_dollar": 573.85,
+        "protein_g_per_dollar": 28.23,
+        "calories_per_dollar": 546.59,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -73,23 +73,23 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 5.12,
+        "avg_price_usd": 6.745,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-01"
+        "as_of": "2026-05"
       },
       "nutrition_per_100g": {
         "energy_kcal": 254.0,
-        "protein_g": 17.2,
+        "protein_g": 17.17,
         "fat_g": 20.0,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
-        "source_fdc_id": 999999
+        "source_fdc_id": 174036
       },
       "value_metrics": {
-        "protein_g_per_dollar": 15.24,
-        "calories_per_dollar": 225.02,
+        "protein_g_per_dollar": 11.55,
+        "calories_per_dollar": 170.81,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -115,10 +115,10 @@
       "nutrition_per_100g": {
         "energy_kcal": 120.0,
         "protein_g": 22.5,
-        "fat_g": 2.6,
+        "fat_g": 2.62,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
-        "source_fdc_id": 999999
+        "source_fdc_id": 171077
       },
       "value_metrics": {
         "protein_g_per_dollar": null,
@@ -139,23 +139,23 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 7.21,
+        "avg_price_usd": 6.712,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-01"
+        "as_of": "2026-05"
       },
       "nutrition_per_100g": {
-        "energy_kcal": 541.0,
-        "protein_g": 37.0,
-        "fat_g": 42.0,
-        "carbs_g": 1.4,
+        "energy_kcal": 898.0,
+        "protein_g": 0.07,
+        "fat_g": 99.5,
+        "carbs_g": 0.0,
         "fiber_g": 0.0,
-        "source_fdc_id": 999999
+        "source_fdc_id": 168324
       },
       "value_metrics": {
-        "protein_g_per_dollar": 23.28,
-        "calories_per_dollar": 340.36,
+        "protein_g_per_dollar": 0.05,
+        "calories_per_dollar": 606.88,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -172,23 +172,23 @@
       "category": "produce",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 0.65,
+        "avg_price_usd": 0.646,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-01"
+        "as_of": "2026-05"
       },
       "nutrition_per_100g": {
         "energy_kcal": 89.0,
-        "protein_g": 1.1,
-        "fat_g": 0.3,
-        "carbs_g": 22.8,
+        "protein_g": 1.09,
+        "fat_g": 0.33,
+        "carbs_g": 22.84,
         "fiber_g": 2.6,
-        "source_fdc_id": 999999
+        "source_fdc_id": 173944
       },
       "value_metrics": {
-        "protein_g_per_dollar": 7.68,
-        "calories_per_dollar": 621.07,
+        "protein_g_per_dollar": 7.65,
+        "calories_per_dollar": 625.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -205,23 +205,23 @@
       "category": "produce",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 1.89,
+        "avg_price_usd": 2.489,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-01"
+        "as_of": "2026-05"
       },
       "nutrition_per_100g": {
         "energy_kcal": 18.0,
-        "protein_g": 0.9,
+        "protein_g": 0.88,
         "fat_g": 0.2,
-        "carbs_g": 3.9,
+        "carbs_g": 3.89,
         "fiber_g": 1.2,
-        "source_fdc_id": 999999
+        "source_fdc_id": 170457
       },
       "value_metrics": {
-        "protein_g_per_dollar": 2.16,
-        "calories_per_dollar": 43.2,
+        "protein_g_per_dollar": 1.6,
+        "calories_per_dollar": 32.8,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -245,12 +245,12 @@
         "as_of": "2026-06"
       },
       "nutrition_per_100g": {
-        "energy_kcal": 266.0,
+        "energy_kcal": 290.0,
         "protein_g": 9.0,
-        "fat_g": 3.3,
-        "carbs_g": 49.4,
-        "fiber_g": 2.4,
-        "source_fdc_id": 999999
+        "fat_g": 4.0,
+        "carbs_g": 54.5,
+        "fiber_g": 2.9,
+        "source_fdc_id": 174925
       },
       "value_metrics": {
         "protein_g_per_dollar": null,
@@ -278,12 +278,12 @@
         "as_of": "2026-06"
       },
       "nutrition_per_100g": {
-        "energy_kcal": 404.0,
-        "protein_g": 23.0,
-        "fat_g": 33.0,
-        "carbs_g": 1.3,
+        "energy_kcal": 239.0,
+        "protein_g": 16.7,
+        "fat_g": 14.0,
+        "carbs_g": 11.6,
         "fiber_g": 0.0,
-        "source_fdc_id": 999999
+        "source_fdc_id": 169901
       },
       "value_metrics": {
         "protein_g_per_dollar": null,
@@ -311,12 +311,12 @@
         "as_of": "2026-06"
       },
       "nutrition_per_100g": {
-        "energy_kcal": 347.0,
-        "protein_g": 21.4,
-        "fat_g": 1.2,
-        "carbs_g": 62.6,
-        "fiber_g": 15.5,
-        "source_fdc_id": 999999
+        "energy_kcal": 62.0,
+        "protein_g": 5.25,
+        "fat_g": 0.9,
+        "carbs_g": 11.6,
+        "fiber_g": null,
+        "source_fdc_id": 170086
       },
       "value_metrics": {
         "protein_g_per_dollar": null,
@@ -344,12 +344,12 @@
         "as_of": "2026-06"
       },
       "nutrition_per_100g": {
-        "energy_kcal": 353.0,
-        "protein_g": 25.8,
-        "fat_g": 1.1,
-        "carbs_g": 60.1,
-        "fiber_g": 30.5,
-        "source_fdc_id": 999999
+        "energy_kcal": 371.0,
+        "protein_g": 36.17,
+        "fat_g": 9.74,
+        "carbs_g": 40.37,
+        "fiber_g": 18.9,
+        "source_fdc_id": 172423
       },
       "value_metrics": {
         "protein_g_per_dollar": null,
@@ -378,11 +378,11 @@
       },
       "nutrition_per_100g": {
         "energy_kcal": 144.0,
-        "protein_g": 15.8,
-        "fat_g": 8.7,
-        "carbs_g": 2.8,
-        "fiber_g": 1.2,
-        "source_fdc_id": 999999
+        "protein_g": 17.27,
+        "fat_g": 8.72,
+        "carbs_g": 2.78,
+        "fiber_g": 2.3,
+        "source_fdc_id": 172475
       },
       "value_metrics": {
         "protein_g_per_dollar": null,

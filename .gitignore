@@ -1,1 +1,27 @@
+# Python
+etl/__pycache__
+etl/.env
+etl/*.pyc
+etl/.venv/
+
+# Site build output
+site/dist/
+site/.astro/
+
+# Dependencies
+site/node_modules/
+site/package-lock.json
+
+# Generated / local env
+site/src/env.d.ts
+site/.env
+
+# CDK / infra
+infra/node_modules/
+infra/dist/
+infra/cdk.out/
+
+# Editors
 .idea/
+.vscode/
+*.DS_Store
