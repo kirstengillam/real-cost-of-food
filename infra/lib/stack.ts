@@ -143,8 +143,10 @@ export class RealCostOfFoodStack extends cdk.Stack {
     });
 
     siteBucket.grantReadWrite(deployRole);
-    dataBucket.grantRead(deployRole); // so CI can download foods_export.json for the build
+    dataBucket.grantReadWrite(deployRole); // read for site build, write for ETL workflow upload
     distribution.grantCreateInvalidation(deployRole);
+    blsKeyParam.grantRead(deployRole); // ETL workflow reads keys via aws ssm get-parameter
+    fdcKeyParam.grantRead(deployRole);
 
     // ── Outputs ───────────────────────────────────────────────────────────────
     new cdk.CfnOutput(this, 'CloudFrontUrl', {
