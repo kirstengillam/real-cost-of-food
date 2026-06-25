@@ -57,7 +57,7 @@ def fake_fetch_series(series_ids, start_year, end_year, **kwargs):
         "APU0000712412": 1.99,   # broccoli, per lb
         "APU0000705111": 4.25,   # frankfurters, per lb
         "APU0000707111": 3.89,   # tuna, per lb
-        "APU0000FF1101": 4.99,   # chicken breast boneless, per lb
+        "APU0000706111": 1.89,   # chicken whole, per lb
     }
     out = {}
     for sid in series_ids:
@@ -77,7 +77,7 @@ def fake_lookup_food(query, data_type):
         "bananas raw":                            ( 89,  1.1,  0.3, 22.8,  2.6),
         "tomatoes red ripe raw":                  ( 18,  0.9,  0.2,  3.9,  1.2),
         "pork bacon cooked":                      (541, 37.0, 42.0,  1.4,  0.0),
-        "chicken breast boneless skinless raw":   (120, 22.5,  2.6,  0.0,  0.0),
+        "chicken broilers or fryers whole raw":    (215, 18.6, 15.1,  0.0,  0.0),
         "bread white commercially prepared":      (266,  9.0,  3.3, 49.4,  2.4),
         "bread whole wheat commercially prepared":(247,  9.4,  3.3, 48.0,  7.4),
         "cheese cheddar":                         (404, 23.0, 33.0,  1.3,  0.0),

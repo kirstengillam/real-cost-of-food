@@ -79,17 +79,18 @@ FOODS: list[FoodSeed] = [
         price_verified=True,
     ),
     FoodSeed(
-        slug="chicken-breast",
-        display_name="Chicken Breast (Boneless)",
+        slug="chicken-whole",
+        display_name="Chicken (Fresh, Whole)",
         category="protein",
-        avg_price_series_id="APU0000FF1101",  # ap: FF1101 — Chicken breast, boneless, per lb.
+        avg_price_series_id="APU0000706111",  # ap: 706111 — Chicken, fresh, whole, per lb.
         avg_price_unit="per lb",
-        cpi_series_id="CUUR0000SS06021",      # cu: SS06021 — Fresh and frozen chicken parts (closest available)
-        fdc_query="chicken breast boneless skinless raw",
+        cpi_series_id="CUUR0000SS06011",      # cu: SS06011 — Fresh whole chicken
+        fdc_query="chicken broilers or fryers whole raw",
         fdc_data_type="SR Legacy",
         serving_unit="100g",
-        price_verified=False,
-        notes="ID from official ap.item. CPI series covers all chicken parts, not boneless-only — inflation % will be approximate.",
+        price_verified=True,
+        # price_verified=False,
+        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
     FoodSeed(
         slug="bacon",
@@ -114,7 +115,8 @@ FOODS: list[FoodSeed] = [
         fdc_data_type="SR Legacy",
         serving_unit="100g",
         price_verified=False,
-        notes="ID from official ap.item; confirm live data before flipping price_verified.",
+        # price_verified=True,
+        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
     FoodSeed(
         slug="tuna",
@@ -127,7 +129,8 @@ FOODS: list[FoodSeed] = [
         fdc_data_type="SR Legacy",
         serving_unit="100g",
         price_verified=False,
-        notes="ID from official ap.item; confirm live data before flipping price_verified.",
+        # price_verified=True,
+        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
     FoodSeed(
         slug="peanut-butter",
@@ -140,7 +143,8 @@ FOODS: list[FoodSeed] = [
         fdc_data_type="SR Legacy",
         serving_unit="100g",
         price_verified=False,
-        notes="ID from official ap.item; confirm live data before flipping price_verified.",
+        # price_verified=True,
+        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
     FoodSeed(
         slug="dry-beans",
@@ -152,8 +156,9 @@ FOODS: list[FoodSeed] = [
         fdc_query="beans pinto mature seeds raw",
         fdc_data_type="SR Legacy",
         serving_unit="100g dry",
-        price_verified=False,
-        notes="BLS series covers 'any type' dried beans — price reflects category average, not pinto specifically.",
+        # price_verified=False,
+        price_verified=True,
+        # notes="BLS series covers 'any type' dried beans — price reflects category average, not pinto specifically.",
     ),
     FoodSeed(
         slug="lentils",
@@ -194,7 +199,8 @@ FOODS: list[FoodSeed] = [
         fdc_data_type="SR Legacy",
         serving_unit="100g",
         price_verified=False,
-        notes="ID from official ap.item; confirm live data before flipping price_verified.",
+        # price_verified=True,
+        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
     FoodSeed(
         slug="cheddar-cheese",
@@ -206,8 +212,9 @@ FOODS: list[FoodSeed] = [
         fdc_query="cheese cheddar",
         fdc_data_type="SR Legacy",
         serving_unit="100g",
-        price_verified=False,
-        notes="ID confirmed from official ap.item. Confirm live data before flipping price_verified.",
+        # price_verified=False,
+        price_verified=True,
+        # notes="ID confirmed from official ap.item. Confirm live data before flipping price_verified.",
     ),
 
     # ── Produce ───────────────────────────────────────────────────────────────
@@ -235,7 +242,8 @@ FOODS: list[FoodSeed] = [
         fdc_data_type="SR Legacy",
         serving_unit="100g",
         price_verified=False,
-        notes="ID from official ap.item; confirm live data before flipping price_verified.",
+        # price_verified=True,
+        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
     FoodSeed(
         slug="oranges",
@@ -247,8 +255,9 @@ FOODS: list[FoodSeed] = [
         fdc_query="oranges raw navels",
         fdc_data_type="SR Legacy",
         serving_unit="100g",
-        price_verified=False,
-        notes="ID from official ap.item; confirm live data before flipping price_verified.",
+        # price_verified=False,
+        price_verified=True,
+        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
     FoodSeed(
         slug="tomatoes",
@@ -272,8 +281,9 @@ FOODS: list[FoodSeed] = [
         fdc_query="potatoes flesh and skin raw",
         fdc_data_type="SR Legacy",
         serving_unit="100g",
-        price_verified=False,
-        notes="ID from official ap.item; confirm live data before flipping price_verified.",
+        # price_verified=False,
+        price_verified=True,
+        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
     FoodSeed(
         slug="lettuce",
@@ -285,8 +295,9 @@ FOODS: list[FoodSeed] = [
         fdc_query="lettuce iceberg raw",
         fdc_data_type="SR Legacy",
         serving_unit="100g",
-        price_verified=False,
-        notes="ID from official ap.item; confirm live data before flipping price_verified.",
+        # price_verified=False,
+        price_verified=True,
+        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
     FoodSeed(
         slug="carrots",
@@ -294,12 +305,13 @@ FOODS: list[FoodSeed] = [
         category="produce",
         avg_price_series_id="APU0000712403",  # ap: 712403 — Carrots, short trimmed and topped, per lb.
         avg_price_unit="per lb",
-        cpi_series_id="CUUR0000SEFL04",       # cu: SEFL04 — Other fresh vegetables (no carrot-specific series)
+        cpi_series_id=None,  # "CUUR0000SEFL04", # cu: SEFL04 — Other fresh vegetables (no carrot-specific series)
         fdc_query="carrots raw",
         fdc_data_type="SR Legacy",
         serving_unit="100g",
         price_verified=False,
-        notes="CPI series SEFL04 covers all 'other fresh vegetables' — inflation % reflects the category, not carrots specifically.",
+        # price_verified=True,
+        # notes="CPI series SEFL04 covers all 'other fresh vegetables' — inflation % reflects the category, not carrots specifically.",
     ),
     FoodSeed(
         slug="broccoli",
@@ -312,7 +324,8 @@ FOODS: list[FoodSeed] = [
         fdc_data_type="SR Legacy",
         serving_unit="100g",
         price_verified=False,
-        notes="CPI series SEFL04 covers all 'other fresh vegetables' — inflation % reflects the category, not broccoli specifically.",
+        # price_verified=True,
+        # notes="CPI series SEFL04 covers all 'other fresh vegetables' — inflation % reflects the category, not broccoli specifically.",
     ),
 
     # ── Grains ────────────────────────────────────────────────────────────────
@@ -327,8 +340,9 @@ FOODS: list[FoodSeed] = [
         fdc_query="bread white commercially prepared",
         fdc_data_type="SR Legacy",
         serving_unit="100g",
-        price_verified=False,
-        notes="ID confirmed from official ap.item. Confirm live data before flipping price_verified.",
+        # price_verified=False,
+        price_verified=True,
+        # notes="ID confirmed from official ap.item. Confirm live data before flipping price_verified.",
     ),
     FoodSeed(
         slug="bread-whole-wheat",
@@ -340,8 +354,9 @@ FOODS: list[FoodSeed] = [
         fdc_query="bread whole wheat commercially prepared",
         fdc_data_type="SR Legacy",
         serving_unit="100g",
-        price_verified=False,
-        notes="ID from official ap.item; confirm live data before flipping price_verified.",
+        # price_verified=False,
+        price_verified=True,
+        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
     FoodSeed(
         slug="rice",
@@ -353,8 +368,9 @@ FOODS: list[FoodSeed] = [
         fdc_query="rice white long grain unenriched raw",
         fdc_data_type="SR Legacy",
         serving_unit="100g dry",
-        price_verified=False,
-        notes="ID from official ap.item; confirm live data before flipping price_verified.",
+        # price_verified=False,
+        price_verified=True,
+        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
     FoodSeed(
         slug="flour",
@@ -366,8 +382,9 @@ FOODS: list[FoodSeed] = [
         fdc_query="wheat flour white all purpose unenriched",
         fdc_data_type="SR Legacy",
         serving_unit="100g",
-        price_verified=False,
-        notes="ID from official ap.item; confirm live data before flipping price_verified.",
+        # price_verified=False,
+        price_verified=True,
+        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
     FoodSeed(
         slug="pasta",
@@ -375,12 +392,13 @@ FOODS: list[FoodSeed] = [
         category="grain",
         avg_price_series_id="APU0000701322",  # ap: 701322 — Spaghetti and macaroni, per lb.
         avg_price_unit="per lb",
-        cpi_series_id="CUUR0000SEFA03",       # cu: SEFA03 — Rice, pasta, cornmeal
+        cpi_series_id=None, #"CUUR0000SEFA03",       # cu: SEFA03 — Rice, pasta, cornmeal
         fdc_query="spaghetti dry unenriched",
         fdc_data_type="SR Legacy",
         serving_unit="100g dry",
-        price_verified=False,
-        notes="ID from official ap.item; confirm live. CPI series covers rice+pasta+cornmeal — inflation % reflects the category.",
+        # price_verified=False,
+        price_verified=True,
+        # notes="ID from official ap.item; confirm live. CPI series covers rice+pasta+cornmeal — inflation % reflects the category.",
     ),
 
     # ── Pantry ────────────────────────────────────────────────────────────────
@@ -396,7 +414,8 @@ FOODS: list[FoodSeed] = [
         fdc_data_type="SR Legacy",
         serving_unit="100g",
         price_verified=False,
-        notes="ID from official ap.item; confirm live data before flipping price_verified.",
+        # price_verified=True,
+        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
 
     # ── Beverages ─────────────────────────────────────────────────────────────
@@ -411,8 +430,9 @@ FOODS: list[FoodSeed] = [
         fdc_query="coffee brewed from grounds",
         fdc_data_type="SR Legacy",
         serving_unit="100ml brewed",
-        price_verified=False,
-        notes="ID from official ap.item; confirm live. Nutrition query reflects brewed coffee, not dry grounds.",
+        # price_verified=False,
+        price_verified=True,
+        # notes="ID from official ap.item; confirm live. Nutrition query reflects brewed coffee, not dry grounds.",
     ),
     FoodSeed(
         slug="cola",
@@ -425,7 +445,8 @@ FOODS: list[FoodSeed] = [
         fdc_data_type="SR Legacy",
         serving_unit="100ml",
         price_verified=False,
-        notes="ID from official ap.item; confirm live data before flipping price_verified.",
+        # price_verified=True,
+        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
     FoodSeed(
         slug="oj-frozen",
@@ -437,8 +458,9 @@ FOODS: list[FoodSeed] = [
         fdc_query="orange juice frozen concentrate unsweetened",
         fdc_data_type="SR Legacy",
         serving_unit="100ml reconstituted",
-        price_verified=False,
-        notes="ID from official ap.item; confirm live data before flipping price_verified.",
+        # price_verified=False,
+        price_verified=True,
+        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
 ]
 

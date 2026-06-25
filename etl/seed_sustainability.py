@@ -73,7 +73,7 @@ SUSTAINABILITY_SEED = [
         "Beef has the highest water footprint per kg of common proteins",
     ),
     (
-        "chicken-breast",
+        "chicken-whole",
         "medium", "mekonnen2012",
         "short", "mekonnen2012",
         "Common nationwide (broiler production widespread)",

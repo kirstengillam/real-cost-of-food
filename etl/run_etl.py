@@ -44,6 +44,7 @@ from unit_convert import nutrient_per_dollar, UnsupportedUnitError
 DATA_DIR = Path(__file__).parent.parent / "data"
 EXPORT_PATH = DATA_DIR / "foods_export.json"
 
+YEAR_LOOKBACK = 2
 
 def upsert_food_row(conn, food: FoodSeed) -> None:
     conn.execute(
@@ -82,7 +83,7 @@ def fetch_and_store_price(conn, food: FoodSeed, now: datetime) -> None:
         series_ids.append(food.cpi_series_id)
 
     try:
-        results = fetch_series(series_ids, start_year=now.year - 2, end_year=now.year)
+        results = fetch_series(series_ids, start_year=now.year - YEAR_LOOKBACK, end_year=now.year)
     except BlsClientError as e:
         print(f"[run_etl] ERROR fetching BLS data for {food.slug!r}: {e}")
         return
@@ -152,7 +153,8 @@ def export_json(conn) -> None:
             """
             SELECT * FROM price_snapshots
             WHERE food_slug = ?
-            ORDER BY year DESC, month DESC
+            ORDER BY CASE WHEN price_source = 'bls_avg_price' THEN 0 ELSE 1 END,
+                     year DESC, month DESC
             LIMIT 1
             """,
             (f["slug"],),
