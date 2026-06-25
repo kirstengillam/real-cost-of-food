@@ -33,12 +33,36 @@ export class RealCostOfFoodStack extends cdk.Stack {
       versioned: true, // cheap insurance — keeps the last N exports if something goes wrong
     });
 
+    // ── CloudFront Function: rewrite clean URLs to /path/index.html ──────────
+    // S3 only serves defaultRootObject at the root. For /foods/eggs, CloudFront
+    // must request /foods/eggs/index.html explicitly — this function does that.
+    const urlRewriteFn = new cloudfront.Function(this, 'UrlRewriteFunction', {
+      code: cloudfront.FunctionCode.fromInline(`
+function handler(event) {
+  var request = event.request;
+  var uri = request.uri;
+  if (uri.endsWith('/')) {
+    request.uri += 'index.html';
+  } else if (!uri.includes('.')) {
+    request.uri += '/index.html';
+  }
+  return request;
+}
+      `),
+      runtime: cloudfront.FunctionRuntime.JS_2_0,
+      comment: 'Rewrite clean URLs to /index.html for S3 static hosting',
+    });
+
     // ── CloudFront distribution ───────────────────────────────────────────────
     const distribution = new cloudfront.Distribution(this, 'Distribution', {
       defaultBehavior: {
         origin: origins.S3BucketOrigin.withOriginAccessControl(siteBucket),
         viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
         cachePolicy: cloudfront.CachePolicy.CACHING_OPTIMIZED,
+        functionAssociations: [{
+          function: urlRewriteFn,
+          eventType: cloudfront.FunctionEventType.VIEWER_REQUEST,
+        }],
       },
       defaultRootObject: 'index.html',
       // Serve index.html for clean URLs like /foods/eggs (Astro generates eggs/index.html)
