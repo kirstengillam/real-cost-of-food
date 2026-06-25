@@ -1,0 +1,32 @@
+---
+/**
+ * AdSense ad unit stub.
+ *
+ * Usage:
+ *   <AdUnit slot="1234567890" style="display:block" format="auto" />
+ *
+ * Renders nothing when ADSENSE_ID is unset (dev / pre-monetization).
+ * Set ADSENSE_ID=ca-pub-XXXXXXXXXXXXXXXX in your build environment to activate.
+ */
+interface Props {
+  adSlot: string;          // the data-ad-slot value from your AdSense account
+  format?: string;         // 'auto' (default) | 'rectangle' | 'horizontal' etc.
+  style?: string;          // inline style forwarded to the <ins> tag
+}
+
+const { adSlot, format = 'auto', style = 'display:block' } = Astro.props;
+const publisherId = import.meta.env.ADSENSE_ID;
+const enabled = Boolean(publisherId);
+---
+
+{enabled && (
+  <ins
+    class="adsbygoogle"
+    style={style}
+    data-ad-client={publisherId}
+    data-ad-slot={adSlot}
+    data-ad-format={format}
+    data-full-width-responsive="true"
+  ></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+)}
