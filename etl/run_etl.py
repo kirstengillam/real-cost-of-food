@@ -158,7 +158,20 @@ def export_json(conn) -> None:
             (f["slug"],),
         ).fetchone()
         nutrition_row = conn.execute("SELECT * FROM nutrition WHERE food_slug = ?", (f["slug"],)).fetchone()
-        sustainability_row = conn.execute("SELECT * FROM sustainability WHERE food_slug = ?", (f["slug"],)).fetchone()
+        sustainability_row = conn.execute(
+            """
+            SELECT s.*,
+                   ws.short_key as water_source_key, ws.authors as water_authors,
+                   ws.title as water_title, ws.year as water_year, ws.url as water_url,
+                   ss.short_key as storage_source_key, ss.authors as storage_authors,
+                   ss.title as storage_title, ss.year as storage_year, ss.url as storage_url
+            FROM sustainability s
+            LEFT JOIN sustainability_sources ws ON s.water_source_id = ws.id
+            LEFT JOIN sustainability_sources ss ON s.storage_source_id = ss.id
+            WHERE s.food_slug = ?
+            """,
+            (f["slug"],),
+        ).fetchone()
 
         protein_per_dollar = None
         cal_per_dollar = None
@@ -202,7 +215,26 @@ def export_json(conn) -> None:
                 "calories_per_dollar": cal_per_dollar,
                 "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
             },
-            "sustainability": dict(sustainability_row) if sustainability_row else None,
+            "sustainability": {
+                "water_use_tier": sustainability_row["water_use_tier"],
+                "storage_life_tier": sustainability_row["storage_life_tier"],
+                "typical_local_production": sustainability_row["typical_local_production"],
+                "notes": sustainability_row["notes"],
+                "water_source": {
+                    "key": sustainability_row["water_source_key"],
+                    "authors": sustainability_row["water_authors"],
+                    "title": sustainability_row["water_title"],
+                    "year": sustainability_row["water_year"],
+                    "url": sustainability_row["water_url"],
+                } if sustainability_row["water_source_key"] else None,
+                "storage_source": {
+                    "key": sustainability_row["storage_source_key"],
+                    "authors": sustainability_row["storage_authors"],
+                    "title": sustainability_row["storage_title"],
+                    "year": sustainability_row["storage_year"],
+                    "url": sustainability_row["storage_url"],
+                } if sustainability_row["storage_source_key"] else None,
+            } if sustainability_row else None,
         })
 
     EXPORT_PATH.parent.mkdir(parents=True, exist_ok=True)

@@ -12,10 +12,11 @@ Migrate to RDS Postgres later only if/when you add:
     for a few hundred foods x a few hundred months)
 
 Tables:
-  foods            -- one row per curated food (mirrors foods_seed.py)
-  price_snapshots  -- one row per (food, year, month): $ price + inflation %
-  nutrition        -- one row per food: nutrient profile per 100g (mostly static)
-  sustainability   -- one row per food: hand-curated tiers + source citation
+  foods                  -- one row per curated food (mirrors foods_seed.py)
+  price_snapshots        -- one row per (food, year, month): $ price + inflation %
+  nutrition              -- one row per food: nutrient profile per 100g (mostly static)
+  sustainability_sources -- reusable source records (author, title, year, URL)
+  sustainability         -- one row per food: hand-curated tiers, FK to sources
 """
 
 import sqlite3
@@ -62,12 +63,24 @@ CREATE TABLE IF NOT EXISTS nutrition (
     fetched_at        TEXT NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS sustainability_sources (
+    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    short_key   TEXT NOT NULL UNIQUE,  -- human-readable slug, e.g. 'mekonnen2012'
+    authors     TEXT NOT NULL,
+    title       TEXT NOT NULL,
+    year        INTEGER NOT NULL,
+    publisher   TEXT,
+    url         TEXT
+);
+
 CREATE TABLE IF NOT EXISTS sustainability (
-    food_slug          TEXT PRIMARY KEY REFERENCES foods(slug),
-    water_use_tier      TEXT,   -- 'low' | 'medium' | 'high'
-    storage_life_tier   TEXT,   -- 'short' | 'medium' | 'long'
-    typical_local_production TEXT,  -- free text, e.g. 'common in most US regions'
-    source_citation     TEXT NOT NULL  -- REQUIRED: where this tier judgment came from
+    food_slug                TEXT PRIMARY KEY REFERENCES foods(slug),
+    water_use_tier           TEXT,    -- 'low' | 'medium' | 'high'
+    storage_life_tier        TEXT,    -- 'short' | 'medium' | 'long'
+    typical_local_production TEXT,
+    water_source_id          INTEGER REFERENCES sustainability_sources(id),
+    storage_source_id        INTEGER REFERENCES sustainability_sources(id),
+    notes                    TEXT     -- optional extra context about this food specifically
 );
 """
 
@@ -85,9 +98,62 @@ def connect(db_path: Path = DEFAULT_DB_PATH):
         conn.close()
 
 
+MIGRATIONS = [
+    # Migration 1: replace source_citation text column with FK-based source IDs
+    # and add sustainability_sources table.
+    """
+    CREATE TABLE IF NOT EXISTS sustainability_sources (
+        id          INTEGER PRIMARY KEY AUTOINCREMENT,
+        short_key   TEXT NOT NULL UNIQUE,
+        authors     TEXT NOT NULL,
+        title       TEXT NOT NULL,
+        year        INTEGER NOT NULL,
+        publisher   TEXT,
+        url         TEXT
+    );
+    """,
+    """
+    ALTER TABLE sustainability ADD COLUMN water_source_id INTEGER
+        REFERENCES sustainability_sources(id);
+    """,
+    """
+    ALTER TABLE sustainability ADD COLUMN storage_source_id INTEGER
+        REFERENCES sustainability_sources(id);
+    """,
+    """
+    ALTER TABLE sustainability ADD COLUMN notes TEXT;
+    """,
+]
+
+
+def _get_migration_version(conn) -> int:
+    conn.execute("CREATE TABLE IF NOT EXISTS _migrations (version INTEGER PRIMARY KEY);")
+    row = conn.execute("SELECT MAX(version) FROM _migrations").fetchone()
+    return row[0] if row[0] is not None else 0
+
+
+def _set_migration_version(conn, version: int) -> None:
+    conn.execute("INSERT OR REPLACE INTO _migrations (version) VALUES (?);", (version,))
+
+
 def init_db(db_path: Path = DEFAULT_DB_PATH) -> None:
     with connect(db_path) as conn:
         conn.executescript(SCHEMA)
+        current = _get_migration_version(conn)
+        for i, migration_sql in enumerate(MIGRATIONS, start=1):
+            if i <= current:
+                continue
+            try:
+                conn.executescript(migration_sql)
+            except sqlite3.OperationalError as e:
+                # "duplicate column name" means migration was already applied outside
+                # the version tracker (e.g. fresh DB created with new SCHEMA) — safe to skip.
+                if "duplicate column name" in str(e).lower() or "already exists" in str(e).lower():
+                    pass
+                else:
+                    raise
+            _set_migration_version(conn, i)
+            print(f"[db] Applied migration {i}.")
 
 
 if __name__ == "__main__":

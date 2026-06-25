@@ -9,20 +9,25 @@ of the site -- so it gets its own module and its own tests rather than
 being inlined and trusted blindly.
 
 Supported avg_price_unit strings (must match foods_seed.py exactly):
-    "per lb"     -> 1 lb = 453.592 g
-    "per dozen"  -> assumes large eggs, ~50g each (USDA standard) = 600g/dozen
-    "per gallon" -> assumes water-like density for milk (~3.78 kg/gallon;
-                    whole milk is close enough to water density for this
-                    purpose -- if you add other per-gallon liquids with very
-                    different density, add a specific conversion, don't reuse this)
+    "per lb"       -> 1 lb = 453.592 g
+    "per dozen"    -> assumes large eggs, ~50g each (USDA standard) = 600g/dozen
+    "per gallon"   -> assumes water-like density for milk (~3.78 kg/gallon;
+                      whole milk is close enough to water density for this
+                      purpose -- if you add other per-gallon liquids with very
+                      different density, add a specific conversion, don't reuse this)
+    "per 2 liters" -> cola (2000 ml; density ~1.0 g/ml for water-like soda)
+    "per 16 oz"    -> OJ frozen concentrate (16 fl oz = 473.18 ml; density
+                      ~1.05 g/ml for juice concentrate)
 
 Anything not in this table raises, rather than silently returning a wrong
 number. Add new units explicitly as new foods need them.
 """
 
 LB_TO_GRAMS = 453.592
-DOZEN_EGGS_TO_GRAMS = 600.0   # 12 x ~50g large egg (USDA large egg = 50g)
+DOZEN_EGGS_TO_GRAMS = 600.0        # 12 x ~50g large egg (USDA large egg = 50g)
 GALLON_TO_GRAMS_WATER_DENSITY = 3780.0  # approx, fine for whole milk
+TWO_LITERS_TO_GRAMS = 2000.0       # cola; density ~1.0 g/ml
+SIXTEEN_OZ_TO_GRAMS = 496.8        # 16 fl oz x 1.05 g/ml (OJ concentrate density)
 
 
 class UnsupportedUnitError(Exception):
@@ -38,6 +43,10 @@ def price_per_100g(avg_price_usd: float, avg_price_unit: str) -> float:
         grams_total = DOZEN_EGGS_TO_GRAMS
     elif unit == "per gallon":
         grams_total = GALLON_TO_GRAMS_WATER_DENSITY
+    elif unit == "per 2 liters":
+        grams_total = TWO_LITERS_TO_GRAMS
+    elif unit == "per 16 oz":
+        grams_total = SIXTEEN_OZ_TO_GRAMS
     else:
         raise UnsupportedUnitError(
             f"No conversion defined for avg_price_unit={avg_price_unit!r}. "

@@ -7,7 +7,7 @@ This proves the orchestration logic is correct independent of live API
 availability. Run the real thing (run_etl.py) once you have network access
 and real API keys.
 
-Run: python test_etl_offline.py
+Run: python3 test_etl_offline.py
 """
 
 from datetime import datetime, timezone
@@ -22,47 +22,88 @@ import run_etl
 
 
 def fake_fetch_series(series_ids, start_year, end_year, **kwargs):
-    """Pretend BLS response: eggs at $2.58/dozen, +12% YoY CPI."""
+    """
+    Pretend BLS responses for all foods that have a price_verified=True AP series,
+    plus a handful of the new unverified ones to exercise the pipeline paths.
+    Series with no entry here return nothing, which tests the 'missing data' path.
+    """
+    MOCK_PRICES = {
+        # Verified
+        "APU0000708111": 2.58,   # eggs, per dozen
+        "APU0000703112": 5.12,   # ground beef, per lb
+        "APU0000709112": 4.02,   # whole milk, per gallon
+        "APU0000711211": 0.65,   # bananas, per lb
+        "APU0000712311": 1.89,   # tomatoes, per lb
+        "APU0000704111": 7.21,   # bacon, per lb
+        # Unverified but included to exercise unit conversion paths
+        "APU0000710111": 5.85,   # butter, per lb
+        "APU0000701312": 1.32,   # rice, per lb
+        "APU0000701111": 0.72,   # flour, per lb
+        "APU0000701322": 1.45,   # pasta, per lb
+        "APU0000715212": 0.89,   # sugar, per lb
+        "APU0000716141": 3.15,   # peanut butter, per lb
+        "APU0000717311": 7.50,   # coffee, per lb
+        "APU0000717114": 2.19,   # cola, per 2 liters
+        "APU0000713111": 2.89,   # OJ frozen, per 16 oz
+        "APU0000714233": 1.85,   # dry beans, per lb
+        "APU0000711111": 1.65,   # apples, per lb
+        "APU0000711311": 1.29,   # oranges, per lb
+        "APU0000712112": 0.89,   # potatoes, per lb
+        "APU0000710212": 6.45,   # cheddar cheese, per lb
+        "APU0000702111": 3.45,   # bread white, per lb
+        "APU0000702212": 3.89,   # bread whole wheat, per lb
+        "APU0000712211": 1.49,   # lettuce, per lb
+        "APU0000712403": 1.09,   # carrots, per lb
+        "APU0000712412": 1.99,   # broccoli, per lb
+        "APU0000705111": 4.25,   # frankfurters, per lb
+        "APU0000707111": 3.89,   # tuna, per lb
+        "APU0000FF1101": 4.99,   # chicken breast boneless, per lb
+    }
     out = {}
     for sid in series_ids:
-        if sid == "APU0000708111":  # eggs avg price
-            out[sid] = [
-                BlsObservation(sid, "2025", "M12", "December", 2.45, []),
-                BlsObservation(sid, "2026", "M01", "January", 2.58, []),
-            ]
-        elif sid == "APU0000703112":  # ground beef avg price
-            out[sid] = [BlsObservation(sid, "2026", "M01", "January", 5.12, [])]
-        elif sid == "APU0000709112":  # milk avg price
-            out[sid] = [BlsObservation(sid, "2026", "M01", "January", 4.02, [])]
-        elif sid == "APU0000711211":  # bananas
-            out[sid] = [BlsObservation(sid, "2026", "M01", "January", 0.65, [])]
-        elif sid == "APU0000712311":  # tomatoes
-            out[sid] = [BlsObservation(sid, "2026", "M01", "January", 1.89, [])]
-        elif sid == "APU0000704111":  # bacon
-            out[sid] = [BlsObservation(sid, "2026", "M01", "January", 7.21, [])]
-        # CPI series and unverified series intentionally return nothing -> tests the "missing" path
+        if sid in MOCK_PRICES:
+            out[sid] = [BlsObservation(sid, "2026", "M01", "January", MOCK_PRICES[sid], [])]
+        # CPI series and unknown series intentionally return nothing
     return out
 
 
 def fake_lookup_food(query, data_type):
-    """Pretend FDC response keyed by query string -- covers our verified foods."""
-    fake_nutrition = {
-        "egg whole raw": (143, 12.6, 9.5, 0.7, 0.0),
-        "ground beef 80% lean raw": (254, 17.2, 20.0, 0.0, 0.0),
-        "milk whole 3.25% milkfat": (61, 3.2, 3.3, 4.8, 0.0),
-        "bananas raw": (89, 1.1, 0.3, 22.8, 2.6),
-        "tomatoes red ripe raw": (18, 0.9, 0.2, 3.9, 1.2),
-        "pork bacon cooked": (541, 37.0, 42.0, 1.4, 0.0),
-        "beans pinto mature seeds raw": (347, 21.4, 1.2, 62.6, 15.5),
-        "lentils mature seeds raw": (353, 25.8, 1.1, 60.1, 30.5),
-        "tofu firm raw": (144, 15.8, 8.7, 2.8, 1.2),
-        "chicken breast boneless skinless raw": (120, 22.5, 2.6, 0.0, 0.0),
-        "bread white commercially prepared": (266, 9.0, 3.3, 49.4, 2.4),
-        "cheese cheddar": (404, 23.0, 33.0, 1.3, 0.0),
+    """Pretend FDC responses keyed by fdc_query string."""
+    # (energy_kcal, protein_g, fat_g, carbs_g, fiber_g)
+    MOCK_NUTRITION = {
+        "egg whole raw":                          (143, 12.6,  9.5,  0.7,  0.0),
+        "ground beef 80% lean raw":               (254, 17.2, 20.0,  0.0,  0.0),
+        "milk whole 3.25% milkfat":               ( 61,  3.2,  3.3,  4.8,  0.0),
+        "bananas raw":                            ( 89,  1.1,  0.3, 22.8,  2.6),
+        "tomatoes red ripe raw":                  ( 18,  0.9,  0.2,  3.9,  1.2),
+        "pork bacon cooked":                      (541, 37.0, 42.0,  1.4,  0.0),
+        "chicken breast boneless skinless raw":   (120, 22.5,  2.6,  0.0,  0.0),
+        "bread white commercially prepared":      (266,  9.0,  3.3, 49.4,  2.4),
+        "bread whole wheat commercially prepared":(247,  9.4,  3.3, 48.0,  7.4),
+        "cheese cheddar":                         (404, 23.0, 33.0,  1.3,  0.0),
+        "beans pinto mature seeds raw":           (347, 21.4,  1.2, 62.6, 15.5),
+        "lentils mature seeds raw":               (353, 25.8,  1.1, 60.1, 30.5),
+        "frankfurters beef":                      (290, 11.3, 26.3,  2.1,  0.0),
+        "tuna light canned in water":             (116, 25.5,  1.0,  0.0,  0.0),
+        "peanut butter smooth style without salt":(588, 25.1, 50.4, 20.0,  6.0),
+        "butter salted":                          (717,  0.9, 81.1,  0.1,  0.0),
+        "apples raw with skin":                   ( 52,  0.3,  0.2, 13.8,  2.4),
+        "oranges raw navels":                     ( 47,  0.9,  0.1, 11.8,  2.4),
+        "potatoes flesh and skin raw":            ( 77,  2.0,  0.1, 17.5,  2.2),
+        "lettuce iceberg raw":                    ( 14,  0.9,  0.1,  2.0,  0.9),
+        "carrots raw":                            ( 41,  0.9,  0.2,  9.6,  2.8),
+        "broccoli raw":                           ( 34,  2.8,  0.4,  6.6,  2.6),
+        "rice white long grain unenriched raw":   (365,  7.1,  0.7, 80.0,  1.3),
+        "wheat flour white all purpose unenriched":(364, 10.3,  1.0, 76.3,  2.7),
+        "spaghetti dry unenriched":               (371, 13.0,  1.5, 74.7,  3.2),
+        "sugars granulated":                      (387,  0.0,  0.0, 100.0, 0.0),
+        "coffee brewed from grounds":             (  1,  0.1,  0.0,  0.0,  0.0),
+        "carbonated beverage cola":               ( 37,  0.0,  0.0,  9.6,  0.0),
+        "orange juice frozen concentrate unsweetened": (150, 2.3, 0.1, 36.3, 0.4),
     }
-    if query not in fake_nutrition:
+    if query not in MOCK_NUTRITION:
         return None
-    kcal, protein, fat, carbs, fiber = fake_nutrition[query]
+    kcal, protein, fat, carbs, fiber = MOCK_NUTRITION[query]
     return FdcFood(
         fdc_id=999999,
         description=f"TEST: {query}",
@@ -75,7 +116,6 @@ def fake_lookup_food(query, data_type):
 
 
 def run():
-    # Use a throwaway test DB so we don't clobber any real data.
     test_db_path = DEFAULT_DB_PATH.parent / "test_real_cost_of_food.db"
     test_db_path.unlink(missing_ok=True)
 
@@ -93,45 +133,60 @@ def run():
                 run_etl.fetch_and_store_price(conn, food, now)
             for food in FOODS:
                 run_etl.fetch_and_store_nutrition(conn, food, now)
-        seed_sustainability_data()  # uses its own connect() call against the patched DEFAULT_DB_PATH
+        seed_sustainability_data()
         with connect(test_db_path) as conn:
             run_etl.export_json(conn)
 
-    # Validate output
     import json
     export_path = DEFAULT_DB_PATH.parent / "test_foods_export.json"
     with open(export_path) as fp:
         data = json.load(fp)
+
+    foods_by_slug = {f["slug"]: f for f in data["foods"]}
 
     print(f"\n=== Exported {len(data['foods'])} foods ===")
     for food in data["foods"]:
         vm = food["value_metrics"]
         price = food["price"]
         print(
-            f"{food['slug']:20s} price=${price['avg_price_usd']} ({price['price_source']:14s}) "
-            f"protein/$={vm['protein_g_per_dollar']}"
+            f"{food['slug']:30s} price=${str(price['avg_price_usd']):7s} "
+            f"({price['price_source']:14s}) protein/$={vm['protein_g_per_dollar']}"
         )
 
-    eggs = next(f for f in data["foods"] if f["slug"] == "eggs")
-    assert eggs["price"]["avg_price_usd"] == 2.58, "Eggs price mismatch"
-    assert eggs["value_metrics"]["protein_g_per_dollar"] == 29.3, f"Eggs protein/$ mismatch: {eggs['value_metrics']}"
+    # ── Assertions ────────────────────────────────────────────────────────────
+
+    eggs = foods_by_slug["eggs"]
+    assert eggs["price"]["avg_price_usd"] == 2.58
+    assert eggs["value_metrics"]["protein_g_per_dollar"] == 29.3, eggs["value_metrics"]
     assert eggs["price"]["price_source"] == "bls_avg_price"
 
-    dry_beans = next(f for f in data["foods"] if f["slug"] == "dry-beans")
-    assert dry_beans["price"]["price_source"] == "estimate", "Dry beans should be marked estimate (no BLS series)"
-    assert dry_beans["value_metrics"]["protein_g_per_dollar"] is None, "Should not compute protein/$ for estimated prices"
+    # dry-beans now has a BLS series (714233), so price_source should be bls_avg_price
+    # but price_verified=False means it gets skipped -> estimate
+    dry_beans = foods_by_slug["dry-beans"]
+    assert dry_beans["price"]["price_source"] == "estimate", \
+        "dry-beans has price_verified=False so should still be skipped -> estimate"
+    assert dry_beans["value_metrics"]["protein_g_per_dollar"] is None
+
+    # lentils has no AP series at all -> estimate, no protein/$
+    lentils = foods_by_slug["lentils"]
+    assert lentils["price"]["price_source"] == "estimate"
+    assert lentils["value_metrics"]["protein_g_per_dollar"] is None
+
+    # cola exercises the "per 2 liters" unit path (price_verified=False -> estimate, no value metrics)
+    cola = foods_by_slug["cola"]
+    assert cola["price"]["price_source"] == "estimate"
+
+    # sustainability should be present for all foods
+    missing_sustainability = [f["slug"] for f in data["foods"] if f["sustainability"] is None]
+    assert not missing_sustainability, f"Missing sustainability for: {missing_sustainability}"
 
     print("\nAll assertions passed. Pipeline logic is correct.")
 
-    # Also write a copy to the real export path so the Astro site has
-    # something to build against during local dev/preview, until the
-    # real run_etl.py is run against live APIs.
     real_export_path = DEFAULT_DB_PATH.parent / "foods_export.json"
     with open(real_export_path, "w") as fp:
         json.dump(data, fp, indent=2)
     print(f"Also wrote preview data to {real_export_path} (for `astro dev`/`astro build` to consume).")
 
-    # cleanup
     test_db_path.unlink(missing_ok=True)
     export_path.unlink(missing_ok=True)
 
