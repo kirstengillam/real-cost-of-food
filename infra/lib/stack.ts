@@ -3,6 +3,7 @@ import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
+import * as acm from 'aws-cdk-lib/aws-certificatemanager';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import * as events from 'aws-cdk-lib/aws-events';
 import * as targets from 'aws-cdk-lib/aws-events-targets';
@@ -80,9 +81,12 @@ function handler(event) {
           ttl: cdk.Duration.seconds(0),
         },
       ],
-      // TODO: add certificate + domainNames once you have a domain:
-      // certificate: acm.Certificate.fromCertificateArn(this, 'Cert', 'arn:aws:acm:...'),
-      // domainNames: ['realcostoffood.com', 'www.realcostoffood.com'],
+      // Paste your ACM cert ARN below (must be in us-east-1):
+      // Create via ACM console → Request public cert → DNS validation → copy ARN once Issued
+      certificate: acm.Certificate.fromCertificateArn(this, 'Cert',
+        'arn:aws:acm:us-east-1:111111111111:certificate/4151ad7c-7d42-4724-8579-7a3e0df8b3dd'
+      ),
+      domainNames: ['realcostoffood.com', 'www.realcostoffood.com'],
     });
 
     // ── API key parameters (SSM, not Secrets Manager — these are low-sensitivity) ──
