@@ -1,0 +1,163 @@
+import * as cdk from 'aws-cdk-lib';
+import { Construct } from 'constructs';
+import * as s3 from 'aws-cdk-lib/aws-s3';
+import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
+import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
+import * as events from 'aws-cdk-lib/aws-events';
+import * as targets from 'aws-cdk-lib/aws-events-targets';
+import * as ssm from 'aws-cdk-lib/aws-ssm';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import * as path from 'path';
+
+export class RealCostOfFoodStack extends cdk.Stack {
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+    super(scope, id, props);
+
+    // ── Static site bucket ────────────────────────────────────────────────────
+    // Not public — CloudFront accesses it via OAC. Never set publicReadAccess=true.
+    const siteBucket = new s3.Bucket(this, 'SiteBucket', {
+      bucketName: `real-cost-of-food-site-${this.account}`,
+      blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
+      removalPolicy: cdk.RemovalPolicy.RETAIN,
+      versioned: false,
+    });
+
+    // ── Data bucket ───────────────────────────────────────────────────────────
+    // Lambda writes foods_export.json here; GitHub Actions reads it for the
+    // site build. Separate from site so the ETL can't accidentally overwrite HTML.
+    const dataBucket = new s3.Bucket(this, 'DataBucket', {
+      bucketName: `real-cost-of-food-data-${this.account}`,
+      blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
+      removalPolicy: cdk.RemovalPolicy.RETAIN,
+      versioned: true, // cheap insurance — keeps the last N exports if something goes wrong
+    });
+
+    // ── CloudFront distribution ───────────────────────────────────────────────
+    const distribution = new cloudfront.Distribution(this, 'Distribution', {
+      defaultBehavior: {
+        origin: origins.S3BucketOrigin.withOriginAccessControl(siteBucket),
+        viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+        cachePolicy: cloudfront.CachePolicy.CACHING_OPTIMIZED,
+      },
+      defaultRootObject: 'index.html',
+      // Serve index.html for clean URLs like /foods/eggs (Astro generates eggs/index.html)
+      errorResponses: [
+        {
+          httpStatus: 403,
+          responseHttpStatus: 200,
+          responsePagePath: '/index.html',
+          ttl: cdk.Duration.seconds(0),
+        },
+        {
+          httpStatus: 404,
+          responseHttpStatus: 404,
+          responsePagePath: '/404.html',
+          ttl: cdk.Duration.seconds(0),
+        },
+      ],
+      // TODO: add certificate + domainNames once you have a domain:
+      // certificate: acm.Certificate.fromCertificateArn(this, 'Cert', 'arn:aws:acm:...'),
+      // domainNames: ['realcostoffood.com', 'www.realcostoffood.com'],
+    });
+
+    // ── API key parameters (SSM, not Secrets Manager — these are low-sensitivity) ──
+    // Create these manually once with:
+    //   aws ssm put-parameter --name /rcof/bls-api-key --type SecureString --value YOUR_KEY
+    //   aws ssm put-parameter --name /rcof/fdc-api-key --type SecureString --value YOUR_KEY
+    const blsKeyParam = ssm.StringParameter.fromSecureStringParameterAttributes(
+      this, 'BlsApiKey', { parameterName: '/rcof/bls-api-key' }
+    );
+    const fdcKeyParam = ssm.StringParameter.fromSecureStringParameterAttributes(
+      this, 'FdcApiKey', { parameterName: '/rcof/fdc-api-key' }
+    );
+
+    // ── ETL Lambda ────────────────────────────────────────────────────────────
+    // Packages the entire etl/ directory. Dependencies are installed in a
+    // Lambda layer — see lambda-layer/Makefile.
+    const etlFunction = new lambda.Function(this, 'EtlFunction', {
+      runtime: lambda.Runtime.PYTHON_3_12,
+      handler: 'lambda_handler.handler',
+      code: lambda.Code.fromAsset(path.join(__dirname, '../../etl'), {
+        bundling: {
+          // Docker-based bundling: installs requirements.txt into the asset dir
+          // so Lambda gets a self-contained zip. Requires Docker on your machine.
+          image: lambda.Runtime.PYTHON_3_12.bundlingImage,
+          command: [
+            'bash', '-c',
+            'pip install -r requirements.txt -t /asset-output && cp -r . /asset-output',
+          ],
+        },
+      }),
+      environment: {
+        DATA_BUCKET: dataBucket.bucketName,
+        BLS_API_KEY_PARAM: blsKeyParam.parameterName,
+        FDC_API_KEY_PARAM: fdcKeyParam.parameterName,
+        // Tells run_etl.py to write to S3 instead of local disk when set
+        EXPORT_TARGET: 's3',
+      },
+      timeout: cdk.Duration.minutes(5),
+      memorySize: 256,
+      description: 'Monthly ETL: fetches BLS + USDA data, writes foods_export.json to S3',
+    });
+
+    // Grant Lambda permission to read the SSM parameters
+    blsKeyParam.grantRead(etlFunction);
+    fdcKeyParam.grantRead(etlFunction);
+
+    // Grant Lambda permission to write to the data bucket
+    dataBucket.grantPut(etlFunction);
+
+    // ── EventBridge monthly schedule ──────────────────────────────────────────
+    // Runs on the 2nd of every month at 06:00 UTC — BLS typically releases the
+    // prior month's data on the first Tuesday, so the 2nd is a safe lag.
+    new events.Rule(this, 'MonthlyEtlRule', {
+      schedule: events.Schedule.cron({ minute: '0', hour: '6', day: '2', month: '*' }),
+      targets: [new targets.LambdaFunction(etlFunction)],
+      description: 'Trigger ETL on the 2nd of each month',
+    });
+
+    // ── GitHub Actions deploy role ────────────────────────────────────────────
+    // GitHub Actions assumes this role (via OIDC) to sync site/dist/ to S3
+    // and invalidate CloudFront. No long-lived AWS credentials stored in GitHub.
+    const githubOidcProvider = new iam.OpenIdConnectProvider(this, 'GithubOidc', {
+      url: 'https://token.actions.githubusercontent.com',
+      clientIds: ['sts.amazonaws.com'],
+    });
+
+    const deployRole = new iam.Role(this, 'GithubDeployRole', {
+      assumedBy: new iam.WebIdentityPrincipal(githubOidcProvider.openIdConnectProviderArn, {
+        StringEquals: {
+          // Replace with your actual GitHub org/repo before deploying
+          'token.actions.githubusercontent.com:sub': 'repo:kirstengillam/real-cost-of-food:ref:refs/heads/main',
+          'token.actions.githubusercontent.com:aud': 'sts.amazonaws.com',
+        },
+      }),
+      description: 'Assumed by GitHub Actions to deploy site to S3/CloudFront',
+    });
+
+    siteBucket.grantReadWrite(deployRole);
+    dataBucket.grantRead(deployRole); // so CI can download foods_export.json for the build
+    distribution.grantCreateInvalidation(deployRole);
+
+    // ── Outputs ───────────────────────────────────────────────────────────────
+    new cdk.CfnOutput(this, 'CloudFrontUrl', {
+      value: `https://${distribution.distributionDomainName}`,
+      description: 'CloudFront distribution URL',
+    });
+    new cdk.CfnOutput(this, 'SiteBucketName', {
+      value: siteBucket.bucketName,
+    });
+    new cdk.CfnOutput(this, 'DataBucketName', {
+      value: dataBucket.bucketName,
+    });
+    new cdk.CfnOutput(this, 'DistributionId', {
+      value: distribution.distributionId,
+      description: 'Used by GitHub Actions to create cache invalidations after deploy',
+    });
+    new cdk.CfnOutput(this, 'DeployRoleArn', {
+      value: deployRole.roleArn,
+      description: 'ARN to put in GitHub Actions secret AWS_DEPLOY_ROLE_ARN',
+    });
+  }
+}

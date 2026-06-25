@@ -1,0 +1,27 @@
+{
+  "name": "infra",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cdk": "cdk",
+    "diff": "cdk diff",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy --require-approval never"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "aws-cdk-lib": "^2.260.0",
+    "constructs": "^10.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "@types/source-map-support": "^0.5.10",
+    "aws-cdk": "^2.1128.1",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
