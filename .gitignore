@@ -10,7 +10,6 @@ site/.astro/
 
 # Dependencies
 site/node_modules/
-site/package-lock.json
 
 # Generated / local env
 site/src/env.d.ts
