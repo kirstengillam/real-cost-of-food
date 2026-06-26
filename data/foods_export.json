@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T19:47:13.131089+00:00",
+  "generated_at": "2026-06-26T20:07:00.718085+00:00",
   "foods": [
     {
       "slug": "eggs",
@@ -31,8 +31,20 @@
         "storage_life_tier": "medium",
         "typical_local_production": "Common in most US regions; backyard production widespread",
         "notes": null,
-        "water_source": null,
-        "storage_source": null
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
       }
     },
     {
@@ -65,8 +77,20 @@
         "storage_life_tier": "short",
         "typical_local_production": "Common in dairy-producing states (CA, WI, NY, ID)",
         "notes": null,
-        "water_source": null,
-        "storage_source": null
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
       }
     },
     {
@@ -98,9 +122,21 @@
         "water_use_tier": "high",
         "storage_life_tier": "short",
         "typical_local_production": "Common in cattle-producing states (TX, NE, KS, OK)",
-        "notes": null,
-        "water_source": null,
-        "storage_source": null
+        "notes": "Beef has the highest water footprint per kg of common proteins",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
       }
     },
     {
@@ -132,9 +168,21 @@
         "water_use_tier": "medium",
         "storage_life_tier": "short",
         "typical_local_production": "Common nationwide (broiler production widespread)",
-        "notes": null,
-        "water_source": null,
-        "storage_source": null
+        "notes": "Poultry generally lower water footprint than beef per kg protein",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
       }
     },
     {
@@ -167,8 +215,20 @@
         "storage_life_tier": "medium",
         "typical_local_production": "Common in pork-producing states (IA, NC, MN)",
         "notes": null,
-        "water_source": null,
-        "storage_source": null
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
       }
     },
     {
@@ -201,8 +261,20 @@
         "storage_life_tier": "short",
         "typical_local_production": "Not grown commercially in mainland US (imported, mainly from Latin America)",
         "notes": null,
-        "water_source": null,
-        "storage_source": null
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
       }
     },
     {
@@ -235,8 +307,20 @@
         "storage_life_tier": "short",
         "typical_local_production": "Common in CA, FL; widely home-grown nationwide in season",
         "notes": null,
-        "water_source": null,
-        "storage_source": null
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
       }
     },
     {
@@ -268,9 +352,21 @@
         "water_use_tier": "low",
         "storage_life_tier": "medium",
         "typical_local_production": "Wheat grown widely in Midwest/Great Plains; bread itself manufactured nationwide",
-        "notes": null,
-        "water_source": null,
-        "storage_source": null
+        "notes": "Water footprint based on wheat; processing adds minimal water",
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
       }
     },
     {
@@ -303,8 +399,20 @@
         "storage_life_tier": "long",
         "typical_local_production": "Common in dairy states; aged cheese has long shelf life relative to fresh dairy",
         "notes": null,
-        "water_source": null,
-        "storage_source": null
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
       }
     },
     {
@@ -336,9 +444,21 @@
         "water_use_tier": "low",
         "storage_life_tier": "long",
         "typical_local_production": "Common in ND, MI, MN; excellent shelf-stable storage life when kept dry",
-        "notes": null,
-        "water_source": null,
-        "storage_source": null
+        "notes": "Pulses have among the lowest water footprints per gram of protein",
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
       }
     },
     {
@@ -366,7 +486,26 @@
         "calories_per_dollar": 144.12,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "low",
+        "storage_life_tier": "medium",
+        "typical_local_production": "Grown mainly in FL and CA. Available year-round through regional staggering.",
+        "notes": null,
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "potatoes",
@@ -393,7 +532,26 @@
         "calories_per_dollar": 390.66,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "low",
+        "storage_life_tier": "long",
+        "typical_local_production": "Grown widely in ID, WA, WI, ND, CO. Store well in cool dark conditions for months.",
+        "notes": null,
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "lettuce",
@@ -420,7 +578,26 @@
         "calories_per_dollar": 32.33,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "low",
+        "storage_life_tier": "short",
+        "typical_local_production": "Grown mainly in CA and AZ. Very short shelf life; highly perishable.",
+        "notes": null,
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "bread-whole-wheat",
@@ -447,7 +624,26 @@
         "calories_per_dollar": 406.19,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "low",
+        "storage_life_tier": "medium",
+        "typical_local_production": "Wheat grown widely in Midwest/Great Plains; bread manufactured nationwide",
+        "notes": "Water footprint based on wheat grain; processing adds minimal water",
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "rice",
@@ -474,7 +670,26 @@
         "calories_per_dollar": 1545.96,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "medium",
+        "storage_life_tier": "long",
+        "typical_local_production": "Limited US production (AR, CA, LA, MO, TX); much is imported. Dry rice stores for years.",
+        "notes": "Rice has higher water footprint than most other grains per calorie",
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "flour",
@@ -501,7 +716,26 @@
         "calories_per_dollar": 3035.86,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "low",
+        "storage_life_tier": "long",
+        "typical_local_production": "Wheat grown widely in Midwest/Great Plains; flour milled regionally. Stores 1 year+.",
+        "notes": null,
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "pasta",
@@ -528,7 +762,26 @@
         "calories_per_dollar": 1224.83,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "low",
+        "storage_life_tier": "long",
+        "typical_local_production": "Wheat-based; manufactured widely. Dry pasta stores 2+ years.",
+        "notes": null,
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "coffee",
@@ -555,7 +808,26 @@
         "calories_per_dollar": 0.95,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "high",
+        "storage_life_tier": "long",
+        "typical_local_production": "Not grown commercially in mainland US; imported mainly from Latin America and Africa.",
+        "notes": "Coffee has a very high water footprint per kg \u2014 among the highest of common beverages",
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "oj-frozen",
@@ -582,7 +854,26 @@
         "calories_per_dollar": 147.94,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "medium",
+        "storage_life_tier": "long",
+        "typical_local_production": "Orange production mainly in FL and CA; frozen concentrate extends shelf life to 1 year+.",
+        "notes": null,
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "chicken-whole",
@@ -609,7 +900,26 @@
         "calories_per_dollar": 276.23,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "medium",
+        "storage_life_tier": "short",
+        "typical_local_production": "Common nationwide (broiler production widespread)",
+        "notes": "Poultry generally lower water footprint than beef per kg protein",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "ground-beef-all",
@@ -636,7 +946,26 @@
         "calories_per_dollar": 163.1,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "high",
+        "storage_life_tier": "short",
+        "typical_local_production": "Cattle-producing states (TX, NE, KS, OK); broad BLS price series across all fat levels",
+        "notes": "Beef has the highest water footprint per kg of common proteins",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "beef-roasts-all",
@@ -663,7 +992,26 @@
         "calories_per_dollar": 67.9,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "high",
+        "storage_life_tier": "short",
+        "typical_local_production": "Cattle-producing states (TX, NE, KS, OK); broad series covering all roast cuts",
+        "notes": "Beef has the highest water footprint per kg of common proteins",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "beef-steaks-all",
@@ -690,7 +1038,26 @@
         "calories_per_dollar": 41.45,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "high",
+        "storage_life_tier": "short",
+        "typical_local_production": "Cattle-producing states (TX, NE, KS, OK); broad series covering all steak cuts",
+        "notes": "Beef has the highest water footprint per kg of common proteins",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "beef-other",
@@ -717,7 +1084,26 @@
         "calories_per_dollar": 112.08,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "high",
+        "storage_life_tier": "short",
+        "typical_local_production": "Cattle-producing states (TX, NE, KS, OK); miscellaneous beef cuts",
+        "notes": "Beef has the highest water footprint per kg of common proteins",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "ground-chuck",
@@ -744,7 +1130,26 @@
         "calories_per_dollar": 171.49,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "high",
+        "storage_life_tier": "short",
+        "typical_local_production": "Common in cattle-producing states (TX, NE, KS, OK); cut from the chuck section",
+        "notes": "Beef has the highest water footprint per kg of common proteins",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "ground-beef-lean",
@@ -771,7 +1176,26 @@
         "calories_per_dollar": 72.06,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "high",
+        "storage_life_tier": "short",
+        "typical_local_production": "Cattle-producing states (TX, NE, KS, OK); lower fat content than regular ground beef",
+        "notes": "Beef has the highest water footprint per kg of common proteins",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "beef-stew",
@@ -798,7 +1222,26 @@
         "calories_per_dollar": 62.47,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "high",
+        "storage_life_tier": "short",
+        "typical_local_production": "Cattle-producing states (TX, NE, KS, OK); typically chuck or round trimmed for stewing",
+        "notes": "Beef has the highest water footprint per kg of common proteins",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "chuck-roast-choice",
@@ -825,7 +1268,26 @@
         "calories_per_dollar": 117.56,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "high",
+        "storage_life_tier": "short",
+        "typical_local_production": "Common in cattle-producing states (TX, NE, KS, OK); USDA Choice grade chuck",
+        "notes": "Beef has the highest water footprint per kg of common proteins",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "round-roast",
@@ -852,7 +1314,26 @@
         "calories_per_dollar": 73.71,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "high",
+        "storage_life_tier": "short",
+        "typical_local_production": "Common in cattle-producing states (TX, NE, KS, OK); leaner roast from the round",
+        "notes": "Beef has the highest water footprint per kg of common proteins",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "steak-round",
@@ -879,7 +1360,26 @@
         "calories_per_dollar": 72.94,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "high",
+        "storage_life_tier": "short",
+        "typical_local_production": "Common in cattle-producing states (TX, NE, KS, OK); lean cut from the round",
+        "notes": "Beef has the highest water footprint per kg of common proteins",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "steak-round-choice",
@@ -906,7 +1406,26 @@
         "calories_per_dollar": 69.51,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "high",
+        "storage_life_tier": "short",
+        "typical_local_production": "Common in cattle-producing states (TX, NE, KS, OK); USDA Choice grade round steak",
+        "notes": "Beef has the highest water footprint per kg of common proteins",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "steak-sirloin",
@@ -933,7 +1452,26 @@
         "calories_per_dollar": 57.83,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "high",
+        "storage_life_tier": "short",
+        "typical_local_production": "Common in cattle-producing states (TX, NE, KS, OK); premium cut from the loin",
+        "notes": "Beef has the highest water footprint per kg of common proteins",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "pork-chops-all",
@@ -960,7 +1498,26 @@
         "calories_per_dollar": 773.05,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "medium",
+        "storage_life_tier": "short",
+        "typical_local_production": "Common in pork-producing states (IA, NC, MN); broad BLS series across all chop cuts",
+        "notes": null,
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "pork-other",
@@ -987,7 +1544,26 @@
         "calories_per_dollar": 903.6,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "medium",
+        "storage_life_tier": "short",
+        "typical_local_production": "Pork-producing states (IA, NC, MN); miscellaneous pork cuts",
+        "notes": null,
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "pork-chops-center-cut",
@@ -1014,7 +1590,26 @@
         "calories_per_dollar": 172.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "medium",
+        "storage_life_tier": "short",
+        "typical_local_production": "Common in pork-producing states (IA, NC, MN); leaner center loin cut",
+        "notes": null,
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "pork-chops-boneless",
@@ -1041,7 +1636,26 @@
         "calories_per_dollar": 207.33,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "medium",
+        "storage_life_tier": "short",
+        "typical_local_production": "Common in pork-producing states (IA, NC, MN)",
+        "notes": null,
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "ham-boneless",
@@ -1068,7 +1682,26 @@
         "calories_per_dollar": 203.64,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "medium",
+        "storage_life_tier": "medium",
+        "typical_local_production": "Common in pork-producing states (IA, NC, MN); cured and cooked for longer shelf life",
+        "notes": "Curing extends shelf life relative to fresh pork; whole unopened ham keeps ~1\u20132 weeks refrigerated",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "chicken-legs",
@@ -1095,7 +1728,26 @@
         "calories_per_dollar": 185.42,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "medium",
+        "storage_life_tier": "short",
+        "typical_local_production": "Common nationwide (broiler production widespread)",
+        "notes": "Poultry generally lower water footprint than beef per kg protein",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "american-cheese",
@@ -1122,7 +1774,26 @@
         "calories_per_dollar": 287.7,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "high",
+        "storage_life_tier": "long",
+        "typical_local_production": "Common in dairy states; processed slices have longer shelf life than natural cheese",
+        "notes": null,
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "butter-stick",
@@ -1149,7 +1820,26 @@
         "calories_per_dollar": 827.75,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "high",
+        "storage_life_tier": "medium",
+        "typical_local_production": "Common in dairy states; concentrated dairy fat product",
+        "notes": "High water footprint inherits from dairy; refrigerated shelf life ~1\u20133 months",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "lowfat-milk",
@@ -1176,7 +1866,26 @@
         "calories_per_dollar": 749.22,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "high",
+        "storage_life_tier": "short",
+        "typical_local_production": "Common in dairy-producing states (CA, WI, NY, ID)",
+        "notes": null,
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "ice-cream",
@@ -1203,7 +1912,26 @@
         "calories_per_dollar": 189.37,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "high",
+        "storage_life_tier": "medium",
+        "typical_local_production": "Manufactured nationwide; requires continuous frozen storage",
+        "notes": "Dairy and sugar base both carry significant water footprints; quality declines after 2\u20134 months",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "yogurt",
@@ -1230,7 +1958,26 @@
         "calories_per_dollar": 90.01,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "high",
+        "storage_life_tier": "short",
+        "typical_local_production": "Common in dairy-producing states; widely manufactured nationwide",
+        "notes": null,
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "lettuce-romaine",
@@ -1257,7 +2004,26 @@
         "calories_per_dollar": 21.28,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "low",
+        "storage_life_tier": "short",
+        "typical_local_production": "Grown mainly in CA and AZ. Very short shelf life; highly perishable.",
+        "notes": null,
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "grapefruit",
@@ -1284,7 +2050,26 @@
         "calories_per_dollar": 85.32,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "low",
+        "storage_life_tier": "medium",
+        "typical_local_production": "Grown mainly in FL, TX, and CA. Keeps 2\u20133 weeks refrigerated.",
+        "notes": null,
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "lemons",
@@ -1311,7 +2096,26 @@
         "calories_per_dollar": 62.91,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "low",
+        "storage_life_tier": "medium",
+        "typical_local_production": "Grown mainly in CA and AZ. Keeps 3\u20134 weeks refrigerated.",
+        "notes": null,
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "strawberries",
@@ -1338,7 +2142,26 @@
         "calories_per_dollar": 41.95,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "low",
+        "storage_life_tier": "short",
+        "typical_local_production": "Grown mainly in CA and FL. Highly perishable; best within 1\u20133 days of purchase.",
+        "notes": null,
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "cookies-chocolate-chip",
@@ -1365,7 +2188,26 @@
         "calories_per_dollar": 388.72,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "medium",
+        "storage_life_tier": "long",
+        "typical_local_production": "Manufactured nationwide; ingredients (wheat, butter, eggs, sugar) sourced regionally",
+        "notes": "Medium water footprint reflects dairy and sugar inputs; packaged cookies keep 6\u20139 months",
+        "water_source": {
+          "key": "mekonnen2012",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "A global assessment of the water footprint of farm animals and animal products",
+          "year": 2012,
+          "url": "https://doi.org/10.1007/s10021-011-9517-8"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "corn-canned",
@@ -1392,7 +2234,26 @@
         "calories_per_dollar": 248.36,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "low",
+        "storage_life_tier": "long",
+        "typical_local_production": "Corn grown widely in the Midwest (IA, IL, NE, MN). Canned for long shelf stability.",
+        "notes": null,
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "potato-chips",
@@ -1419,7 +2280,26 @@
         "calories_per_dollar": 366.74,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "low",
+        "storage_life_tier": "long",
+        "typical_local_production": "Potatoes grown widely in ID, WA, WI; chips manufactured regionally. Keeps ~2\u20133 months unopened.",
+        "notes": null,
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "sugar-all-sizes",
@@ -1446,7 +2326,26 @@
         "calories_per_dollar": 1697.37,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "medium",
+        "storage_life_tier": "long",
+        "typical_local_production": "Derived from sugarcane (FL, LA, TX) or sugar beets (MN, ID, ND). Indefinite shelf life when dry.",
+        "notes": "Water footprint reflects sugarcane or beet cultivation; sugarcane is higher",
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "soft-drinks-2l",
@@ -1473,7 +2372,26 @@
         "calories_per_dollar": 382.51,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "low",
+        "storage_life_tier": "long",
+        "typical_local_production": "Manufactured nationally; primary ingredient is water with corn-syrup sweetener.",
+        "notes": "Low direct water footprint as a product; corn syrup adds indirect footprint",
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "soft-drinks-cans",
@@ -1500,7 +2418,26 @@
         "calories_per_dollar": 248.96,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "low",
+        "storage_life_tier": "long",
+        "typical_local_production": "Manufactured nationally; primary ingredient is water with corn-syrup sweetener.",
+        "notes": "Low direct water footprint as a product; corn syrup adds indirect footprint",
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "beer",
@@ -1527,7 +2464,26 @@
         "calories_per_dollar": 113.82,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "medium",
+        "storage_life_tier": "long",
+        "typical_local_production": "Brewed widely across the US; primary ingredients are malted barley, hops, water.",
+        "notes": "Water footprint mainly from barley cultivation; beer is lower than wine per liter",
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "wine",
@@ -1554,7 +2510,26 @@
         "calories_per_dollar": 61.41,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "medium",
+        "storage_life_tier": "long",
+        "typical_local_production": "Produced mainly in CA, WA, OR. Stable for months to years depending on variety.",
+        "notes": "Water footprint reflects grape cultivation; varies significantly by region and variety",
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     },
     {
       "slug": "vodka",
@@ -1581,7 +2556,26 @@
         "calories_per_dollar": 184.81,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
-      "sustainability": null
+      "sustainability": {
+        "water_use_tier": "medium",
+        "storage_life_tier": "long",
+        "typical_local_production": "Distilled nationwide from grain (corn, wheat) or potatoes; essentially indefinite shelf life sealed.",
+        "notes": "Water footprint from grain or potato base; distillation process adds minimal water",
+        "water_source": {
+          "key": "mekonnen2010",
+          "authors": "Mekonnen, M.M. & Hoekstra, A.Y.",
+          "title": "The green, blue and grey water footprint of crops and derived crop products",
+          "year": 2010,
+          "url": "https://waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf"
+        },
+        "storage_source": {
+          "key": "usda_storage2023",
+          "authors": "USDA Food Safety and Inspection Service",
+          "title": "FoodKeeper App \u2014 Food Product Storage Recommendations",
+          "year": 2023,
+          "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app"
+        }
+      }
     }
   ]
 }
