@@ -926,8 +926,8 @@ FOODS: list[FoodSeed] = [
         slug="potato-chips",
         display_name="Potato Chips",
         category="pantry",
-        avg_price_series_id="APU0000718311",  # ap: 718311 — Potato chips, per 16 oz.
-        avg_price_unit="per 16 oz",
+        avg_price_series_id="APU0000718311",  # ap: 718311 — Potato chips, per 16 oz. (16 dry oz = 1 lb)
+        avg_price_unit="per lb",
         cpi_series_id=None,
         fdc_query="potato chips plain salted",
         fdc_data_type="SR Legacy",
