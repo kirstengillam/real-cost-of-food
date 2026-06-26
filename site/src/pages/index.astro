@@ -29,7 +29,7 @@ const byCategory = foods.reduce((acc, food) => {
                 <span class="line-dots" aria-hidden="true"></span>
                 <span class="food-price">
                   {food.price.price_source === 'bls_avg_price' && food.price.avg_price_usd != null
-                    ? `$${food.price.avg_price_usd.toFixed(2)}`
+                    ? `$${food.price.avg_price_usd.toFixed(2)}${food.price.avg_price_unit ? `/${food.price.avg_price_unit.replace('per ', '')}` : ''}`
                     : 'estimate pending'}
                 </span>
               </a>
