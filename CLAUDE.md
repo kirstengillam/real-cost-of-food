@@ -76,11 +76,6 @@ site/  Astro static site, reads foods_export.json at BUILD time, outputs static 
    add it explicitly there with a comment — don't inline a conversion
    factor elsewhere or silently reuse a wrong one.
 
-## Current state / what's verified vs. not
-
-No BLS series exists at all (will need USDA ERS or manual sampling, and
-must display as `price_source='estimate'`): dry beans, lentils, tofu.
-
 ## Useful commands
 
 ```bash

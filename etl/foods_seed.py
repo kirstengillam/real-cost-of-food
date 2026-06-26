@@ -104,48 +104,6 @@ FOODS: list[FoodSeed] = [
         price_verified=True,
     ),
     FoodSeed(
-        slug="frankfurters",
-        display_name="Frankfurters (All Meat)",
-        category="protein",
-        avg_price_series_id="APU0000705111",  # ap: 705111 — Frankfurters, all meat or all beef, per lb.
-        avg_price_unit="per lb",
-        cpi_series_id="CUUR0000SS05011",      # cu: SS05011 — Frankfurters
-        fdc_query="frankfurters beef",
-        fdc_data_type="SR Legacy",
-        serving_unit="100g",
-        price_verified=True,
-        # price_verified=True,
-        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
-    ),
-    FoodSeed(
-        slug="tuna",
-        display_name="Tuna (Light, Chunk, Canned)",
-        category="protein",
-        avg_price_series_id="APU0000707111",  # ap: 707111 — Tuna, light, chunk, per lb.
-        avg_price_unit="per lb",
-        cpi_series_id="CUUR0000SS07011",      # cu: SS07011 — Shelf stable fish and seafood
-        fdc_query="tuna light canned in water",
-        fdc_data_type="SR Legacy",
-        serving_unit="100g",
-        price_verified=True,
-        # price_verified=True,
-        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
-    ),
-    FoodSeed(
-        slug="peanut-butter",
-        display_name="Peanut Butter (Creamy)",
-        category="protein",
-        avg_price_series_id="APU0000716141",  # ap: 716141 — Peanut butter, creamy, all sizes, per lb.
-        avg_price_unit="per lb",
-        cpi_series_id="CUUR0000SS16014",      # cu: SS16014 — Peanut butter
-        fdc_query="peanut butter smooth style without salt",
-        fdc_data_type="SR Legacy",
-        serving_unit="100g",
-        price_verified=True,
-        # price_verified=True,
-        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
-    ),
-    FoodSeed(
         slug="dry-beans",
         display_name="Dry Beans (Any Type)",
         category="protein",
@@ -158,19 +116,6 @@ FOODS: list[FoodSeed] = [
 
         price_verified=True,
         # notes="BLS series covers 'any type' dried beans — price reflects category average, not pinto specifically.",
-    ),
-    FoodSeed(
-        slug="eggs-grade-aa",
-        display_name="Eggs (Grade AA, Large)",
-        category="protein",
-        avg_price_series_id="APU0000708112",  # ap: 708112 — Eggs, grade AA, large, per doz.
-        avg_price_unit="per dozen",
-        cpi_series_id=None,
-        fdc_query="egg whole raw",
-        fdc_data_type="SR Legacy",
-        serving_unit="100g (~2 large eggs)",
-        price_verified=True,
-        notes="Series ended M10 2025. Higher grade than grade-A; nutritionally equivalent.",
     ),
     FoodSeed(
         slug="ground-beef-all",
@@ -259,19 +204,6 @@ FOODS: list[FoodSeed] = [
         fdc_data_type="SR Legacy",
         serving_unit="100g",
         price_verified=True,
-    ),
-    FoodSeed(
-        slug="chuck-roast",
-        display_name="Chuck Roast (Ungraded)",
-        category="protein",
-        avg_price_series_id="APU0000703212",  # ap: 703212 — Chuck roast, graded and ungraded, excl. USDA Prime and Choice, per lb.
-        avg_price_unit="per lb",
-        cpi_series_id=None,
-        fdc_query="beef chuck arm pot roast raw",
-        fdc_data_type="SR Legacy",
-        serving_unit="100g",
-        price_verified=True,
-        notes="Series ended M10 2025.",
     ),
     FoodSeed(
         slug="chuck-roast-choice",
@@ -396,19 +328,6 @@ FOODS: list[FoodSeed] = [
         price_verified=True,
     ),
     FoodSeed(
-        slug="bologna",
-        display_name="Bologna (All Beef or Mixed)",
-        category="protein",
-        avg_price_series_id="APU0000705121",  # ap: 705121 — Bologna, all beef or mixed, per lb.
-        avg_price_unit="per lb",
-        cpi_series_id=None,
-        fdc_query="bologna beef",
-        fdc_data_type="SR Legacy",
-        serving_unit="100g",
-        price_verified=True,
-        notes="Series ended M10 2025.",
-    ),
-    FoodSeed(
         slug="chicken-breast",
         display_name="Chicken Breast (Boneless)",
         category="protein",
@@ -434,22 +353,6 @@ FOODS: list[FoodSeed] = [
         price_verified=True,
     ),
     FoodSeed(
-        slug="turkey-frozen",
-        display_name="Turkey (Frozen, Whole)",
-        category="protein",
-        avg_price_series_id="APU0000706311",  # ap: 706311 — Turkey, frozen, whole, per lb.
-        avg_price_unit="per lb",
-        cpi_series_id=None,
-        fdc_query="turkey whole raw",
-        fdc_data_type="SR Legacy",
-        serving_unit="100g",
-        price_verified=True,
-        notes="Series ended M10 2025.",
-    ),
-
-    # ── Dairy ─────────────────────────────────────────────────────────────────
-
-    FoodSeed(
         slug="whole-milk",
         display_name="Milk (Whole, Fortified)",
         category="dairy",
@@ -460,20 +363,6 @@ FOODS: list[FoodSeed] = [
         fdc_data_type="SR Legacy",
         serving_unit="100g",
         price_verified=True,
-    ),
-    FoodSeed(
-        slug="butter",
-        display_name="Butter (Salted, Grade AA)",
-        category="dairy",
-        avg_price_series_id="APU0000710111",  # ap: 710111 — Butter, salted, grade AA, stick, per lb.
-        avg_price_unit="per lb",
-        cpi_series_id="CUUR0000SS10011",      # cu: SS10011 — Butter
-        fdc_query="butter salted",
-        fdc_data_type="SR Legacy",
-        serving_unit="100g",
-        price_verified=True,
-        # price_verified=True,
-        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
     FoodSeed(
         slug="cheddar-cheese",
@@ -541,19 +430,6 @@ FOODS: list[FoodSeed] = [
         price_verified=True,
     ),
     FoodSeed(
-        slug="margarine",
-        display_name="Margarine (Soft, Tubs)",
-        category="dairy",
-        avg_price_series_id="APU0000716116",  # ap: 716116 — Margarine, soft, tubs, per lb.
-        avg_price_unit="per lb",
-        cpi_series_id=None,
-        fdc_query="margarine regular",
-        fdc_data_type="SR Legacy",
-        serving_unit="100g",
-        price_verified=True,
-        notes="Series ended M10 2025.",
-    ),
-    FoodSeed(
         slug="yogurt",
         display_name="Yogurt",
         category="dairy",
@@ -580,20 +456,6 @@ FOODS: list[FoodSeed] = [
         fdc_data_type="SR Legacy",
         serving_unit="100g",
         price_verified=True,
-    ),
-    FoodSeed(
-        slug="apples",
-        display_name="Apples (Red Delicious)",
-        category="produce",
-        avg_price_series_id="APU0000711111",  # ap: 711111 — Apples, Red Delicious, per lb.
-        avg_price_unit="per lb",
-        cpi_series_id="CUUR0000SEFK01",       # cu: SEFK01 — Apples
-        fdc_query="apples raw with skin",
-        fdc_data_type="SR Legacy",
-        serving_unit="100g",
-        price_verified=True,
-        # price_verified=True,
-        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
     FoodSeed(
         slug="oranges",
@@ -650,35 +512,6 @@ FOODS: list[FoodSeed] = [
         # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
     FoodSeed(
-        slug="carrots",
-        display_name="Carrots",
-        category="produce",
-        avg_price_series_id="APU0000712403",  # ap: 712403 — Carrots, short trimmed and topped, per lb.
-        avg_price_unit="per lb",
-        cpi_series_id=None,  # "CUUR0000SEFL04", # cu: SEFL04 — Other fresh vegetables (no carrot-specific series)
-        fdc_query="carrots raw",
-        fdc_data_type="SR Legacy",
-        serving_unit="100g",
-        price_verified=True,
-        # price_verified=True,
-        # notes="CPI series SEFL04 covers all 'other fresh vegetables' — inflation % reflects the category, not carrots specifically.",
-    ),
-    FoodSeed(
-        slug="broccoli",
-        display_name="Broccoli",
-        category="produce",
-        avg_price_series_id="APU0000712412",  # ap: 712412 — Broccoli, per lb.
-        avg_price_unit="per lb",
-        cpi_series_id="CUUR0000SEFL04",       # cu: SEFL04 — Other fresh vegetables (shared with carrots)
-        fdc_query="broccoli raw",
-        fdc_data_type="SR Legacy",
-        serving_unit="100g",
-        price_verified=True,
-        # price_verified=True,
-        # notes="CPI series SEFL04 covers all 'other fresh vegetables' — inflation % reflects the category, not broccoli specifically.",
-    ),
-
-    FoodSeed(
         slug="lettuce-romaine",
         display_name="Lettuce (Romaine)",
         category="produce",
@@ -690,19 +523,6 @@ FOODS: list[FoodSeed] = [
         serving_unit="100g",
         price_verified=True,
         notes="Newer BLS series (FL prefix).",
-    ),
-    FoodSeed(
-        slug="sweet-peppers",
-        display_name="Peppers (Sweet)",
-        category="produce",
-        avg_price_series_id="APU0000712406",  # ap: 712406 — Peppers, sweet, per lb.
-        avg_price_unit="per lb",
-        cpi_series_id=None,
-        fdc_query="peppers sweet green raw",
-        fdc_data_type="SR Legacy",
-        serving_unit="100g",
-        price_verified=True,
-        notes="Series ended M10 2025.",
     ),
     FoodSeed(
         slug="grapefruit",
@@ -717,19 +537,6 @@ FOODS: list[FoodSeed] = [
         price_verified=True,
     ),
     FoodSeed(
-        slug="grapes",
-        display_name="Grapes (Thompson Seedless)",
-        category="produce",
-        avg_price_series_id="APU0000711417",  # ap: 711417 — Grapes, Thompson Seedless, per lb.
-        avg_price_unit="per lb",
-        cpi_series_id=None,
-        fdc_query="grapes red or green raw",
-        fdc_data_type="SR Legacy",
-        serving_unit="100g",
-        price_verified=True,
-        notes="Series ended M10 2025.",
-    ),
-    FoodSeed(
         slug="lemons",
         display_name="Lemons",
         category="produce",
@@ -740,45 +547,6 @@ FOODS: list[FoodSeed] = [
         fdc_data_type="SR Legacy",
         serving_unit="100g",
         price_verified=True,
-    ),
-    FoodSeed(
-        slug="peaches",
-        display_name="Peaches",
-        category="produce",
-        avg_price_series_id="APU0000711414",  # ap: 711414 — Peaches, per lb.
-        avg_price_unit="per lb",
-        cpi_series_id=None,
-        fdc_query="peaches raw",
-        fdc_data_type="SR Legacy",
-        serving_unit="100g",
-        price_verified=True,
-        notes="Series ended M10 2025; seasonal item.",
-    ),
-    FoodSeed(
-        slug="pears",
-        display_name="Pears (Anjou)",
-        category="produce",
-        avg_price_series_id="APU0000711413",  # ap: 711413 — Pears, Anjou, per lb.
-        avg_price_unit="per lb",
-        cpi_series_id=None,
-        fdc_query="pears raw",
-        fdc_data_type="SR Legacy",
-        serving_unit="100g",
-        price_verified=True,
-        notes="Series ended M10 2025.",
-    ),
-    FoodSeed(
-        slug="cherries",
-        display_name="Cherries",
-        category="produce",
-        avg_price_series_id="APU0000711418",  # ap: 711418 — Cherries, per lb.
-        avg_price_unit="per lb",
-        cpi_series_id=None,
-        fdc_query="cherries sweet raw",
-        fdc_data_type="SR Legacy",
-        serving_unit="100g",
-        price_verified=True,
-        notes="Series ended M10 2025; seasonal item.",
     ),
     FoodSeed(
         slug="strawberries",
@@ -868,19 +636,6 @@ FOODS: list[FoodSeed] = [
     ),
 
     FoodSeed(
-        slug="bread-french",
-        display_name="Bread (French)",
-        category="grain",
-        avg_price_series_id="APU0000702112",  # ap: 702112 — Bread, French, per lb.
-        avg_price_unit="per lb",
-        cpi_series_id=None,
-        fdc_query="bread french or vienna toasted",
-        fdc_data_type="SR Legacy",
-        serving_unit="100g",
-        price_verified=True,
-        notes="Series ended M10 2025.",
-    ),
-    FoodSeed(
         slug="cookies-chocolate-chip",
         display_name="Cookies (Chocolate Chip)",
         category="grain",
@@ -894,21 +649,6 @@ FOODS: list[FoodSeed] = [
     ),
 
     # ── Pantry ────────────────────────────────────────────────────────────────
-
-    FoodSeed(
-        slug="sugar",
-        display_name="Sugar (White, Granulated)",
-        category="pantry",
-        avg_price_series_id="APU0000715212",  # ap: 715212 — Sugar, white, 33-80 oz. pkg, per lb.
-        avg_price_unit="per lb",
-        cpi_series_id="CUUR0000SEFR01",       # cu: SEFR01 — Sugar and sugar substitutes
-        fdc_query="sugars granulated",
-        fdc_data_type="SR Legacy",
-        serving_unit="100g",
-        price_verified=True,
-        # price_verified=True,
-        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
-    ),
 
     FoodSeed(
         slug="corn-canned",
@@ -964,20 +704,6 @@ FOODS: list[FoodSeed] = [
 
         price_verified=True,
         # notes="ID from official ap.item; confirm live. Nutrition query reflects brewed coffee, not dry grounds.",
-    ),
-    FoodSeed(
-        slug="cola",
-        display_name="Cola (Non-Diet, 2 Liter)",
-        category="beverage",
-        avg_price_series_id="APU0000717114",  # ap: 717114 — Cola, nondiet, per 2 liters
-        avg_price_unit="per 2 liters",
-        cpi_series_id="CUUR0000SEFN01",       # cu: SEFN01 — Carbonated drinks
-        fdc_query="carbonated beverage cola",
-        fdc_data_type="SR Legacy",
-        serving_unit="100ml",
-        price_verified=True,
-        # price_verified=True,
-        # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
     FoodSeed(
         slug="oj-frozen",

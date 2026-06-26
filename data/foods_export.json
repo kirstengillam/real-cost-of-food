@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T18:55:34.467249+00:00",
+  "generated_at": "2026-06-26T19:47:13.131089+00:00",
   "foods": [
     {
       "slug": "eggs",
@@ -342,209 +342,6 @@
       }
     },
     {
-      "slug": "lentils",
-      "display_name": "Lentils (Dry)",
-      "category": "protein",
-      "serving_unit": "100g dry",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 371.0,
-        "protein_g": 36.17,
-        "fat_g": 9.74,
-        "carbs_g": 40.37,
-        "fiber_g": 18.9,
-        "source_fdc_id": 172423
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": {
-        "water_use_tier": "low",
-        "storage_life_tier": "long",
-        "typical_local_production": "Limited US production (mainly ID, WA, ND, MT); excellent dry storage life",
-        "notes": null,
-        "water_source": null,
-        "storage_source": null
-      }
-    },
-    {
-      "slug": "tofu",
-      "display_name": "Tofu (Firm)",
-      "category": "protein",
-      "serving_unit": "100g",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 144.0,
-        "protein_g": 17.27,
-        "fat_g": 8.72,
-        "carbs_g": 2.78,
-        "fiber_g": 2.3,
-        "source_fdc_id": 172475
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": {
-        "water_use_tier": "low",
-        "storage_life_tier": "short",
-        "typical_local_production": "Soybeans widely grown in US Midwest, though tofu processing is regionally concentrated",
-        "notes": null,
-        "water_source": null,
-        "storage_source": null
-      }
-    },
-    {
-      "slug": "frankfurters",
-      "display_name": "Frankfurters (All Meat)",
-      "category": "protein",
-      "serving_unit": "100g",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 322.0,
-        "protein_g": 11.69,
-        "fat_g": 29.36,
-        "carbs_g": 2.66,
-        "fiber_g": 0.0,
-        "source_fdc_id": 174614
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
-      "slug": "tuna",
-      "display_name": "Tuna (Light, Chunk, Canned)",
-      "category": "protein",
-      "serving_unit": "100g",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 116.0,
-        "protein_g": 25.51,
-        "fat_g": 0.82,
-        "carbs_g": 0.0,
-        "fiber_g": 0.0,
-        "source_fdc_id": 171986
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
-      "slug": "peanut-butter",
-      "display_name": "Peanut Butter (Creamy)",
-      "category": "protein",
-      "serving_unit": "100g",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 598.0,
-        "protein_g": 22.21,
-        "fat_g": 51.36,
-        "carbs_g": 22.31,
-        "fiber_g": 5.0,
-        "source_fdc_id": 172470
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
-      "slug": "butter",
-      "display_name": "Butter (Salted, Grade AA)",
-      "category": "dairy",
-      "serving_unit": "100g",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 717.0,
-        "protein_g": 0.85,
-        "fat_g": 81.11,
-        "carbs_g": 0.06,
-        "fiber_g": 0.0,
-        "source_fdc_id": 173410
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
-      "slug": "apples",
-      "display_name": "Apples (Red Delicious)",
-      "category": "produce",
-      "serving_unit": "100g",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 48.0,
-        "protein_g": 0.27,
-        "fat_g": 0.13,
-        "carbs_g": 12.76,
-        "fiber_g": 1.3,
-        "source_fdc_id": 171689
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
       "slug": "oranges",
       "display_name": "Oranges (Navel)",
       "category": "produce",
@@ -621,60 +418,6 @@
       "value_metrics": {
         "protein_g_per_dollar": 2.08,
         "calories_per_dollar": 32.33,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
-      "slug": "carrots",
-      "display_name": "Carrots",
-      "category": "produce",
-      "serving_unit": "100g",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 41.0,
-        "protein_g": 0.93,
-        "fat_g": 0.24,
-        "carbs_g": 9.58,
-        "fiber_g": 2.8,
-        "source_fdc_id": 170393
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
-      "slug": "broccoli",
-      "display_name": "Broccoli",
-      "category": "produce",
-      "serving_unit": "100g",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 34.0,
-        "protein_g": 2.82,
-        "fat_g": 0.37,
-        "carbs_g": 6.64,
-        "fiber_g": 2.6,
-        "source_fdc_id": 170379
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": null
@@ -788,33 +531,6 @@
       "sustainability": null
     },
     {
-      "slug": "sugar",
-      "display_name": "Sugar (White, Granulated)",
-      "category": "pantry",
-      "serving_unit": "100g",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 387.0,
-        "protein_g": 0.0,
-        "fat_g": 0.0,
-        "carbs_g": 99.98,
-        "fiber_g": 0.0,
-        "source_fdc_id": 169655
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
       "slug": "coffee",
       "display_name": "Coffee (Ground Roast)",
       "category": "beverage",
@@ -837,33 +553,6 @@
       "value_metrics": {
         "protein_g_per_dollar": 0.14,
         "calories_per_dollar": 0.95,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
-      "slug": "cola",
-      "display_name": "Cola (Non-Diet, 2 Liter)",
-      "category": "beverage",
-      "serving_unit": "100ml",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per 2 liters",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 42.0,
-        "protein_g": 0.0,
-        "fat_g": 0.25,
-        "carbs_g": 10.36,
-        "fiber_g": 0.0,
-        "source_fdc_id": 174852
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": null
@@ -918,33 +607,6 @@
       "value_metrics": {
         "protein_g_per_dollar": 39.83,
         "calories_per_dollar": 276.23,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
-      "slug": "eggs-grade-aa",
-      "display_name": "Eggs (Grade AA, Large)",
-      "category": "protein",
-      "serving_unit": "100g (~2 large eggs)",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per dozen",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 143.0,
-        "protein_g": 12.56,
-        "fat_g": 9.51,
-        "carbs_g": 0.72,
-        "fiber_g": 0.0,
-        "source_fdc_id": 171287
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": null
@@ -1134,33 +796,6 @@
       "value_metrics": {
         "protein_g_per_dollar": 11.03,
         "calories_per_dollar": 62.47,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
-      "slug": "chuck-roast",
-      "display_name": "Chuck Roast (Ungraded)",
-      "category": "protein",
-      "serving_unit": "100g",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 249.0,
-        "protein_g": 19.14,
-        "fat_g": 18.57,
-        "carbs_g": 0.0,
-        "fiber_g": 0.0,
-        "source_fdc_id": 168668
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": null
@@ -1436,33 +1071,6 @@
       "sustainability": null
     },
     {
-      "slug": "bologna",
-      "display_name": "Bologna (All Beef or Mixed)",
-      "category": "protein",
-      "serving_unit": "100g",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 299.0,
-        "protein_g": 10.91,
-        "fat_g": 26.13,
-        "carbs_g": 4.29,
-        "fiber_g": 0.0,
-        "source_fdc_id": 172012
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
       "slug": "chicken-legs",
       "display_name": "Chicken Legs (Bone-In)",
       "category": "protein",
@@ -1485,33 +1093,6 @@
       "value_metrics": {
         "protein_g_per_dollar": 41.66,
         "calories_per_dollar": 185.42,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
-      "slug": "turkey-frozen",
-      "display_name": "Turkey (Frozen, Whole)",
-      "category": "protein",
-      "serving_unit": "100g",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 124.0,
-        "protein_g": 18.18,
-        "fat_g": 5.09,
-        "carbs_g": 0.07,
-        "fiber_g": 0.0,
-        "source_fdc_id": 171083
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": null
@@ -1618,35 +1199,8 @@
         "source_fdc_id": 167575
       },
       "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
-      "slug": "margarine",
-      "display_name": "Margarine (Soft, Tubs)",
-      "category": "dairy",
-      "serving_unit": "100g",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 719.0,
-        "protein_g": 0.9,
-        "fat_g": 80.5,
-        "carbs_g": 0.9,
-        "fiber_g": 0.0,
-        "source_fdc_id": 171018
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
+        "protein_g_per_dollar": 3.2,
+        "calories_per_dollar": 189.37,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": null
@@ -1672,8 +1226,8 @@
         "source_fdc_id": 171284
       },
       "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
+        "protein_g_per_dollar": 5.12,
+        "calories_per_dollar": 90.01,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": null
@@ -1706,33 +1260,6 @@
       "sustainability": null
     },
     {
-      "slug": "sweet-peppers",
-      "display_name": "Peppers (Sweet)",
-      "category": "produce",
-      "serving_unit": "100g",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 20.0,
-        "protein_g": 0.86,
-        "fat_g": 0.17,
-        "carbs_g": 4.64,
-        "fiber_g": 1.7,
-        "source_fdc_id": 170427
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
       "slug": "grapefruit",
       "display_name": "Grapefruit",
       "category": "produce",
@@ -1755,33 +1282,6 @@
       "value_metrics": {
         "protein_g_per_dollar": 1.56,
         "calories_per_dollar": 85.32,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
-      "slug": "grapes",
-      "display_name": "Grapes (Thompson Seedless)",
-      "category": "produce",
-      "serving_unit": "100g",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 69.0,
-        "protein_g": 0.72,
-        "fat_g": 0.16,
-        "carbs_g": 18.1,
-        "fiber_g": 0.9,
-        "source_fdc_id": 174683
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": null
@@ -1814,87 +1314,6 @@
       "sustainability": null
     },
     {
-      "slug": "peaches",
-      "display_name": "Peaches",
-      "category": "produce",
-      "serving_unit": "100g",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 39.0,
-        "protein_g": 0.91,
-        "fat_g": 0.25,
-        "carbs_g": 9.54,
-        "fiber_g": 1.5,
-        "source_fdc_id": 169928
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
-      "slug": "pears",
-      "display_name": "Pears (Anjou)",
-      "category": "produce",
-      "serving_unit": "100g",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 57.0,
-        "protein_g": 0.36,
-        "fat_g": 0.14,
-        "carbs_g": 15.23,
-        "fiber_g": 3.1,
-        "source_fdc_id": 169118
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
-      "slug": "cherries",
-      "display_name": "Cherries",
-      "category": "produce",
-      "serving_unit": "100g",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 63.0,
-        "protein_g": 1.06,
-        "fat_g": 0.2,
-        "carbs_g": 16.01,
-        "fiber_g": 2.1,
-        "source_fdc_id": 171719
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
       "slug": "strawberries",
       "display_name": "Strawberries",
       "category": "produce",
@@ -1915,35 +1334,8 @@
         "source_fdc_id": 167762
       },
       "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
-      },
-      "sustainability": null
-    },
-    {
-      "slug": "bread-french",
-      "display_name": "Bread (French)",
-      "category": "grain",
-      "serving_unit": "100g",
-      "price": {
-        "avg_price_usd": null,
-        "avg_price_unit": "per lb",
-        "price_source": "estimate",
-        "yoy_pct_change": null,
-        "as_of": "2026-06"
-      },
-      "nutrition_per_100g": {
-        "energy_kcal": 319.0,
-        "protein_g": 13.0,
-        "fat_g": 2.14,
-        "carbs_g": 61.93,
-        "fiber_g": 3.1,
-        "source_fdc_id": 174911
-      },
-      "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
+        "protein_g_per_dollar": 0.88,
+        "calories_per_dollar": 41.95,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": null
@@ -2009,7 +1401,7 @@
       "serving_unit": "100g",
       "price": {
         "avg_price_usd": 6.58,
-        "avg_price_unit": "per 16 oz",
+        "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
         "as_of": "2026-05"
@@ -2023,8 +1415,8 @@
         "source_fdc_id": 169677
       },
       "value_metrics": {
-        "protein_g_per_dollar": 4.82,
-        "calories_per_dollar": 401.66,
+        "protein_g_per_dollar": 4.41,
+        "calories_per_dollar": 366.74,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": null
@@ -2104,8 +1496,8 @@
         "source_fdc_id": 174852
       },
       "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
+        "protein_g_per_dollar": 0.0,
+        "calories_per_dollar": 248.96,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": null
@@ -2158,8 +1550,8 @@
         "source_fdc_id": 173190
       },
       "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
+        "protein_g_per_dollar": 0.05,
+        "calories_per_dollar": 61.41,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": null
@@ -2185,8 +1577,8 @@
         "source_fdc_id": 174817
       },
       "value_metrics": {
-        "protein_g_per_dollar": null,
-        "calories_per_dollar": null,
+        "protein_g_per_dollar": 0.0,
+        "calories_per_dollar": 184.81,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": null
