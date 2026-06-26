@@ -78,20 +78,8 @@ site/  Astro static site, reads foods_export.json at BUILD time, outputs static 
 
 ## Current state / what's verified vs. not
 
-Verified live (safe to ship) BLS Average Price series, confirmed against
-FRED/BLS directly: eggs, ground beef, bacon, whole milk, bananas, tomatoes.
-
-Still needs verification before `price_verified=True`: chicken breast,
-bread (white pan), cheddar cheese — series *names* were seen referenced
-on FRED but exact numeric IDs weren't independently confirmed.
-
 No BLS series exists at all (will need USDA ERS or manual sampling, and
 must display as `price_source='estimate'`): dry beans, lentils, tofu.
-
-CPI series IDs (for YoY inflation %) are mostly still unverified placeholders
-— only blocks the inflation-% stat, not the price itself. Check
-`foods_seed.py` `cpi_series_id` fields before trusting any "+X% vs last year"
-number on the live site.
 
 ## Useful commands
 
@@ -109,16 +97,12 @@ npm run dev                       # local preview
 npm run build                     # static output to site/dist/
 ```
 
-API keys (free, register before relying on production rate limits):
+API keys (free, registered for production deployment):
 - BLS: https://data.bls.gov/registrationEngine/
 - USDA FDC: https://fdc.nal.usda.gov/api-key-signup.html
 
 ## Open decisions / not yet built
 
-- AWS deployment scaffold (Lambda + EventBridge for the monthly ETL run,
-  S3 + CloudFront for hosting) — discussed, not yet implemented.
 - Ad monetization integration — deferred until there's real traffic to
   justify it; URL structure and sitemap were built with this in mind
   but no ad code exists yet.
-- Expanding beyond the current ~12 foods — do this only after verifying
-  remaining BLS series IDs, not before.
