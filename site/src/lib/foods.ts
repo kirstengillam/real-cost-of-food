@@ -22,6 +22,7 @@ export interface FoodNutrition {
   fat_g: number | null;
   carbs_g: number | null;
   fiber_g: number | null;
+  sugars_g: number | null;
   source_fdc_id: number | null;
 }
 

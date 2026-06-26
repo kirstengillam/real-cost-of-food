@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T20:07:00.718085+00:00",
+  "generated_at": "2026-06-26T20:42:22.851544+00:00",
   "foods": [
     {
       "slug": "eggs",
@@ -19,6 +19,7 @@
         "fat_g": 9.51,
         "carbs_g": 0.72,
         "fiber_g": 0.0,
+        "sugars_g": 0.37,
         "source_fdc_id": 171287
       },
       "value_metrics": {
@@ -65,6 +66,7 @@
         "fat_g": 3.25,
         "carbs_g": 4.8,
         "fiber_g": 0.0,
+        "sugars_g": 5.05,
         "source_fdc_id": 171265
       },
       "value_metrics": {
@@ -111,6 +113,7 @@
         "fat_g": 20.0,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 174036
       },
       "value_metrics": {
@@ -157,6 +160,7 @@
         "fat_g": 2.62,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 171077
       },
       "value_metrics": {
@@ -203,6 +207,7 @@
         "fat_g": 99.5,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 168324
       },
       "value_metrics": {
@@ -249,6 +254,7 @@
         "fat_g": 0.33,
         "carbs_g": 22.84,
         "fiber_g": 2.6,
+        "sugars_g": 12.23,
         "source_fdc_id": 173944
       },
       "value_metrics": {
@@ -295,6 +301,7 @@
         "fat_g": 0.2,
         "carbs_g": 3.89,
         "fiber_g": 1.2,
+        "sugars_g": 2.63,
         "source_fdc_id": 170457
       },
       "value_metrics": {
@@ -341,6 +348,7 @@
         "fat_g": 4.0,
         "carbs_g": 54.5,
         "fiber_g": 2.9,
+        "sugars_g": 6.2,
         "source_fdc_id": 174925
       },
       "value_metrics": {
@@ -387,6 +395,7 @@
         "fat_g": 14.0,
         "carbs_g": 11.6,
         "fiber_g": 0.0,
+        "sugars_g": 7.74,
         "source_fdc_id": 169901
       },
       "value_metrics": {
@@ -433,6 +442,7 @@
         "fat_g": 0.9,
         "carbs_g": 11.6,
         "fiber_g": null,
+        "sugars_g": null,
         "source_fdc_id": 170086
       },
       "value_metrics": {
@@ -479,6 +489,7 @@
         "fat_g": 0.15,
         "carbs_g": 12.54,
         "fiber_g": 2.2,
+        "sugars_g": 8.5,
         "source_fdc_id": 169917
       },
       "value_metrics": {
@@ -525,6 +536,7 @@
         "fat_g": 0.09,
         "carbs_g": 17.49,
         "fiber_g": 2.1,
+        "sugars_g": 0.82,
         "source_fdc_id": 170026
       },
       "value_metrics": {
@@ -571,6 +583,7 @@
         "fat_g": 0.14,
         "carbs_g": 2.97,
         "fiber_g": 1.2,
+        "sugars_g": 1.97,
         "source_fdc_id": 169248
       },
       "value_metrics": {
@@ -617,6 +630,7 @@
         "fat_g": 3.5,
         "carbs_g": 42.71,
         "fiber_g": 6.0,
+        "sugars_g": 4.34,
         "source_fdc_id": 172688
       },
       "value_metrics": {
@@ -663,6 +677,7 @@
         "fat_g": 0.66,
         "carbs_g": 79.95,
         "fiber_g": 1.3,
+        "sugars_g": 0.12,
         "source_fdc_id": 169756
       },
       "value_metrics": {
@@ -709,6 +724,7 @@
         "fat_g": 0.98,
         "carbs_g": 76.31,
         "fiber_g": 2.7,
+        "sugars_g": 0.27,
         "source_fdc_id": 169761
       },
       "value_metrics": {
@@ -755,6 +771,7 @@
         "fat_g": 1.51,
         "carbs_g": 74.67,
         "fiber_g": 3.2,
+        "sugars_g": 2.67,
         "source_fdc_id": 168927
       },
       "value_metrics": {
@@ -801,6 +818,7 @@
         "fat_g": 0.0,
         "carbs_g": 0.17,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 171881
       },
       "value_metrics": {
@@ -847,6 +865,7 @@
         "fat_g": 0.25,
         "carbs_g": 35.19,
         "fiber_g": 1.0,
+        "sugars_g": 29.68,
         "source_fdc_id": 169923
       },
       "value_metrics": {
@@ -893,6 +912,7 @@
         "fat_g": 4.47,
         "carbs_g": 1.8,
         "fiber_g": 0.0,
+        "sugars_g": null,
         "source_fdc_id": 171057
       },
       "value_metrics": {
@@ -939,6 +959,7 @@
         "fat_g": 20.0,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 174036
       },
       "value_metrics": {
@@ -985,6 +1006,7 @@
         "fat_g": 6.21,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 169566
       },
       "value_metrics": {
@@ -1031,6 +1053,7 @@
         "fat_g": 2.69,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 169429
       },
       "value_metrics": {
@@ -1077,6 +1100,7 @@
         "fat_g": 14.9,
         "carbs_g": 0.14,
         "fiber_g": 0.0,
+        "sugars_g": null,
         "source_fdc_id": 170199
       },
       "value_metrics": {
@@ -1123,6 +1147,7 @@
         "fat_g": 20.0,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 174036
       },
       "value_metrics": {
@@ -1169,6 +1194,7 @@
         "fat_g": 5.0,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 171790
       },
       "value_metrics": {
@@ -1215,6 +1241,7 @@
         "fat_g": 3.99,
         "carbs_g": 0.21,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 170809
       },
       "value_metrics": {
@@ -1261,6 +1288,7 @@
         "fat_g": 18.57,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 168668
       },
       "value_metrics": {
@@ -1307,6 +1335,7 @@
         "fat_g": 4.96,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 174058
       },
       "value_metrics": {
@@ -1353,6 +1382,7 @@
         "fat_g": 6.59,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 172128
       },
       "value_metrics": {
@@ -1399,6 +1429,7 @@
         "fat_g": 6.59,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 172128
       },
       "value_metrics": {
@@ -1445,6 +1476,7 @@
         "fat_g": 7.34,
         "carbs_g": 0.14,
         "fiber_g": null,
+        "sugars_g": null,
         "source_fdc_id": 167673
       },
       "value_metrics": {
@@ -1491,6 +1523,7 @@
         "fat_g": 80.5,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 168287
       },
       "value_metrics": {
@@ -1537,6 +1570,7 @@
         "fat_g": 80.5,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 168287
       },
       "value_metrics": {
@@ -1583,6 +1617,7 @@
         "fat_g": 11.04,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 168242
       },
       "value_metrics": {
@@ -1629,6 +1664,7 @@
         "fat_g": 14.01,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 167889
       },
       "value_metrics": {
@@ -1675,6 +1711,7 @@
         "fat_g": 18.87,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
+        "sugars_g": null,
         "source_fdc_id": 168222
       },
       "value_metrics": {
@@ -1721,6 +1758,7 @@
         "fat_g": 0.3,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 168148
       },
       "value_metrics": {
@@ -1767,6 +1805,7 @@
         "fat_g": 21.23,
         "carbs_g": 8.73,
         "fiber_g": 0.0,
+        "sugars_g": 7.32,
         "source_fdc_id": 171254
       },
       "value_metrics": {
@@ -1813,6 +1852,7 @@
         "fat_g": 81.11,
         "carbs_g": 0.06,
         "fiber_g": 0.0,
+        "sugars_g": 0.06,
         "source_fdc_id": 173410
       },
       "value_metrics": {
@@ -1859,6 +1899,7 @@
         "fat_g": 1.02,
         "carbs_g": 2.72,
         "fiber_g": 0.0,
+        "sugars_g": 2.72,
         "source_fdc_id": 173417
       },
       "value_metrics": {
@@ -1905,6 +1946,7 @@
         "fat_g": 11.0,
         "carbs_g": 23.6,
         "fiber_g": 0.7,
+        "sugars_g": 21.22,
         "source_fdc_id": 167575
       },
       "value_metrics": {
@@ -1951,6 +1993,7 @@
         "fat_g": 3.25,
         "carbs_g": 4.66,
         "fiber_g": 0.0,
+        "sugars_g": 4.66,
         "source_fdc_id": 171284
       },
       "value_metrics": {
@@ -1997,6 +2040,7 @@
         "fat_g": 0.3,
         "carbs_g": 3.29,
         "fiber_g": 2.1,
+        "sugars_g": 1.19,
         "source_fdc_id": 169247
       },
       "value_metrics": {
@@ -2043,6 +2087,7 @@
         "fat_g": 0.1,
         "carbs_g": 7.5,
         "fiber_g": 1.1,
+        "sugars_g": null,
         "source_fdc_id": 174675
       },
       "value_metrics": {
@@ -2089,6 +2134,7 @@
         "fat_g": 0.3,
         "carbs_g": 9.32,
         "fiber_g": 2.8,
+        "sugars_g": 2.5,
         "source_fdc_id": 167746
       },
       "value_metrics": {
@@ -2135,6 +2181,7 @@
         "fat_g": 0.3,
         "carbs_g": 7.68,
         "fiber_g": 2.0,
+        "sugars_g": 4.89,
         "source_fdc_id": 167762
       },
       "value_metrics": {
@@ -2181,6 +2228,7 @@
         "fat_g": 19.77,
         "carbs_g": 65.75,
         "fiber_g": 1.8,
+        "sugars_g": 37.1,
         "source_fdc_id": 172717
       },
       "value_metrics": {
@@ -2227,6 +2275,7 @@
         "fat_g": 0.42,
         "carbs_g": 18.13,
         "fiber_g": 1.2,
+        "sugars_g": 3.23,
         "source_fdc_id": 169346
       },
       "value_metrics": {
@@ -2273,6 +2322,7 @@
         "fat_g": 33.98,
         "carbs_g": 53.83,
         "fiber_g": 3.1,
+        "sugars_g": 0.33,
         "source_fdc_id": 169677
       },
       "value_metrics": {
@@ -2319,6 +2369,7 @@
         "fat_g": 0.0,
         "carbs_g": 99.98,
         "fiber_g": 0.0,
+        "sugars_g": 99.8,
         "source_fdc_id": 169655
       },
       "value_metrics": {
@@ -2365,6 +2416,7 @@
         "fat_g": 0.25,
         "carbs_g": 10.36,
         "fiber_g": 0.0,
+        "sugars_g": 9.94,
         "source_fdc_id": 174852
       },
       "value_metrics": {
@@ -2411,6 +2463,7 @@
         "fat_g": 0.25,
         "carbs_g": 10.36,
         "fiber_g": 0.0,
+        "sugars_g": 9.94,
         "source_fdc_id": 174852
       },
       "value_metrics": {
@@ -2457,6 +2510,7 @@
         "fat_g": 0.0,
         "carbs_g": 3.55,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 168746
       },
       "value_metrics": {
@@ -2503,6 +2557,7 @@
         "fat_g": 0.0,
         "carbs_g": 2.61,
         "fiber_g": 0.0,
+        "sugars_g": 0.62,
         "source_fdc_id": 173190
       },
       "value_metrics": {
@@ -2549,6 +2604,7 @@
         "fat_g": 0.0,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
+        "sugars_g": 0.0,
         "source_fdc_id": 174817
       },
       "value_metrics": {

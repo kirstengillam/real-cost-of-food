@@ -210,6 +210,7 @@ def export_json(conn) -> None:
                 "fat_g": nutrition_row["fat_g"] if nutrition_row else None,
                 "carbs_g": nutrition_row["carbs_g"] if nutrition_row else None,
                 "fiber_g": nutrition_row["fiber_g"] if nutrition_row else None,
+                "sugars_g": nutrition_row["sugars_g"] if nutrition_row else None,
                 "source_fdc_id": nutrition_row["fdc_id"] if nutrition_row else None,
             } if nutrition_row else None,
             "value_metrics": {

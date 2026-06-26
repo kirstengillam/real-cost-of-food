@@ -123,9 +123,19 @@ const jsonLd: Record<string, unknown> = {
             <span class="line-value">{food.nutrition_per_100g.energy_kcal ?? '—'} kcal</span>
           </div>
           <div class="line-item line-item--muted">
+            <span class="line-label">Carbs per 100g</span>
+            <span class="line-dots" aria-hidden="true"></span>
+            <span class="line-value">{food.nutrition_per_100g.carbs_g ?? '—'} g</span>
+          </div>
+          <div class="line-item line-item--muted">
             <span class="line-label">Fiber per 100g</span>
             <span class="line-dots" aria-hidden="true"></span>
             <span class="line-value">{food.nutrition_per_100g.fiber_g ?? '—'} g</span>
+          </div>
+          <div class="line-item line-item--muted">
+            <span class="line-label">Sugars per 100g</span>
+            <span class="line-dots" aria-hidden="true"></span>
+            <span class="line-value">{food.nutrition_per_100g.sugars_g ?? '—'} g</span>
           </div>
           <p class="as-of">nutrition source: USDA FoodData Central{food.nutrition_per_100g.source_fdc_id ? ` (FDC #${food.nutrition_per_100g.source_fdc_id})` : ''}</p>
         </>
