@@ -18,40 +18,34 @@ if (!food) {
 const hasRealPrice = food.price.price_source === 'bls_avg_price' && food.price.avg_price_usd !== null;
 const trendDirection = food.price.yoy_pct_change == null ? null : food.price.yoy_pct_change >= 0 ? 'up' : 'down';
 
-const title = `${food.display_name} Price & Real Cost — Real Cost of Food`;
+// Short name strips parenthetical qualifiers for use in H1/title ("Eggs" not "Eggs (Grade A, Large)")
+const shortName = food.display_name.replace(/\s*\(.*?\)\s*/g, '').trim();
+
+const priceFormatted = hasRealPrice
+  ? `$${food.price.avg_price_usd!.toFixed(2)}${food.price.avg_price_unit ? `/${food.price.avg_price_unit.replace('per ', '')}` : ''}`
+  : null;
+
+const asOfFormatted = food.price.as_of
+  ? new Date(`${food.price.as_of}-01`).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+  : null;
+
+const title = priceFormatted
+  ? `${shortName} Prices: ${priceFormatted}${asOfFormatted ? ` (${asOfFormatted})` : ''} — Real Cost of Food`
+  : `${shortName} Price & Nutrition — Real Cost of Food`;
+
 const description = `What ${food.display_name} actually costs: current price, protein and calories per dollar, and inflation trend, sourced from BLS and USDA data.`;
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
 
 const jsonLd: Record<string, unknown> = {
   '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: food.display_name,
+  '@type': 'Article',
+  headline: title,
   description,
   url: canonicalUrl,
-  category: food.category,
-  ...(hasRealPrice && food.price.as_of ? {
-    offers: {
-      '@type': 'Offer',
-      priceCurrency: 'USD',
-      price: food.price.avg_price_usd!.toFixed(2),
-      priceValidUntil: food.price.as_of,
-      unitText: food.price.avg_price_unit ?? undefined,
-      availability: 'https://schema.org/InStock',
-      seller: { '@type': 'Organization', name: 'U.S. City Average (BLS)' },
-    },
-  } : {}),
-  ...(food.nutrition_per_100g ? {
-    nutrition: {
-      '@type': 'NutritionInformation',
-      servingSize: '100 g',
-      ...(food.nutrition_per_100g.energy_kcal != null ? { calories: `${food.nutrition_per_100g.energy_kcal} kcal` } : {}),
-      ...(food.nutrition_per_100g.protein_g != null ? { proteinContent: `${food.nutrition_per_100g.protein_g} g` } : {}),
-      ...(food.nutrition_per_100g.fat_g != null ? { fatContent: `${food.nutrition_per_100g.fat_g} g` } : {}),
-      ...(food.nutrition_per_100g.carbs_g != null ? { carbohydrateContent: `${food.nutrition_per_100g.carbs_g} g` } : {}),
-      ...(food.nutrition_per_100g.fiber_g != null ? { fiberContent: `${food.nutrition_per_100g.fiber_g} g` } : {}),
-    },
-  } : {}),
+  author: { '@type': 'Organization', name: 'Real Cost of Food' },
+  publisher: { '@type': 'Organization', name: 'Real Cost of Food', url: new URL('/', Astro.site).href },
+  ...(food.price.as_of ? { dateModified: `${food.price.as_of}-01` } : {}),
 };
 ---
 <Layout title={title} description={description}>
@@ -65,7 +59,7 @@ const jsonLd: Record<string, unknown> = {
     <article class="receipt">
       <div class="receipt-header">
         <span class="eyebrow">{food.category}</span>
-        <h1>{food.display_name}</h1>
+        <h1>{priceFormatted ? `${shortName} cost ${priceFormatted}` : shortName}</h1>
         <p class="serving-note">priced and measured per {food.serving_unit}</p>
       </div>
 
