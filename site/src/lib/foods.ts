@@ -29,6 +29,7 @@ export interface FoodNutrition {
 export interface FoodValueMetrics {
   protein_g_per_dollar: number | null;
   calories_per_dollar: number | null;
+  fiber_g_per_dollar: number | null;
   note: string;
 }
 

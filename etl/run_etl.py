@@ -177,6 +177,7 @@ def export_json(conn) -> None:
 
         protein_per_dollar = None
         cal_per_dollar = None
+        fiber_per_dollar = None
         if (
             price_row and price_row["avg_price_usd"] and price_row["price_source"] == "bls_avg_price"
             and nutrition_row and nutrition_row["protein_g"] is not None
@@ -188,6 +189,10 @@ def export_json(conn) -> None:
                 if nutrition_row["energy_kcal"] is not None:
                     cal_per_dollar = nutrient_per_dollar(
                         nutrition_row["energy_kcal"], price_row["avg_price_usd"], f["avg_price_unit"]
+                    )
+                if nutrition_row["fiber_g"] is not None:
+                    fiber_per_dollar = nutrient_per_dollar(
+                        nutrition_row["fiber_g"], price_row["avg_price_usd"], f["avg_price_unit"]
                     )
             except UnsupportedUnitError as e:
                 print(f"[run_etl] WARNING: {f['slug']!r}: {e}")
@@ -216,6 +221,7 @@ def export_json(conn) -> None:
             "value_metrics": {
                 "protein_g_per_dollar": protein_per_dollar,
                 "calories_per_dollar": cal_per_dollar,
+                "fiber_g_per_dollar": fiber_per_dollar,
                 "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
             },
             "sustainability": {

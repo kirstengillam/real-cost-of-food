@@ -7,6 +7,7 @@ etl/.venv/
 # Site build output
 site/dist/
 site/.astro/
+site/.claude
 
 # Dependencies
 site/node_modules/
@@ -24,4 +25,5 @@ infra/cdk-outputs.json
 # Editors
 .idea/
 .vscode/
+.claude/
 *.DS_Store

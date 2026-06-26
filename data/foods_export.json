@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T20:42:22.851544+00:00",
+  "generated_at": "2026-06-26T20:58:27.874588+00:00",
   "foods": [
     {
       "slug": "eggs",
@@ -25,6 +25,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 34.39,
         "calories_per_dollar": 391.57,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -72,6 +73,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 28.23,
         "calories_per_dollar": 546.59,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -119,6 +121,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 11.55,
         "calories_per_dollar": 170.81,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -166,6 +169,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 24.47,
         "calories_per_dollar": 130.51,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -213,6 +217,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 0.05,
         "calories_per_dollar": 606.88,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -260,6 +265,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 7.65,
         "calories_per_dollar": 625.0,
+        "fiber_g_per_dollar": 18.26,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -307,6 +313,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 1.6,
         "calories_per_dollar": 32.8,
+        "fiber_g_per_dollar": 2.19,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -354,6 +361,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 22.31,
         "calories_per_dollar": 718.89,
+        "fiber_g_per_dollar": 7.19,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -401,6 +409,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 13.32,
         "calories_per_dollar": 190.7,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -448,6 +457,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 14.27,
         "calories_per_dollar": 168.48,
+        "fiber_g_per_dollar": null,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -495,6 +505,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 2.68,
         "calories_per_dollar": 144.12,
+        "fiber_g_per_dollar": 6.47,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -542,6 +553,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 10.4,
         "calories_per_dollar": 390.66,
+        "fiber_g_per_dollar": 10.65,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -589,6 +601,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 2.08,
         "calories_per_dollar": 32.33,
+        "fiber_g_per_dollar": 2.77,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -636,6 +649,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 20.07,
         "calories_per_dollar": 406.19,
+        "fiber_g_per_dollar": 9.67,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -683,6 +697,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 30.2,
         "calories_per_dollar": 1545.96,
+        "fiber_g_per_dollar": 5.51,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -730,6 +745,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 86.16,
         "calories_per_dollar": 3035.86,
+        "fiber_g_per_dollar": 22.52,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -777,6 +793,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 43.05,
         "calories_per_dollar": 1224.83,
+        "fiber_g_per_dollar": 10.56,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -824,6 +841,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 0.14,
         "calories_per_dollar": 0.95,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -871,6 +889,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 2.4,
         "calories_per_dollar": 147.94,
+        "fiber_g_per_dollar": 1.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -918,6 +937,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 39.83,
         "calories_per_dollar": 276.23,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -965,6 +985,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 11.03,
         "calories_per_dollar": 163.1,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1012,6 +1033,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 10.1,
         "calories_per_dollar": 67.9,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1059,6 +1081,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 8.17,
         "calories_per_dollar": 41.45,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1106,6 +1129,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 8.31,
         "calories_per_dollar": 112.08,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1153,6 +1177,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 11.59,
         "calories_per_dollar": 171.49,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1200,6 +1225,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 11.26,
         "calories_per_dollar": 72.06,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1247,6 +1273,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 11.03,
         "calories_per_dollar": 62.47,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1294,6 +1321,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 9.04,
         "calories_per_dollar": 117.56,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1341,6 +1369,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 11.7,
         "calories_per_dollar": 73.71,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1388,6 +1417,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 10.33,
         "calories_per_dollar": 72.94,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1435,6 +1465,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 9.84,
         "calories_per_dollar": 69.51,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1482,6 +1513,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 9.18,
         "calories_per_dollar": 57.83,
+        "fiber_g_per_dollar": null,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1529,6 +1561,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 5.22,
         "calories_per_dollar": 773.05,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1576,6 +1609,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 6.1,
         "calories_per_dollar": 903.6,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1623,6 +1657,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 18.75,
         "calories_per_dollar": 172.0,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1670,6 +1705,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 19.55,
         "calories_per_dollar": 207.33,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1717,6 +1753,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 14.49,
         "calories_per_dollar": 203.64,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1764,6 +1801,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 41.66,
         "calories_per_dollar": 185.42,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1811,6 +1849,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 16.28,
         "calories_per_dollar": 287.7,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1858,6 +1897,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 0.98,
         "calories_per_dollar": 827.75,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1905,6 +1945,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 128.93,
         "calories_per_dollar": 749.22,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1952,6 +1993,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 3.2,
         "calories_per_dollar": 189.37,
+        "fiber_g_per_dollar": 0.64,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1999,6 +2041,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 5.12,
         "calories_per_dollar": 90.01,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2046,6 +2089,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 1.54,
         "calories_per_dollar": 21.28,
+        "fiber_g_per_dollar": 2.63,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2093,6 +2137,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 1.56,
         "calories_per_dollar": 85.32,
+        "fiber_g_per_dollar": 3.13,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2140,6 +2185,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 2.39,
         "calories_per_dollar": 62.91,
+        "fiber_g_per_dollar": 6.07,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2187,6 +2233,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 0.88,
         "calories_per_dollar": 41.95,
+        "fiber_g_per_dollar": 2.62,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2234,6 +2281,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 3.18,
         "calories_per_dollar": 388.72,
+        "fiber_g_per_dollar": 1.58,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2281,6 +2329,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 6.0,
         "calories_per_dollar": 248.36,
+        "fiber_g_per_dollar": 4.14,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2328,6 +2377,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 4.41,
         "calories_per_dollar": 366.74,
+        "fiber_g_per_dollar": 2.14,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2375,6 +2425,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 0.0,
         "calories_per_dollar": 1697.37,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2422,6 +2473,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 0.0,
         "calories_per_dollar": 382.51,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2469,6 +2521,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 0.0,
         "calories_per_dollar": 248.96,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2516,6 +2569,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 1.22,
         "calories_per_dollar": 113.82,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2563,6 +2617,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 0.05,
         "calories_per_dollar": 61.41,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2610,6 +2665,7 @@
       "value_metrics": {
         "protein_g_per_dollar": 0.0,
         "calories_per_dollar": 184.81,
+        "fiber_g_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {

@@ -3,10 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import { getAllFoods } from '../lib/foods';
 
 const foods = getAllFoods();
-const byCategory = foods.reduce((acc, food) => {
-  (acc[food.category] ??= []).push(food);
-  return acc;
-}, {} as Record<string, typeof foods>);
 ---
 <Layout
   title="Real Cost of Food — what your groceries actually buy you"
@@ -18,26 +14,52 @@ const byCategory = foods.reduce((acc, food) => {
       <p class="masthead-sub">Price tells you what it costs. We show you what it's worth.</p>
     </header>
 
-    {Object.entries(byCategory).map(([category, items]) => (
-      <section class="category">
-        <h2>{category}</h2>
-        <ul class="food-list">
-          {items.map((food) => (
-            <li>
-              <a href={`/foods/${food.slug}`} class="food-row">
-                <span class="food-name">{food.display_name}</span>
-                <span class="line-dots" aria-hidden="true"></span>
-                <span class="food-price">
-                  {food.price.price_source === 'bls_avg_price' && food.price.avg_price_usd != null
-                    ? `$${food.price.avg_price_usd.toFixed(2)}${food.price.avg_price_unit ? `/${food.price.avg_price_unit.replace('per ', '')}` : ''}`
-                    : 'estimate pending'}
-                </span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-    ))}
+    <div class="sort-bar">
+      <label for="sort-select">Sort by</label>
+      <select id="sort-select">
+        <option value="category">Category</option>
+        <option value="price">Price (low to high)</option>
+        <option value="protein-per-dollar">Protein per dollar (high to low)</option>
+        <option value="calories-per-dollar">Calories per dollar (high to low)</option>
+        <option value="protein100g">Protein per 100g (high to low)</option>
+        <option value="calories100g">Calories per 100g (high to low)</option>
+        <option value="fiber-per-dollar">Fiber per dollar (high to low)</option>
+        <option value="fiber100g">Fiber per 100g (high to low)</option>
+      </select>
+    </div>
+
+    <ul id="food-list">
+      {foods.map((food) => {
+        const price = food.price.avg_price_usd;
+        const priceUnit = food.price.avg_price_unit ? food.price.avg_price_unit.replace('per ', '') : '';
+        const priceLabel = price != null ? `$${price.toFixed(2)}${priceUnit ? `/${priceUnit}` : ''}` : 'estimate pending';
+        const proteinPerDollar = food.value_metrics.protein_g_per_dollar;
+        const calPerDollar = food.value_metrics.calories_per_dollar;
+        const fiberPerDollar = food.value_metrics.fiber_g_per_dollar;
+        const protein100g = food.nutrition_per_100g?.protein_g ?? null;
+        const calories100g = food.nutrition_per_100g?.energy_kcal ?? null;
+        const fiber100g = food.nutrition_per_100g?.fiber_g ?? null;
+        return (
+          <li
+            data-category={food.category}
+            data-price={price ?? ''}
+            data-price-label={priceLabel}
+            data-protein-per-dollar={proteinPerDollar ?? ''}
+            data-calories-per-dollar={calPerDollar ?? ''}
+            data-fiber-per-dollar={fiberPerDollar ?? ''}
+            data-protein100g={protein100g ?? ''}
+            data-calories100g={calories100g ?? ''}
+            data-fiber100g={fiber100g ?? ''}
+          >
+            <a href={`/foods/${food.slug}`} class="food-row">
+              <span class="food-name">{food.display_name}</span>
+              <span class="line-dots" aria-hidden="true"></span>
+              <span class="food-metric" data-price-label={priceLabel}>{priceLabel}</span>
+            </a>
+          </li>
+        );
+      })}
+    </ul>
 
     <footer class="site-footer">
       <p>Prices: U.S. Bureau of Labor Statistics. Nutrition: USDA FoodData Central. Updated monthly.</p>
@@ -52,7 +74,7 @@ const byCategory = foods.reduce((acc, food) => {
     margin: 0 auto;
     padding: 3rem 1.25rem 4rem;
   }
-  .masthead { text-align: center; margin-bottom: 3rem; }
+  .masthead { text-align: center; margin-bottom: 2.5rem; }
   h1 {
     font-family: var(--font-display);
     font-weight: 900;
@@ -64,24 +86,37 @@ const byCategory = foods.reduce((acc, food) => {
     font-size: 0.95rem;
     margin: 0.5rem 0 0;
   }
-  .category { margin-bottom: 2rem; }
-  .category h2 {
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--produce-green);
-    font-weight: 600;
-    border-bottom: 1px dashed var(--line-dotted);
-    padding-bottom: 0.4rem;
-    margin-bottom: 0.5rem;
+
+  .sort-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.75rem;
+    font-size: 0.82rem;
+    color: var(--thermal-gray);
   }
-  .food-list { list-style: none; margin: 0; padding: 0; }
+  .sort-bar label { flex-shrink: 0; }
+  .sort-bar select {
+    font-size: 0.82rem;
+    font-family: inherit;
+    color: var(--ink);
+    background: transparent;
+    border: 1px solid var(--line-dotted);
+    border-radius: 3px;
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
+  }
+
+  #food-list { list-style: none; margin: 0; padding: 0; }
+
+
   .food-row {
     display: flex;
     align-items: baseline;
     gap: 0.5rem;
     padding: 0.6rem 0;
     color: var(--ink);
+    text-decoration: none;
   }
   .food-row:hover { color: var(--stamp-red); }
   .food-name { font-weight: 600; flex-shrink: 0; }
@@ -90,7 +125,8 @@ const byCategory = foods.reduce((acc, food) => {
     border-bottom: 1px dotted var(--line-dotted);
     height: 0.6em;
   }
-  .food-price { flex-shrink: 0; color: var(--thermal-gray); font-size: 0.9rem; }
+  .food-metric { flex-shrink: 0; color: var(--thermal-gray); font-size: 0.9rem; }
+
   .site-footer {
     text-align: center;
     margin-top: 2.5rem;
@@ -98,3 +134,128 @@ const byCategory = foods.reduce((acc, food) => {
     color: var(--thermal-gray);
   }
 </style>
+
+<style is:global>
+  .category-header {
+    font-size: 1rem;
+    font-family: var(--font-display);
+    font-weight: 800;
+    color: var(--produce-green);
+    border-bottom: 2px solid var(--produce-green);
+    padding: 1.75rem 0 0.4rem;
+    margin-bottom: 0.25rem;
+  }
+  #food-list .category-header:first-child { padding-top: 0; }
+</style>
+
+<script>
+  const select = document.getElementById('sort-select') as HTMLSelectElement;
+  const list = document.getElementById('food-list') as HTMLUListElement;
+  const items = Array.from(list.querySelectorAll<HTMLLIElement>('li[data-category]'));
+
+  function getVal(el: HTMLLIElement, attr: string): number {
+    const v = el.dataset[attr];
+    return v ? parseFloat(v) : -Infinity;
+  }
+
+  function renderList(sortKey: string) {
+    // Remove any category header elements from a previous render
+    list.querySelectorAll('.category-header').forEach(h => h.remove());
+
+    let sorted: HTMLLIElement[];
+    let getMetric: (el: HTMLLIElement) => string;
+
+    if (sortKey === 'category') {
+      sorted = [...items].sort((a, b) => {
+        const catCmp = (a.dataset.category ?? '').localeCompare(b.dataset.category ?? '');
+        if (catCmp !== 0) return catCmp;
+        return (a.querySelector('.food-name')?.textContent ?? '').localeCompare(
+          b.querySelector('.food-name')?.textContent ?? ''
+        );
+      });
+      getMetric = (el) => el.dataset.priceLabel ?? '';
+    } else if (sortKey === 'price') {
+      sorted = [...items].sort((a, b) => getVal(a, 'price') - getVal(b, 'price'));
+      getMetric = (el) => el.dataset.priceLabel ?? '';
+    } else if (sortKey === 'proteinPerDollar') {
+      sorted = [...items].sort((a, b) => getVal(b, 'proteinPerDollar') - getVal(a, 'proteinPerDollar'));
+      getMetric = (el) => {
+        const v = el.dataset.proteinPerDollar;
+        return v ? `${parseFloat(v).toFixed(1)} g protein/$` : '—';
+      };
+    } else if (sortKey === 'caloriesPerDollar') {
+      sorted = [...items].sort((a, b) => getVal(b, 'caloriesPerDollar') - getVal(a, 'caloriesPerDollar'));
+      getMetric = (el) => {
+        const v = el.dataset.caloriesPerDollar;
+        return v ? `${Math.round(parseFloat(v))} kcal/$` : '—';
+      };
+    } else if (sortKey === 'protein100g') {
+      sorted = [...items].sort((a, b) => getVal(b, 'protein100g') - getVal(a, 'protein100g'));
+      getMetric = (el) => {
+        const v = el.dataset.protein100g;
+        return v ? `${parseFloat(v).toFixed(1)} g protein/100g` : '—';
+      };
+    } else if (sortKey === 'calories100g') {
+      sorted = [...items].sort((a, b) => getVal(b, 'calories100g') - getVal(a, 'calories100g'));
+      getMetric = (el) => {
+        const v = el.dataset.calories100g;
+        return v ? `${Math.round(parseFloat(v))} kcal/100g` : '—';
+      };
+    } else if (sortKey === 'fiberPerDollar') {
+      sorted = [...items].sort((a, b) => getVal(b, 'fiberPerDollar') - getVal(a, 'fiberPerDollar'));
+      getMetric = (el) => {
+        const v = el.dataset.fiberPerDollar;
+        return v ? `${parseFloat(v).toFixed(1)} g fiber/$` : '—';
+      };
+    } else {
+      // fiber100g
+      sorted = [...items].sort((a, b) => getVal(b, 'fiber100g') - getVal(a, 'fiber100g'));
+      getMetric = (el) => {
+        const v = el.dataset.fiber100g;
+        return v ? `${parseFloat(v).toFixed(1)} g fiber/100g` : '—';
+      };
+    }
+
+    // Update metric text on each item
+    sorted.forEach(el => {
+      const metric = el.querySelector<HTMLSpanElement>('.food-metric');
+      if (metric) metric.textContent = getMetric(el);
+    });
+
+    // Re-insert items (and category headers if needed)
+    if (sortKey === 'category') {
+      let lastCat = '';
+      sorted.forEach(el => {
+        const cat = el.dataset.category ?? '';
+        if (cat !== lastCat) {
+          const header = document.createElement('li');
+          header.className = 'category-header';
+          header.textContent = cat;
+          list.appendChild(header);
+          lastCat = cat;
+        }
+        list.appendChild(el);
+      });
+    } else {
+      sorted.forEach(el => list.appendChild(el));
+    }
+  }
+
+  // Initial render in category order
+  renderList('category');
+
+  select.addEventListener('change', () => {
+    // Convert kebab-case option value to camelCase dataset key convention
+    const keyMap: Record<string, string> = {
+      'category': 'category',
+      'price': 'price',
+      'protein-per-dollar': 'proteinPerDollar',
+      'calories-per-dollar': 'caloriesPerDollar',
+      'protein100g': 'protein100g',
+      'calories100g': 'calories100g',
+      'fiber-per-dollar': 'fiberPerDollar',
+      'fiber100g': 'fiber100g',
+    };
+    renderList(keyMap[select.value] ?? 'category');
+  });
+</script>
