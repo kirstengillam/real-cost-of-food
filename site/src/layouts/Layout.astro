@@ -27,6 +27,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
       crossorigin="anonymous"
     ></script>
   )}
+  <slot name="head" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Archivo:wght@500;700;900&display=swap" rel="stylesheet">

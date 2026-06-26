@@ -20,8 +20,42 @@ const trendDirection = food.price.yoy_pct_change == null ? null : food.price.yoy
 
 const title = `${food.display_name} Price & Real Cost — Real Cost of Food`;
 const description = `What ${food.display_name} actually costs: current price, protein and calories per dollar, and inflation trend, sourced from BLS and USDA data.`;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
+
+const jsonLd: Record<string, unknown> = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: food.display_name,
+  description,
+  url: canonicalUrl,
+  category: food.category,
+  ...(hasRealPrice && food.price.as_of ? {
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'USD',
+      price: food.price.avg_price_usd!.toFixed(2),
+      priceValidUntil: food.price.as_of,
+      unitText: food.price.avg_price_unit ?? undefined,
+      availability: 'https://schema.org/InStock',
+      seller: { '@type': 'Organization', name: 'U.S. City Average (BLS)' },
+    },
+  } : {}),
+  ...(food.nutrition_per_100g ? {
+    nutrition: {
+      '@type': 'NutritionInformation',
+      servingSize: '100 g',
+      ...(food.nutrition_per_100g.energy_kcal != null ? { calories: `${food.nutrition_per_100g.energy_kcal} kcal` } : {}),
+      ...(food.nutrition_per_100g.protein_g != null ? { proteinContent: `${food.nutrition_per_100g.protein_g} g` } : {}),
+      ...(food.nutrition_per_100g.fat_g != null ? { fatContent: `${food.nutrition_per_100g.fat_g} g` } : {}),
+      ...(food.nutrition_per_100g.carbs_g != null ? { carbohydrateContent: `${food.nutrition_per_100g.carbs_g} g` } : {}),
+      ...(food.nutrition_per_100g.fiber_g != null ? { fiberContent: `${food.nutrition_per_100g.fiber_g} g` } : {}),
+    },
+  } : {}),
+};
 ---
 <Layout title={title} description={description}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <main class="page">
     <header class="masthead">
       <a href="/" class="masthead-link">Real Cost of Food</a>
