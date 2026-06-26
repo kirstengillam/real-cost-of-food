@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout
+  title="Privacy Policy — Real Cost of Food"
+  description="How Real Cost of Food handles data, cookies, and advertising."
+>
+  <main class="page">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: June 25, 2026</p>
+
+    <h2>What this site is</h2>
+    <p>
+      Real Cost of Food is a static informational website. We do not operate accounts,
+      logins, or user profiles, and we do not collect or store any personal information
+      you submit — because there is no form or submission mechanism on this site.
+    </p>
+
+    <h2>Analytics</h2>
+    <p>
+      We may use third-party analytics (such as Google Analytics) to understand aggregate
+      traffic patterns — pages visited, approximate geography, and referring sources.
+      This data is collected anonymously and is not linked to you personally. You can
+      opt out via your browser's Do Not Track setting or a browser extension such as
+      uBlock Origin.
+    </p>
+
+    <h2>Advertising</h2>
+    <p>
+      This site may display ads served by Google AdSense. Google uses cookies to serve
+      ads based on your prior visits to this site and other sites on the internet.
+      You may opt out of personalized advertising by visiting
+      <a href="https://www.google.com/settings/ads" rel="noopener noreferrer" target="_blank">Google's Ad Settings</a>.
+      Third-party vendors, including Google, use cookies to serve ads based on a user's
+      prior visits to websites. Google's use of advertising cookies enables it and its
+      partners to serve ads based on your visit to this site and/or other sites on the
+      internet.
+    </p>
+
+    <h2>Cookies</h2>
+    <p>
+      This site itself sets no first-party cookies. Third-party services (Google Analytics,
+      Google AdSense) may set their own cookies as described in their respective privacy
+      policies. You can disable cookies in your browser settings at any time.
+    </p>
+
+    <h2>Data sources</h2>
+    <p>
+      All price, nutrition, and sustainability data displayed on this site comes from
+      public federal datasets (BLS, USDA FoodData Central) and published academic research.
+      No user data is used to generate or personalize this content.
+    </p>
+
+    <h2>External links</h2>
+    <p>
+      This site links to external sources (BLS, USDA, academic papers). We are not
+      responsible for the privacy practices or content of those sites.
+    </p>
+
+    <h2>Children</h2>
+    <p>
+      This site is not directed at children under 13 and does not knowingly collect
+      information from children.
+    </p>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      If we make material changes to this policy, we will update the date at the top
+      of this page.
+    </p>
+
+    <!-- If this site ever collects user data, add a contact section here:
+         <h2>Contact</h2>
+         <p>Questions about this policy? Email <a href="mailto:privacy@[yourdomain].com">privacy@[yourdomain].com</a>.</p>
+         Set up the alias via Cloudflare Email Routing before publishing. -->
+
+    <p><a href="/">← Back to all foods</a></p>
+  </main>
+</Layout>
+
+<style>
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 4rem;
+    line-height: 1.6;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.9rem;
+    margin-bottom: 0.5rem;
+  }
+  .updated {
+    font-size: 0.8rem;
+    color: var(--thermal-gray);
+    margin-bottom: 1.5rem;
+  }
+  h2 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-top: 1.75rem;
+    margin-bottom: 0.4rem;
+  }
+  p { font-size: 0.92rem; color: var(--ink-faded); margin: 0.4rem 0; }
+</style>
