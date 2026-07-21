@@ -1,22 +1,29 @@
 """
-Quick sanity check: embed a question and retrieve top matching chunks from Chroma.
+Quick sanity check: embed a question and retrieve top matching chunks from embeddings.json.
 
 Usage:
     python rag/query_test.py "cheap plant protein"
     python rag/query_test.py "low water use grain"
 """
 
+import json
+import math
 import os
-import sys
 import pathlib
+import sys
 
-import chromadb
 import voyageai
 
-CHROMA_DIR = pathlib.Path(__file__).parent / "chroma_db"
+EMBEDDINGS_FILE = pathlib.Path(__file__).parent / "embeddings.json"
 EMBED_MODEL = "voyage-4"
-COLLECTION_NAME = "real_cost_of_food"
 TOP_K = 3
+
+
+def cosine_similarity(a: list[float], b: list[float]) -> float:
+    dot = sum(x * y for x, y in zip(a, b))
+    norm_a = math.sqrt(sum(x * x for x in a))
+    norm_b = math.sqrt(sum(x * x for x in b))
+    return dot / (norm_a * norm_b) if norm_a and norm_b else 0.0
 
 
 def main():
@@ -26,25 +33,29 @@ def main():
         print("Error: VOYAGE_API_KEY not set.", file=sys.stderr)
         sys.exit(1)
 
+    if not EMBEDDINGS_FILE.exists():
+        print(f"Error: {EMBEDDINGS_FILE} not found. Run embed_and_store.py first.", file=sys.stderr)
+        sys.exit(1)
+
+    with open(EMBEDDINGS_FILE) as f:
+        store = json.load(f)
+
+    chunks = store["chunks"]
+
     client = voyageai.Client(api_key=api_key)
-    result = client.embed([question], model=EMBED_MODEL, input_type="query")
-    query_embedding = result.embeddings[0]
+    query_embedding = client.embed([question], model=EMBED_MODEL, input_type="query").embeddings[0]
 
-    chroma_client = chromadb.PersistentClient(path=str(CHROMA_DIR))
-    collection = chroma_client.get_collection(COLLECTION_NAME)
-
-    results = collection.query(
-        query_embeddings=[query_embedding],
-        n_results=TOP_K,
-        include=["documents", "metadatas", "distances"],
+    scored = sorted(
+        chunks,
+        key=lambda c: cosine_similarity(query_embedding, c["embedding"]),
+        reverse=True,
     )
 
     print(f'Query: "{question}"\n')
-    for i, (doc, meta, dist) in enumerate(
-        zip(results["documents"][0], results["metadatas"][0], results["distances"][0])
-    ):
-        print(f"Result {i+1} — {meta['name']} (score: {1 - dist:.3f})")
-        print(doc[:300])
+    for i, chunk in enumerate(scored[:TOP_K]):
+        score = cosine_similarity(query_embedding, chunk["embedding"])
+        print(f"Result {i+1} — {chunk['metadata'].get('name', '?')} (score: {score:.3f})")
+        print(chunk["text"][:300])
         print()
 
 

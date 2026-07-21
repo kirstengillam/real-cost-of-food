@@ -187,20 +187,20 @@ function handler(event) {
       this, 'AnthropicApiKey', { parameterName: '/rcof/anthropic-api-key' }
     );
 
-    // chroma_db/ is NOT bundled here — the deploy-site workflow packages it
-    // fresh after each embed_and_store.py run and calls aws lambda update-function-code.
-    // This initial asset is a bootstrap placeholder (no chroma_db = graceful 503).
+    // The deploy-site workflow packages this Lambda fresh on every deploy
+    // (pip install voyageai anthropic + lambda_handler.py, ~30MB unzipped).
+    // embeddings.json is stored in S3 and fetched at cold start — no Chroma needed.
     const ragFunction = new lambda.Function(this, 'RagFunction', {
       runtime: lambda.Runtime.PYTHON_3_12,
       handler: 'lambda_handler.handler',
       code: lambda.Code.fromAsset(path.join(__dirname, '../../rag'), {
-        exclude: ['venv/**', 'venv', '*.pyc', '__pycache__', 'chroma_db', 'chunks.json'],
+        exclude: ['venv/**', 'venv', '*.pyc', '__pycache__', 'chroma_db', 'chunks.json', 'embeddings.json'],
         bundling: {
           local: {
             tryBundle(outputDir: string) {
               const { execSync } = require('child_process');
               const ragDir = path.join(__dirname, '../../rag');
-              execSync(`pip3 install voyageai chromadb anthropic -t ${outputDir} --quiet --break-system-packages`);
+              execSync(`pip3 install voyageai anthropic -t ${outputDir} --quiet --break-system-packages`);
               execSync(`cp ${ragDir}/lambda_handler.py ${outputDir}/`);
               return true;
             },
@@ -209,17 +209,25 @@ function handler(event) {
         },
       }),
       environment: {
-        VOYAGE_API_KEY_PARAM: voyageKeyParam.parameterName,
-        ANTHROPIC_API_KEY_PARAM: anthropicKeyParam.parameterName,
+        // API keys and DATA_BUCKET are injected by the deploy workflow via
+        // aws lambda update-function-configuration on every deploy.
+        // Set placeholders here so CDK doesn't error on first deploy.
+        VOYAGE_API_KEY: 'placeholder',
+        ANTHROPIC_API_KEY: 'placeholder',
+        DATA_BUCKET: dataBucket.bucketName,
       },
       timeout: cdk.Duration.seconds(30),
       memorySize: 512,
-      description: 'RAG Q&A: embeds question via Voyage, retrieves from Chroma, answers via Claude',
+      description: 'RAG Q&A: embeds question via Voyage, retrieves from S3 embeddings, answers via Claude',
     });
 
-    // SSM grants for the Lambda execution role (reads keys at runtime)
+    // SSM grants are kept so the Lambda execution role can read keys if ever
+    // needed, but the workflow now injects them as env vars directly.
     voyageKeyParam.grantRead(ragFunction);
     anthropicKeyParam.grantRead(ragFunction);
+
+    // Lambda reads embeddings.json from the data bucket at cold start
+    dataBucket.grantRead(ragFunction);
 
     // Function URL — NONE auth means no IAM invoke permission needed; the
     // deploy role does NOT need grantInvokeUrl (that would create a circular dep).

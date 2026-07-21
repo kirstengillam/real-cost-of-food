@@ -40,7 +40,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install RAG dependencies
-        run: pip install voyageai chromadb anthropic
+        run: pip install voyageai
 
       - name: Fetch Voyage API key from SSM
         run: |
@@ -51,14 +51,18 @@ jobs:
           python rag/build_chunks.py
           python rag/embed_and_store.py
 
+      - name: Upload embeddings to S3
+        run: |
+          aws s3 cp rag/embeddings.json \
+            s3://${{ secrets.DATA_BUCKET_NAME }}/rag/embeddings.json \
+            --content-type application/json
+
       - name: Package RAG Lambda zip
         run: |
           LAMBDA_BUILD=$(mktemp -d)
-          pip install voyageai chromadb anthropic -t "$LAMBDA_BUILD" --quiet
+          pip install voyageai anthropic -t "$LAMBDA_BUILD" --quiet
           cp rag/lambda_handler.py "$LAMBDA_BUILD/"
-          cp -r rag/chroma_db "$LAMBDA_BUILD/"
           cd "$LAMBDA_BUILD" && zip -r "$GITHUB_WORKSPACE/rag_lambda.zip" . -q
-          echo "LAMBDA_BUILD=$LAMBDA_BUILD" >> $GITHUB_ENV
 
       - name: Deploy RAG Lambda code
         run: |
@@ -72,7 +76,7 @@ jobs:
           ANTHROPIC_KEY=$(aws ssm get-parameter --name /rcof/anthropic-api-key --with-decryption --query Parameter.Value --output text)
           aws lambda update-function-configuration \
             --function-name ${{ secrets.RAG_FUNCTION_NAME }} \
-            --environment "Variables={VOYAGE_API_KEY=$VOYAGE_API_KEY,ANTHROPIC_API_KEY=$ANTHROPIC_KEY}" \
+            --environment "Variables={VOYAGE_API_KEY=$VOYAGE_API_KEY,ANTHROPIC_API_KEY=$ANTHROPIC_KEY,DATA_BUCKET=${{ secrets.DATA_BUCKET_NAME }}}" \
             --no-cli-pager
       # ─────────────────────────────────────────────────────────────────────────
 
