@@ -77,6 +77,11 @@ jobs:
             --s3-key rag/lambda.zip \
             --no-cli-pager
 
+      - name: Wait for Lambda code update to finish
+        run: |
+          aws lambda wait function-updated \
+            --function-name ${{ secrets.RAG_FUNCTION_NAME }}
+
       - name: Inject API keys into RAG Lambda environment
         run: |
           ANTHROPIC_KEY=$(aws ssm get-parameter --name /rcof/anthropic-api-key --with-decryption --query Parameter.Value --output text)
