@@ -186,6 +186,9 @@ function handler(event) {
     const anthropicKeyParam = ssm.StringParameter.fromSecureStringParameterAttributes(
       this, 'AnthropicApiKey', { parameterName: '/rcof/anthropic-api-key' }
     );
+    
+    voyageKeyParam.grantRead(deployRole);
+    anthropicKeyParam.grantRead(deployRole);
 
     // The deploy-site workflow packages this Lambda fresh on every deploy
     // (pip install voyageai anthropic + lambda_handler.py, ~30MB unzipped).
