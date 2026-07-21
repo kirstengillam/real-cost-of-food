@@ -217,14 +217,12 @@ function handler(event) {
       description: 'RAG Q&A: embeds question via Voyage, retrieves from Chroma, answers via Claude',
     });
 
-    // Fetch keys at cold start via SSM (avoids storing plaintext in env vars).
-    // The workflow injects the actual values when it packages and deploys the zip,
-    // so the SSM grants here are for the Lambda execution role's future use.
+    // SSM grants for the Lambda execution role (reads keys at runtime)
     voyageKeyParam.grantRead(ragFunction);
     anthropicKeyParam.grantRead(ragFunction);
 
-    // Function URL — simpler than API Gateway for a single-endpoint Lambda.
-    // CORS is handled in the handler itself so the Lambda can control allowed origins.
+    // Function URL — NONE auth means no IAM invoke permission needed; the
+    // deploy role does NOT need grantInvokeUrl (that would create a circular dep).
     const ragFunctionUrl = ragFunction.addFunctionUrl({
       authType: lambda.FunctionUrlAuthType.NONE,
       cors: {
@@ -234,14 +232,10 @@ function handler(event) {
       },
     });
 
-    // Allow the deploy role to update RAG function code (called by deploy-site.yml)
-    ragFunction.grantInvokeUrl(deployRole);
-    ragFunction.addToRolePolicy(new iam.PolicyStatement({
-      actions: ['lambda:UpdateFunctionCode'],
-      resources: [ragFunction.functionArn],
-    }));
+    // Allow the deploy role to update RAG function code (called by deploy-site.yml).
+    // Only add to the deploy role's policy — no resource-based policy on the function.
     deployRole.addToPrincipalPolicy(new iam.PolicyStatement({
-      actions: ['lambda:UpdateFunctionCode', 'lambda:GetFunction'],
+      actions: ['lambda:UpdateFunctionCode', 'lambda:GetFunction', 'lambda:UpdateFunctionConfiguration'],
       resources: [ragFunction.functionArn],
     }));
 
