@@ -22,6 +22,9 @@ infra/dist/
 infra/cdk.out/
 infra/cdk-outputs.json
 
+# RAG artifacts
+rag/chroma_db/
+
 # Editors
 .idea/
 .vscode/

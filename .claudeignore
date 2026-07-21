@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+site/node_modules/
+infra/node_modules/
+
+# Build artifacts
+site/dist/
+site/.astro/
+infra/dist/
+infra/cdk.out/
+rag/chroma_db/
+
+# Python
+etl/__pycache__/
+**/.venv/
+**/__pycache__/
+
+# Editors / OS
+.idea/
+.vscode/
+*.DS_Store
