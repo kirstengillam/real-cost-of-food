@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import QA from '../components/QA.astro';
 import { getAllFoods } from '../lib/foods';
 
 const foods = getAllFoods();
@@ -60,6 +61,8 @@ const foods = getAllFoods();
         );
       })}
     </ul>
+
+    <QA />
 
     <footer class="site-footer">
       <p>Prices: U.S. Bureau of Labor Statistics. Nutrition: USDA FoodData Central. Updated monthly.</p>

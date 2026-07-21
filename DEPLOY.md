@@ -83,11 +83,24 @@ aws ssm put-parameter \
   --name /rcof/fdc-api-key \
   --type SecureString \
   --value YOUR_FDC_API_KEY
+
+# RAG Q&A — Voyage AI (embeddings) and Anthropic (generation)
+aws ssm put-parameter \
+  --name /rcof/voyage-api-key \
+  --type SecureString \
+  --value YOUR_VOYAGE_API_KEY
+
+aws ssm put-parameter \
+  --name /rcof/anthropic-api-key \
+  --type SecureString \
+  --value YOUR_ANTHROPIC_API_KEY
 ```
 
-Get API keys (both free):
-- BLS: https://data.bls.gov/registrationEngine/
-- USDA FDC: https://fdc.nal.usda.gov/api-key-signup.html
+Get API keys:
+- BLS: https://data.bls.gov/registrationEngine/ (free)
+- USDA FDC: https://fdc.nal.usda.gov/api-key-signup.html (free)
+- Voyage AI: https://www.voyageai.com (free tier, for embeddings)
+- Anthropic: https://console.anthropic.com (for Claude generation)
 
 ### 5. Add GitHub Actions secrets
 
@@ -100,6 +113,8 @@ In your GitHub repo → Settings → Secrets and variables → Actions, add:
 | `DATA_BUCKET_NAME` | `DataBucketName` output from CDK |
 | `CLOUDFRONT_DISTRIBUTION_ID` | `DistributionId` output from CDK |
 | `ADSENSE_ID` | Your AdSense publisher ID (`ca-pub-XXXXXXXXXXXXXXXX`) — leave blank until ready to monetize |
+| `RAG_FUNCTION_NAME` | `RagFunctionName` output from CDK |
+| `RAG_FUNCTION_URL` | `RagFunctionUrl` output from CDK |
 
 ### 6. First deploy of the site
 

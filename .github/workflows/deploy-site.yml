@@ -33,6 +33,49 @@ jobs:
         # Falls back to the committed file if the bucket is empty (first deploy)
         continue-on-error: true
 
+      # ── RAG: rebuild embeddings and redeploy Lambda ───────────────────────
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install RAG dependencies
+        run: pip install voyageai chromadb anthropic
+
+      - name: Fetch Voyage API key from SSM
+        run: |
+          echo "VOYAGE_API_KEY=$(aws ssm get-parameter --name /rcof/voyage-api-key --with-decryption --query Parameter.Value --output text)" >> $GITHUB_ENV
+
+      - name: Build chunks and embeddings
+        run: |
+          python rag/build_chunks.py
+          python rag/embed_and_store.py
+
+      - name: Package RAG Lambda zip
+        run: |
+          LAMBDA_BUILD=$(mktemp -d)
+          pip install voyageai chromadb anthropic -t "$LAMBDA_BUILD" --quiet
+          cp rag/lambda_handler.py "$LAMBDA_BUILD/"
+          cp -r rag/chroma_db "$LAMBDA_BUILD/"
+          cd "$LAMBDA_BUILD" && zip -r "$GITHUB_WORKSPACE/rag_lambda.zip" . -q
+          echo "LAMBDA_BUILD=$LAMBDA_BUILD" >> $GITHUB_ENV
+
+      - name: Deploy RAG Lambda code
+        run: |
+          aws lambda update-function-code \
+            --function-name ${{ secrets.RAG_FUNCTION_NAME }} \
+            --zip-file fileb://rag_lambda.zip \
+            --no-cli-pager
+
+      - name: Inject API keys into RAG Lambda environment
+        run: |
+          ANTHROPIC_KEY=$(aws ssm get-parameter --name /rcof/anthropic-api-key --with-decryption --query Parameter.Value --output text)
+          aws lambda update-function-configuration \
+            --function-name ${{ secrets.RAG_FUNCTION_NAME }} \
+            --environment "Variables={VOYAGE_API_KEY=$VOYAGE_API_KEY,ANTHROPIC_API_KEY=$ANTHROPIC_KEY}" \
+            --no-cli-pager
+      # ─────────────────────────────────────────────────────────────────────────
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
@@ -48,6 +91,7 @@ jobs:
         working-directory: site
         env:
           ADSENSE_ID: ${{ secrets.ADSENSE_ID }}
+          PUBLIC_RAG_URL: ${{ secrets.RAG_FUNCTION_URL }}
         run: npm run build
 
       - name: Sync to S3

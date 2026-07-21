@@ -176,6 +176,75 @@ function handler(event) {
     blsKeyParam.grantRead(deployRole); // ETL workflow reads keys via aws ssm get-parameter
     fdcKeyParam.grantRead(deployRole);
 
+    // ── RAG Q&A Lambda ───────────────────────────────────────────────────────
+    // API keys for the RAG function. Create these once with:
+    //   aws ssm put-parameter --name /rcof/voyage-api-key  --type SecureString --value YOUR_KEY
+    //   aws ssm put-parameter --name /rcof/anthropic-api-key --type SecureString --value YOUR_KEY
+    const voyageKeyParam = ssm.StringParameter.fromSecureStringParameterAttributes(
+      this, 'VoyageApiKey', { parameterName: '/rcof/voyage-api-key' }
+    );
+    const anthropicKeyParam = ssm.StringParameter.fromSecureStringParameterAttributes(
+      this, 'AnthropicApiKey', { parameterName: '/rcof/anthropic-api-key' }
+    );
+
+    // chroma_db/ is NOT bundled here — the deploy-site workflow packages it
+    // fresh after each embed_and_store.py run and calls aws lambda update-function-code.
+    // This initial asset is a bootstrap placeholder (no chroma_db = graceful 503).
+    const ragFunction = new lambda.Function(this, 'RagFunction', {
+      runtime: lambda.Runtime.PYTHON_3_12,
+      handler: 'lambda_handler.handler',
+      code: lambda.Code.fromAsset(path.join(__dirname, '../../rag'), {
+        exclude: ['venv/**', 'venv', '*.pyc', '__pycache__', 'chroma_db', 'chunks.json'],
+        bundling: {
+          local: {
+            tryBundle(outputDir: string) {
+              const { execSync } = require('child_process');
+              const ragDir = path.join(__dirname, '../../rag');
+              execSync(`pip3 install voyageai chromadb anthropic -t ${outputDir} --quiet --break-system-packages`);
+              execSync(`cp ${ragDir}/lambda_handler.py ${outputDir}/`);
+              return true;
+            },
+          },
+          image: lambda.Runtime.PYTHON_3_12.bundlingImage,
+        },
+      }),
+      environment: {
+        VOYAGE_API_KEY_PARAM: voyageKeyParam.parameterName,
+        ANTHROPIC_API_KEY_PARAM: anthropicKeyParam.parameterName,
+      },
+      timeout: cdk.Duration.seconds(30),
+      memorySize: 512,
+      description: 'RAG Q&A: embeds question via Voyage, retrieves from Chroma, answers via Claude',
+    });
+
+    // Fetch keys at cold start via SSM (avoids storing plaintext in env vars).
+    // The workflow injects the actual values when it packages and deploys the zip,
+    // so the SSM grants here are for the Lambda execution role's future use.
+    voyageKeyParam.grantRead(ragFunction);
+    anthropicKeyParam.grantRead(ragFunction);
+
+    // Function URL — simpler than API Gateway for a single-endpoint Lambda.
+    // CORS is handled in the handler itself so the Lambda can control allowed origins.
+    const ragFunctionUrl = ragFunction.addFunctionUrl({
+      authType: lambda.FunctionUrlAuthType.NONE,
+      cors: {
+        allowedOrigins: ['*'],
+        allowedMethods: [lambda.HttpMethod.POST],
+        allowedHeaders: ['Content-Type'],
+      },
+    });
+
+    // Allow the deploy role to update RAG function code (called by deploy-site.yml)
+    ragFunction.grantInvokeUrl(deployRole);
+    ragFunction.addToRolePolicy(new iam.PolicyStatement({
+      actions: ['lambda:UpdateFunctionCode'],
+      resources: [ragFunction.functionArn],
+    }));
+    deployRole.addToPrincipalPolicy(new iam.PolicyStatement({
+      actions: ['lambda:UpdateFunctionCode', 'lambda:GetFunction'],
+      resources: [ragFunction.functionArn],
+    }));
+
     // ── Outputs ───────────────────────────────────────────────────────────────
     new cdk.CfnOutput(this, 'CloudFrontUrl', {
       value: `https://${distribution.distributionDomainName}`,
@@ -194,6 +263,14 @@ function handler(event) {
     new cdk.CfnOutput(this, 'DeployRoleArn', {
       value: deployRole.roleArn,
       description: 'ARN to put in GitHub Actions secret AWS_DEPLOY_ROLE_ARN',
+    });
+    new cdk.CfnOutput(this, 'RagFunctionName', {
+      value: ragFunction.functionName,
+      description: 'Put in GitHub Actions secret RAG_FUNCTION_NAME',
+    });
+    new cdk.CfnOutput(this, 'RagFunctionUrl', {
+      value: ragFunctionUrl.url,
+      description: 'Put in GitHub Actions secret RAG_FUNCTION_URL (passed to Astro build as PUBLIC_RAG_URL)',
     });
   }
 }

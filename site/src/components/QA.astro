@@ -1,0 +1,133 @@
+---
+const ragUrl = import.meta.env.PUBLIC_RAG_URL;
+---
+
+{ragUrl && (
+<section class="qa-section">
+  <h2 class="qa-heading">Ask a question</h2>
+  <p class="qa-sub">Answers are grounded in our price, nutrition, and sustainability data — not a generic guess.</p>
+  <form class="qa-form" id="qa-form">
+    <input
+      id="qa-input"
+      class="qa-input"
+      type="text"
+      placeholder="e.g. cheap plant protein alternative to chicken?"
+      maxlength="500"
+      autocomplete="off"
+    />
+    <button class="qa-submit" type="submit">Ask</button>
+  </form>
+  <div id="qa-result" class="qa-result" aria-live="polite"></div>
+</section>
+)}
+
+<style>
+  .qa-section {
+    margin: 2.5rem 0 0;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line-dotted);
+  }
+  .qa-heading {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin: 0 0 0.3rem;
+  }
+  .qa-sub {
+    font-size: 0.8rem;
+    color: var(--thermal-gray);
+    margin: 0 0 1rem;
+  }
+  .qa-form {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .qa-input {
+    flex: 1;
+    font-size: 0.9rem;
+    font-family: inherit;
+    padding: 0.45rem 0.65rem;
+    border: 1px solid var(--line-dotted);
+    border-radius: 3px;
+    background: transparent;
+    color: var(--ink);
+    min-width: 0;
+  }
+  .qa-input:focus {
+    outline: 2px solid var(--produce-green);
+    outline-offset: 1px;
+  }
+  .qa-submit {
+    font-size: 0.85rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    padding: 0.45rem 0.9rem;
+    background: var(--produce-green);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .qa-submit:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+  .qa-result {
+    margin-top: 1rem;
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+  .qa-result.loading { color: var(--thermal-gray); }
+  .qa-result.error   { color: var(--stamp-red); }
+  .qa-sources {
+    margin-top: 0.6rem;
+    font-size: 0.75rem;
+    color: var(--thermal-gray);
+  }
+</style>
+
+<script define:vars={{ ragUrl }}>
+  const form   = document.getElementById('qa-form');
+  const input  = document.getElementById('qa-input');
+  const result = document.getElementById('qa-result');
+  const button = form.querySelector('button');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const question = input.value.trim();
+    if (!question) return;
+
+    button.disabled = true;
+    result.className = 'qa-result loading';
+    result.textContent = 'Searching…';
+
+    try {
+      const res = await fetch(ragUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question }),
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        result.className = 'qa-result error';
+        result.textContent = data.error || 'Something went wrong. Please try again.';
+        return;
+      }
+
+      const sources = (data.sources || []).filter(Boolean);
+      result.className = 'qa-result';
+      result.innerHTML =
+        `<p>${data.answer.replace(/\n/g, '<br>')}</p>` +
+        (sources.length
+          ? `<p class="qa-sources">Based on data for: ${sources.join(', ')}</p>`
+          : '');
+    } catch {
+      result.className = 'qa-result error';
+      result.textContent = 'Could not reach the server. Please try again.';
+    } finally {
+      button.disabled = false;
+    }
+  });
+</script>
