@@ -64,11 +64,17 @@ jobs:
           cp rag/lambda_handler.py "$LAMBDA_BUILD/"
           cd "$LAMBDA_BUILD" && zip -r "$GITHUB_WORKSPACE/rag_lambda.zip" . -q
 
+      - name: Upload RAG Lambda zip to S3
+        run: |
+          aws s3 cp rag_lambda.zip \
+            s3://${{ secrets.DATA_BUCKET_NAME }}/rag/lambda.zip
+
       - name: Deploy RAG Lambda code
         run: |
           aws lambda update-function-code \
             --function-name ${{ secrets.RAG_FUNCTION_NAME }} \
-            --zip-file fileb://rag_lambda.zip \
+            --s3-bucket ${{ secrets.DATA_BUCKET_NAME }} \
+            --s3-key rag/lambda.zip \
             --no-cli-pager
 
       - name: Inject API keys into RAG Lambda environment
