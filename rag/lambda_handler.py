@@ -59,9 +59,6 @@ def _cosine(a: list[float], b: list[float]) -> float:
 
 
 def handler(event, context):
-    if event.get("requestContext", {}).get("http", {}).get("method") == "OPTIONS":
-        return _response(200, "")
-
     try:
         body = json.loads(event.get("body") or "{}")
         question = (body.get("question") or "").strip()
@@ -101,11 +98,6 @@ def handler(event, context):
 def _response(status_code: int, body: str) -> dict:
     return {
         "statusCode": status_code,
-        "headers": {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "POST, OPTIONS",
-            "Access-Control-Allow-Headers": "Content-Type",
-        },
+        "headers": {"Content-Type": "application/json"},
         "body": body,
     }
