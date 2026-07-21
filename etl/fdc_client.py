@@ -35,6 +35,10 @@ NUTRIENT_IDS = {
     "fiber_g": 1079,
     "sugars_g": 2000,
     "sodium_mg": 1093,
+    "iron_mg": 1089,
+    "zinc_mg": 1095,
+    "vitamin_b12_mcg": 1178,
+    "folate_mcg": 1177,
 }
 
 

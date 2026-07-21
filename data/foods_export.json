@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T20:58:27.874588+00:00",
+  "generated_at": "2026-07-21T18:09:57.205559+00:00",
   "foods": [
     {
       "slug": "eggs",
@@ -7,11 +7,11 @@
       "category": "protein",
       "serving_unit": "100g (~2 large eggs)",
       "price": {
-        "avg_price_usd": 2.191,
+        "avg_price_usd": 2.141,
         "avg_price_unit": "per dozen",
         "price_source": "bls_avg_price",
-        "yoy_pct_change": -35.18,
-        "as_of": "2026-05"
+        "yoy_pct_change": -27.94,
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 143.0,
@@ -20,12 +20,20 @@
         "carbs_g": 0.72,
         "fiber_g": 0.0,
         "sugars_g": 0.37,
+        "iron_mg": 1.75,
+        "zinc_mg": 1.29,
+        "vitamin_b12_mcg": 0.89,
+        "folate_mcg": 47.0,
         "source_fdc_id": 171287
       },
       "value_metrics": {
-        "protein_g_per_dollar": 34.39,
-        "calories_per_dollar": 391.57,
+        "protein_g_per_dollar": 35.2,
+        "calories_per_dollar": 400.78,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 4.9,
+        "zinc_mg_per_dollar": 3.62,
+        "vitamin_b12_mcg_per_dollar": 2.49,
+        "folate_mcg_per_dollar": 131.73,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -55,11 +63,11 @@
       "category": "dairy",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 4.217,
+        "avg_price_usd": 4.317,
         "avg_price_unit": "per gallon",
         "price_source": "bls_avg_price",
-        "yoy_pct_change": 4.12,
-        "as_of": "2026-05"
+        "yoy_pct_change": 8.97,
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 61.0,
@@ -68,12 +76,20 @@
         "carbs_g": 4.8,
         "fiber_g": 0.0,
         "sugars_g": 5.05,
+        "iron_mg": 0.03,
+        "zinc_mg": 0.37,
+        "vitamin_b12_mcg": 0.45,
+        "folate_mcg": 5.0,
         "source_fdc_id": 171265
       },
       "value_metrics": {
-        "protein_g_per_dollar": 28.23,
-        "calories_per_dollar": 546.59,
+        "protein_g_per_dollar": 27.58,
+        "calories_per_dollar": 534.15,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.26,
+        "zinc_mg_per_dollar": 3.24,
+        "vitamin_b12_mcg_per_dollar": 3.94,
+        "folate_mcg_per_dollar": 43.78,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -103,11 +119,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 6.745,
+        "avg_price_usd": 6.825,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
-        "yoy_pct_change": 12.07,
-        "as_of": "2026-05"
+        "yoy_pct_change": 12.43,
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 254.0,
@@ -116,12 +132,20 @@
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 1.94,
+        "zinc_mg": 4.18,
+        "vitamin_b12_mcg": 2.14,
+        "folate_mcg": 7.0,
         "source_fdc_id": 174036
       },
       "value_metrics": {
-        "protein_g_per_dollar": 11.55,
-        "calories_per_dollar": 170.81,
+        "protein_g_per_dollar": 11.41,
+        "calories_per_dollar": 168.8,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 1.29,
+        "zinc_mg_per_dollar": 2.78,
+        "vitamin_b12_mcg_per_dollar": 1.42,
+        "folate_mcg_per_dollar": 4.65,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -151,11 +175,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 4.171,
+        "avg_price_usd": 4.181,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 120.0,
@@ -164,12 +188,20 @@
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 0.37,
+        "zinc_mg": 0.68,
+        "vitamin_b12_mcg": 0.21,
+        "folate_mcg": 9.0,
         "source_fdc_id": 171077
       },
       "value_metrics": {
-        "protein_g_per_dollar": 24.47,
-        "calories_per_dollar": 130.51,
+        "protein_g_per_dollar": 24.41,
+        "calories_per_dollar": 130.18,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.4,
+        "zinc_mg_per_dollar": 0.74,
+        "vitamin_b12_mcg_per_dollar": 0.23,
+        "folate_mcg_per_dollar": 9.76,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -199,11 +231,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 6.712,
+        "avg_price_usd": 6.561,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
-        "yoy_pct_change": 0.75,
-        "as_of": "2026-05"
+        "yoy_pct_change": -1.54,
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 898.0,
@@ -212,12 +244,20 @@
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 0.13,
+        "zinc_mg": 0.06,
+        "vitamin_b12_mcg": 0.09,
+        "folate_mcg": 0.0,
         "source_fdc_id": 168324
       },
       "value_metrics": {
         "protein_g_per_dollar": 0.05,
-        "calories_per_dollar": 606.88,
+        "calories_per_dollar": 620.81,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.09,
+        "zinc_mg_per_dollar": 0.04,
+        "vitamin_b12_mcg_per_dollar": 0.06,
+        "folate_mcg_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -247,11 +287,11 @@
       "category": "produce",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 0.646,
+        "avg_price_usd": 0.645,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
-        "yoy_pct_change": -1.22,
-        "as_of": "2026-05"
+        "yoy_pct_change": 1.03,
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 89.0,
@@ -260,12 +300,20 @@
         "carbs_g": 22.84,
         "fiber_g": 2.6,
         "sugars_g": 12.23,
+        "iron_mg": 0.26,
+        "zinc_mg": 0.15,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 20.0,
         "source_fdc_id": 173944
       },
       "value_metrics": {
-        "protein_g_per_dollar": 7.65,
-        "calories_per_dollar": 625.0,
-        "fiber_g_per_dollar": 18.26,
+        "protein_g_per_dollar": 7.67,
+        "calories_per_dollar": 625.88,
+        "fiber_g_per_dollar": 18.28,
+        "iron_mg_per_dollar": 1.83,
+        "zinc_mg_per_dollar": 1.05,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 140.65,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -295,11 +343,11 @@
       "category": "produce",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 2.489,
+        "avg_price_usd": 2.154,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
-        "yoy_pct_change": 32.03,
-        "as_of": "2026-05"
+        "yoy_pct_change": 19.53,
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 18.0,
@@ -308,12 +356,20 @@
         "carbs_g": 3.89,
         "fiber_g": 1.2,
         "sugars_g": 2.63,
+        "iron_mg": 0.27,
+        "zinc_mg": 0.17,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 15.0,
         "source_fdc_id": 170457
       },
       "value_metrics": {
-        "protein_g_per_dollar": 1.6,
-        "calories_per_dollar": 32.8,
-        "fiber_g_per_dollar": 2.19,
+        "protein_g_per_dollar": 1.85,
+        "calories_per_dollar": 37.9,
+        "fiber_g_per_dollar": 2.53,
+        "iron_mg_per_dollar": 0.57,
+        "zinc_mg_per_dollar": 0.36,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 31.59,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -343,11 +399,11 @@
       "category": "grain",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 1.83,
+        "avg_price_usd": 1.814,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
-        "yoy_pct_change": 3.51,
-        "as_of": "2026-05"
+        "yoy_pct_change": 3.91,
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 290.0,
@@ -356,12 +412,20 @@
         "carbs_g": 54.5,
         "fiber_g": 2.9,
         "sugars_g": 6.2,
+        "iron_mg": 3.33,
+        "zinc_mg": 0.68,
+        "vitamin_b12_mcg": 0.02,
+        "folate_mcg": 104.0,
         "source_fdc_id": 174925
       },
       "value_metrics": {
-        "protein_g_per_dollar": 22.31,
-        "calories_per_dollar": 718.89,
-        "fiber_g_per_dollar": 7.19,
+        "protein_g_per_dollar": 22.51,
+        "calories_per_dollar": 725.18,
+        "fiber_g_per_dollar": 7.25,
+        "iron_mg_per_dollar": 8.33,
+        "zinc_mg_per_dollar": 1.7,
+        "vitamin_b12_mcg_per_dollar": 0.05,
+        "folate_mcg_per_dollar": 260.07,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -391,11 +455,11 @@
       "category": "dairy",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 5.685,
+        "avg_price_usd": 5.96,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
-        "yoy_pct_change": -6.03,
-        "as_of": "2026-05"
+        "yoy_pct_change": -3.58,
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 239.0,
@@ -404,12 +468,20 @@
         "carbs_g": 11.6,
         "fiber_g": 0.0,
         "sugars_g": 7.74,
+        "iron_mg": 0.33,
+        "zinc_mg": 2.59,
+        "vitamin_b12_mcg": 0.4,
+        "folate_mcg": 7.0,
         "source_fdc_id": 169901
       },
       "value_metrics": {
-        "protein_g_per_dollar": 13.32,
-        "calories_per_dollar": 190.7,
+        "protein_g_per_dollar": 12.71,
+        "calories_per_dollar": 181.89,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.25,
+        "zinc_mg_per_dollar": 1.97,
+        "vitamin_b12_mcg_per_dollar": 0.3,
+        "folate_mcg_per_dollar": 5.33,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -439,11 +511,11 @@
       "category": "protein",
       "serving_unit": "100g dry",
       "price": {
-        "avg_price_usd": 1.669,
+        "avg_price_usd": 1.626,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
-        "yoy_pct_change": -0.36,
-        "as_of": "2026-05"
+        "yoy_pct_change": 0.58,
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 62.0,
@@ -452,12 +524,20 @@
         "carbs_g": 11.6,
         "fiber_g": null,
         "sugars_g": null,
+        "iron_mg": 1.97,
+        "zinc_mg": 0.5,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 118.0,
         "source_fdc_id": 170086
       },
       "value_metrics": {
-        "protein_g_per_dollar": 14.27,
-        "calories_per_dollar": 168.48,
+        "protein_g_per_dollar": 14.64,
+        "calories_per_dollar": 172.94,
         "fiber_g_per_dollar": null,
+        "iron_mg_per_dollar": 5.5,
+        "zinc_mg_per_dollar": 1.39,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 329.15,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -487,11 +567,11 @@
       "category": "produce",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 1.542,
+        "avg_price_usd": 1.54,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
-        "yoy_pct_change": 2.47,
-        "as_of": "2026-05"
+        "yoy_pct_change": 0.78,
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 49.0,
@@ -500,12 +580,20 @@
         "carbs_g": 12.54,
         "fiber_g": 2.2,
         "sugars_g": 8.5,
+        "iron_mg": 0.13,
+        "zinc_mg": 0.08,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 34.0,
         "source_fdc_id": 169917
       },
       "value_metrics": {
         "protein_g_per_dollar": 2.68,
-        "calories_per_dollar": 144.12,
-        "fiber_g_per_dollar": 6.47,
+        "calories_per_dollar": 144.33,
+        "fiber_g_per_dollar": 6.48,
+        "iron_mg_per_dollar": 0.38,
+        "zinc_mg_per_dollar": 0.24,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 100.15,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -535,11 +623,11 @@
       "category": "produce",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 0.894,
+        "avg_price_usd": 0.923,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
-        "yoy_pct_change": -0.62,
-        "as_of": "2026-05"
+        "yoy_pct_change": 1.38,
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 77.0,
@@ -548,12 +636,20 @@
         "carbs_g": 17.49,
         "fiber_g": 2.1,
         "sugars_g": 0.82,
+        "iron_mg": 0.81,
+        "zinc_mg": 0.3,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 15.0,
         "source_fdc_id": 170026
       },
       "value_metrics": {
-        "protein_g_per_dollar": 10.4,
-        "calories_per_dollar": 390.66,
-        "fiber_g_per_dollar": 10.65,
+        "protein_g_per_dollar": 10.07,
+        "calories_per_dollar": 378.38,
+        "fiber_g_per_dollar": 10.32,
+        "iron_mg_per_dollar": 3.98,
+        "zinc_mg_per_dollar": 1.47,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 73.71,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -583,11 +679,11 @@
       "category": "produce",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 1.964,
+        "avg_price_usd": 2.012,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
-        "yoy_pct_change": 24.91,
-        "as_of": "2026-05"
+        "yoy_pct_change": 32.08,
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 14.0,
@@ -596,12 +692,20 @@
         "carbs_g": 2.97,
         "fiber_g": 1.2,
         "sugars_g": 1.97,
+        "iron_mg": 0.41,
+        "zinc_mg": 0.15,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 29.0,
         "source_fdc_id": 169248
       },
       "value_metrics": {
-        "protein_g_per_dollar": 2.08,
-        "calories_per_dollar": 32.33,
-        "fiber_g_per_dollar": 2.77,
+        "protein_g_per_dollar": 2.03,
+        "calories_per_dollar": 31.56,
+        "fiber_g_per_dollar": 2.71,
+        "iron_mg_per_dollar": 0.92,
+        "zinc_mg_per_dollar": 0.34,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 65.37,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -634,7 +738,7 @@
         "avg_price_usd": 2.814,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
-        "yoy_pct_change": 3.56,
+        "yoy_pct_change": 4.28,
         "as_of": "2026-05"
       },
       "nutrition_per_100g": {
@@ -644,12 +748,20 @@
         "carbs_g": 42.71,
         "fiber_g": 6.0,
         "sugars_g": 4.34,
+        "iron_mg": 2.47,
+        "zinc_mg": 1.77,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 42.0,
         "source_fdc_id": 172688
       },
       "value_metrics": {
         "protein_g_per_dollar": 20.07,
         "calories_per_dollar": 406.19,
         "fiber_g_per_dollar": 9.67,
+        "iron_mg_per_dollar": 3.98,
+        "zinc_mg_per_dollar": 2.85,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 67.7,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -679,11 +791,11 @@
       "category": "grain",
       "serving_unit": "100g dry",
       "price": {
-        "avg_price_usd": 1.071,
+        "avg_price_usd": 1.089,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
-        "yoy_pct_change": 2.9,
-        "as_of": "2026-05"
+        "yoy_pct_change": 4.1,
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 365.0,
@@ -692,12 +804,20 @@
         "carbs_g": 79.95,
         "fiber_g": 1.3,
         "sugars_g": 0.12,
+        "iron_mg": 0.8,
+        "zinc_mg": 1.09,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 8.0,
         "source_fdc_id": 169756
       },
       "value_metrics": {
-        "protein_g_per_dollar": 30.2,
-        "calories_per_dollar": 1545.96,
-        "fiber_g_per_dollar": 5.51,
+        "protein_g_per_dollar": 29.7,
+        "calories_per_dollar": 1520.2,
+        "fiber_g_per_dollar": 5.41,
+        "iron_mg_per_dollar": 3.33,
+        "zinc_mg_per_dollar": 4.54,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 33.32,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -730,8 +850,8 @@
         "avg_price_usd": 0.544,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
-        "yoy_pct_change": -1.51,
-        "as_of": "2026-05"
+        "yoy_pct_change": -1.33,
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 364.0,
@@ -740,12 +860,20 @@
         "carbs_g": 76.31,
         "fiber_g": 2.7,
         "sugars_g": 0.27,
+        "iron_mg": 1.17,
+        "zinc_mg": 0.7,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 26.0,
         "source_fdc_id": 169761
       },
       "value_metrics": {
         "protein_g_per_dollar": 86.16,
         "calories_per_dollar": 3035.86,
         "fiber_g_per_dollar": 22.52,
+        "iron_mg_per_dollar": 9.76,
+        "zinc_mg_per_dollar": 5.84,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 216.85,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -775,11 +903,11 @@
       "category": "grain",
       "serving_unit": "100g dry",
       "price": {
-        "avg_price_usd": 1.374,
+        "avg_price_usd": 1.367,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 371.0,
@@ -788,12 +916,20 @@
         "carbs_g": 74.67,
         "fiber_g": 3.2,
         "sugars_g": 2.67,
+        "iron_mg": 1.3,
+        "zinc_mg": 1.41,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 18.0,
         "source_fdc_id": 168927
       },
       "value_metrics": {
-        "protein_g_per_dollar": 43.05,
-        "calories_per_dollar": 1224.83,
-        "fiber_g_per_dollar": 10.56,
+        "protein_g_per_dollar": 43.26,
+        "calories_per_dollar": 1230.92,
+        "fiber_g_per_dollar": 10.62,
+        "iron_mg_per_dollar": 4.31,
+        "zinc_mg_per_dollar": 4.68,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 59.72,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -823,11 +959,11 @@
       "category": "beverage",
       "serving_unit": "100ml brewed",
       "price": {
-        "avg_price_usd": 9.511,
+        "avg_price_usd": 9.457,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
-        "yoy_pct_change": 16.09,
-        "as_of": "2026-05"
+        "yoy_pct_change": 12.15,
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 2.0,
@@ -836,12 +972,20 @@
         "carbs_g": 0.17,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 0.02,
+        "zinc_mg": 0.02,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 0.0,
         "source_fdc_id": 171881
       },
       "value_metrics": {
         "protein_g_per_dollar": 0.14,
-        "calories_per_dollar": 0.95,
+        "calories_per_dollar": 0.96,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.01,
+        "zinc_mg_per_dollar": 0.01,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -871,11 +1015,11 @@
       "category": "beverage",
       "serving_unit": "100ml reconstituted",
       "price": {
-        "avg_price_usd": 4.97,
+        "avg_price_usd": 4.874,
         "avg_price_unit": "per 16 oz",
         "price_source": "bls_avg_price",
-        "yoy_pct_change": 6.86,
-        "as_of": "2026-05"
+        "yoy_pct_change": 5.53,
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 148.0,
@@ -884,12 +1028,20 @@
         "carbs_g": 35.19,
         "fiber_g": 1.0,
         "sugars_g": 29.68,
+        "iron_mg": 0.33,
+        "zinc_mg": 0.16,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 77.0,
         "source_fdc_id": 169923
       },
       "value_metrics": {
-        "protein_g_per_dollar": 2.4,
-        "calories_per_dollar": 147.94,
-        "fiber_g_per_dollar": 1.0,
+        "protein_g_per_dollar": 2.45,
+        "calories_per_dollar": 150.85,
+        "fiber_g_per_dollar": 1.02,
+        "iron_mg_per_dollar": 0.34,
+        "zinc_mg_per_dollar": 0.16,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 78.48,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -919,11 +1071,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 2.036,
+        "avg_price_usd": 2.044,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
-        "yoy_pct_change": -1.51,
-        "as_of": "2026-05"
+        "yoy_pct_change": -2.33,
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 124.0,
@@ -932,12 +1084,20 @@
         "carbs_g": 1.8,
         "fiber_g": 0.0,
         "sugars_g": null,
+        "iron_mg": 5.86,
+        "zinc_mg": 3.32,
+        "vitamin_b12_mcg": 11.41,
+        "folate_mcg": 345.0,
         "source_fdc_id": 171057
       },
       "value_metrics": {
-        "protein_g_per_dollar": 39.83,
-        "calories_per_dollar": 276.23,
+        "protein_g_per_dollar": 39.68,
+        "calories_per_dollar": 275.19,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 13.0,
+        "zinc_mg_per_dollar": 7.37,
+        "vitamin_b12_mcg_per_dollar": 25.32,
+        "folate_mcg_per_dollar": 765.65,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -967,11 +1127,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 7.064,
+        "avg_price_usd": 7.141,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 254.0,
@@ -980,12 +1140,20 @@
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 1.94,
+        "zinc_mg": 4.18,
+        "vitamin_b12_mcg": 2.14,
+        "folate_mcg": 7.0,
         "source_fdc_id": 174036
       },
       "value_metrics": {
-        "protein_g_per_dollar": 11.03,
-        "calories_per_dollar": 163.1,
+        "protein_g_per_dollar": 10.91,
+        "calories_per_dollar": 161.34,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 1.23,
+        "zinc_mg_per_dollar": 2.66,
+        "vitamin_b12_mcg_per_dollar": 1.36,
+        "folate_mcg_per_dollar": 4.45,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1015,11 +1183,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 9.286,
+        "avg_price_usd": 9.434,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 139.0,
@@ -1028,12 +1196,20 @@
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 2.18,
+        "zinc_mg": 8.25,
+        "vitamin_b12_mcg": 2.91,
+        "folate_mcg": 3.0,
         "source_fdc_id": 169566
       },
       "value_metrics": {
-        "protein_g_per_dollar": 10.1,
-        "calories_per_dollar": 67.9,
+        "protein_g_per_dollar": 9.94,
+        "calories_per_dollar": 66.83,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 1.05,
+        "zinc_mg_per_dollar": 3.97,
+        "vitamin_b12_mcg_per_dollar": 1.4,
+        "folate_mcg_per_dollar": 1.44,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1063,11 +1239,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 12.802,
+        "avg_price_usd": 12.879,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 117.0,
@@ -1076,12 +1252,20 @@
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 1.85,
+        "zinc_mg": 3.61,
+        "vitamin_b12_mcg": 1.27,
+        "folate_mcg": 13.0,
         "source_fdc_id": 169429
       },
       "value_metrics": {
-        "protein_g_per_dollar": 8.17,
-        "calories_per_dollar": 41.45,
+        "protein_g_per_dollar": 8.13,
+        "calories_per_dollar": 41.21,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.65,
+        "zinc_mg_per_dollar": 1.27,
+        "vitamin_b12_mcg_per_dollar": 0.45,
+        "folate_mcg_per_dollar": 4.58,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1111,11 +1295,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 8.013,
+        "avg_price_usd": 8.222,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 198.0,
@@ -1124,12 +1308,20 @@
         "carbs_g": 0.14,
         "fiber_g": 0.0,
         "sugars_g": null,
+        "iron_mg": 1.69,
+        "zinc_mg": 2.85,
+        "vitamin_b12_mcg": 1.78,
+        "folate_mcg": 5.0,
         "source_fdc_id": 170199
       },
       "value_metrics": {
-        "protein_g_per_dollar": 8.31,
-        "calories_per_dollar": 112.08,
+        "protein_g_per_dollar": 8.1,
+        "calories_per_dollar": 109.24,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.93,
+        "zinc_mg_per_dollar": 1.57,
+        "vitamin_b12_mcg_per_dollar": 0.98,
+        "folate_mcg_per_dollar": 2.76,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1159,11 +1351,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 6.718,
+        "avg_price_usd": 6.975,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 254.0,
@@ -1172,12 +1364,20 @@
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 1.94,
+        "zinc_mg": 4.18,
+        "vitamin_b12_mcg": 2.14,
+        "folate_mcg": 7.0,
         "source_fdc_id": 174036
       },
       "value_metrics": {
-        "protein_g_per_dollar": 11.59,
-        "calories_per_dollar": 171.49,
+        "protein_g_per_dollar": 11.17,
+        "calories_per_dollar": 165.18,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 1.26,
+        "zinc_mg_per_dollar": 2.72,
+        "vitamin_b12_mcg_per_dollar": 1.39,
+        "folate_mcg_per_dollar": 4.55,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1207,11 +1407,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 8.624,
+        "avg_price_usd": 8.651,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 137.0,
@@ -1220,12 +1420,20 @@
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 2.38,
+        "zinc_mg": 5.09,
+        "vitamin_b12_mcg": 2.24,
+        "folate_mcg": 5.0,
         "source_fdc_id": 171790
       },
       "value_metrics": {
-        "protein_g_per_dollar": 11.26,
-        "calories_per_dollar": 72.06,
+        "protein_g_per_dollar": 11.23,
+        "calories_per_dollar": 71.83,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 1.25,
+        "zinc_mg_per_dollar": 2.67,
+        "vitamin_b12_mcg_per_dollar": 1.17,
+        "folate_mcg_per_dollar": 2.62,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1255,11 +1463,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 9.003,
+        "avg_price_usd": 9.304,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 124.0,
@@ -1268,12 +1476,20 @@
         "carbs_g": 0.21,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 2.2,
+        "zinc_mg": 5.51,
+        "vitamin_b12_mcg": 2.42,
+        "folate_mcg": 4.0,
         "source_fdc_id": 170809
       },
       "value_metrics": {
-        "protein_g_per_dollar": 11.03,
-        "calories_per_dollar": 62.47,
+        "protein_g_per_dollar": 10.68,
+        "calories_per_dollar": 60.45,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 1.07,
+        "zinc_mg_per_dollar": 2.69,
+        "vitamin_b12_mcg_per_dollar": 1.18,
+        "folate_mcg_per_dollar": 1.95,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1303,11 +1519,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 9.607,
+        "avg_price_usd": 9.55,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 249.0,
@@ -1316,12 +1532,20 @@
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 1.73,
+        "zinc_mg": 4.56,
+        "vitamin_b12_mcg": 1.79,
+        "folate_mcg": 10.0,
         "source_fdc_id": 168668
       },
       "value_metrics": {
-        "protein_g_per_dollar": 9.04,
-        "calories_per_dollar": 117.56,
+        "protein_g_per_dollar": 9.09,
+        "calories_per_dollar": 118.27,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.82,
+        "zinc_mg_per_dollar": 2.17,
+        "vitamin_b12_mcg_per_dollar": 0.85,
+        "folate_mcg_per_dollar": 4.75,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1351,11 +1575,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 8.615,
+        "avg_price_usd": 8.962,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 140.0,
@@ -1364,12 +1588,20 @@
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 2.06,
+        "zinc_mg": 4.16,
+        "vitamin_b12_mcg": 1.85,
+        "folate_mcg": 13.0,
         "source_fdc_id": 174058
       },
       "value_metrics": {
-        "protein_g_per_dollar": 11.7,
-        "calories_per_dollar": 73.71,
+        "protein_g_per_dollar": 11.25,
+        "calories_per_dollar": 70.86,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 1.04,
+        "zinc_mg_per_dollar": 2.11,
+        "vitamin_b12_mcg_per_dollar": 0.94,
+        "folate_mcg_per_dollar": 6.58,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1412,12 +1644,20 @@
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 2.34,
+        "zinc_mg": 3.76,
+        "vitamin_b12_mcg": 4.7,
+        "folate_mcg": 6.0,
         "source_fdc_id": 172128
       },
       "value_metrics": {
         "protein_g_per_dollar": 10.33,
         "calories_per_dollar": 72.94,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 1.14,
+        "zinc_mg_per_dollar": 1.83,
+        "vitamin_b12_mcg_per_dollar": 2.29,
+        "folate_mcg_per_dollar": 2.92,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1447,11 +1687,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 9.789,
+        "avg_price_usd": 9.844,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 150.0,
@@ -1460,12 +1700,20 @@
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 2.34,
+        "zinc_mg": 3.76,
+        "vitamin_b12_mcg": 4.7,
+        "folate_mcg": 6.0,
         "source_fdc_id": 172128
       },
       "value_metrics": {
-        "protein_g_per_dollar": 9.84,
-        "calories_per_dollar": 69.51,
+        "protein_g_per_dollar": 9.79,
+        "calories_per_dollar": 69.12,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 1.08,
+        "zinc_mg_per_dollar": 1.73,
+        "vitamin_b12_mcg_per_dollar": 2.17,
+        "folate_mcg_per_dollar": 2.76,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1495,11 +1743,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 14.274,
+        "avg_price_usd": 14.451,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 182.0,
@@ -1508,12 +1756,20 @@
         "carbs_g": 0.14,
         "fiber_g": null,
         "sugars_g": null,
+        "iron_mg": 3.27,
+        "zinc_mg": 5.26,
+        "vitamin_b12_mcg": 2.7,
+        "folate_mcg": null,
         "source_fdc_id": 167673
       },
       "value_metrics": {
-        "protein_g_per_dollar": 9.18,
-        "calories_per_dollar": 57.83,
+        "protein_g_per_dollar": 9.07,
+        "calories_per_dollar": 57.13,
         "fiber_g_per_dollar": null,
+        "iron_mg_per_dollar": 1.03,
+        "zinc_mg_per_dollar": 1.65,
+        "vitamin_b12_mcg_per_dollar": 0.85,
+        "folate_mcg_per_dollar": null,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1543,11 +1799,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 4.389,
+        "avg_price_usd": 4.336,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 748.0,
@@ -1556,12 +1812,20 @@
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 0.44,
+        "zinc_mg": 0.9,
+        "vitamin_b12_mcg": 0.29,
+        "folate_mcg": 1.0,
         "source_fdc_id": 168287
       },
       "value_metrics": {
-        "protein_g_per_dollar": 5.22,
-        "calories_per_dollar": 773.05,
+        "protein_g_per_dollar": 5.28,
+        "calories_per_dollar": 782.51,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.46,
+        "zinc_mg_per_dollar": 0.94,
+        "vitamin_b12_mcg_per_dollar": 0.3,
+        "folate_mcg_per_dollar": 1.05,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1591,11 +1855,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 3.755,
+        "avg_price_usd": 3.771,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 748.0,
@@ -1604,12 +1868,20 @@
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 0.44,
+        "zinc_mg": 0.9,
+        "vitamin_b12_mcg": 0.29,
+        "folate_mcg": 1.0,
         "source_fdc_id": 168287
       },
       "value_metrics": {
-        "protein_g_per_dollar": 6.1,
-        "calories_per_dollar": 903.6,
+        "protein_g_per_dollar": 6.07,
+        "calories_per_dollar": 899.69,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.53,
+        "zinc_mg_per_dollar": 1.08,
+        "vitamin_b12_mcg_per_dollar": 0.35,
+        "folate_mcg_per_dollar": 1.2,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1652,12 +1924,20 @@
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 0.59,
+        "zinc_mg": 1.85,
+        "vitamin_b12_mcg": 0.54,
+        "folate_mcg": 0.0,
         "source_fdc_id": 168242
       },
       "value_metrics": {
         "protein_g_per_dollar": 18.75,
         "calories_per_dollar": 172.0,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.55,
+        "zinc_mg_per_dollar": 1.71,
+        "vitamin_b12_mcg_per_dollar": 0.5,
+        "folate_mcg_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1687,11 +1967,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 4.616,
+        "avg_price_usd": 4.555,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 211.0,
@@ -1700,12 +1980,20 @@
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 0.71,
+        "zinc_mg": 1.57,
+        "vitamin_b12_mcg": 0.5,
+        "folate_mcg": 6.0,
         "source_fdc_id": 167889
       },
       "value_metrics": {
-        "protein_g_per_dollar": 19.55,
-        "calories_per_dollar": 207.33,
+        "protein_g_per_dollar": 19.82,
+        "calories_per_dollar": 210.12,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.71,
+        "zinc_mg_per_dollar": 1.56,
+        "vitamin_b12_mcg_per_dollar": 0.5,
+        "folate_mcg_per_dollar": 5.97,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1735,11 +2023,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 5.457,
+        "avg_price_usd": 5.508,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 245.0,
@@ -1748,12 +2036,20 @@
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": null,
+        "iron_mg": 0.85,
+        "zinc_mg": 1.93,
+        "vitamin_b12_mcg": 0.63,
+        "folate_mcg": 7.0,
         "source_fdc_id": 168222
       },
       "value_metrics": {
-        "protein_g_per_dollar": 14.49,
-        "calories_per_dollar": 203.64,
+        "protein_g_per_dollar": 14.35,
+        "calories_per_dollar": 201.76,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.7,
+        "zinc_mg_per_dollar": 1.59,
+        "vitamin_b12_mcg_per_dollar": 0.52,
+        "folate_mcg_per_dollar": 5.76,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1783,11 +2079,11 @@
       "category": "protein",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 1.786,
+        "avg_price_usd": 1.688,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 73.0,
@@ -1796,12 +2092,20 @@
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 1.5,
+        "zinc_mg": 1.0,
+        "vitamin_b12_mcg": 0.4,
+        "folate_mcg": 15.0,
         "source_fdc_id": 168148
       },
       "value_metrics": {
-        "protein_g_per_dollar": 41.66,
-        "calories_per_dollar": 185.42,
+        "protein_g_per_dollar": 44.07,
+        "calories_per_dollar": 196.18,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 4.03,
+        "zinc_mg_per_dollar": 2.69,
+        "vitamin_b12_mcg_per_dollar": 1.07,
+        "folate_mcg_per_dollar": 40.31,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1831,11 +2135,11 @@
       "category": "dairy",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 4.572,
+        "avg_price_usd": 4.626,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 290.0,
@@ -1844,12 +2148,20 @@
         "carbs_g": 8.73,
         "fiber_g": 0.0,
         "sugars_g": 7.32,
+        "iron_mg": 0.33,
+        "zinc_mg": 2.59,
+        "vitamin_b12_mcg": 0.4,
+        "folate_mcg": 7.0,
         "source_fdc_id": 171254
       },
       "value_metrics": {
-        "protein_g_per_dollar": 16.28,
-        "calories_per_dollar": 287.7,
+        "protein_g_per_dollar": 16.09,
+        "calories_per_dollar": 284.34,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.32,
+        "zinc_mg_per_dollar": 2.54,
+        "vitamin_b12_mcg_per_dollar": 0.39,
+        "folate_mcg_per_dollar": 6.86,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1879,11 +2191,11 @@
       "category": "dairy",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 3.929,
+        "avg_price_usd": 3.816,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 717.0,
@@ -1892,12 +2204,20 @@
         "carbs_g": 0.06,
         "fiber_g": 0.0,
         "sugars_g": 0.06,
+        "iron_mg": 0.02,
+        "zinc_mg": 0.09,
+        "vitamin_b12_mcg": 0.17,
+        "folate_mcg": 3.0,
         "source_fdc_id": 173410
       },
       "value_metrics": {
-        "protein_g_per_dollar": 0.98,
-        "calories_per_dollar": 827.75,
+        "protein_g_per_dollar": 1.01,
+        "calories_per_dollar": 852.25,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.02,
+        "zinc_mg_per_dollar": 0.11,
+        "vitamin_b12_mcg_per_dollar": 0.2,
+        "folate_mcg_per_dollar": 3.57,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1927,11 +2247,11 @@
       "category": "dairy",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 3.633,
+        "avg_price_usd": 3.75,
         "avg_price_unit": "per gallon",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 72.0,
@@ -1940,12 +2260,20 @@
         "carbs_g": 2.72,
         "fiber_g": 0.0,
         "sugars_g": 2.72,
+        "iron_mg": 0.14,
+        "zinc_mg": 0.38,
+        "vitamin_b12_mcg": 0.63,
+        "folate_mcg": 12.0,
         "source_fdc_id": 173417
       },
       "value_metrics": {
-        "protein_g_per_dollar": 128.93,
-        "calories_per_dollar": 749.22,
+        "protein_g_per_dollar": 124.9,
+        "calories_per_dollar": 725.81,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 1.41,
+        "zinc_mg_per_dollar": 3.83,
+        "vitamin_b12_mcg_per_dollar": 6.35,
+        "folate_mcg_per_dollar": 120.97,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -1975,11 +2303,11 @@
       "category": "dairy",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 6.045,
+        "avg_price_usd": 5.953,
         "avg_price_unit": "per half gallon",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 207.0,
@@ -1988,12 +2316,20 @@
         "carbs_g": 23.6,
         "fiber_g": 0.7,
         "sugars_g": 21.22,
+        "iron_mg": 0.09,
+        "zinc_mg": 0.69,
+        "vitamin_b12_mcg": 0.39,
+        "folate_mcg": 5.0,
         "source_fdc_id": 167575
       },
       "value_metrics": {
-        "protein_g_per_dollar": 3.2,
-        "calories_per_dollar": 189.37,
-        "fiber_g_per_dollar": 0.64,
+        "protein_g_per_dollar": 3.25,
+        "calories_per_dollar": 192.29,
+        "fiber_g_per_dollar": 0.65,
+        "iron_mg_per_dollar": 0.08,
+        "zinc_mg_per_dollar": 0.64,
+        "vitamin_b12_mcg_per_dollar": 0.36,
+        "folate_mcg_per_dollar": 4.64,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2023,11 +2359,11 @@
       "category": "dairy",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 1.537,
+        "avg_price_usd": 1.587,
         "avg_price_unit": "per 8 oz",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 61.0,
@@ -2036,12 +2372,20 @@
         "carbs_g": 4.66,
         "fiber_g": 0.0,
         "sugars_g": 4.66,
+        "iron_mg": 0.05,
+        "zinc_mg": 0.59,
+        "vitamin_b12_mcg": 0.37,
+        "folate_mcg": 7.0,
         "source_fdc_id": 171284
       },
       "value_metrics": {
-        "protein_g_per_dollar": 5.12,
-        "calories_per_dollar": 90.01,
+        "protein_g_per_dollar": 4.96,
+        "calories_per_dollar": 87.18,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.07,
+        "zinc_mg_per_dollar": 0.84,
+        "vitamin_b12_mcg_per_dollar": 0.53,
+        "folate_mcg_per_dollar": 10.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2071,11 +2415,11 @@
       "category": "produce",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 3.624,
+        "avg_price_usd": 4.021,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 17.0,
@@ -2084,12 +2428,20 @@
         "carbs_g": 3.29,
         "fiber_g": 2.1,
         "sugars_g": 1.19,
+        "iron_mg": 0.97,
+        "zinc_mg": 0.23,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 136.0,
         "source_fdc_id": 169247
       },
       "value_metrics": {
-        "protein_g_per_dollar": 1.54,
-        "calories_per_dollar": 21.28,
-        "fiber_g_per_dollar": 2.63,
+        "protein_g_per_dollar": 1.39,
+        "calories_per_dollar": 19.18,
+        "fiber_g_per_dollar": 2.37,
+        "iron_mg_per_dollar": 1.09,
+        "zinc_mg_per_dollar": 0.26,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 153.41,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2119,11 +2471,11 @@
       "category": "produce",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 1.595,
+        "avg_price_usd": 1.634,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 30.0,
@@ -2132,12 +2484,20 @@
         "carbs_g": 7.5,
         "fiber_g": 1.1,
         "sugars_g": null,
+        "iron_mg": 0.12,
+        "zinc_mg": 0.07,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 9.0,
         "source_fdc_id": 174675
       },
       "value_metrics": {
-        "protein_g_per_dollar": 1.56,
-        "calories_per_dollar": 85.32,
-        "fiber_g_per_dollar": 3.13,
+        "protein_g_per_dollar": 1.53,
+        "calories_per_dollar": 83.29,
+        "fiber_g_per_dollar": 3.05,
+        "iron_mg_per_dollar": 0.33,
+        "zinc_mg_per_dollar": 0.19,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 24.99,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2167,11 +2527,11 @@
       "category": "produce",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 2.091,
+        "avg_price_usd": 2.109,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 29.0,
@@ -2180,12 +2540,20 @@
         "carbs_g": 9.32,
         "fiber_g": 2.8,
         "sugars_g": 2.5,
+        "iron_mg": 0.6,
+        "zinc_mg": 0.06,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 11.0,
         "source_fdc_id": 167746
       },
       "value_metrics": {
-        "protein_g_per_dollar": 2.39,
-        "calories_per_dollar": 62.91,
-        "fiber_g_per_dollar": 6.07,
+        "protein_g_per_dollar": 2.37,
+        "calories_per_dollar": 62.37,
+        "fiber_g_per_dollar": 6.02,
+        "iron_mg_per_dollar": 1.29,
+        "zinc_mg_per_dollar": 0.13,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 23.66,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2215,11 +2583,11 @@
       "category": "produce",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 2.595,
+        "avg_price_usd": 2.516,
         "avg_price_unit": "per 12 oz",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 32.0,
@@ -2228,12 +2596,20 @@
         "carbs_g": 7.68,
         "fiber_g": 2.0,
         "sugars_g": 4.89,
+        "iron_mg": 0.41,
+        "zinc_mg": 0.14,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 24.0,
         "source_fdc_id": 167762
       },
       "value_metrics": {
-        "protein_g_per_dollar": 0.88,
-        "calories_per_dollar": 41.95,
-        "fiber_g_per_dollar": 2.62,
+        "protein_g_per_dollar": 0.91,
+        "calories_per_dollar": 43.27,
+        "fiber_g_per_dollar": 2.7,
+        "iron_mg_per_dollar": 0.55,
+        "zinc_mg_per_dollar": 0.19,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 32.45,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2263,11 +2639,11 @@
       "category": "grain",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 5.181,
+        "avg_price_usd": 4.964,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 444.0,
@@ -2276,12 +2652,20 @@
         "carbs_g": 65.75,
         "fiber_g": 1.8,
         "sugars_g": 37.1,
+        "iron_mg": 4.07,
+        "zinc_mg": 0.54,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 27.0,
         "source_fdc_id": 172717
       },
       "value_metrics": {
-        "protein_g_per_dollar": 3.18,
-        "calories_per_dollar": 388.72,
-        "fiber_g_per_dollar": 1.58,
+        "protein_g_per_dollar": 3.32,
+        "calories_per_dollar": 405.7,
+        "fiber_g_per_dollar": 1.64,
+        "iron_mg_per_dollar": 3.72,
+        "zinc_mg_per_dollar": 0.49,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 24.67,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2311,11 +2695,11 @@
       "category": "pantry",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 1.315,
+        "avg_price_usd": 1.286,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 72.0,
@@ -2324,12 +2708,20 @@
         "carbs_g": 18.13,
         "fiber_g": 1.2,
         "sugars_g": 3.23,
+        "iron_mg": 0.38,
+        "zinc_mg": 0.53,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 45.0,
         "source_fdc_id": 169346
       },
       "value_metrics": {
-        "protein_g_per_dollar": 6.0,
-        "calories_per_dollar": 248.36,
-        "fiber_g_per_dollar": 4.14,
+        "protein_g_per_dollar": 6.14,
+        "calories_per_dollar": 253.97,
+        "fiber_g_per_dollar": 4.23,
+        "iron_mg_per_dollar": 1.34,
+        "zinc_mg_per_dollar": 1.87,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 158.73,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2359,11 +2751,11 @@
       "category": "pantry",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 6.58,
+        "avg_price_usd": 6.632,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 532.0,
@@ -2372,12 +2764,20 @@
         "carbs_g": 53.83,
         "fiber_g": 3.1,
         "sugars_g": 0.33,
+        "iron_mg": 1.28,
+        "zinc_mg": 1.09,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 29.0,
         "source_fdc_id": 169677
       },
       "value_metrics": {
-        "protein_g_per_dollar": 4.41,
-        "calories_per_dollar": 366.74,
-        "fiber_g_per_dollar": 2.14,
+        "protein_g_per_dollar": 4.37,
+        "calories_per_dollar": 363.86,
+        "fiber_g_per_dollar": 2.12,
+        "iron_mg_per_dollar": 0.88,
+        "zinc_mg_per_dollar": 0.75,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 19.83,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2407,11 +2807,11 @@
       "category": "pantry",
       "serving_unit": "100g",
       "price": {
-        "avg_price_usd": 1.034,
+        "avg_price_usd": 1.018,
         "avg_price_unit": "per lb",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 387.0,
@@ -2420,12 +2820,20 @@
         "carbs_g": 99.98,
         "fiber_g": 0.0,
         "sugars_g": 99.8,
+        "iron_mg": 0.05,
+        "zinc_mg": 0.01,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 0.0,
         "source_fdc_id": 169655
       },
       "value_metrics": {
         "protein_g_per_dollar": 0.0,
-        "calories_per_dollar": 1697.37,
+        "calories_per_dollar": 1724.6,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.22,
+        "zinc_mg_per_dollar": 0.04,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2455,11 +2863,11 @@
       "category": "beverage",
       "serving_unit": "100ml",
       "price": {
-        "avg_price_usd": 2.195,
+        "avg_price_usd": 2.196,
         "avg_price_unit": "per 2 liters",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 42.0,
@@ -2468,12 +2876,20 @@
         "carbs_g": 10.36,
         "fiber_g": 0.0,
         "sugars_g": 9.94,
+        "iron_mg": 0.02,
+        "zinc_mg": 0.09,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 0.0,
         "source_fdc_id": 174852
       },
       "value_metrics": {
         "protein_g_per_dollar": 0.0,
         "calories_per_dollar": 382.51,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.18,
+        "zinc_mg_per_dollar": 0.82,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2503,11 +2919,11 @@
       "category": "beverage",
       "serving_unit": "100ml",
       "price": {
-        "avg_price_usd": 0.574,
+        "avg_price_usd": 0.612,
         "avg_price_unit": "per 12 oz",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 42.0,
@@ -2516,12 +2932,20 @@
         "carbs_g": 10.36,
         "fiber_g": 0.0,
         "sugars_g": 9.94,
+        "iron_mg": 0.02,
+        "zinc_mg": 0.09,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 0.0,
         "source_fdc_id": 174852
       },
       "value_metrics": {
         "protein_g_per_dollar": 0.0,
-        "calories_per_dollar": 248.96,
+        "calories_per_dollar": 233.46,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.11,
+        "zinc_mg_per_dollar": 0.5,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2551,11 +2975,11 @@
       "category": "beverage",
       "serving_unit": "100ml",
       "price": {
-        "avg_price_usd": 1.877,
+        "avg_price_usd": 1.882,
         "avg_price_unit": "per 16 oz",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 43.0,
@@ -2564,12 +2988,20 @@
         "carbs_g": 3.55,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 0.02,
+        "zinc_mg": 0.01,
+        "vitamin_b12_mcg": 0.02,
+        "folate_mcg": 6.0,
         "source_fdc_id": 168746
       },
       "value_metrics": {
-        "protein_g_per_dollar": 1.22,
-        "calories_per_dollar": 113.82,
+        "protein_g_per_dollar": 1.21,
+        "calories_per_dollar": 113.52,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.05,
+        "zinc_mg_per_dollar": 0.03,
+        "vitamin_b12_mcg_per_dollar": 0.05,
+        "folate_mcg_per_dollar": 15.84,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2599,11 +3031,11 @@
       "category": "beverage",
       "serving_unit": "100ml",
       "price": {
-        "avg_price_usd": 13.841,
+        "avg_price_usd": 13.804,
         "avg_price_unit": "per liter",
         "price_source": "bls_avg_price",
         "yoy_pct_change": null,
-        "as_of": "2026-05"
+        "as_of": "2026-06"
       },
       "nutrition_per_100g": {
         "energy_kcal": 85.0,
@@ -2612,12 +3044,20 @@
         "carbs_g": 2.61,
         "fiber_g": 0.0,
         "sugars_g": 0.62,
+        "iron_mg": 0.46,
+        "zinc_mg": 0.14,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 1.0,
         "source_fdc_id": 173190
       },
       "value_metrics": {
         "protein_g_per_dollar": 0.05,
-        "calories_per_dollar": 61.41,
+        "calories_per_dollar": 61.58,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.33,
+        "zinc_mg_per_dollar": 0.1,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 0.72,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {
@@ -2660,12 +3100,20 @@
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
+        "iron_mg": 0.12,
+        "zinc_mg": 0.07,
+        "vitamin_b12_mcg": 0.0,
+        "folate_mcg": 0.0,
         "source_fdc_id": 174817
       },
       "value_metrics": {
         "protein_g_per_dollar": 0.0,
         "calories_per_dollar": 184.81,
         "fiber_g_per_dollar": 0.0,
+        "iron_mg_per_dollar": 0.1,
+        "zinc_mg_per_dollar": 0.06,
+        "vitamin_b12_mcg_per_dollar": 0.0,
+        "folate_mcg_per_dollar": 0.0,
         "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
       },
       "sustainability": {

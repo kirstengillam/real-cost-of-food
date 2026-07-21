@@ -13,7 +13,7 @@ copyable by content-farm/AI sites. The nutrition + sustainability layer
 is the actual differentiator and moat — it requires real curation work
 a scraper bot won't bother doing well.
 
-## Goals (in priority order)
+## Goals
 
 1. **MVP first.** ~12-40 hand-curated foods, not thousands of thin
    programmatic pages. Earn scale after the format proves out.
@@ -25,6 +25,7 @@ a scraper bot won't bother doing well.
 4. **Low operating cost / low maintenance.** Monthly batch ETL, not a
    live service. Target <$20-30/mo at small scale (S3 + CloudFront +
    occasional Lambda invocation).
+5. RAG Q&A Add-On (see RAG.md)
 
 ## Architecture (as built)
 

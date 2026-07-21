@@ -129,17 +129,22 @@ def fetch_and_store_nutrition(conn, food: FoodSeed, now: datetime) -> None:
     conn.execute(
         """
         INSERT INTO nutrition (food_slug, fdc_id, fdc_description, fdc_data_type,
-                                energy_kcal, protein_g, fat_g, carbs_g, fiber_g, sugars_g, sodium_mg, fetched_at)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                                energy_kcal, protein_g, fat_g, carbs_g, fiber_g, sugars_g, sodium_mg,
+                                iron_mg, zinc_mg, vitamin_b12_mcg, folate_mcg, fetched_at)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ON CONFLICT(food_slug) DO UPDATE SET
             fdc_id=excluded.fdc_id, fdc_description=excluded.fdc_description, fdc_data_type=excluded.fdc_data_type,
             energy_kcal=excluded.energy_kcal, protein_g=excluded.protein_g, fat_g=excluded.fat_g,
             carbs_g=excluded.carbs_g, fiber_g=excluded.fiber_g, sugars_g=excluded.sugars_g,
-            sodium_mg=excluded.sodium_mg, fetched_at=excluded.fetched_at
+            sodium_mg=excluded.sodium_mg, iron_mg=excluded.iron_mg, zinc_mg=excluded.zinc_mg,
+            vitamin_b12_mcg=excluded.vitamin_b12_mcg, folate_mcg=excluded.folate_mcg,
+            fetched_at=excluded.fetched_at
         """,
         (food.slug, result.fdc_id, result.description, result.data_type,
          n.get("energy_kcal"), n.get("protein_g"), n.get("fat_g"), n.get("carbs_g"),
-         n.get("fiber_g"), n.get("sugars_g"), n.get("sodium_mg"), now.isoformat()),
+         n.get("fiber_g"), n.get("sugars_g"), n.get("sodium_mg"),
+         n.get("iron_mg"), n.get("zinc_mg"), n.get("vitamin_b12_mcg"), n.get("folate_mcg"),
+         now.isoformat()),
     )
     print(f"[run_etl] OK nutrition for {food.slug!r}: matched FDC#{result.fdc_id} ({result.description!r})")
 
@@ -178,6 +183,10 @@ def export_json(conn) -> None:
         protein_per_dollar = None
         cal_per_dollar = None
         fiber_per_dollar = None
+        iron_per_dollar = None
+        zinc_per_dollar = None
+        vitamin_b12_per_dollar = None
+        folate_per_dollar = None
         if (
             price_row and price_row["avg_price_usd"] and price_row["price_source"] == "bls_avg_price"
             and nutrition_row and nutrition_row["protein_g"] is not None
@@ -193,6 +202,22 @@ def export_json(conn) -> None:
                 if nutrition_row["fiber_g"] is not None:
                     fiber_per_dollar = nutrient_per_dollar(
                         nutrition_row["fiber_g"], price_row["avg_price_usd"], f["avg_price_unit"]
+                    )
+                if nutrition_row["iron_mg"] is not None:
+                    iron_per_dollar = nutrient_per_dollar(
+                        nutrition_row["iron_mg"], price_row["avg_price_usd"], f["avg_price_unit"]
+                    )
+                if nutrition_row["zinc_mg"] is not None:
+                    zinc_per_dollar = nutrient_per_dollar(
+                        nutrition_row["zinc_mg"], price_row["avg_price_usd"], f["avg_price_unit"]
+                    )
+                if nutrition_row["vitamin_b12_mcg"] is not None:
+                    vitamin_b12_per_dollar = nutrient_per_dollar(
+                        nutrition_row["vitamin_b12_mcg"], price_row["avg_price_usd"], f["avg_price_unit"]
+                    )
+                if nutrition_row["folate_mcg"] is not None:
+                    folate_per_dollar = nutrient_per_dollar(
+                        nutrition_row["folate_mcg"], price_row["avg_price_usd"], f["avg_price_unit"]
                     )
             except UnsupportedUnitError as e:
                 print(f"[run_etl] WARNING: {f['slug']!r}: {e}")
@@ -216,12 +241,20 @@ def export_json(conn) -> None:
                 "carbs_g": nutrition_row["carbs_g"] if nutrition_row else None,
                 "fiber_g": nutrition_row["fiber_g"] if nutrition_row else None,
                 "sugars_g": nutrition_row["sugars_g"] if nutrition_row else None,
+                "iron_mg": nutrition_row["iron_mg"] if nutrition_row else None,
+                "zinc_mg": nutrition_row["zinc_mg"] if nutrition_row else None,
+                "vitamin_b12_mcg": nutrition_row["vitamin_b12_mcg"] if nutrition_row else None,
+                "folate_mcg": nutrition_row["folate_mcg"] if nutrition_row else None,
                 "source_fdc_id": nutrition_row["fdc_id"] if nutrition_row else None,
             } if nutrition_row else None,
             "value_metrics": {
                 "protein_g_per_dollar": protein_per_dollar,
                 "calories_per_dollar": cal_per_dollar,
                 "fiber_g_per_dollar": fiber_per_dollar,
+                "iron_mg_per_dollar": iron_per_dollar,
+                "zinc_mg_per_dollar": zinc_per_dollar,
+                "vitamin_b12_mcg_per_dollar": vitamin_b12_per_dollar,
+                "folate_mcg_per_dollar": folate_per_dollar,
                 "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
             },
             "sustainability": {

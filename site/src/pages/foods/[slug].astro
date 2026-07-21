@@ -112,31 +112,91 @@ const jsonLd: Record<string, unknown> = {
                 : '—'}
             </span>
           </div>
+          {food.value_metrics.iron_mg_per_dollar != null && (
+            <div class="line-item">
+              <span class="line-label">Iron per dollar</span>
+              <span class="line-dots" aria-hidden="true"></span>
+              <span class="line-value">{food.value_metrics.iron_mg_per_dollar} mg</span>
+            </div>
+          )}
+          {food.value_metrics.zinc_mg_per_dollar != null && (
+            <div class="line-item">
+              <span class="line-label">Zinc per dollar</span>
+              <span class="line-dots" aria-hidden="true"></span>
+              <span class="line-value">{food.value_metrics.zinc_mg_per_dollar} mg</span>
+            </div>
+          )}
+          {food.value_metrics.vitamin_b12_mcg_per_dollar != null && food.value_metrics.vitamin_b12_mcg_per_dollar > 0 && (
+            <div class="line-item">
+              <span class="line-label">Vitamin B12 per dollar</span>
+              <span class="line-dots" aria-hidden="true"></span>
+              <span class="line-value">{food.value_metrics.vitamin_b12_mcg_per_dollar} µg</span>
+            </div>
+          )}
+          {food.value_metrics.folate_mcg_per_dollar != null && food.value_metrics.folate_mcg_per_dollar > 0 && (
+            <div class="line-item">
+              <span class="line-label">Folate per dollar</span>
+              <span class="line-dots" aria-hidden="true"></span>
+              <span class="line-value">{food.value_metrics.folate_mcg_per_dollar} µg</span>
+            </div>
+          )}
+
+          <div class="divider" aria-hidden="true"></div>
+          <h2 class="section-heading">Nutrition per 100g</h2>
+
           <div class="line-item line-item--muted">
-            <span class="line-label">Protein per 100g</span>
-            <span class="line-dots" aria-hidden="true"></span>
-            <span class="line-value">{food.nutrition_per_100g.protein_g ?? '—'} g</span>
-          </div>
-          <div class="line-item line-item--muted">
-            <span class="line-label">Calories per 100g</span>
+            <span class="line-label">Calories</span>
             <span class="line-dots" aria-hidden="true"></span>
             <span class="line-value">{food.nutrition_per_100g.energy_kcal ?? '—'} kcal</span>
           </div>
           <div class="line-item line-item--muted">
-            <span class="line-label">Carbs per 100g</span>
+            <span class="line-label">Protein</span>
+            <span class="line-dots" aria-hidden="true"></span>
+            <span class="line-value">{food.nutrition_per_100g.protein_g ?? '—'} g</span>
+          </div>
+          <div class="line-item line-item--muted">
+            <span class="line-label">Carbs</span>
             <span class="line-dots" aria-hidden="true"></span>
             <span class="line-value">{food.nutrition_per_100g.carbs_g ?? '—'} g</span>
           </div>
           <div class="line-item line-item--muted">
-            <span class="line-label">Fiber per 100g</span>
+            <span class="line-label">Fiber</span>
             <span class="line-dots" aria-hidden="true"></span>
             <span class="line-value">{food.nutrition_per_100g.fiber_g ?? '—'} g</span>
           </div>
           <div class="line-item line-item--muted">
-            <span class="line-label">Sugars per 100g</span>
+            <span class="line-label">Sugars</span>
             <span class="line-dots" aria-hidden="true"></span>
             <span class="line-value">{food.nutrition_per_100g.sugars_g ?? '—'} g</span>
           </div>
+          {food.nutrition_per_100g.iron_mg != null && (
+            <div class="line-item line-item--muted">
+              <span class="line-label">Iron</span>
+              <span class="line-dots" aria-hidden="true"></span>
+              <span class="line-value">{food.nutrition_per_100g.iron_mg} mg</span>
+            </div>
+          )}
+          {food.nutrition_per_100g.zinc_mg != null && (
+            <div class="line-item line-item--muted">
+              <span class="line-label">Zinc</span>
+              <span class="line-dots" aria-hidden="true"></span>
+              <span class="line-value">{food.nutrition_per_100g.zinc_mg} mg</span>
+            </div>
+          )}
+          {food.nutrition_per_100g.vitamin_b12_mcg != null && food.nutrition_per_100g.vitamin_b12_mcg > 0 && (
+            <div class="line-item line-item--muted">
+              <span class="line-label">Vitamin B12</span>
+              <span class="line-dots" aria-hidden="true"></span>
+              <span class="line-value">{food.nutrition_per_100g.vitamin_b12_mcg} µg</span>
+            </div>
+          )}
+          {food.nutrition_per_100g.folate_mcg != null && food.nutrition_per_100g.folate_mcg > 0 && (
+            <div class="line-item line-item--muted">
+              <span class="line-label">Folate</span>
+              <span class="line-dots" aria-hidden="true"></span>
+              <span class="line-value">{food.nutrition_per_100g.folate_mcg} µg</span>
+            </div>
+          )}
           <p class="as-of">nutrition source: USDA FoodData Central{food.nutrition_per_100g.source_fdc_id ? ` (FDC #${food.nutrition_per_100g.source_fdc_id})` : ''}</p>
         </>
       )}

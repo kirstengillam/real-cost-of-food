@@ -23,6 +23,10 @@ export interface FoodNutrition {
   carbs_g: number | null;
   fiber_g: number | null;
   sugars_g: number | null;
+  iron_mg: number | null;
+  zinc_mg: number | null;
+  vitamin_b12_mcg: number | null;
+  folate_mcg: number | null;
   source_fdc_id: number | null;
 }
 
@@ -30,6 +34,10 @@ export interface FoodValueMetrics {
   protein_g_per_dollar: number | null;
   calories_per_dollar: number | null;
   fiber_g_per_dollar: number | null;
+  iron_mg_per_dollar: number | null;
+  zinc_mg_per_dollar: number | null;
+  vitamin_b12_mcg_per_dollar: number | null;
+  folate_mcg_per_dollar: number | null;
   note: string;
 }
 

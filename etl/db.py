@@ -60,6 +60,10 @@ CREATE TABLE IF NOT EXISTS nutrition (
     fiber_g           REAL,
     sugars_g          REAL,
     sodium_mg         REAL,
+    iron_mg           REAL,
+    zinc_mg           REAL,
+    vitamin_b12_mcg   REAL,
+    folate_mcg        REAL,
     fetched_at        TEXT NOT NULL
 );
 
@@ -123,6 +127,11 @@ MIGRATIONS = [
     """
     ALTER TABLE sustainability ADD COLUMN notes TEXT;
     """,
+    # Migration 2: add micronutrient columns to nutrition table
+    """ALTER TABLE nutrition ADD COLUMN iron_mg REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN zinc_mg REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN vitamin_b12_mcg REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN folate_mcg REAL;""",
 ]
 
 

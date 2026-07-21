@@ -499,9 +499,8 @@ def seed():
                 """
                 INSERT INTO sustainability
                     (food_slug, water_use_tier, storage_life_tier,
-                     typical_local_production, water_source_id, storage_source_id, notes,
-                     source_citation)
-                VALUES (?, ?, ?, ?, ?, ?, ?, '')
+                     typical_local_production, water_source_id, storage_source_id, notes)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
                 ON CONFLICT(food_slug) DO UPDATE SET
                     water_use_tier=excluded.water_use_tier,
                     storage_life_tier=excluded.storage_life_tier,
