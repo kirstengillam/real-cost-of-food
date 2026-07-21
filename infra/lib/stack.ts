@@ -246,7 +246,7 @@ function handler(event) {
     // Allow the deploy role to update RAG function code (called by deploy-site.yml).
     // Only add to the deploy role's policy — no resource-based policy on the function.
     deployRole.addToPrincipalPolicy(new iam.PolicyStatement({
-      actions: ['lambda:UpdateFunctionCode', 'lambda:GetFunction', 'lambda:UpdateFunctionConfiguration'],
+      actions: ['lambda:UpdateFunctionCode', 'lambda:GetFunction', 'lambda:UpdateFunctionConfiguration', 'lambda:GetFunctionConfiguration'],
       resources: [ragFunction.functionArn],
     }));
 
