@@ -88,7 +88,7 @@ jobs:
           LANGSMITH_KEY=$(aws ssm get-parameter --name /rcof/langsmith-api-key --with-decryption --query Parameter.Value --output text)
           aws lambda update-function-configuration \
             --function-name ${{ secrets.RAG_FUNCTION_NAME }} \
-            --environment "Variables={VOYAGE_API_KEY=$VOYAGE_API_KEY,ANTHROPIC_API_KEY=$ANTHROPIC_KEY,DATA_BUCKET=${{ secrets.DATA_BUCKET_NAME }},LANGSMITH_API_KEY=$LANGSMITH_KEY,LANGSMITH_TRACING=true,LANGSMITH_PROJECT=real-cost-of-food}" \
+            --environment "Variables={VOYAGE_API_KEY=$VOYAGE_API_KEY,ANTHROPIC_API_KEY=$ANTHROPIC_KEY,DATA_BUCKET=${{ secrets.DATA_BUCKET_NAME }},LANGSMITH_API_KEY=$LANGSMITH_KEY,LANGSMITH_TRACING=true,LANGSMITH_PROJECT=realcostoffood}" \
             --no-cli-pager
       # ─────────────────────────────────────────────────────────────────────────
 
