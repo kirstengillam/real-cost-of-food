@@ -37,7 +37,7 @@ from pathlib import Path
 
 from foods_seed import FOODS, FoodSeed
 from bls_client import fetch_series, latest_value, year_over_year_pct_change, BlsClientError
-from fdc_client import lookup_food, FdcClientError
+from fdc_client import lookup_food, lookup_food_by_id, FdcClientError
 from db import connect, init_db, DEFAULT_DB_PATH
 from unit_convert import nutrient_per_dollar, UnsupportedUnitError
 
@@ -116,7 +116,10 @@ def fetch_and_store_price(conn, food: FoodSeed, now: datetime) -> None:
 
 def fetch_and_store_nutrition(conn, food: FoodSeed, now: datetime) -> None:
     try:
-        result = lookup_food(food.fdc_query, food.fdc_data_type)
+        if food.fdc_id is not None:
+            result = lookup_food_by_id(food.fdc_id)
+        else:
+            result = lookup_food(food.fdc_query, food.fdc_data_type)
     except FdcClientError as e:
         print(f"[run_etl] ERROR fetching FDC data for {food.slug!r}: {e}")
         return

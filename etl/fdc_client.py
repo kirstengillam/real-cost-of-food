@@ -153,6 +153,23 @@ def lookup_food(query: str, preferred_data_type: str) -> FdcFood | None:
     )
 
 
+def lookup_food_by_id(fdc_id: int) -> FdcFood:
+    """
+    Fetch a specific FDC record directly, bypassing search entirely.
+    Use for foods where FDC's search relevance ranking picks the wrong
+    result (see FoodSeed.fdc_id in foods_seed.py) -- the fdc_id must have
+    been manually verified against fdc.nal.usda.gov/food-search first.
+    """
+    detail = get_food_details(fdc_id)
+    nutrients = extract_nutrients_per_100g(detail)
+    return FdcFood(
+        fdc_id=fdc_id,
+        description=detail.get("description", ""),
+        data_type=detail.get("dataType", ""),
+        nutrients_per_100g=nutrients,
+    )
+
+
 if __name__ == "__main__":
     # Quick manual smoke test: python fdc_client.py
     result = lookup_food("egg whole raw", "SR Legacy")

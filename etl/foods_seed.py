@@ -47,6 +47,13 @@ class FoodSeed:
     serving_unit: str                   # display label; nutrition is always fetched per 100g
     price_verified: bool                # True only after confirmed live via API/FRED
     notes: str = ""
+    fdc_id: Optional[int] = None        # pin a specific FDC record, bypassing fdc_query search.
+                                         # FDC's search relevance ranking is not trustworthy for
+                                         # picking the right food (e.g. "chicken leg raw" ranked
+                                         # "Frog legs, raw" above the actual chicken cuts) -- set
+                                         # this after manually verifying the fdc_id via
+                                         # https://fdc.nal.usda.gov/food-search once fdc_query
+                                         # has been confirmed to mismatch.
 
 
 FOODS: list[FoodSeed] = [
@@ -88,6 +95,8 @@ FOODS: list[FoodSeed] = [
         fdc_data_type="SR Legacy",
         serving_unit="100g",
         price_verified=True,
+        fdc_id=171447,  # "Chicken, broilers or fryers, meat and skin, raw" -- fdc_query was
+                         # matching 171057 "Chicken, broilers or fryers, giblets, raw" instead.
 
         # notes="ID from official ap.item; confirm live data before flipping price_verified.",
     ),
@@ -102,6 +111,9 @@ FOODS: list[FoodSeed] = [
         fdc_data_type="SR Legacy",
         serving_unit="100g",
         price_verified=True,
+        fdc_id=168277,  # "Pork, cured, bacon, unprepared" -- fdc_query was matching 168324
+                         # "Pork, bacon, rendered fat, cooked" (drippings, not bacon; also cooked
+                         # rather than raw, inconsistent with every other raw-basis nutrition row).
     ),
     FoodSeed(
         slug="dry-beans",
@@ -264,6 +276,9 @@ FOODS: list[FoodSeed] = [
         fdc_data_type="SR Legacy",
         serving_unit="100g",
         price_verified=True,
+        fdc_id=168728,  # "Beef, top sirloin, steak, separable lean and fat, trimmed to 1/8"
+                         # fat, choice, raw" -- fdc_query was matching 167673 "DENNY'S, top
+                         # sirloin steak" (a branded, cooked restaurant menu item).
     ),
     FoodSeed(
         slug="pork-chops-all",
@@ -277,6 +292,9 @@ FOODS: list[FoodSeed] = [
         serving_unit="100g",
         price_verified=True,
         notes="BLS aggregate covering all pork chop cuts; newer series code (FD prefix).",
+        fdc_id=168238,  # "Pork, fresh, loin, center loin (chops), bone-in, separable lean and
+                         # fat, raw" -- fdc_query was matching 168287 "Pork, cured, salt pork,
+                         # raw" (not a chop at all).
     ),
     FoodSeed(
         slug="pork-other",
@@ -290,6 +308,9 @@ FOODS: list[FoodSeed] = [
         serving_unit="100g",
         price_verified=True,
         notes="BLS aggregate for pork cuts not in chops/ham/bacon categories.",
+        fdc_id=167888,  # "Pork, fresh, composite of trimmed retail cuts (leg, loin, shoulder,
+                         # and spareribs), separable lean and fat, raw" -- fdc_query was matching
+                         # 168287 "Pork, cured, salt pork, raw".
     ),
     FoodSeed(
         slug="pork-chops-center-cut",
@@ -351,6 +372,8 @@ FOODS: list[FoodSeed] = [
         fdc_data_type="SR Legacy",
         serving_unit="100g",
         price_verified=True,
+        fdc_id=172378,  # "Chicken, broilers or fryers, leg, meat and skin, raw" -- fdc_query
+                         # was matching 168148 "Frog legs, raw" instead.
     ),
     FoodSeed(
         slug="whole-milk",
@@ -377,6 +400,8 @@ FOODS: list[FoodSeed] = [
 
         price_verified=True,
         # notes="ID confirmed from official ap.item. Confirm live data before flipping price_verified.",
+        fdc_id=173414,  # "Cheese, cheddar" -- fdc_query was matching 169901 "Cheese, american
+                         # cheddar, imitation" (not real cheese).
     ),
 
     FoodSeed(
@@ -416,6 +441,9 @@ FOODS: list[FoodSeed] = [
         serving_unit="100g",
         price_verified=True,
         notes="Newer BLS aggregate series (FJ prefix) covering low-fat, reduced-fat, and skim milk.",
+        fdc_id=170872,  # "Milk, lowfat, fluid, 1% milkfat, with added vitamin A and vitamin D"
+                         # -- fdc_query was matching 173417 "Cheese, cottage, lowfat, 1%
+                         # milkfat" (not milk at all).
     ),
     FoodSeed(
         slug="ice-cream",
@@ -781,6 +809,8 @@ FOODS: list[FoodSeed] = [
         serving_unit="100ml",
         price_verified=True,
         notes="Series ended M10 2025.",
+        fdc_id=174818,  # "Alcoholic beverage, distilled, vodka, 80 proof" -- fdc_query was
+                         # matching 174817 "Alcoholic beverage, distilled, rum, 80 proof".
     ),
 ]
 
