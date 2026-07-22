@@ -1,14 +1,14 @@
 # real-cost-of-food
 
+Shows what groceries actually cost *and* what they're worth — price,
+protein-per-dollar, calories-per-dollar, and sustainability tiers
+(water use, storage life), one page per food. Data comes from a monthly
+BLS + USDA ETL pipeline; see [`CLAUDE.md`](CLAUDE.md) for the full project
+rationale and hard rules, and [`DEPLOY.md`](DEPLOY.md) for infrastructure
+and setup.
 
-
-
-## Project internal notes
-
-main stack deployed on AWS, region us-east-1, account 111111111111
-
-custom domain registered with cloudfare (supposed to be slightly cheaper?)
-(just over $10/year)
+**Stack**: Python ETL → SQLite → static Astro site, deployed to AWS
+(S3 + CloudFront + Lambda) via CDK, with GitHub Actions handling CI/CD.
 
 ## SEO notes
 

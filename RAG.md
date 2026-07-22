@@ -4,9 +4,10 @@
 
 Add a natural-language Q&A feature to Real Cost of Food that lets users ask questions like "what's a cheap plant protein alternative to chicken?" and get answers grounded in the site's actual nutrition/price/sustainability dataset — not a generic LLM guess.
 
-This has two goals:
-1. **Product**: extends the "honesty over precision" design commitment already core to the project — answers are constrained to retrieved data, and the system says so explicitly when something isn't covered, rather than letting the model hallucinate a number.
-2. **Skill-building**: hands-on exposure to RAG, vector databases, and AI-feature deployment, to close a gap between current DevOps background and MLOps/AI-infrastructure job postings, and to gauge genuine interest in this domain before investing further.
+This serves the "honesty over precision" design commitment already core to
+the project — answers are constrained to retrieved data, and the system
+says so explicitly when something isn't covered, rather than letting the
+model hallucinate a number.
 
 ## Architecture (v1, kept minimal)
 
@@ -20,15 +21,15 @@ This has two goals:
 
 - **No fine-tuning.** Pure RAG is enough to demonstrate the skill and keeps cost near zero.
 - **One dataset category first** (e.g. protein sources), not the full catalog. Ship something working before expanding.
-- **No LangChain/LangGraph yet.** Plain API calls (embed → query → generate) for v1 — clearer for portfolio purposes since it shows understanding of what's happening underneath. Add an orchestration framework later if a specific job posting calls for familiarity with it.
+- **No LangChain/LangGraph yet.** Plain API calls (embed → query → generate) for v1 — clearer for portfolio purposes since it shows understanding of what's happening underneath. Add an orchestration framework later if the pipeline's complexity actually warrants it.
 - **Optional stretch (not v1):** log queries and add LangSmith tracing, for a taste of LLM-specific observability.
 
-## What this exercises (mapped to the MLOps/AI-infra skill gap)
+## What this demonstrates
 
-- Chroma → vector database experience
-- Retrieval/generation split → core RAG pattern common to MLOps/AI-infra postings
-- Lambda + API → deployment pipeline for an AI feature, not just a static site
-- (Stretch) LangSmith → LLM-specific observability, the piece hardest to demonstrate without hands-on experience
+- Chroma → vector database / embedding retrieval
+- Retrieval/generation split → the core RAG pattern
+- Lambda + API → a real deployment pipeline for an AI feature, not just a static site
+- (Stretch) LangSmith → LLM-specific observability/tracing
 
 ## Rough time estimate
 

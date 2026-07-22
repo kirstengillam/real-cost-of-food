@@ -54,6 +54,12 @@ function handler(event) {
       comment: 'Rewrite clean URLs to /index.html for S3 static hosting',
     });
 
+    // ── Custom domain certificate ─────────────────────────────────────────────
+    // Not hardcoded — pass your own via `cdk deploy -c certArn=...` or the
+    // CERT_ARN env var. Create it via ACM console (us-east-1, required for
+    // CloudFront) → Request public cert → DNS validation → copy ARN once Issued.
+    const certArn: string | undefined = this.node.tryGetContext('certArn') ?? process.env.CERT_ARN;
+
     // ── CloudFront distribution ───────────────────────────────────────────────
     const distribution = new cloudfront.Distribution(this, 'Distribution', {
       defaultBehavior: {
@@ -81,12 +87,10 @@ function handler(event) {
           ttl: cdk.Duration.seconds(0),
         },
       ],
-      // Paste your ACM cert ARN below (must be in us-east-1):
-      // Create via ACM console → Request public cert → DNS validation → copy ARN once Issued
-      certificate: acm.Certificate.fromCertificateArn(this, 'Cert',
-        'arn:aws:acm:us-east-1:111111111111:certificate/4151ad7c-7d42-4724-8579-7a3e0df8b3dd'
-      ),
-      domainNames: ['realcostoffood.com', 'www.realcostoffood.com'],
+      certificate: certArn
+        ? acm.Certificate.fromCertificateArn(this, 'Cert', certArn)
+        : undefined,
+      domainNames: certArn ? ['realcostoffood.com', 'www.realcostoffood.com'] : undefined,
     });
 
     // ── API key parameters (SSM, not Secrets Manager — these are low-sensitivity) ──

@@ -135,9 +135,12 @@ gh workflow run deploy-site.yml --ref main
 ## Custom domain (when ready)
 
 1. Register a domain and create a certificate in **ACM in us-east-1** (required for CloudFront).
-2. Uncomment the `certificate` and `domainNames` lines in [`infra/lib/stack.ts`](infra/lib/stack.ts).
-3. Run `npx cdk deploy` to update the distribution.
-4. Point your domain's DNS (CNAME or ALIAS) at the CloudFront domain name.
+2. Deploy with the certificate ARN passed in — it's read from CDK context or an env var, never hardcoded:
+   ```bash
+   npx cdk deploy -c certArn=arn:aws:acm:us-east-1:<account-id>:certificate/<cert-id>
+   # or: export CERT_ARN=arn:aws:acm:... && npx cdk deploy
+   ```
+3. Point your domain's DNS (CNAME or ALIAS) at the CloudFront domain name.
 
 ---
 
