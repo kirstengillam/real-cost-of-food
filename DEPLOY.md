@@ -94,6 +94,11 @@ aws ssm put-parameter \
   --name /rcof/anthropic-api-key \
   --type SecureString \
   --value YOUR_ANTHROPIC_API_KEY
+
+aws ssm put-parameter \
+  --name /rcof/langsmith-api-key \
+  --type SecureString \
+  --value YOUR_LANGSMITH_API_KEY
 ```
 
 Get API keys:
@@ -101,6 +106,7 @@ Get API keys:
 - USDA FDC: https://fdc.nal.usda.gov/api-key-signup.html (free)
 - Voyage AI: https://www.voyageai.com (free tier, for embeddings)
 - Anthropic: https://console.anthropic.com (for Claude generation)
+- LangSmith: https://smith.langchain.com (free tier, for RAG tracing)
 
 ### 5. Add GitHub Actions secrets
 

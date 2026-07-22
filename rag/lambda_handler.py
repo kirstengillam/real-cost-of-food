@@ -6,6 +6,10 @@ Returns:  { "answer": "...", "sources": [...food names...] }
 
 On cold start, downloads rag/embeddings.json from S3 into /tmp and keeps it
 in memory for warm invocations. No Chroma or compiled vector DB needed.
+
+LangSmith tracing is enabled when LANGSMITH_API_KEY and LANGSMITH_TRACING=true
+are set. Each question produces a trace with three named spans:
+  embed_question → retrieve_chunks → generate_answer
 """
 
 import json
@@ -17,6 +21,7 @@ import tempfile
 import anthropic
 import boto3
 import voyageai
+from langsmith import traceable
 
 EMBED_MODEL = "voyage-4"
 CLAUDE_MODEL = "claude-haiku-4-5-20251001"
@@ -58,6 +63,51 @@ def _cosine(a: list[float], b: list[float]) -> float:
     return dot / (na * nb) if na and nb else 0.0
 
 
+@traceable(name="embed_question", run_type="embedding")
+def _embed(question: str) -> list[float]:
+    vo = voyageai.Client(api_key=os.environ["VOYAGE_API_KEY"])
+    return vo.embed([question], model=EMBED_MODEL, input_type="query").embeddings[0]
+
+
+@traceable(name="retrieve_chunks", run_type="retriever")
+def _retrieve(query_emb: list[float]) -> list[dict]:
+    chunks = _load_chunks()
+    scored = sorted(chunks, key=lambda c: _cosine(query_emb, c["embedding"]), reverse=True)
+    top = scored[:TOP_K]
+    # Return in a shape LangSmith understands as retrieved documents
+    return [
+        {
+            "page_content": c["text"],
+            "metadata": {**c["metadata"], "score": round(_cosine(query_emb, c["embedding"]), 4)},
+        }
+        for c in top
+    ]
+
+
+@traceable(name="generate_answer", run_type="llm")
+def _generate(question: str, docs: list[dict]) -> str:
+    context_text = "\n\n".join(
+        f"[{d['metadata'].get('name', 'unknown')}]\n{d['page_content']}" for d in docs
+    )
+    client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+    message = client.messages.create(
+        model=CLAUDE_MODEL,
+        max_tokens=512,
+        system=SYSTEM_PROMPT,
+        messages=[{"role": "user", "content": f"Food data:\n{context_text}\n\nQuestion: {question}"}],
+    )
+    return message.content[0].text
+
+
+@traceable(name="rag_query", run_type="chain")
+def _rag(question: str) -> dict:
+    query_emb = _embed(question)
+    docs = _retrieve(query_emb)
+    answer = _generate(question, docs)
+    sources = [d["metadata"].get("name", "") for d in docs if d["metadata"].get("name")]
+    return {"answer": answer, "sources": sources}
+
+
 def handler(event, context):
     try:
         body = json.loads(event.get("body") or "{}")
@@ -67,28 +117,8 @@ def handler(event, context):
         if len(question) > 500:
             return _response(400, json.dumps({"error": "question too long (max 500 chars)"}))
 
-        chunks = _load_chunks()
-
-        vo = voyageai.Client(api_key=os.environ["VOYAGE_API_KEY"])
-        query_emb = vo.embed([question], model=EMBED_MODEL, input_type="query").embeddings[0]
-
-        top = sorted(chunks, key=lambda c: _cosine(query_emb, c["embedding"]), reverse=True)[:TOP_K]
-
-        sources = [c["metadata"].get("name", "") for c in top if c["metadata"].get("name")]
-        context_text = "\n\n".join(
-            f"[{c['metadata'].get('name', 'unknown')}]\n{c['text']}" for c in top
-        )
-
-        client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
-        message = client.messages.create(
-            model=CLAUDE_MODEL,
-            max_tokens=512,
-            system=SYSTEM_PROMPT,
-            messages=[{"role": "user", "content": f"Food data:\n{context_text}\n\nQuestion: {question}"}],
-        )
-
-        answer = message.content[0].text
-        return _response(200, json.dumps({"answer": answer, "sources": sources}))
+        result = _rag(question)
+        return _response(200, json.dumps(result))
 
     except Exception as e:
         print(f"RAG handler error: {e}")

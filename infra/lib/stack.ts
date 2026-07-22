@@ -178,17 +178,22 @@ function handler(event) {
 
     // ── RAG Q&A Lambda ───────────────────────────────────────────────────────
     // API keys for the RAG function. Create these once with:
-    //   aws ssm put-parameter --name /rcof/voyage-api-key  --type SecureString --value YOUR_KEY
-    //   aws ssm put-parameter --name /rcof/anthropic-api-key --type SecureString --value YOUR_KEY
+    //   aws ssm put-parameter --name /rcof/voyage-api-key      --type SecureString --value YOUR_KEY
+    //   aws ssm put-parameter --name /rcof/anthropic-api-key   --type SecureString --value YOUR_KEY
+    //   aws ssm put-parameter --name /rcof/langsmith-api-key   --type SecureString --value YOUR_KEY
     const voyageKeyParam = ssm.StringParameter.fromSecureStringParameterAttributes(
       this, 'VoyageApiKey', { parameterName: '/rcof/voyage-api-key' }
     );
     const anthropicKeyParam = ssm.StringParameter.fromSecureStringParameterAttributes(
       this, 'AnthropicApiKey', { parameterName: '/rcof/anthropic-api-key' }
     );
-    
+    const langsmithKeyParam = ssm.StringParameter.fromSecureStringParameterAttributes(
+      this, 'LangsmithApiKey', { parameterName: '/rcof/langsmith-api-key' }
+    );
+
     voyageKeyParam.grantRead(deployRole);
     anthropicKeyParam.grantRead(deployRole);
+    langsmithKeyParam.grantRead(deployRole);
 
     // The deploy-site workflow packages this Lambda fresh on every deploy
     // (pip install voyageai anthropic + lambda_handler.py, ~30MB unzipped).
