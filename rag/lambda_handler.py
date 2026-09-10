@@ -4,6 +4,11 @@ RAG Q&A Lambda handler.
 Receives: POST { "question": "..." }
 Returns:  { "answer": "...", "sources": [...food names...], "low_confidence": bool }
 
+Also receives: POST { "feedback": "up"|"down", "question": "...", "low_confidence": bool }
+Returns:  { "ok": true } — logs a thumbs up/down from the frontend as a
+CloudWatch metric + structured log line. No database; feedback volume at
+this project's scale doesn't warrant one.
+
 On cold start, downloads rag/embeddings.json from S3 into /tmp and keeps it
 in memory for warm invocations. No Chroma or compiled vector DB needed.
 
@@ -164,9 +169,35 @@ def _rag(question: str) -> dict:
     }
 
 
+def _handle_feedback(body: dict) -> dict:
+    feedback = body.get("feedback")
+    if feedback not in ("up", "down"):
+        return _response(400, json.dumps({"error": "feedback must be 'up' or 'down'"}))
+
+    question = (body.get("question") or "").strip()[:500]
+    _emit_metric({
+        "AnswerFeedbackUp": (1 if feedback == "up" else 0, "Count"),
+        "AnswerFeedbackDown": (1 if feedback == "down" else 0, "Count"),
+    })
+    # Kept separate from the metric so a human can see which specific
+    # questions got a thumbs-down, and whether they were already flagged
+    # low_confidence by the retriever (client echoes that flag back).
+    print(json.dumps({
+        "event": "answer_feedback",
+        "feedback": feedback,
+        "question": question,
+        "low_confidence": bool(body.get("low_confidence")),
+    }))
+    return _response(200, json.dumps({"ok": True}))
+
+
 def handler(event, context):
     try:
         body = json.loads(event.get("body") or "{}")
+
+        if "feedback" in body:
+            return _handle_feedback(body)
+
         question = (body.get("question") or "").strip()
         if not question:
             return _response(400, json.dumps({"error": "question is required"}))

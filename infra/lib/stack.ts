@@ -353,6 +353,15 @@ function handler(event) {
             ],
           }),
         ],
+        [
+          new cloudwatch.GraphWidget({
+            title: 'User feedback (thumbs up/down on answers)',
+            left: [
+              ragMetric('AnswerFeedbackUp', 'Sum', cdk.Duration.hours(1)),
+              ragMetric('AnswerFeedbackDown', 'Sum', cdk.Duration.hours(1)),
+            ],
+          }),
+        ],
       ],
     });
 

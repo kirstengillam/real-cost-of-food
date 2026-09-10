@@ -18,6 +18,7 @@ const ragUrl = import.meta.env.PUBLIC_RAG_URL;
     <button class="qa-submit" type="submit">Ask</button>
   </form>
   <div id="qa-result" class="qa-result" aria-live="polite"></div>
+  <div id="qa-feedback" class="qa-feedback" hidden></div>
 </section>
 )}
 
@@ -85,13 +86,66 @@ const ragUrl = import.meta.env.PUBLIC_RAG_URL;
     font-size: 0.75rem;
     color: var(--thermal-gray);
   }
+  .qa-feedback {
+    margin-top: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--thermal-gray);
+  }
+  .qa-feedback-btn {
+    font-size: 0.9rem;
+    line-height: 1;
+    padding: 0.2rem 0.4rem;
+    background: transparent;
+    border: 1px solid var(--line-dotted);
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .qa-feedback-btn:hover {
+    border-color: var(--produce-green);
+  }
 </style>
 
 <script define:vars={{ ragUrl }}>
-  const form   = document.getElementById('qa-form');
-  const input  = document.getElementById('qa-input');
-  const result = document.getElementById('qa-result');
-  const button = form.querySelector('button');
+  const form     = document.getElementById('qa-form');
+  const input    = document.getElementById('qa-input');
+  const result   = document.getElementById('qa-result');
+  const feedback = document.getElementById('qa-feedback');
+  const button   = form.querySelector('button');
+
+  let lastQuestion = '';
+  let lastLowConfidence = false;
+
+  function showFeedbackPrompt() {
+    feedback.hidden = false;
+    feedback.innerHTML =
+      '<span>Was this helpful?</span>' +
+      '<button type="button" class="qa-feedback-btn" data-vote="up" aria-label="Yes, helpful">👍</button>' +
+      '<button type="button" class="qa-feedback-btn" data-vote="down" aria-label="Not helpful">👎</button>';
+    feedback.querySelectorAll('.qa-feedback-btn').forEach((btn) => {
+      btn.addEventListener('click', () => sendFeedback(btn.dataset.vote), { once: true });
+    });
+  }
+
+  async function sendFeedback(vote) {
+    feedback.innerHTML = '<span>Thanks for the feedback.</span>';
+    try {
+      // Best-effort — a failed feedback POST shouldn't disrupt the UI.
+      await fetch(ragUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          feedback: vote,
+          question: lastQuestion,
+          low_confidence: lastLowConfidence,
+        }),
+      });
+    } catch {
+      // ignore
+    }
+  }
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -99,6 +153,7 @@ const ragUrl = import.meta.env.PUBLIC_RAG_URL;
     if (!question) return;
 
     button.disabled = true;
+    feedback.hidden = true;
     result.className = 'qa-result loading';
     result.textContent = 'Searching…';
 
@@ -123,6 +178,10 @@ const ragUrl = import.meta.env.PUBLIC_RAG_URL;
         (sources.length
           ? `<p class="qa-sources">Based on data for: ${sources.join(', ')}</p>`
           : '');
+
+      lastQuestion = question;
+      lastLowConfidence = !!data.low_confidence;
+      showFeedbackPrompt();
     } catch {
       result.className = 'qa-result error';
       result.textContent = 'Could not reach the server. Please try again.';
