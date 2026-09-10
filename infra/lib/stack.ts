@@ -9,6 +9,10 @@ import * as events from 'aws-cdk-lib/aws-events';
 import * as targets from 'aws-cdk-lib/aws-events-targets';
 import * as ssm from 'aws-cdk-lib/aws-ssm';
 import * as iam from 'aws-cdk-lib/aws-iam';
+import * as cloudwatch from 'aws-cdk-lib/aws-cloudwatch';
+import * as cw_actions from 'aws-cdk-lib/aws-cloudwatch-actions';
+import * as sns from 'aws-cdk-lib/aws-sns';
+import * as subscriptions from 'aws-cdk-lib/aws-sns-subscriptions';
 import * as path from 'path';
 
 export class RealCostOfFoodStack extends cdk.Stack {
@@ -259,6 +263,99 @@ function handler(event) {
       resources: [ragFunction.functionArn],
     }));
 
+    // ── RAG observability: alarms + dashboard ─────────────────────────────────
+    // Email for alarm notifications — override via `cdk deploy -c alarmEmail=...`
+    // or the ALARM_EMAIL env var, same pattern as certArn above.
+    const alarmEmail: string | undefined =
+      this.node.tryGetContext('alarmEmail') ?? process.env.ALARM_EMAIL ?? 'kirstengillam@gmail.com';
+
+    const alarmTopic = new sns.Topic(this, 'RagAlarmTopic', {
+      displayName: 'Real Cost of Food — RAG alarms',
+    });
+    if (alarmEmail) {
+      alarmTopic.addSubscription(new subscriptions.EmailSubscription(alarmEmail));
+    }
+
+    // lambda_handler.py emits these as CloudWatch EMF metrics (see _emit_metric)
+    // — no put_metric_data calls, just structured stdout that CloudWatch Logs
+    // parses into the RealCostOfFood/RAG namespace.
+    const ragMetric = (metricName: string, statistic: string, period: cdk.Duration) =>
+      new cloudwatch.Metric({ namespace: 'RealCostOfFood/RAG', metricName, statistic, period });
+
+    // The handler catches exceptions internally and returns a 500 rather than
+    // throwing, so Lambda's own built-in Errors metric never fires for this
+    // failure mode — alarm on the custom metric instead.
+    new cloudwatch.Alarm(this, 'RagHandlerErrorAlarm', {
+      metric: ragMetric('HandlerError', 'Sum', cdk.Duration.minutes(5)),
+      threshold: 1,
+      evaluationPeriods: 1,
+      treatMissingData: cloudwatch.TreatMissingData.NOT_BREACHING,
+      alarmDescription: 'RAG Lambda returned a 500 (caught exception) in the last 5 minutes',
+    }).addAlarmAction(new cw_actions.SnsAction(alarmTopic));
+
+    // Built-in Duration metric — catches queries creeping toward the 30s
+    // function timeout before users start seeing failures.
+    new cloudwatch.Alarm(this, 'RagDurationAlarm', {
+      metric: ragFunction.metricDuration({ statistic: 'p99', period: cdk.Duration.minutes(5) }),
+      threshold: cdk.Duration.seconds(20).toMilliseconds(),
+      evaluationPeriods: 2,
+      treatMissingData: cloudwatch.TreatMissingData.NOT_BREACHING,
+      alarmDescription: 'RAG Lambda p99 duration over 20s (function timeout is 30s)',
+    }).addAlarmAction(new cw_actions.SnsAction(alarmTopic));
+
+    // Built-in Throttles metric.
+    new cloudwatch.Alarm(this, 'RagThrottleAlarm', {
+      metric: ragFunction.metricThrottles({ period: cdk.Duration.minutes(5) }),
+      threshold: 1,
+      evaluationPeriods: 1,
+      treatMissingData: cloudwatch.TreatMissingData.NOT_BREACHING,
+      alarmDescription: 'RAG Lambda is being throttled',
+    }).addAlarmAction(new cw_actions.SnsAction(alarmTopic));
+
+    // Retrieval-quality drift — a burst of low-confidence answers suggests the
+    // embedding index is missing coverage or user questions have shifted.
+    new cloudwatch.Alarm(this, 'RagLowConfidenceAlarm', {
+      metric: ragMetric('LowConfidenceRetrieval', 'Sum', cdk.Duration.hours(24)),
+      threshold: 5,
+      evaluationPeriods: 1,
+      treatMissingData: cloudwatch.TreatMissingData.NOT_BREACHING,
+      alarmDescription: 'More than 5 low-confidence (weak retrieval) RAG answers in 24h',
+    }).addAlarmAction(new cw_actions.SnsAction(alarmTopic));
+
+    const ragDashboard = new cloudwatch.Dashboard(this, 'RagDashboard', {
+      dashboardName: 'RealCostOfFood-RAG',
+      widgets: [
+        [
+          new cloudwatch.GraphWidget({
+            title: 'Invocations / Errors / Throttles',
+            left: [ragFunction.metricInvocations(), ragFunction.metricErrors(), ragFunction.metricThrottles()],
+          }),
+          new cloudwatch.GraphWidget({
+            title: 'Duration (p50 / p99)',
+            left: [
+              ragFunction.metricDuration({ statistic: 'p50' }),
+              ragFunction.metricDuration({ statistic: 'p99' }),
+            ],
+          }),
+        ],
+        [
+          new cloudwatch.GraphWidget({
+            title: 'Retrieval quality',
+            left: [ragMetric('RetrievalTopScore', 'Average', cdk.Duration.minutes(5))],
+            right: [ragMetric('LowConfidenceRetrieval', 'Sum', cdk.Duration.minutes(5))],
+          }),
+          new cloudwatch.GraphWidget({
+            title: 'Token usage per query (raw counts, not a cost estimate)',
+            left: [
+              ragMetric('EmbedTokens', 'Sum', cdk.Duration.minutes(5)),
+              ragMetric('InputTokens', 'Sum', cdk.Duration.minutes(5)),
+              ragMetric('OutputTokens', 'Sum', cdk.Duration.minutes(5)),
+            ],
+          }),
+        ],
+      ],
+    });
+
     // ── Outputs ───────────────────────────────────────────────────────────────
     new cdk.CfnOutput(this, 'CloudFrontUrl', {
       value: `https://${distribution.distributionDomainName}`,
@@ -285,6 +382,14 @@ function handler(event) {
     new cdk.CfnOutput(this, 'RagFunctionUrl', {
       value: ragFunctionUrl.url,
       description: 'Put in GitHub Actions secret RAG_FUNCTION_URL (passed to Astro build as PUBLIC_RAG_URL)',
+    });
+    new cdk.CfnOutput(this, 'RagDashboardUrl', {
+      value: `https://${this.region}.console.aws.amazon.com/cloudwatch/home?region=${this.region}#dashboards:name=${ragDashboard.dashboardName}`,
+      description: 'CloudWatch dashboard for RAG latency, errors, retrieval quality, and token usage',
+    });
+    new cdk.CfnOutput(this, 'RagAlarmTopicArn', {
+      value: alarmTopic.topicArn,
+      description: `RAG alarms publish here${alarmEmail ? ` (subscribed: ${alarmEmail})` : ' (no email subscribed — set alarmEmail context/env var)'}`,
     });
   }
 }
