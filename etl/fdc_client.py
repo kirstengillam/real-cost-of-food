@@ -27,6 +27,10 @@ REQUEST_TIMEOUT_SECONDS = 30
 
 # Nutrient IDs are stable across FDC's database. These are the ones we care
 # about for "X per dollar" comparisons. Full list: https://fdc.nal.usda.gov/
+# Key order here is also the column order used for the `nutrition` table
+# INSERT and the per-dollar loop in run_etl.py -- add new nutrients here and
+# the rest of the pipeline picks them up automatically (still requires a
+# `db.py` migration to add the column).
 NUTRIENT_IDS = {
     "energy_kcal": 1008,
     "protein_g": 1003,
@@ -39,6 +43,16 @@ NUTRIENT_IDS = {
     "zinc_mg": 1095,
     "vitamin_b12_mcg": 1178,
     "folate_mcg": 1177,
+    # Public-health-priority micronutrients (commonly under-consumed per US
+    # dietary guidelines) -- added to expand the site's micronutrient coverage.
+    "calcium_mg": 1087,
+    "potassium_mg": 1092,
+    "magnesium_mg": 1090,
+    "vitamin_a_mcg": 1106,  # RAE (retinol activity equivalents)
+    "vitamin_c_mg": 1162,
+    "vitamin_d_mcg": 1114,  # D2 + D3
+    "vitamin_e_mg": 1109,   # alpha-tocopherol
+    "vitamin_k_mcg": 1185,  # phylloquinone
 }
 
 

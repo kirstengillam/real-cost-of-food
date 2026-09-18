@@ -27,6 +27,14 @@ export interface FoodNutrition {
   zinc_mg: number | null;
   vitamin_b12_mcg: number | null;
   folate_mcg: number | null;
+  calcium_mg: number | null;
+  potassium_mg: number | null;
+  magnesium_mg: number | null;
+  vitamin_a_mcg: number | null;
+  vitamin_c_mg: number | null;
+  vitamin_d_mcg: number | null;
+  vitamin_e_mg: number | null;
+  vitamin_k_mcg: number | null;
   source_fdc_id: number | null;
 }
 
@@ -38,6 +46,14 @@ export interface FoodValueMetrics {
   zinc_mg_per_dollar: number | null;
   vitamin_b12_mcg_per_dollar: number | null;
   folate_mcg_per_dollar: number | null;
+  calcium_mg_per_dollar: number | null;
+  potassium_mg_per_dollar: number | null;
+  magnesium_mg_per_dollar: number | null;
+  vitamin_a_mcg_per_dollar: number | null;
+  vitamin_c_mg_per_dollar: number | null;
+  vitamin_d_mcg_per_dollar: number | null;
+  vitamin_e_mg_per_dollar: number | null;
+  vitamin_k_mcg_per_dollar: number | null;
   note: string;
 }
 

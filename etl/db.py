@@ -64,6 +64,14 @@ CREATE TABLE IF NOT EXISTS nutrition (
     zinc_mg           REAL,
     vitamin_b12_mcg   REAL,
     folate_mcg        REAL,
+    calcium_mg        REAL,
+    potassium_mg      REAL,
+    magnesium_mg      REAL,
+    vitamin_a_mcg     REAL,   -- RAE
+    vitamin_c_mg      REAL,
+    vitamin_d_mcg     REAL,   -- D2 + D3
+    vitamin_e_mg      REAL,   -- alpha-tocopherol
+    vitamin_k_mcg     REAL,   -- phylloquinone
     fetched_at        TEXT NOT NULL
 );
 
@@ -132,6 +140,15 @@ MIGRATIONS = [
     """ALTER TABLE nutrition ADD COLUMN zinc_mg REAL;""",
     """ALTER TABLE nutrition ADD COLUMN vitamin_b12_mcg REAL;""",
     """ALTER TABLE nutrition ADD COLUMN folate_mcg REAL;""",
+    # Migration 3: expand micronutrient coverage (public-health-priority set)
+    """ALTER TABLE nutrition ADD COLUMN calcium_mg REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN potassium_mg REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN magnesium_mg REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN vitamin_a_mcg REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN vitamin_c_mg REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN vitamin_d_mcg REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN vitamin_e_mg REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN vitamin_k_mcg REAL;""",
 ]
 
 

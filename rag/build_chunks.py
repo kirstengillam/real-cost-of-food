@@ -13,6 +13,25 @@ DATA_FILE = pathlib.Path(__file__).parent.parent / "data" / "foods_export.json"
 OUTPUT_FILE = pathlib.Path(__file__).parent / "chunks.json"
 
 
+# (nutrition key, decimal places, unit string, prose label) -- shared between
+# format_nutrition and format_value_metrics so a new nutrient only needs to
+# be listed once. Order here is the order it appears in the chunk text.
+MICRONUTRIENT_CHUNK_FIELDS = [
+    ("iron_mg", 2, "mg", "iron"),
+    ("zinc_mg", 2, "mg", "zinc"),
+    ("vitamin_b12_mcg", 2, "mcg", "B12"),
+    ("folate_mcg", 0, "mcg", "folate"),
+    ("calcium_mg", 0, "mg", "calcium"),
+    ("potassium_mg", 0, "mg", "potassium"),
+    ("magnesium_mg", 0, "mg", "magnesium"),
+    ("vitamin_a_mcg", 0, "mcg RAE", "vitamin A"),
+    ("vitamin_c_mg", 1, "mg", "vitamin C"),
+    ("vitamin_d_mcg", 1, "mcg", "vitamin D"),
+    ("vitamin_e_mg", 2, "mg", "vitamin E"),
+    ("vitamin_k_mcg", 1, "mcg", "vitamin K"),
+]
+
+
 def format_value_metrics(vm: dict, price_unit: str) -> str:
     if not vm or vm.get("protein_g_per_dollar") is None:
         return "Value metrics unavailable (price not verified)."
@@ -23,14 +42,10 @@ def format_value_metrics(vm: dict, price_unit: str) -> str:
         parts.append(f"{vm['calories_per_dollar']:.0f} calories per dollar")
     if vm.get("fiber_g_per_dollar") is not None and vm["fiber_g_per_dollar"] > 0:
         parts.append(f"{vm['fiber_g_per_dollar']:.1f}g fiber per dollar")
-    if vm.get("iron_mg_per_dollar") is not None:
-        parts.append(f"{vm['iron_mg_per_dollar']:.1f}mg iron per dollar")
-    if vm.get("zinc_mg_per_dollar") is not None:
-        parts.append(f"{vm['zinc_mg_per_dollar']:.1f}mg zinc per dollar")
-    if vm.get("vitamin_b12_mcg_per_dollar") is not None and vm["vitamin_b12_mcg_per_dollar"] > 0:
-        parts.append(f"{vm['vitamin_b12_mcg_per_dollar']:.2f}mcg B12 per dollar")
-    if vm.get("folate_mcg_per_dollar") is not None and vm["folate_mcg_per_dollar"] > 0:
-        parts.append(f"{vm['folate_mcg_per_dollar']:.0f}mcg folate per dollar")
+    for key, decimals, unit, label in MICRONUTRIENT_CHUNK_FIELDS:
+        val = vm.get(f"{key}_per_dollar")
+        if val is not None and val > 0:
+            parts.append(f"{val:.{decimals}f}{unit} {label} per dollar")
     return "Per dollar spent: " + ", ".join(parts) + "."
 
 
@@ -49,14 +64,10 @@ def format_nutrition(n: dict) -> str:
     if n.get("sugars_g") and n["sugars_g"] > 0:
         parts.append(f"{n['sugars_g']:.1f}g sugars")
     micros = []
-    if n.get("iron_mg"):
-        micros.append(f"{n['iron_mg']:.2f}mg iron")
-    if n.get("zinc_mg"):
-        micros.append(f"{n['zinc_mg']:.2f}mg zinc")
-    if n.get("vitamin_b12_mcg") and n["vitamin_b12_mcg"] > 0:
-        micros.append(f"{n['vitamin_b12_mcg']:.2f}mcg B12")
-    if n.get("folate_mcg") and n["folate_mcg"] > 0:
-        micros.append(f"{n['folate_mcg']:.0f}mcg folate")
+    for key, decimals, unit, label in MICRONUTRIENT_CHUNK_FIELDS:
+        val = n.get(key)
+        if val:
+            micros.append(f"{val:.{decimals}f}{unit} {label}")
     result = "Per 100g: " + ", ".join(parts) + "."
     if micros:
         result += " Micronutrients per 100g: " + ", ".join(micros) + "."

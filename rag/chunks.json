@@ -1,205 +1,205 @@
 {
-  "generated_at": "2026-07-21T18:09:57.205559+00:00",
+  "generated_at": "2026-09-18T00:39:09.252295+00:00",
   "chunk_count": 56,
   "chunks": [
     {
       "id": "eggs",
-      "text": "Eggs (Grade A, Large) (category: protein, slug: eggs) Serving size reference: 100g (~2 large eggs). Current price: $2.141 per dozen (as of 2026-06, BLS average price series). Price is down 27.9% year-over-year. Per 100g: 143 kcal, 12.6g protein, 9.5g fat, 0.7g carbs, 0.4g sugars. Micronutrients per 100g: 1.75mg iron, 1.29mg zinc, 0.89mcg B12, 47mcg folate. Per dollar spent: 35.2g protein per dollar, 401 calories per dollar, 4.9mg iron per dollar, 3.6mg zinc per dollar, 2.49mcg B12 per dollar, 132mcg folate per dollar. Sustainability: water use is medium, storage life is medium. Local production: Common in most US regions; backyard production widespread.",
+      "text": "Eggs (Grade A, Large) (category: protein, slug: eggs) Serving size reference: 100g (~2 large eggs). Current price: $2.272 per dozen (as of 2026-08, BLS average price series). Price is down 23.0% year-over-year. Per 100g: 143 kcal, 12.6g protein, 9.5g fat, 0.7g carbs, 0.4g sugars. Micronutrients per 100g: 1.75mg iron, 1.29mg zinc, 0.89mcg B12, 47mcg folate, 56mg calcium, 138mg potassium, 12mg magnesium, 160mcg RAE vitamin A, 2.0mcg vitamin D, 1.05mg vitamin E, 0.3mcg vitamin K. Per dollar spent: 33.2g protein per dollar, 378 calories per dollar, 4.62mg iron per dollar, 3.41mg zinc per dollar, 2.35mcg B12 per dollar, 124mcg folate per dollar, 148mg calcium per dollar, 364mg potassium per dollar, 32mg magnesium per dollar, 422mcg RAE vitamin A per dollar, 5.3mcg vitamin D per dollar, 2.77mg vitamin E per dollar, 0.8mcg vitamin K per dollar. Sustainability: water use is medium, storage life is medium. Local production: Common in most US regions; backyard production widespread.",
       "metadata": {
         "slug": "eggs",
         "name": "Eggs (Grade A, Large)",
         "category": "protein",
-        "price_usd": 2.141,
+        "price_usd": 2.272,
         "price_unit": "per dozen",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "medium",
         "storage_life_tier": "medium"
       }
     },
     {
       "id": "whole-milk",
-      "text": "Milk (Whole, Fortified) (category: dairy, slug: whole-milk) Serving size reference: 100g. Current price: $4.317 per gallon (as of 2026-06, BLS average price series). Price is up 9.0% year-over-year. Per 100g: 61 kcal, 3.1g protein, 3.2g fat, 4.8g carbs, 5.0g sugars. Micronutrients per 100g: 0.03mg iron, 0.37mg zinc, 0.45mcg B12, 5mcg folate. Per dollar spent: 27.6g protein per dollar, 534 calories per dollar, 0.3mg iron per dollar, 3.2mg zinc per dollar, 3.94mcg B12 per dollar, 44mcg folate per dollar. Sustainability: water use is high, storage life is short. Local production: Common in dairy-producing states (CA, WI, NY, ID).",
+      "text": "Milk (Whole, Fortified) (category: dairy, slug: whole-milk) Serving size reference: 100g. Current price: $4.229 per gallon (as of 2026-08, BLS average price series). Price is up 4.7% year-over-year. Per 100g: 61 kcal, 3.1g protein, 3.2g fat, 4.8g carbs, 5.0g sugars. Micronutrients per 100g: 0.03mg iron, 0.37mg zinc, 0.45mcg B12, 5mcg folate, 113mg calcium, 132mg potassium, 10mg magnesium, 46mcg RAE vitamin A, 1.3mcg vitamin D, 0.07mg vitamin E, 0.3mcg vitamin K. Per dollar spent: 28.1g protein per dollar, 545 calories per dollar, 0.27mg iron per dollar, 3.31mg zinc per dollar, 4.02mcg B12 per dollar, 45mcg folate per dollar, 1010mg calcium per dollar, 1180mg potassium per dollar, 89mg magnesium per dollar, 411mcg RAE vitamin A per dollar, 11.6mcg vitamin D per dollar, 0.63mg vitamin E per dollar, 2.7mcg vitamin K per dollar. Sustainability: water use is high, storage life is short. Local production: Common in dairy-producing states (CA, WI, NY, ID).",
       "metadata": {
         "slug": "whole-milk",
         "name": "Milk (Whole, Fortified)",
         "category": "dairy",
-        "price_usd": 4.317,
+        "price_usd": 4.229,
         "price_unit": "per gallon",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "ground-beef",
-      "text": "Ground Beef (100% Beef) (category: protein, slug: ground-beef) Serving size reference: 100g. Current price: $6.825 per lb (as of 2026-06, BLS average price series). Price is up 12.4% year-over-year. Per 100g: 254 kcal, 17.2g protein, 20.0g fat. Micronutrients per 100g: 1.94mg iron, 4.18mg zinc, 2.14mcg B12, 7mcg folate. Per dollar spent: 11.4g protein per dollar, 169 calories per dollar, 1.3mg iron per dollar, 2.8mg zinc per dollar, 1.42mcg B12 per dollar, 5mcg folate per dollar. Sustainability: water use is high, storage life is short. Local production: Common in cattle-producing states (TX, NE, KS, OK). Notes: Beef has the highest water footprint per kg of common proteins.",
+      "text": "Ground Beef (100% Beef) (category: protein, slug: ground-beef) Serving size reference: 100g. Current price: $6.923 per lb (as of 2026-08, BLS average price series). Price is up 7.2% year-over-year. Per 100g: 254 kcal, 17.2g protein, 20.0g fat. Micronutrients per 100g: 1.94mg iron, 4.18mg zinc, 2.14mcg B12, 7mcg folate, 18mg calcium, 270mg potassium, 17mg magnesium, 4mcg RAE vitamin A, 0.1mcg vitamin D, 0.17mg vitamin E, 1.8mcg vitamin K. Per dollar spent: 11.2g protein per dollar, 166 calories per dollar, 1.27mg iron per dollar, 2.74mg zinc per dollar, 1.40mcg B12 per dollar, 5mcg folate per dollar, 12mg calcium per dollar, 177mg potassium per dollar, 11mg magnesium per dollar, 3mcg RAE vitamin A per dollar, 0.1mcg vitamin D per dollar, 0.11mg vitamin E per dollar, 1.2mcg vitamin K per dollar. Sustainability: water use is high, storage life is short. Local production: Common in cattle-producing states (TX, NE, KS, OK). Notes: Beef has the highest water footprint per kg of common proteins.",
       "metadata": {
         "slug": "ground-beef",
         "name": "Ground Beef (100% Beef)",
         "category": "protein",
-        "price_usd": 6.825,
+        "price_usd": 6.923,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "chicken-breast",
-      "text": "Chicken Breast (Boneless) (category: protein, slug: chicken-breast) Serving size reference: 100g. Current price: $4.181 per lb (as of 2026-06, BLS average price series). Per 100g: 120 kcal, 22.5g protein, 2.6g fat. Micronutrients per 100g: 0.37mg iron, 0.68mg zinc, 0.21mcg B12, 9mcg folate. Per dollar spent: 24.4g protein per dollar, 130 calories per dollar, 0.4mg iron per dollar, 0.7mg zinc per dollar, 0.23mcg B12 per dollar, 10mcg folate per dollar. Sustainability: water use is medium, storage life is short. Local production: Common nationwide (broiler production widespread). Notes: Poultry generally lower water footprint than beef per kg protein.",
+      "text": "Chicken Breast (Boneless) (category: protein, slug: chicken-breast) Serving size reference: 100g. Current price: $4.173 per lb (as of 2026-08, BLS average price series). Per 100g: 120 kcal, 22.5g protein, 2.6g fat. Micronutrients per 100g: 0.37mg iron, 0.68mg zinc, 0.21mcg B12, 9mcg folate, 5mg calcium, 334mg potassium, 28mg magnesium, 9mcg RAE vitamin A, 0.56mg vitamin E. Per dollar spent: 24.5g protein per dollar, 130 calories per dollar, 0.40mg iron per dollar, 0.74mg zinc per dollar, 0.23mcg B12 per dollar, 10mcg folate per dollar, 5mg calcium per dollar, 363mg potassium per dollar, 30mg magnesium per dollar, 10mcg RAE vitamin A per dollar, 0.61mg vitamin E per dollar. Sustainability: water use is medium, storage life is short. Local production: Common nationwide (broiler production widespread). Notes: Poultry generally lower water footprint than beef per kg protein.",
       "metadata": {
         "slug": "chicken-breast",
         "name": "Chicken Breast (Boneless)",
         "category": "protein",
-        "price_usd": 4.181,
+        "price_usd": 4.173,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "medium",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "bacon",
-      "text": "Bacon (Sliced) (category: protein, slug: bacon) Serving size reference: 100g. Current price: $6.561 per lb (as of 2026-06, BLS average price series). Price is down 1.5% year-over-year. Per 100g: 898 kcal, 0.1g protein, 99.5g fat. Micronutrients per 100g: 0.13mg iron, 0.06mg zinc, 0.09mcg B12. Per dollar spent: 0.1g protein per dollar, 621 calories per dollar, 0.1mg iron per dollar, 0.0mg zinc per dollar, 0.06mcg B12 per dollar. Sustainability: water use is medium, storage life is medium. Local production: Common in pork-producing states (IA, NC, MN).",
+      "text": "Bacon (Sliced) (category: protein, slug: bacon) Serving size reference: 100g. Current price: $6.605 per lb (as of 2026-08, BLS average price series). Price is down 3.4% year-over-year. Per 100g: 393 kcal, 13.7g protein, 37.1g fat, 0.3g sugars. Micronutrients per 100g: 0.38mg iron, 1.14mg zinc, 0.50mcg B12, 6mg calcium, 201mg potassium, 13mg magnesium, 11mcg RAE vitamin A, 0.4mcg vitamin D, 0.43mg vitamin E. Per dollar spent: 9.4g protein per dollar, 270 calories per dollar, 0.26mg iron per dollar, 0.78mg zinc per dollar, 0.34mcg B12 per dollar, 4mg calcium per dollar, 138mg potassium per dollar, 9mg magnesium per dollar, 8mcg RAE vitamin A per dollar, 0.3mcg vitamin D per dollar, 0.30mg vitamin E per dollar. Sustainability: water use is medium, storage life is medium. Local production: Common in pork-producing states (IA, NC, MN).",
       "metadata": {
         "slug": "bacon",
         "name": "Bacon (Sliced)",
         "category": "protein",
-        "price_usd": 6.561,
+        "price_usd": 6.605,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "medium",
         "storage_life_tier": "medium"
       }
     },
     {
       "id": "bananas",
-      "text": "Bananas (category: produce, slug: bananas) Serving size reference: 100g. Current price: $0.645 per lb (as of 2026-06, BLS average price series). Price is up 1.0% year-over-year. Per 100g: 89 kcal, 1.1g protein, 0.3g fat, 22.8g carbs, 2.6g fiber, 12.2g sugars. Micronutrients per 100g: 0.26mg iron, 0.15mg zinc, 20mcg folate. Per dollar spent: 7.7g protein per dollar, 626 calories per dollar, 18.3g fiber per dollar, 1.8mg iron per dollar, 1.1mg zinc per dollar, 141mcg folate per dollar. Sustainability: water use is medium, storage life is short. Local production: Not grown commercially in mainland US (imported, mainly from Latin America).",
+      "text": "Bananas (category: produce, slug: bananas) Serving size reference: 100g. Current price: $0.652 per lb (as of 2026-08, BLS average price series). Price is down 1.4% year-over-year. Per 100g: 89 kcal, 1.1g protein, 0.3g fat, 22.8g carbs, 2.6g fiber, 12.2g sugars. Micronutrients per 100g: 0.26mg iron, 0.15mg zinc, 20mcg folate, 5mg calcium, 358mg potassium, 27mg magnesium, 3mcg RAE vitamin A, 8.7mg vitamin C, 0.10mg vitamin E, 0.5mcg vitamin K. Per dollar spent: 7.6g protein per dollar, 619 calories per dollar, 18.1g fiber per dollar, 1.81mg iron per dollar, 1.04mg zinc per dollar, 139mcg folate per dollar, 35mg calcium per dollar, 2491mg potassium per dollar, 188mg magnesium per dollar, 21mcg RAE vitamin A per dollar, 60.5mg vitamin C per dollar, 0.70mg vitamin E per dollar, 3.5mcg vitamin K per dollar. Sustainability: water use is medium, storage life is short. Local production: Not grown commercially in mainland US (imported, mainly from Latin America).",
       "metadata": {
         "slug": "bananas",
         "name": "Bananas",
         "category": "produce",
-        "price_usd": 0.645,
+        "price_usd": 0.652,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "medium",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "tomatoes",
-      "text": "Tomatoes (Field Grown) (category: produce, slug: tomatoes) Serving size reference: 100g. Current price: $2.154 per lb (as of 2026-06, BLS average price series). Price is up 19.5% year-over-year. Per 100g: 18 kcal, 0.9g protein, 0.2g fat, 3.9g carbs, 1.2g fiber, 2.6g sugars. Micronutrients per 100g: 0.27mg iron, 0.17mg zinc, 15mcg folate. Per dollar spent: 1.9g protein per dollar, 38 calories per dollar, 2.5g fiber per dollar, 0.6mg iron per dollar, 0.4mg zinc per dollar, 32mcg folate per dollar. Sustainability: water use is low, storage life is short. Local production: Common in CA, FL; widely home-grown nationwide in season.",
+      "text": "Tomatoes (Field Grown) (category: produce, slug: tomatoes) Serving size reference: 100g. Current price: $1.977 per lb (as of 2026-08, BLS average price series). Price is up 5.8% year-over-year. Per 100g: 18 kcal, 0.9g protein, 0.2g fat, 3.9g carbs, 1.2g fiber, 2.6g sugars. Micronutrients per 100g: 0.27mg iron, 0.17mg zinc, 15mcg folate, 10mg calcium, 237mg potassium, 11mg magnesium, 42mcg RAE vitamin A, 13.7mg vitamin C, 0.54mg vitamin E, 7.9mcg vitamin K. Per dollar spent: 2.0g protein per dollar, 41 calories per dollar, 2.8g fiber per dollar, 0.62mg iron per dollar, 0.39mg zinc per dollar, 34mcg folate per dollar, 23mg calcium per dollar, 544mg potassium per dollar, 25mg magnesium per dollar, 96mcg RAE vitamin A per dollar, 31.4mg vitamin C per dollar, 1.24mg vitamin E per dollar, 18.1mcg vitamin K per dollar. Sustainability: water use is low, storage life is short. Local production: Common in CA, FL; widely home-grown nationwide in season.",
       "metadata": {
         "slug": "tomatoes",
         "name": "Tomatoes (Field Grown)",
         "category": "produce",
-        "price_usd": 2.154,
+        "price_usd": 1.977,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "low",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "bread-white",
-      "text": "Bread (White, Pan) (category: grain, slug: bread-white) Serving size reference: 100g. Current price: $1.814 per lb (as of 2026-06, BLS average price series). Price is up 3.9% year-over-year. Per 100g: 290 kcal, 9.0g protein, 4.0g fat, 54.5g carbs, 2.9g fiber, 6.2g sugars. Micronutrients per 100g: 3.33mg iron, 0.68mg zinc, 0.02mcg B12, 104mcg folate. Per dollar spent: 22.5g protein per dollar, 725 calories per dollar, 7.2g fiber per dollar, 8.3mg iron per dollar, 1.7mg zinc per dollar, 0.05mcg B12 per dollar, 260mcg folate per dollar. Sustainability: water use is low, storage life is medium. Local production: Wheat grown widely in Midwest/Great Plains; bread itself manufactured nationwide. Notes: Water footprint based on wheat; processing adds minimal water.",
+      "text": "Bread (White, Pan) (category: grain, slug: bread-white) Serving size reference: 100g. Current price: $1.823 per lb (as of 2026-08, BLS average price series). Price is up 3.8% year-over-year. Per 100g: 290 kcal, 9.0g protein, 4.0g fat, 54.5g carbs, 2.9g fiber, 6.2g sugars. Micronutrients per 100g: 3.33mg iron, 0.68mg zinc, 0.02mcg B12, 104mcg folate, 119mg calcium, 131mg potassium, 26mg magnesium, 0.24mg vitamin E, 3.4mcg vitamin K. Per dollar spent: 22.4g protein per dollar, 722 calories per dollar, 7.2g fiber per dollar, 8.29mg iron per dollar, 1.69mg zinc per dollar, 0.05mcg B12 per dollar, 259mcg folate per dollar, 296mg calcium per dollar, 326mg potassium per dollar, 65mg magnesium per dollar, 0.60mg vitamin E per dollar, 8.5mcg vitamin K per dollar. Sustainability: water use is low, storage life is medium. Local production: Wheat grown widely in Midwest/Great Plains; bread itself manufactured nationwide. Notes: Water footprint based on wheat; processing adds minimal water.",
       "metadata": {
         "slug": "bread-white",
         "name": "Bread (White, Pan)",
         "category": "grain",
-        "price_usd": 1.814,
+        "price_usd": 1.823,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "low",
         "storage_life_tier": "medium"
       }
     },
     {
       "id": "cheddar-cheese",
-      "text": "Cheddar Cheese (Natural) (category: dairy, slug: cheddar-cheese) Serving size reference: 100g. Current price: $5.960 per lb (as of 2026-06, BLS average price series). Price is down 3.6% year-over-year. Per 100g: 239 kcal, 16.7g protein, 14.0g fat, 11.6g carbs, 7.7g sugars. Micronutrients per 100g: 0.33mg iron, 2.59mg zinc, 0.40mcg B12, 7mcg folate. Per dollar spent: 12.7g protein per dollar, 182 calories per dollar, 0.2mg iron per dollar, 2.0mg zinc per dollar, 0.30mcg B12 per dollar, 5mcg folate per dollar. Sustainability: water use is high, storage life is long. Local production: Common in dairy states; aged cheese has long shelf life relative to fresh dairy.",
+      "text": "Cheddar Cheese (Natural) (category: dairy, slug: cheddar-cheese) Serving size reference: 100g. Current price: $5.983 per lb (as of 2026-08, BLS average price series). Price is down 3.8% year-over-year. Per 100g: 403 kcal, 22.9g protein, 33.3g fat, 3.4g carbs, 0.5g sugars. Micronutrients per 100g: 0.14mg iron, 3.64mg zinc, 1.10mcg B12, 27mcg folate, 710mg calcium, 76mg potassium, 27mg magnesium, 337mcg RAE vitamin A, 0.6mcg vitamin D, 0.71mg vitamin E, 2.4mcg vitamin K. Per dollar spent: 17.3g protein per dollar, 306 calories per dollar, 0.11mg iron per dollar, 2.76mg zinc per dollar, 0.83mcg B12 per dollar, 20mcg folate per dollar, 538mg calcium per dollar, 58mg potassium per dollar, 20mg magnesium per dollar, 256mcg RAE vitamin A per dollar, 0.5mcg vitamin D per dollar, 0.54mg vitamin E per dollar, 1.8mcg vitamin K per dollar. Sustainability: water use is high, storage life is long. Local production: Common in dairy states; aged cheese has long shelf life relative to fresh dairy.",
       "metadata": {
         "slug": "cheddar-cheese",
         "name": "Cheddar Cheese (Natural)",
         "category": "dairy",
-        "price_usd": 5.96,
+        "price_usd": 5.983,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "long"
       }
     },
     {
       "id": "dry-beans",
-      "text": "Dry Beans (Any Type) (category: protein, slug: dry-beans) Serving size reference: 100g dry. Current price: $1.626 per lb (as of 2026-06, BLS average price series). Price is up 0.6% year-over-year. Per 100g: 62 kcal, 5.2g protein, 0.9g fat, 11.6g carbs. Micronutrients per 100g: 1.97mg iron, 0.50mg zinc, 118mcg folate. Per dollar spent: 14.6g protein per dollar, 173 calories per dollar, 5.5mg iron per dollar, 1.4mg zinc per dollar, 329mcg folate per dollar. Sustainability: water use is low, storage life is long. Local production: Common in ND, MI, MN; excellent shelf-stable storage life when kept dry. Notes: Pulses have among the lowest water footprints per gram of protein.",
+      "text": "Dry Beans (Any Type) (category: protein, slug: dry-beans) Serving size reference: 100g dry. Current price: $1.630 per lb (as of 2026-08, BLS average price series). Price is up 3.5% year-over-year. Per 100g: 62 kcal, 5.2g protein, 0.9g fat, 11.6g carbs. Micronutrients per 100g: 1.97mg iron, 0.50mg zinc, 118mcg folate, 43mg calcium, 307mg potassium, 53mg magnesium, 21.7mg vitamin C. Per dollar spent: 14.6g protein per dollar, 173 calories per dollar, 5.48mg iron per dollar, 1.39mg zinc per dollar, 328mcg folate per dollar, 120mg calcium per dollar, 854mg potassium per dollar, 147mg magnesium per dollar, 60.4mg vitamin C per dollar. Sustainability: water use is low, storage life is long. Local production: Common in ND, MI, MN; excellent shelf-stable storage life when kept dry. Notes: Pulses have among the lowest water footprints per gram of protein.",
       "metadata": {
         "slug": "dry-beans",
         "name": "Dry Beans (Any Type)",
         "category": "protein",
-        "price_usd": 1.626,
+        "price_usd": 1.63,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "low",
         "storage_life_tier": "long"
       }
     },
     {
       "id": "oranges",
-      "text": "Oranges (Navel) (category: produce, slug: oranges) Serving size reference: 100g. Current price: $1.540 per lb (as of 2026-06, BLS average price series). Price is up 0.8% year-over-year. Per 100g: 49 kcal, 0.9g protein, 0.1g fat, 12.5g carbs, 2.2g fiber, 8.5g sugars. Micronutrients per 100g: 0.13mg iron, 0.08mg zinc, 34mcg folate. Per dollar spent: 2.7g protein per dollar, 144 calories per dollar, 6.5g fiber per dollar, 0.4mg iron per dollar, 0.2mg zinc per dollar, 100mcg folate per dollar. Sustainability: water use is low, storage life is medium. Local production: Grown mainly in FL and CA. Available year-round through regional staggering..",
+      "text": "Oranges (Navel) (category: produce, slug: oranges) Serving size reference: 100g. Current price: $1.709 per lb (as of 2026-08, BLS average price series). Price is down 0.9% year-over-year. Per 100g: 49 kcal, 0.9g protein, 0.1g fat, 12.5g carbs, 2.2g fiber, 8.5g sugars. Micronutrients per 100g: 0.13mg iron, 0.08mg zinc, 34mcg folate, 43mg calcium, 166mg potassium, 11mg magnesium, 12mcg RAE vitamin A, 59.1mg vitamin C, 0.15mg vitamin E. Per dollar spent: 2.4g protein per dollar, 130 calories per dollar, 5.8g fiber per dollar, 0.35mg iron per dollar, 0.21mg zinc per dollar, 90mcg folate per dollar, 114mg calcium per dollar, 441mg potassium per dollar, 29mg magnesium per dollar, 32mcg RAE vitamin A per dollar, 156.8mg vitamin C per dollar, 0.40mg vitamin E per dollar. Sustainability: water use is low, storage life is medium. Local production: Grown mainly in FL and CA. Available year-round through regional staggering..",
       "metadata": {
         "slug": "oranges",
         "name": "Oranges (Navel)",
         "category": "produce",
-        "price_usd": 1.54,
+        "price_usd": 1.709,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "low",
         "storage_life_tier": "medium"
       }
     },
     {
       "id": "potatoes",
-      "text": "Potatoes (White) (category: produce, slug: potatoes) Serving size reference: 100g. Current price: $0.923 per lb (as of 2026-06, BLS average price series). Price is up 1.4% year-over-year. Per 100g: 77 kcal, 2.0g protein, 0.1g fat, 17.5g carbs, 2.1g fiber, 0.8g sugars. Micronutrients per 100g: 0.81mg iron, 0.30mg zinc, 15mcg folate. Per dollar spent: 10.1g protein per dollar, 378 calories per dollar, 10.3g fiber per dollar, 4.0mg iron per dollar, 1.5mg zinc per dollar, 74mcg folate per dollar. Sustainability: water use is low, storage life is long. Local production: Grown widely in ID, WA, WI, ND, CO. Store well in cool dark conditions for months..",
+      "text": "Potatoes (White) (category: produce, slug: potatoes) Serving size reference: 100g. Current price: $0.976 per lb (as of 2026-08, BLS average price series). Price is up 3.6% year-over-year. Per 100g: 77 kcal, 2.0g protein, 0.1g fat, 17.5g carbs, 2.1g fiber, 0.8g sugars. Micronutrients per 100g: 0.81mg iron, 0.30mg zinc, 15mcg folate, 12mg calcium, 425mg potassium, 23mg magnesium, 19.7mg vitamin C, 0.01mg vitamin E, 2.0mcg vitamin K. Per dollar spent: 9.5g protein per dollar, 358 calories per dollar, 9.8g fiber per dollar, 3.76mg iron per dollar, 1.39mg zinc per dollar, 70mcg folate per dollar, 56mg calcium per dollar, 1975mg potassium per dollar, 107mg magnesium per dollar, 91.5mg vitamin C per dollar, 0.05mg vitamin E per dollar, 9.3mcg vitamin K per dollar. Sustainability: water use is low, storage life is long. Local production: Grown widely in ID, WA, WI, ND, CO. Store well in cool dark conditions for months..",
       "metadata": {
         "slug": "potatoes",
         "name": "Potatoes (White)",
         "category": "produce",
-        "price_usd": 0.923,
+        "price_usd": 0.976,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "low",
         "storage_life_tier": "long"
       }
     },
     {
       "id": "lettuce",
-      "text": "Lettuce (Iceberg) (category: produce, slug: lettuce) Serving size reference: 100g. Current price: $2.012 per lb (as of 2026-06, BLS average price series). Price is up 32.1% year-over-year. Per 100g: 14 kcal, 0.9g protein, 0.1g fat, 3.0g carbs, 1.2g fiber, 2.0g sugars. Micronutrients per 100g: 0.41mg iron, 0.15mg zinc, 29mcg folate. Per dollar spent: 2.0g protein per dollar, 32 calories per dollar, 2.7g fiber per dollar, 0.9mg iron per dollar, 0.3mg zinc per dollar, 65mcg folate per dollar. Sustainability: water use is low, storage life is short. Local production: Grown mainly in CA and AZ. Very short shelf life; highly perishable..",
+      "text": "Lettuce (Iceberg) (category: produce, slug: lettuce) Serving size reference: 100g. Current price: $1.471 per lb (as of 2026-08, BLS average price series). Price is down 2.2% year-over-year. Per 100g: 14 kcal, 0.9g protein, 0.1g fat, 3.0g carbs, 1.2g fiber, 2.0g sugars. Micronutrients per 100g: 0.41mg iron, 0.15mg zinc, 29mcg folate, 18mg calcium, 141mg potassium, 7mg magnesium, 25mcg RAE vitamin A, 2.8mg vitamin C, 0.18mg vitamin E, 24.1mcg vitamin K. Per dollar spent: 2.8g protein per dollar, 43 calories per dollar, 3.7g fiber per dollar, 1.26mg iron per dollar, 0.46mg zinc per dollar, 89mcg folate per dollar, 56mg calcium per dollar, 435mg potassium per dollar, 22mg magnesium per dollar, 77mcg RAE vitamin A per dollar, 8.6mg vitamin C per dollar, 0.56mg vitamin E per dollar, 74.3mcg vitamin K per dollar. Sustainability: water use is low, storage life is short. Local production: Grown mainly in CA and AZ. Very short shelf life; highly perishable..",
       "metadata": {
         "slug": "lettuce",
         "name": "Lettuce (Iceberg)",
         "category": "produce",
-        "price_usd": 2.012,
+        "price_usd": 1.471,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "low",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "bread-whole-wheat",
-      "text": "Bread (Whole Wheat, Pan) (category: grain, slug: bread-whole-wheat) Serving size reference: 100g. Current price: $2.814 per lb (as of 2026-05, BLS average price series). Price is up 4.3% year-over-year. Per 100g: 252 kcal, 12.4g protein, 3.5g fat, 42.7g carbs, 6.0g fiber, 4.3g sugars. Micronutrients per 100g: 2.47mg iron, 1.77mg zinc, 42mcg folate. Per dollar spent: 20.1g protein per dollar, 406 calories per dollar, 9.7g fiber per dollar, 4.0mg iron per dollar, 2.9mg zinc per dollar, 68mcg folate per dollar. Sustainability: water use is low, storage life is medium. Local production: Wheat grown widely in Midwest/Great Plains; bread manufactured nationwide. Notes: Water footprint based on wheat grain; processing adds minimal water.",
+      "text": "Bread (Whole Wheat, Pan) (category: grain, slug: bread-whole-wheat) Serving size reference: 100g. Current price: $2.814 per lb (as of 2026-05, BLS average price series). Price is up 3.9% year-over-year. Per 100g: 252 kcal, 12.4g protein, 3.5g fat, 42.7g carbs, 6.0g fiber, 4.3g sugars. Micronutrients per 100g: 2.47mg iron, 1.77mg zinc, 42mcg folate, 161mg calcium, 254mg potassium, 75mg magnesium, 2.66mg vitamin E, 7.8mcg vitamin K. Per dollar spent: 20.1g protein per dollar, 406 calories per dollar, 9.7g fiber per dollar, 3.98mg iron per dollar, 2.85mg zinc per dollar, 68mcg folate per dollar, 260mg calcium per dollar, 409mg potassium per dollar, 121mg magnesium per dollar, 4.29mg vitamin E per dollar, 12.6mcg vitamin K per dollar. Sustainability: water use is low, storage life is medium. Local production: Wheat grown widely in Midwest/Great Plains; bread manufactured nationwide. Notes: Water footprint based on wheat grain; processing adds minimal water.",
       "metadata": {
         "slug": "bread-whole-wheat",
         "name": "Bread (Whole Wheat, Pan)",
@@ -214,232 +214,232 @@
     },
     {
       "id": "rice",
-      "text": "Rice (White, Long Grain, Uncooked) (category: grain, slug: rice) Serving size reference: 100g dry. Current price: $1.089 per lb (as of 2026-06, BLS average price series). Price is up 4.1% year-over-year. Per 100g: 365 kcal, 7.1g protein, 0.7g fat, 80.0g carbs, 1.3g fiber, 0.1g sugars. Micronutrients per 100g: 0.80mg iron, 1.09mg zinc, 8mcg folate. Per dollar spent: 29.7g protein per dollar, 1520 calories per dollar, 5.4g fiber per dollar, 3.3mg iron per dollar, 4.5mg zinc per dollar, 33mcg folate per dollar. Sustainability: water use is medium, storage life is long. Local production: Limited US production (AR, CA, LA, MO, TX); much is imported. Dry rice stores for years.. Notes: Rice has higher water footprint than most other grains per calorie.",
+      "text": "Rice (White, Long Grain, Uncooked) (category: grain, slug: rice) Serving size reference: 100g dry. Current price: $1.111 per lb (as of 2026-08, BLS average price series). Price is up 4.7% year-over-year. Per 100g: 365 kcal, 7.1g protein, 0.7g fat, 80.0g carbs, 1.3g fiber, 0.1g sugars. Micronutrients per 100g: 0.80mg iron, 1.09mg zinc, 8mcg folate, 28mg calcium, 115mg potassium, 25mg magnesium, 0.11mg vitamin E, 0.1mcg vitamin K. Per dollar spent: 29.1g protein per dollar, 1490 calories per dollar, 5.3g fiber per dollar, 3.27mg iron per dollar, 4.45mg zinc per dollar, 33mcg folate per dollar, 114mg calcium per dollar, 470mg potassium per dollar, 102mg magnesium per dollar, 0.45mg vitamin E per dollar, 0.4mcg vitamin K per dollar. Sustainability: water use is medium, storage life is long. Local production: Limited US production (AR, CA, LA, MO, TX); much is imported. Dry rice stores for years.. Notes: Rice has higher water footprint than most other grains per calorie.",
       "metadata": {
         "slug": "rice",
         "name": "Rice (White, Long Grain, Uncooked)",
         "category": "grain",
-        "price_usd": 1.089,
+        "price_usd": 1.111,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "medium",
         "storage_life_tier": "long"
       }
     },
     {
       "id": "flour",
-      "text": "Flour (White, All Purpose) (category: grain, slug: flour) Serving size reference: 100g. Current price: $0.544 per lb (as of 2026-06, BLS average price series). Price is down 1.3% year-over-year. Per 100g: 364 kcal, 10.3g protein, 1.0g fat, 76.3g carbs, 2.7g fiber, 0.3g sugars. Micronutrients per 100g: 1.17mg iron, 0.70mg zinc, 26mcg folate. Per dollar spent: 86.2g protein per dollar, 3036 calories per dollar, 22.5g fiber per dollar, 9.8mg iron per dollar, 5.8mg zinc per dollar, 217mcg folate per dollar. Sustainability: water use is low, storage life is long. Local production: Wheat grown widely in Midwest/Great Plains; flour milled regionally. Stores 1 year+..",
+      "text": "Flour (White, All Purpose) (category: grain, slug: flour) Serving size reference: 100g. Current price: $0.548 per lb (as of 2026-08, BLS average price series). Price is up 0.6% year-over-year. Per 100g: 364 kcal, 10.3g protein, 1.0g fat, 76.3g carbs, 2.7g fiber, 0.3g sugars. Micronutrients per 100g: 1.17mg iron, 0.70mg zinc, 26mcg folate, 15mg calcium, 107mg potassium, 22mg magnesium, 0.06mg vitamin E, 0.3mcg vitamin K. Per dollar spent: 85.5g protein per dollar, 3013 calories per dollar, 22.4g fiber per dollar, 9.69mg iron per dollar, 5.79mg zinc per dollar, 215mcg folate per dollar, 124mg calcium per dollar, 886mg potassium per dollar, 182mg magnesium per dollar, 0.50mg vitamin E per dollar, 2.5mcg vitamin K per dollar. Sustainability: water use is low, storage life is long. Local production: Wheat grown widely in Midwest/Great Plains; flour milled regionally. Stores 1 year+..",
       "metadata": {
         "slug": "flour",
         "name": "Flour (White, All Purpose)",
         "category": "grain",
-        "price_usd": 0.544,
+        "price_usd": 0.548,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "low",
         "storage_life_tier": "long"
       }
     },
     {
       "id": "pasta",
-      "text": "Pasta (Spaghetti / Macaroni) (category: grain, slug: pasta) Serving size reference: 100g dry. Current price: $1.367 per lb (as of 2026-06, BLS average price series). Per 100g: 371 kcal, 13.0g protein, 1.5g fat, 74.7g carbs, 3.2g fiber, 2.7g sugars. Micronutrients per 100g: 1.30mg iron, 1.41mg zinc, 18mcg folate. Per dollar spent: 43.3g protein per dollar, 1231 calories per dollar, 10.6g fiber per dollar, 4.3mg iron per dollar, 4.7mg zinc per dollar, 60mcg folate per dollar. Sustainability: water use is low, storage life is long. Local production: Wheat-based; manufactured widely. Dry pasta stores 2+ years..",
+      "text": "Pasta (Spaghetti / Macaroni) (category: grain, slug: pasta) Serving size reference: 100g dry. Current price: $1.374 per lb (as of 2026-08, BLS average price series). Per 100g: 371 kcal, 13.0g protein, 1.5g fat, 74.7g carbs, 3.2g fiber, 2.7g sugars. Micronutrients per 100g: 1.30mg iron, 1.41mg zinc, 18mcg folate, 21mg calcium, 223mg potassium, 53mg magnesium, 0.11mg vitamin E, 0.1mcg vitamin K. Per dollar spent: 43.0g protein per dollar, 1225 calories per dollar, 10.6g fiber per dollar, 4.29mg iron per dollar, 4.66mg zinc per dollar, 59mcg folate per dollar, 69mg calcium per dollar, 736mg potassium per dollar, 175mg magnesium per dollar, 0.36mg vitamin E per dollar, 0.3mcg vitamin K per dollar. Sustainability: water use is low, storage life is long. Local production: Wheat-based; manufactured widely. Dry pasta stores 2+ years..",
       "metadata": {
         "slug": "pasta",
         "name": "Pasta (Spaghetti / Macaroni)",
         "category": "grain",
-        "price_usd": 1.367,
+        "price_usd": 1.374,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "low",
         "storage_life_tier": "long"
       }
     },
     {
       "id": "coffee",
-      "text": "Coffee (Ground Roast) (category: beverage, slug: coffee) Serving size reference: 100ml brewed. Current price: $9.457 per lb (as of 2026-06, BLS average price series). Price is up 12.2% year-over-year. Per 100g: 2 kcal, 0.3g protein, 0.2g carbs. Micronutrients per 100g: 0.02mg iron, 0.02mg zinc. Per dollar spent: 0.1g protein per dollar, 1 calories per dollar, 0.0mg iron per dollar, 0.0mg zinc per dollar. Sustainability: water use is high, storage life is long. Local production: Not grown commercially in mainland US; imported mainly from Latin America and Africa.. Notes: Coffee has a very high water footprint per kg \u2014 among the highest of common beverages.",
+      "text": "Coffee (Ground Roast) (category: beverage, slug: coffee) Serving size reference: 100ml brewed. Current price: $9.299 per lb (as of 2026-08, BLS average price series). Price is up 4.9% year-over-year. Per 100g: 2 kcal, 0.3g protein, 0.2g carbs. Micronutrients per 100g: 0.02mg iron, 0.02mg zinc, 2mg calcium, 50mg potassium, 4mg magnesium. Per dollar spent: 0.1g protein per dollar, 1 calories per dollar, 0.01mg iron per dollar, 0.01mg zinc per dollar, 1mg calcium per dollar, 24mg potassium per dollar, 2mg magnesium per dollar. Sustainability: water use is high, storage life is long. Local production: Not grown commercially in mainland US; imported mainly from Latin America and Africa.. Notes: Coffee has a very high water footprint per kg \u2014 among the highest of common beverages.",
       "metadata": {
         "slug": "coffee",
         "name": "Coffee (Ground Roast)",
         "category": "beverage",
-        "price_usd": 9.457,
+        "price_usd": 9.299,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "long"
       }
     },
     {
       "id": "oj-frozen",
-      "text": "Orange Juice (Frozen Concentrate) (category: beverage, slug: oj-frozen) Serving size reference: 100ml reconstituted. Current price: $4.874 per 16 oz (as of 2026-06, BLS average price series). Price is up 5.5% year-over-year. Per 100g: 148 kcal, 2.4g protein, 0.2g fat, 35.2g carbs, 1.0g fiber, 29.7g sugars. Micronutrients per 100g: 0.33mg iron, 0.16mg zinc, 77mcg folate. Per dollar spent: 2.5g protein per dollar, 151 calories per dollar, 1.0g fiber per dollar, 0.3mg iron per dollar, 0.2mg zinc per dollar, 78mcg folate per dollar. Sustainability: water use is medium, storage life is long. Local production: Orange production mainly in FL and CA; frozen concentrate extends shelf life to 1 year+..",
+      "text": "Orange Juice (Frozen Concentrate) (category: beverage, slug: oj-frozen) Serving size reference: 100ml reconstituted. Current price: $4.817 per 16 oz (as of 2026-07, BLS average price series). Price is down 0.3% year-over-year. Per 100g: 148 kcal, 2.4g protein, 0.2g fat, 35.2g carbs, 1.0g fiber, 29.7g sugars. Micronutrients per 100g: 0.33mg iron, 0.16mg zinc, 77mcg folate, 38mg calcium, 629mg potassium, 35mg magnesium, 13mcg RAE vitamin A, 144.8mg vitamin C, 0.60mg vitamin E, 0.4mcg vitamin K. Per dollar spent: 2.5g protein per dollar, 153 calories per dollar, 1.0g fiber per dollar, 0.34mg iron per dollar, 0.17mg zinc per dollar, 79mcg folate per dollar, 39mg calcium per dollar, 649mg potassium per dollar, 36mg magnesium per dollar, 13mcg RAE vitamin A per dollar, 149.3mg vitamin C per dollar, 0.62mg vitamin E per dollar, 0.4mcg vitamin K per dollar. Sustainability: water use is medium, storage life is long. Local production: Orange production mainly in FL and CA; frozen concentrate extends shelf life to 1 year+..",
       "metadata": {
         "slug": "oj-frozen",
         "name": "Orange Juice (Frozen Concentrate)",
         "category": "beverage",
-        "price_usd": 4.874,
+        "price_usd": 4.817,
         "price_unit": "per 16 oz",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-07",
         "water_use_tier": "medium",
         "storage_life_tier": "long"
       }
     },
     {
       "id": "chicken-whole",
-      "text": "Chicken (Fresh, Whole) (category: protein, slug: chicken-whole) Serving size reference: 100g. Current price: $2.044 per lb (as of 2026-06, BLS average price series). Price is down 2.3% year-over-year. Per 100g: 124 kcal, 17.9g protein, 4.5g fat, 1.8g carbs. Micronutrients per 100g: 5.86mg iron, 3.32mg zinc, 11.41mcg B12, 345mcg folate. Per dollar spent: 39.7g protein per dollar, 275 calories per dollar, 13.0mg iron per dollar, 7.4mg zinc per dollar, 25.32mcg B12 per dollar, 766mcg folate per dollar. Sustainability: water use is medium, storage life is short. Local production: Common nationwide (broiler production widespread). Notes: Poultry generally lower water footprint than beef per kg protein.",
+      "text": "Chicken (Fresh, Whole) (category: protein, slug: chicken-whole) Serving size reference: 100g. Current price: $2.012 per lb (as of 2026-08, BLS average price series). Price is down 3.0% year-over-year. Per 100g: 215 kcal, 18.6g protein, 15.1g fat. Micronutrients per 100g: 0.90mg iron, 1.31mg zinc, 0.31mcg B12, 6mcg folate, 11mg calcium, 189mg potassium, 20mg magnesium, 41mcg RAE vitamin A, 1.6mg vitamin C, 0.2mcg vitamin D, 0.30mg vitamin E, 1.5mcg vitamin K. Per dollar spent: 41.9g protein per dollar, 485 calories per dollar, 2.03mg iron per dollar, 2.95mg zinc per dollar, 0.70mcg B12 per dollar, 14mcg folate per dollar, 25mg calcium per dollar, 426mg potassium per dollar, 45mg magnesium per dollar, 92mcg RAE vitamin A per dollar, 3.6mg vitamin C per dollar, 0.5mcg vitamin D per dollar, 0.68mg vitamin E per dollar, 3.4mcg vitamin K per dollar. Sustainability: water use is medium, storage life is short. Local production: Common nationwide (broiler production widespread). Notes: Poultry generally lower water footprint than beef per kg protein.",
       "metadata": {
         "slug": "chicken-whole",
         "name": "Chicken (Fresh, Whole)",
         "category": "protein",
-        "price_usd": 2.044,
+        "price_usd": 2.012,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "medium",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "ground-beef-all",
-      "text": "Ground Beef (All Uncooked) (category: protein, slug: ground-beef-all) Serving size reference: 100g. Current price: $7.141 per lb (as of 2026-06, BLS average price series). Per 100g: 254 kcal, 17.2g protein, 20.0g fat. Micronutrients per 100g: 1.94mg iron, 4.18mg zinc, 2.14mcg B12, 7mcg folate. Per dollar spent: 10.9g protein per dollar, 161 calories per dollar, 1.2mg iron per dollar, 2.7mg zinc per dollar, 1.36mcg B12 per dollar, 4mcg folate per dollar. Sustainability: water use is high, storage life is short. Local production: Cattle-producing states (TX, NE, KS, OK); broad BLS price series across all fat levels. Notes: Beef has the highest water footprint per kg of common proteins.",
+      "text": "Ground Beef (All Uncooked) (category: protein, slug: ground-beef-all) Serving size reference: 100g. Current price: $7.158 per lb (as of 2026-08, BLS average price series). Per 100g: 254 kcal, 17.2g protein, 20.0g fat. Micronutrients per 100g: 1.94mg iron, 4.18mg zinc, 2.14mcg B12, 7mcg folate, 18mg calcium, 270mg potassium, 17mg magnesium, 4mcg RAE vitamin A, 0.1mcg vitamin D, 0.17mg vitamin E, 1.8mcg vitamin K. Per dollar spent: 10.9g protein per dollar, 161 calories per dollar, 1.23mg iron per dollar, 2.65mg zinc per dollar, 1.36mcg B12 per dollar, 4mcg folate per dollar, 11mg calcium per dollar, 171mg potassium per dollar, 11mg magnesium per dollar, 3mcg RAE vitamin A per dollar, 0.1mcg vitamin D per dollar, 0.11mg vitamin E per dollar, 1.1mcg vitamin K per dollar. Sustainability: water use is high, storage life is short. Local production: Cattle-producing states (TX, NE, KS, OK); broad BLS price series across all fat levels. Notes: Beef has the highest water footprint per kg of common proteins.",
       "metadata": {
         "slug": "ground-beef-all",
         "name": "Ground Beef (All Uncooked)",
         "category": "protein",
-        "price_usd": 7.141,
+        "price_usd": 7.158,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "beef-roasts-all",
-      "text": "Beef Roasts (All Uncooked) (category: protein, slug: beef-roasts-all) Serving size reference: 100g. Current price: $9.434 per lb (as of 2026-06, BLS average price series). Per 100g: 139 kcal, 20.7g protein, 6.2g fat. Micronutrients per 100g: 2.18mg iron, 8.25mg zinc, 2.91mcg B12, 3mcg folate. Per dollar spent: 9.9g protein per dollar, 67 calories per dollar, 1.1mg iron per dollar, 4.0mg zinc per dollar, 1.40mcg B12 per dollar, 1mcg folate per dollar. Sustainability: water use is high, storage life is short. Local production: Cattle-producing states (TX, NE, KS, OK); broad series covering all roast cuts. Notes: Beef has the highest water footprint per kg of common proteins.",
+      "text": "Beef Roasts (All Uncooked) (category: protein, slug: beef-roasts-all) Serving size reference: 100g. Current price: $9.368 per lb (as of 2026-08, BLS average price series). Per 100g: 139 kcal, 20.7g protein, 6.2g fat. Micronutrients per 100g: 2.18mg iron, 8.25mg zinc, 2.91mcg B12, 3mcg folate, 17mg calcium, 332mg potassium, 21mg magnesium, 2mcg RAE vitamin A, 0.1mcg vitamin D, 0.23mg vitamin E, 1.5mcg vitamin K. Per dollar spent: 10.0g protein per dollar, 67 calories per dollar, 1.06mg iron per dollar, 3.99mg zinc per dollar, 1.41mcg B12 per dollar, 1mcg folate per dollar, 8mg calcium per dollar, 161mg potassium per dollar, 10mg magnesium per dollar, 1mcg RAE vitamin A per dollar, 0.1mcg vitamin D per dollar, 0.11mg vitamin E per dollar, 0.7mcg vitamin K per dollar. Sustainability: water use is high, storage life is short. Local production: Cattle-producing states (TX, NE, KS, OK); broad series covering all roast cuts. Notes: Beef has the highest water footprint per kg of common proteins.",
       "metadata": {
         "slug": "beef-roasts-all",
         "name": "Beef Roasts (All Uncooked)",
         "category": "protein",
-        "price_usd": 9.434,
+        "price_usd": 9.368,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "beef-steaks-all",
-      "text": "Beef Steaks (All Uncooked) (category: protein, slug: beef-steaks-all) Serving size reference: 100g. Current price: $12.879 per lb (as of 2026-06, BLS average price series). Per 100g: 117 kcal, 23.1g protein, 2.7g fat. Micronutrients per 100g: 1.85mg iron, 3.61mg zinc, 1.27mcg B12, 13mcg folate. Per dollar spent: 8.1g protein per dollar, 41 calories per dollar, 0.7mg iron per dollar, 1.3mg zinc per dollar, 0.45mcg B12 per dollar, 5mcg folate per dollar. Sustainability: water use is high, storage life is short. Local production: Cattle-producing states (TX, NE, KS, OK); broad series covering all steak cuts. Notes: Beef has the highest water footprint per kg of common proteins.",
+      "text": "Beef Steaks (All Uncooked) (category: protein, slug: beef-steaks-all) Serving size reference: 100g. Current price: $12.813 per lb (as of 2026-08, BLS average price series). Per 100g: 117 kcal, 23.1g protein, 2.7g fat. Micronutrients per 100g: 1.85mg iron, 3.61mg zinc, 1.27mcg B12, 13mcg folate, 9mg calcium, 342mg potassium, 23mg magnesium, 0.22mg vitamin E, 0.9mcg vitamin K. Per dollar spent: 8.2g protein per dollar, 41 calories per dollar, 0.65mg iron per dollar, 1.28mg zinc per dollar, 0.45mcg B12 per dollar, 5mcg folate per dollar, 3mg calcium per dollar, 121mg potassium per dollar, 8mg magnesium per dollar, 0.08mg vitamin E per dollar, 0.3mcg vitamin K per dollar. Sustainability: water use is high, storage life is short. Local production: Cattle-producing states (TX, NE, KS, OK); broad series covering all steak cuts. Notes: Beef has the highest water footprint per kg of common proteins.",
       "metadata": {
         "slug": "beef-steaks-all",
         "name": "Beef Steaks (All Uncooked)",
         "category": "protein",
-        "price_usd": 12.879,
+        "price_usd": 12.813,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "beef-other",
-      "text": "Other Beef (Uncooked, Excl. Veal) (category: protein, slug: beef-other) Serving size reference: 100g. Current price: $8.222 per lb (as of 2026-06, BLS average price series). Per 100g: 198 kcal, 14.7g protein, 14.9g fat, 0.1g carbs. Micronutrients per 100g: 1.69mg iron, 2.85mg zinc, 1.78mcg B12, 5mcg folate. Per dollar spent: 8.1g protein per dollar, 109 calories per dollar, 0.9mg iron per dollar, 1.6mg zinc per dollar, 0.98mcg B12 per dollar, 3mcg folate per dollar. Sustainability: water use is high, storage life is short. Local production: Cattle-producing states (TX, NE, KS, OK); miscellaneous beef cuts. Notes: Beef has the highest water footprint per kg of common proteins.",
+      "text": "Other Beef (Uncooked, Excl. Veal) (category: protein, slug: beef-other) Serving size reference: 100g. Current price: $8.135 per lb (as of 2026-08, BLS average price series). Per 100g: 198 kcal, 14.7g protein, 14.9g fat, 0.1g carbs. Micronutrients per 100g: 1.69mg iron, 2.85mg zinc, 1.78mcg B12, 5mcg folate, 7mg calcium, 297mg potassium, 14mg magnesium, 27.0mg vitamin C. Per dollar spent: 8.2g protein per dollar, 110 calories per dollar, 0.94mg iron per dollar, 1.59mg zinc per dollar, 0.99mcg B12 per dollar, 3mcg folate per dollar, 4mg calcium per dollar, 166mg potassium per dollar, 8mg magnesium per dollar, 15.1mg vitamin C per dollar. Sustainability: water use is high, storage life is short. Local production: Cattle-producing states (TX, NE, KS, OK); miscellaneous beef cuts. Notes: Beef has the highest water footprint per kg of common proteins.",
       "metadata": {
         "slug": "beef-other",
         "name": "Other Beef (Uncooked, Excl. Veal)",
         "category": "protein",
-        "price_usd": 8.222,
+        "price_usd": 8.135,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "ground-chuck",
-      "text": "Ground Chuck (100% Beef) (category: protein, slug: ground-chuck) Serving size reference: 100g. Current price: $6.975 per lb (as of 2026-06, BLS average price series). Per 100g: 254 kcal, 17.2g protein, 20.0g fat. Micronutrients per 100g: 1.94mg iron, 4.18mg zinc, 2.14mcg B12, 7mcg folate. Per dollar spent: 11.2g protein per dollar, 165 calories per dollar, 1.3mg iron per dollar, 2.7mg zinc per dollar, 1.39mcg B12 per dollar, 5mcg folate per dollar. Sustainability: water use is high, storage life is short. Local production: Common in cattle-producing states (TX, NE, KS, OK); cut from the chuck section. Notes: Beef has the highest water footprint per kg of common proteins.",
+      "text": "Ground Chuck (100% Beef) (category: protein, slug: ground-chuck) Serving size reference: 100g. Current price: $6.774 per lb (as of 2026-08, BLS average price series). Per 100g: 254 kcal, 17.2g protein, 20.0g fat. Micronutrients per 100g: 1.94mg iron, 4.18mg zinc, 2.14mcg B12, 7mcg folate, 18mg calcium, 270mg potassium, 17mg magnesium, 4mcg RAE vitamin A, 0.1mcg vitamin D, 0.17mg vitamin E, 1.8mcg vitamin K. Per dollar spent: 11.5g protein per dollar, 170 calories per dollar, 1.30mg iron per dollar, 2.80mg zinc per dollar, 1.43mcg B12 per dollar, 5mcg folate per dollar, 12mg calcium per dollar, 181mg potassium per dollar, 11mg magnesium per dollar, 3mcg RAE vitamin A per dollar, 0.1mcg vitamin D per dollar, 0.11mg vitamin E per dollar, 1.2mcg vitamin K per dollar. Sustainability: water use is high, storage life is short. Local production: Common in cattle-producing states (TX, NE, KS, OK); cut from the chuck section. Notes: Beef has the highest water footprint per kg of common proteins.",
       "metadata": {
         "slug": "ground-chuck",
         "name": "Ground Chuck (100% Beef)",
         "category": "protein",
-        "price_usd": 6.975,
+        "price_usd": 6.774,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "ground-beef-lean",
-      "text": "Ground Beef (Lean and Extra Lean) (category: protein, slug: ground-beef-lean) Serving size reference: 100g. Current price: $8.651 per lb (as of 2026-06, BLS average price series). Per 100g: 137 kcal, 21.4g protein, 5.0g fat. Micronutrients per 100g: 2.38mg iron, 5.09mg zinc, 2.24mcg B12, 5mcg folate. Per dollar spent: 11.2g protein per dollar, 72 calories per dollar, 1.2mg iron per dollar, 2.7mg zinc per dollar, 1.17mcg B12 per dollar, 3mcg folate per dollar. Sustainability: water use is high, storage life is short. Local production: Cattle-producing states (TX, NE, KS, OK); lower fat content than regular ground beef. Notes: Beef has the highest water footprint per kg of common proteins.",
+      "text": "Ground Beef (Lean and Extra Lean) (category: protein, slug: ground-beef-lean) Serving size reference: 100g. Current price: $8.573 per lb (as of 2026-08, BLS average price series). Per 100g: 137 kcal, 21.4g protein, 5.0g fat. Micronutrients per 100g: 2.38mg iron, 5.09mg zinc, 2.24mcg B12, 5mcg folate, 9mg calcium, 346mg potassium, 22mg magnesium, 4mcg RAE vitamin A, 0.1mcg vitamin D, 0.17mg vitamin E, 0.3mcg vitamin K. Per dollar spent: 11.3g protein per dollar, 72 calories per dollar, 1.26mg iron per dollar, 2.69mg zinc per dollar, 1.19mcg B12 per dollar, 3mcg folate per dollar, 5mg calcium per dollar, 183mg potassium per dollar, 12mg magnesium per dollar, 2mcg RAE vitamin A per dollar, 0.1mcg vitamin D per dollar, 0.09mg vitamin E per dollar, 0.2mcg vitamin K per dollar. Sustainability: water use is high, storage life is short. Local production: Cattle-producing states (TX, NE, KS, OK); lower fat content than regular ground beef. Notes: Beef has the highest water footprint per kg of common proteins.",
       "metadata": {
         "slug": "ground-beef-lean",
         "name": "Ground Beef (Lean and Extra Lean)",
         "category": "protein",
-        "price_usd": 8.651,
+        "price_usd": 8.573,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "beef-stew",
-      "text": "Beef for Stew (Boneless) (category: protein, slug: beef-stew) Serving size reference: 100g. Current price: $9.304 per lb (as of 2026-06, BLS average price series). Per 100g: 124 kcal, 21.9g protein, 4.0g fat, 0.2g carbs. Micronutrients per 100g: 2.20mg iron, 5.51mg zinc, 2.42mcg B12, 4mcg folate. Per dollar spent: 10.7g protein per dollar, 60 calories per dollar, 1.1mg iron per dollar, 2.7mg zinc per dollar, 1.18mcg B12 per dollar, 2mcg folate per dollar. Sustainability: water use is high, storage life is short. Local production: Cattle-producing states (TX, NE, KS, OK); typically chuck or round trimmed for stewing. Notes: Beef has the highest water footprint per kg of common proteins.",
+      "text": "Beef for Stew (Boneless) (category: protein, slug: beef-stew) Serving size reference: 100g. Current price: $8.587 per lb (as of 2026-08, BLS average price series). Per 100g: 124 kcal, 21.9g protein, 4.0g fat, 0.2g carbs. Micronutrients per 100g: 2.20mg iron, 5.51mg zinc, 2.42mcg B12, 4mcg folate, 14mg calcium, 359mg potassium, 20mg magnesium, 2mcg RAE vitamin A, 0.1mcg vitamin D, 0.15mg vitamin E, 1.5mcg vitamin K. Per dollar spent: 11.6g protein per dollar, 66 calories per dollar, 1.16mg iron per dollar, 2.91mg zinc per dollar, 1.28mcg B12 per dollar, 2mcg folate per dollar, 7mg calcium per dollar, 190mg potassium per dollar, 11mg magnesium per dollar, 1mcg RAE vitamin A per dollar, 0.1mcg vitamin D per dollar, 0.08mg vitamin E per dollar, 0.8mcg vitamin K per dollar. Sustainability: water use is high, storage life is short. Local production: Cattle-producing states (TX, NE, KS, OK); typically chuck or round trimmed for stewing. Notes: Beef has the highest water footprint per kg of common proteins.",
       "metadata": {
         "slug": "beef-stew",
         "name": "Beef for Stew (Boneless)",
         "category": "protein",
-        "price_usd": 9.304,
+        "price_usd": 8.587,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "chuck-roast-choice",
-      "text": "Chuck Roast (USDA Choice, Boneless) (category: protein, slug: chuck-roast-choice) Serving size reference: 100g. Current price: $9.550 per lb (as of 2026-06, BLS average price series). Per 100g: 249 kcal, 19.1g protein, 18.6g fat. Micronutrients per 100g: 1.73mg iron, 4.56mg zinc, 1.79mcg B12, 10mcg folate. Per dollar spent: 9.1g protein per dollar, 118 calories per dollar, 0.8mg iron per dollar, 2.2mg zinc per dollar, 0.85mcg B12 per dollar, 5mcg folate per dollar. Sustainability: water use is high, storage life is short. Local production: Common in cattle-producing states (TX, NE, KS, OK); USDA Choice grade chuck. Notes: Beef has the highest water footprint per kg of common proteins.",
+      "text": "Chuck Roast (USDA Choice, Boneless) (category: protein, slug: chuck-roast-choice) Serving size reference: 100g. Current price: $9.448 per lb (as of 2026-08, BLS average price series). Per 100g: 249 kcal, 19.1g protein, 18.6g fat. Micronutrients per 100g: 1.73mg iron, 4.56mg zinc, 1.79mcg B12, 10mcg folate, 16mg calcium, 290mg potassium, 19mg magnesium, 0.41mg vitamin E, 1.6mcg vitamin K. Per dollar spent: 9.2g protein per dollar, 120 calories per dollar, 0.83mg iron per dollar, 2.19mg zinc per dollar, 0.86mcg B12 per dollar, 5mcg folate per dollar, 8mg calcium per dollar, 139mg potassium per dollar, 9mg magnesium per dollar, 0.20mg vitamin E per dollar, 0.8mcg vitamin K per dollar. Sustainability: water use is high, storage life is short. Local production: Common in cattle-producing states (TX, NE, KS, OK); USDA Choice grade chuck. Notes: Beef has the highest water footprint per kg of common proteins.",
       "metadata": {
         "slug": "chuck-roast-choice",
         "name": "Chuck Roast (USDA Choice, Boneless)",
         "category": "protein",
-        "price_usd": 9.55,
+        "price_usd": 9.448,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "round-roast",
-      "text": "Round Roast (USDA Choice, Boneless) (category: protein, slug: round-roast) Serving size reference: 100g. Current price: $8.962 per lb (as of 2026-06, BLS average price series). Per 100g: 140 kcal, 22.2g protein, 5.0g fat. Micronutrients per 100g: 2.06mg iron, 4.16mg zinc, 1.85mcg B12, 13mcg folate. Per dollar spent: 11.2g protein per dollar, 71 calories per dollar, 1.0mg iron per dollar, 2.1mg zinc per dollar, 0.94mcg B12 per dollar, 7mcg folate per dollar. Sustainability: water use is high, storage life is short. Local production: Common in cattle-producing states (TX, NE, KS, OK); leaner roast from the round. Notes: Beef has the highest water footprint per kg of common proteins.",
+      "text": "Round Roast (USDA Choice, Boneless) (category: protein, slug: round-roast) Serving size reference: 100g. Current price: $8.959 per lb (as of 2026-08, BLS average price series). Per 100g: 140 kcal, 22.2g protein, 5.0g fat. Micronutrients per 100g: 2.06mg iron, 4.16mg zinc, 1.85mcg B12, 13mcg folate, 19mg calcium, 341mg potassium, 24mg magnesium, 0.30mg vitamin E, 1.2mcg vitamin K. Per dollar spent: 11.2g protein per dollar, 71 calories per dollar, 1.04mg iron per dollar, 2.11mg zinc per dollar, 0.94mcg B12 per dollar, 7mcg folate per dollar, 10mg calcium per dollar, 173mg potassium per dollar, 12mg magnesium per dollar, 0.15mg vitamin E per dollar, 0.6mcg vitamin K per dollar. Sustainability: water use is high, storage life is short. Local production: Common in cattle-producing states (TX, NE, KS, OK); leaner roast from the round. Notes: Beef has the highest water footprint per kg of common proteins.",
       "metadata": {
         "slug": "round-roast",
         "name": "Round Roast (USDA Choice, Boneless)",
         "category": "protein",
-        "price_usd": 8.962,
+        "price_usd": 8.959,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "steak-round",
-      "text": "Round Steak (Ungraded) (category: protein, slug: steak-round) Serving size reference: 100g. Current price: $9.328 per lb (as of 2026-04, BLS average price series). Per 100g: 150 kcal, 21.2g protein, 6.6g fat. Micronutrients per 100g: 2.34mg iron, 3.76mg zinc, 4.70mcg B12, 6mcg folate. Per dollar spent: 10.3g protein per dollar, 73 calories per dollar, 1.1mg iron per dollar, 1.8mg zinc per dollar, 2.29mcg B12 per dollar, 3mcg folate per dollar. Sustainability: water use is high, storage life is short. Local production: Common in cattle-producing states (TX, NE, KS, OK); lean cut from the round. Notes: Beef has the highest water footprint per kg of common proteins.",
+      "text": "Round Steak (Ungraded) (category: protein, slug: steak-round) Serving size reference: 100g. Current price: $9.328 per lb (as of 2026-04, BLS average price series). Per 100g: 150 kcal, 21.2g protein, 6.6g fat. Micronutrients per 100g: 2.34mg iron, 3.76mg zinc, 4.70mcg B12, 6mcg folate, 5mg calcium, 338mg potassium, 24mg magnesium, 0.08mg vitamin E. Per dollar spent: 10.3g protein per dollar, 73 calories per dollar, 1.14mg iron per dollar, 1.83mg zinc per dollar, 2.29mcg B12 per dollar, 3mcg folate per dollar, 2mg calcium per dollar, 164mg potassium per dollar, 12mg magnesium per dollar, 0.04mg vitamin E per dollar. Sustainability: water use is high, storage life is short. Local production: Common in cattle-producing states (TX, NE, KS, OK); lean cut from the round. Notes: Beef has the highest water footprint per kg of common proteins.",
       "metadata": {
         "slug": "steak-round",
         "name": "Round Steak (Ungraded)",
@@ -454,67 +454,67 @@
     },
     {
       "id": "steak-round-choice",
-      "text": "Round Steak (USDA Choice, Boneless) (category: protein, slug: steak-round-choice) Serving size reference: 100g. Current price: $9.844 per lb (as of 2026-06, BLS average price series). Per 100g: 150 kcal, 21.2g protein, 6.6g fat. Micronutrients per 100g: 2.34mg iron, 3.76mg zinc, 4.70mcg B12, 6mcg folate. Per dollar spent: 9.8g protein per dollar, 69 calories per dollar, 1.1mg iron per dollar, 1.7mg zinc per dollar, 2.17mcg B12 per dollar, 3mcg folate per dollar. Sustainability: water use is high, storage life is short. Local production: Common in cattle-producing states (TX, NE, KS, OK); USDA Choice grade round steak. Notes: Beef has the highest water footprint per kg of common proteins.",
+      "text": "Round Steak (USDA Choice, Boneless) (category: protein, slug: steak-round-choice) Serving size reference: 100g. Current price: $9.692 per lb (as of 2026-08, BLS average price series). Per 100g: 150 kcal, 21.2g protein, 6.6g fat. Micronutrients per 100g: 2.34mg iron, 3.76mg zinc, 4.70mcg B12, 6mcg folate, 5mg calcium, 338mg potassium, 24mg magnesium, 0.08mg vitamin E. Per dollar spent: 9.9g protein per dollar, 70 calories per dollar, 1.10mg iron per dollar, 1.76mg zinc per dollar, 2.20mcg B12 per dollar, 3mcg folate per dollar, 2mg calcium per dollar, 158mg potassium per dollar, 11mg magnesium per dollar, 0.04mg vitamin E per dollar. Sustainability: water use is high, storage life is short. Local production: Common in cattle-producing states (TX, NE, KS, OK); USDA Choice grade round steak. Notes: Beef has the highest water footprint per kg of common proteins.",
       "metadata": {
         "slug": "steak-round-choice",
         "name": "Round Steak (USDA Choice, Boneless)",
         "category": "protein",
-        "price_usd": 9.844,
+        "price_usd": 9.692,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "steak-sirloin",
-      "text": "Sirloin Steak (USDA Choice, Boneless) (category: protein, slug: steak-sirloin) Serving size reference: 100g. Current price: $14.451 per lb (as of 2026-06, BLS average price series). Per 100g: 182 kcal, 28.9g protein, 7.3g fat, 0.1g carbs. Micronutrients per 100g: 3.27mg iron, 5.26mg zinc, 2.70mcg B12. Per dollar spent: 9.1g protein per dollar, 57 calories per dollar, 1.0mg iron per dollar, 1.6mg zinc per dollar, 0.85mcg B12 per dollar. Sustainability: water use is high, storage life is short. Local production: Common in cattle-producing states (TX, NE, KS, OK); premium cut from the loin. Notes: Beef has the highest water footprint per kg of common proteins.",
+      "text": "Sirloin Steak (USDA Choice, Boneless) (category: protein, slug: steak-sirloin) Serving size reference: 100g. Current price: $14.357 per lb (as of 2026-08, BLS average price series). Per 100g: 214 kcal, 19.9g protein, 14.3g fat. Micronutrients per 100g: 1.46mg iron, 3.57mg zinc, 1.11mcg B12, 11mcg folate, 25mg calcium, 309mg potassium, 20mg magnesium, 0.37mg vitamin E, 1.5mcg vitamin K. Per dollar spent: 6.3g protein per dollar, 68 calories per dollar, 0.46mg iron per dollar, 1.13mg zinc per dollar, 0.35mcg B12 per dollar, 3mcg folate per dollar, 8mg calcium per dollar, 98mg potassium per dollar, 6mg magnesium per dollar, 0.12mg vitamin E per dollar, 0.5mcg vitamin K per dollar. Sustainability: water use is high, storage life is short. Local production: Common in cattle-producing states (TX, NE, KS, OK); premium cut from the loin. Notes: Beef has the highest water footprint per kg of common proteins.",
       "metadata": {
         "slug": "steak-sirloin",
         "name": "Sirloin Steak (USDA Choice, Boneless)",
         "category": "protein",
-        "price_usd": 14.451,
+        "price_usd": 14.357,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "pork-chops-all",
-      "text": "Pork Chops (All) (category: protein, slug: pork-chops-all) Serving size reference: 100g. Current price: $4.336 per lb (as of 2026-06, BLS average price series). Per 100g: 748 kcal, 5.0g protein, 80.5g fat. Micronutrients per 100g: 0.44mg iron, 0.90mg zinc, 0.29mcg B12, 1mcg folate. Per dollar spent: 5.3g protein per dollar, 783 calories per dollar, 0.5mg iron per dollar, 0.9mg zinc per dollar, 0.30mcg B12 per dollar, 1mcg folate per dollar. Sustainability: water use is medium, storage life is short. Local production: Common in pork-producing states (IA, NC, MN); broad BLS series across all chop cuts.",
+      "text": "Pork Chops (All) (category: protein, slug: pork-chops-all) Serving size reference: 100g. Current price: $4.239 per lb (as of 2026-08, BLS average price series). Per 100g: 170 kcal, 20.7g protein, 9.0g fat. Micronutrients per 100g: 0.63mg iron, 1.77mg zinc, 0.53mcg B12, 19mg calcium, 343mg potassium, 25mg magnesium, 2mcg RAE vitamin A, 0.5mcg vitamin D, 0.12mg vitamin E. Per dollar spent: 22.2g protein per dollar, 182 calories per dollar, 0.67mg iron per dollar, 1.89mg zinc per dollar, 0.57mcg B12 per dollar, 20mg calcium per dollar, 367mg potassium per dollar, 27mg magnesium per dollar, 2mcg RAE vitamin A per dollar, 0.5mcg vitamin D per dollar, 0.13mg vitamin E per dollar. Sustainability: water use is medium, storage life is short. Local production: Common in pork-producing states (IA, NC, MN); broad BLS series across all chop cuts.",
       "metadata": {
         "slug": "pork-chops-all",
         "name": "Pork Chops (All)",
         "category": "protein",
-        "price_usd": 4.336,
+        "price_usd": 4.239,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "medium",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "pork-other",
-      "text": "Other Pork (Excl. Canned Ham and Luncheon) (category: protein, slug: pork-other) Serving size reference: 100g. Current price: $3.771 per lb (as of 2026-06, BLS average price series). Per 100g: 748 kcal, 5.0g protein, 80.5g fat. Micronutrients per 100g: 0.44mg iron, 0.90mg zinc, 0.29mcg B12, 1mcg folate. Per dollar spent: 6.1g protein per dollar, 900 calories per dollar, 0.5mg iron per dollar, 1.1mg zinc per dollar, 0.35mcg B12 per dollar, 1mcg folate per dollar. Sustainability: water use is medium, storage life is short. Local production: Pork-producing states (IA, NC, MN); miscellaneous pork cuts.",
+      "text": "Other Pork (Excl. Canned Ham and Luncheon) (category: protein, slug: pork-other) Serving size reference: 100g. Current price: $3.737 per lb (as of 2026-08, BLS average price series). Per 100g: 216 kcal, 18.9g protein, 14.9g fat. Micronutrients per 100g: 0.86mg iron, 2.01mg zinc, 0.66mcg B12, 5mcg folate, 19mg calcium, 335mg potassium, 21mg magnesium, 2mcg RAE vitamin A, 0.5mg vitamin C. Per dollar spent: 23.0g protein per dollar, 262 calories per dollar, 1.04mg iron per dollar, 2.44mg zinc per dollar, 0.80mcg B12 per dollar, 6mcg folate per dollar, 23mg calcium per dollar, 407mg potassium per dollar, 25mg magnesium per dollar, 2mcg RAE vitamin A per dollar, 0.6mg vitamin C per dollar. Sustainability: water use is medium, storage life is short. Local production: Pork-producing states (IA, NC, MN); miscellaneous pork cuts.",
       "metadata": {
         "slug": "pork-other",
         "name": "Other Pork (Excl. Canned Ham and Luncheon)",
         "category": "protein",
-        "price_usd": 3.771,
+        "price_usd": 3.737,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "medium",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "pork-chops-center-cut",
-      "text": "Pork Chops (Center Cut, Bone-In) (category: protein, slug: pork-chops-center-cut) Serving size reference: 100g. Current price: $4.905 per lb (as of 2026-05, BLS average price series). Per 100g: 186 kcal, 20.3g protein, 11.0g fat. Micronutrients per 100g: 0.59mg iron, 1.85mg zinc, 0.54mcg B12. Per dollar spent: 18.8g protein per dollar, 172 calories per dollar, 0.6mg iron per dollar, 1.7mg zinc per dollar, 0.50mcg B12 per dollar. Sustainability: water use is medium, storage life is short. Local production: Common in pork-producing states (IA, NC, MN); leaner center loin cut.",
+      "text": "Pork Chops (Center Cut, Bone-In) (category: protein, slug: pork-chops-center-cut) Serving size reference: 100g. Current price: $4.905 per lb (as of 2026-05, BLS average price series). Per 100g: 186 kcal, 20.3g protein, 11.0g fat. Micronutrients per 100g: 0.59mg iron, 1.85mg zinc, 0.54mcg B12, 25mg calcium, 337mg potassium, 23mg magnesium, 2mcg RAE vitamin A, 0.7mcg vitamin D, 0.12mg vitamin E. Per dollar spent: 18.8g protein per dollar, 172 calories per dollar, 0.55mg iron per dollar, 1.71mg zinc per dollar, 0.50mcg B12 per dollar, 23mg calcium per dollar, 312mg potassium per dollar, 21mg magnesium per dollar, 2mcg RAE vitamin A per dollar, 0.7mcg vitamin D per dollar, 0.11mg vitamin E per dollar. Sustainability: water use is medium, storage life is short. Local production: Common in pork-producing states (IA, NC, MN); leaner center loin cut.",
       "metadata": {
         "slug": "pork-chops-center-cut",
         "name": "Pork Chops (Center Cut, Bone-In)",
@@ -529,307 +529,307 @@
     },
     {
       "id": "pork-chops-boneless",
-      "text": "Pork Chops (Boneless) (category: protein, slug: pork-chops-boneless) Serving size reference: 100g. Current price: $4.555 per lb (as of 2026-06, BLS average price series). Per 100g: 211 kcal, 19.9g protein, 14.0g fat. Micronutrients per 100g: 0.71mg iron, 1.57mg zinc, 0.50mcg B12, 6mcg folate. Per dollar spent: 19.8g protein per dollar, 210 calories per dollar, 0.7mg iron per dollar, 1.6mg zinc per dollar, 0.50mcg B12 per dollar, 6mcg folate per dollar. Sustainability: water use is medium, storage life is short. Local production: Common in pork-producing states (IA, NC, MN).",
+      "text": "Pork Chops (Boneless) (category: protein, slug: pork-chops-boneless) Serving size reference: 100g. Current price: $4.532 per lb (as of 2026-08, BLS average price series). Per 100g: 211 kcal, 19.9g protein, 14.0g fat. Micronutrients per 100g: 0.71mg iron, 1.57mg zinc, 0.50mcg B12, 6mcg folate, 5mg calcium, 384mg potassium, 20mg magnesium, 0.3mg vitamin C, 1.4mcg vitamin D, 0.29mg vitamin E. Per dollar spent: 19.9g protein per dollar, 211 calories per dollar, 0.71mg iron per dollar, 1.57mg zinc per dollar, 0.50mcg B12 per dollar, 6mcg folate per dollar, 5mg calcium per dollar, 384mg potassium per dollar, 20mg magnesium per dollar, 0.3mg vitamin C per dollar, 1.4mcg vitamin D per dollar, 0.29mg vitamin E per dollar. Sustainability: water use is medium, storage life is short. Local production: Common in pork-producing states (IA, NC, MN).",
       "metadata": {
         "slug": "pork-chops-boneless",
         "name": "Pork Chops (Boneless)",
         "category": "protein",
-        "price_usd": 4.555,
+        "price_usd": 4.532,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "medium",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "ham-boneless",
-      "text": "Ham (Boneless, Excl. Canned) (category: protein, slug: ham-boneless) Serving size reference: 100g. Current price: $5.508 per lb (as of 2026-06, BLS average price series). Per 100g: 245 kcal, 17.4g protein, 18.9g fat. Micronutrients per 100g: 0.85mg iron, 1.93mg zinc, 0.63mcg B12, 7mcg folate. Per dollar spent: 14.3g protein per dollar, 202 calories per dollar, 0.7mg iron per dollar, 1.6mg zinc per dollar, 0.52mcg B12 per dollar, 6mcg folate per dollar. Sustainability: water use is medium, storage life is medium. Local production: Common in pork-producing states (IA, NC, MN); cured and cooked for longer shelf life. Notes: Curing extends shelf life relative to fresh pork; whole unopened ham keeps ~1\u20132 weeks refrigerated.",
+      "text": "Ham (Boneless, Excl. Canned) (category: protein, slug: ham-boneless) Serving size reference: 100g. Current price: $5.382 per lb (as of 2026-08, BLS average price series). Per 100g: 245 kcal, 17.4g protein, 18.9g fat. Micronutrients per 100g: 0.85mg iron, 1.93mg zinc, 0.63mcg B12, 7mcg folate, 5mg calcium, 315mg potassium, 20mg magnesium, 0.7mg vitamin C, 0.5mcg vitamin D. Per dollar spent: 14.7g protein per dollar, 206 calories per dollar, 0.72mg iron per dollar, 1.63mg zinc per dollar, 0.53mcg B12 per dollar, 6mcg folate per dollar, 4mg calcium per dollar, 265mg potassium per dollar, 17mg magnesium per dollar, 0.6mg vitamin C per dollar, 0.4mcg vitamin D per dollar. Sustainability: water use is medium, storage life is medium. Local production: Common in pork-producing states (IA, NC, MN); cured and cooked for longer shelf life. Notes: Curing extends shelf life relative to fresh pork; whole unopened ham keeps ~1\u20132 weeks refrigerated.",
       "metadata": {
         "slug": "ham-boneless",
         "name": "Ham (Boneless, Excl. Canned)",
         "category": "protein",
-        "price_usd": 5.508,
+        "price_usd": 5.382,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "medium",
         "storage_life_tier": "medium"
       }
     },
     {
       "id": "chicken-legs",
-      "text": "Chicken Legs (Bone-In) (category: protein, slug: chicken-legs) Serving size reference: 100g. Current price: $1.688 per lb (as of 2026-06, BLS average price series). Per 100g: 73 kcal, 16.4g protein, 0.3g fat. Micronutrients per 100g: 1.50mg iron, 1.00mg zinc, 0.40mcg B12, 15mcg folate. Per dollar spent: 44.1g protein per dollar, 196 calories per dollar, 4.0mg iron per dollar, 2.7mg zinc per dollar, 1.07mcg B12 per dollar, 40mcg folate per dollar. Sustainability: water use is medium, storage life is short. Local production: Common nationwide (broiler production widespread). Notes: Poultry generally lower water footprint than beef per kg protein.",
+      "text": "Chicken Legs (Bone-In) (category: protein, slug: chicken-legs) Serving size reference: 100g. Current price: $1.670 per lb (as of 2026-08, BLS average price series). Per 100g: 214 kcal, 16.4g protein, 15.9g fat, 0.2g carbs. Micronutrients per 100g: 0.69mg iron, 1.47mg zinc, 0.56mcg B12, 4mcg folate, 9mg calcium, 203mg potassium, 19mg magnesium, 28mcg RAE vitamin A, 0.2mg vitamin C, 0.1mcg vitamin D, 0.22mg vitamin E, 2.3mcg vitamin K. Per dollar spent: 44.5g protein per dollar, 581 calories per dollar, 1.87mg iron per dollar, 3.99mg zinc per dollar, 1.52mcg B12 per dollar, 11mcg folate per dollar, 24mg calcium per dollar, 551mg potassium per dollar, 52mg magnesium per dollar, 76mcg RAE vitamin A per dollar, 0.5mg vitamin C per dollar, 0.3mcg vitamin D per dollar, 0.60mg vitamin E per dollar, 6.2mcg vitamin K per dollar. Sustainability: water use is medium, storage life is short. Local production: Common nationwide (broiler production widespread). Notes: Poultry generally lower water footprint than beef per kg protein.",
       "metadata": {
         "slug": "chicken-legs",
         "name": "Chicken Legs (Bone-In)",
         "category": "protein",
-        "price_usd": 1.688,
+        "price_usd": 1.67,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "medium",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "american-cheese",
-      "text": "American Processed Cheese (category: dairy, slug: american-cheese) Serving size reference: 100g. Current price: $4.626 per lb (as of 2026-06, BLS average price series). Per 100g: 290 kcal, 16.4g protein, 21.2g fat, 8.7g carbs, 7.3g sugars. Micronutrients per 100g: 0.33mg iron, 2.59mg zinc, 0.40mcg B12, 7mcg folate. Per dollar spent: 16.1g protein per dollar, 284 calories per dollar, 0.3mg iron per dollar, 2.5mg zinc per dollar, 0.39mcg B12 per dollar, 7mcg folate per dollar. Sustainability: water use is high, storage life is long. Local production: Common in dairy states; processed slices have longer shelf life than natural cheese.",
+      "text": "American Processed Cheese (category: dairy, slug: american-cheese) Serving size reference: 100g. Current price: $4.747 per lb (as of 2026-08, BLS average price series). Per 100g: 290 kcal, 16.4g protein, 21.2g fat, 8.7g carbs, 7.3g sugars. Micronutrients per 100g: 0.33mg iron, 2.59mg zinc, 0.40mcg B12, 7mcg folate, 562mg calcium, 242mg potassium, 29mg magnesium, 173mcg RAE vitamin A, 0.4mcg vitamin D, 0.19mg vitamin E, 1.8mcg vitamin K. Per dollar spent: 15.7g protein per dollar, 277 calories per dollar, 0.32mg iron per dollar, 2.47mg zinc per dollar, 0.38mcg B12 per dollar, 7mcg folate per dollar, 537mg calcium per dollar, 231mg potassium per dollar, 28mg magnesium per dollar, 165mcg RAE vitamin A per dollar, 0.4mcg vitamin D per dollar, 0.18mg vitamin E per dollar, 1.7mcg vitamin K per dollar. Sustainability: water use is high, storage life is long. Local production: Common in dairy states; processed slices have longer shelf life than natural cheese.",
       "metadata": {
         "slug": "american-cheese",
         "name": "American Processed Cheese",
         "category": "dairy",
-        "price_usd": 4.626,
+        "price_usd": 4.747,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "long"
       }
     },
     {
       "id": "butter-stick",
-      "text": "Butter (Stick) (category: dairy, slug: butter-stick) Serving size reference: 100g. Current price: $3.816 per lb (as of 2026-06, BLS average price series). Per 100g: 717 kcal, 0.8g protein, 81.1g fat, 0.1g carbs, 0.1g sugars. Micronutrients per 100g: 0.02mg iron, 0.09mg zinc, 0.17mcg B12, 3mcg folate. Per dollar spent: 1.0g protein per dollar, 852 calories per dollar, 0.0mg iron per dollar, 0.1mg zinc per dollar, 0.20mcg B12 per dollar, 4mcg folate per dollar. Sustainability: water use is high, storage life is medium. Local production: Common in dairy states; concentrated dairy fat product. Notes: High water footprint inherits from dairy; refrigerated shelf life ~1\u20133 months.",
+      "text": "Butter (Stick) (category: dairy, slug: butter-stick) Serving size reference: 100g. Current price: $4.021 per lb (as of 2026-08, BLS average price series). Per 100g: 717 kcal, 0.8g protein, 81.1g fat, 0.1g carbs, 0.1g sugars. Micronutrients per 100g: 0.02mg iron, 0.09mg zinc, 0.17mcg B12, 3mcg folate, 24mg calcium, 24mg potassium, 2mg magnesium, 684mcg RAE vitamin A, 2.32mg vitamin E, 7.0mcg vitamin K. Per dollar spent: 1.0g protein per dollar, 809 calories per dollar, 0.02mg iron per dollar, 0.10mg zinc per dollar, 0.19mcg B12 per dollar, 3mcg folate per dollar, 27mg calcium per dollar, 27mg potassium per dollar, 2mg magnesium per dollar, 772mcg RAE vitamin A per dollar, 2.62mg vitamin E per dollar, 7.9mcg vitamin K per dollar. Sustainability: water use is high, storage life is medium. Local production: Common in dairy states; concentrated dairy fat product. Notes: High water footprint inherits from dairy; refrigerated shelf life ~1\u20133 months.",
       "metadata": {
         "slug": "butter-stick",
         "name": "Butter (Stick)",
         "category": "dairy",
-        "price_usd": 3.816,
+        "price_usd": 4.021,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "medium"
       }
     },
     {
       "id": "lowfat-milk",
-      "text": "Milk (Low-Fat / Skim) (category: dairy, slug: lowfat-milk) Serving size reference: 100g. Current price: $3.750 per gallon (as of 2026-06, BLS average price series). Per 100g: 72 kcal, 12.4g protein, 1.0g fat, 2.7g carbs, 2.7g sugars. Micronutrients per 100g: 0.14mg iron, 0.38mg zinc, 0.63mcg B12, 12mcg folate. Per dollar spent: 124.9g protein per dollar, 726 calories per dollar, 1.4mg iron per dollar, 3.8mg zinc per dollar, 6.35mcg B12 per dollar, 121mcg folate per dollar. Sustainability: water use is high, storage life is short. Local production: Common in dairy-producing states (CA, WI, NY, ID).",
+      "text": "Milk (Low-Fat / Skim) (category: dairy, slug: lowfat-milk) Serving size reference: 100g. Current price: $3.715 per gallon (as of 2026-08, BLS average price series). Per 100g: 42 kcal, 3.4g protein, 1.0g fat, 5.0g carbs, 5.2g sugars. Micronutrients per 100g: 0.03mg iron, 0.42mg zinc, 0.47mcg B12, 5mcg folate, 125mg calcium, 150mg potassium, 11mg magnesium, 58mcg RAE vitamin A, 1.2mcg vitamin D, 0.01mg vitamin E, 0.1mcg vitamin K. Per dollar spent: 34.3g protein per dollar, 427 calories per dollar, 0.31mg iron per dollar, 4.27mg zinc per dollar, 4.78mcg B12 per dollar, 51mcg folate per dollar, 1272mg calcium per dollar, 1526mg potassium per dollar, 112mg magnesium per dollar, 590mcg RAE vitamin A per dollar, 12.2mcg vitamin D per dollar, 0.10mg vitamin E per dollar, 1.0mcg vitamin K per dollar. Sustainability: water use is high, storage life is short. Local production: Common in dairy-producing states (CA, WI, NY, ID).",
       "metadata": {
         "slug": "lowfat-milk",
         "name": "Milk (Low-Fat / Skim)",
         "category": "dairy",
-        "price_usd": 3.75,
+        "price_usd": 3.715,
         "price_unit": "per gallon",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "ice-cream",
-      "text": "Ice Cream (Regular, Prepackaged) (category: dairy, slug: ice-cream) Serving size reference: 100g. Current price: $5.953 per half gallon (as of 2026-06, BLS average price series). Per 100g: 207 kcal, 3.5g protein, 11.0g fat, 23.6g carbs, 0.7g fiber, 21.2g sugars. Micronutrients per 100g: 0.09mg iron, 0.69mg zinc, 0.39mcg B12, 5mcg folate. Per dollar spent: 3.2g protein per dollar, 192 calories per dollar, 0.7g fiber per dollar, 0.1mg iron per dollar, 0.6mg zinc per dollar, 0.36mcg B12 per dollar, 5mcg folate per dollar. Sustainability: water use is high, storage life is medium. Local production: Manufactured nationwide; requires continuous frozen storage. Notes: Dairy and sugar base both carry significant water footprints; quality declines after 2\u20134 months.",
+      "text": "Ice Cream (Regular, Prepackaged) (category: dairy, slug: ice-cream) Serving size reference: 100g. Current price: $5.854 per half gallon (as of 2026-08, BLS average price series). Per 100g: 207 kcal, 3.5g protein, 11.0g fat, 23.6g carbs, 0.7g fiber, 21.2g sugars. Micronutrients per 100g: 0.09mg iron, 0.69mg zinc, 0.39mcg B12, 5mcg folate, 128mg calcium, 199mg potassium, 14mg magnesium, 118mcg RAE vitamin A, 0.6mg vitamin C, 0.2mcg vitamin D, 0.30mg vitamin E, 0.3mcg vitamin K. Per dollar spent: 3.3g protein per dollar, 196 calories per dollar, 0.7g fiber per dollar, 0.09mg iron per dollar, 0.65mg zinc per dollar, 0.37mcg B12 per dollar, 5mcg folate per dollar, 121mg calcium per dollar, 188mg potassium per dollar, 13mg magnesium per dollar, 111mcg RAE vitamin A per dollar, 0.6mg vitamin C per dollar, 0.2mcg vitamin D per dollar, 0.28mg vitamin E per dollar, 0.3mcg vitamin K per dollar. Sustainability: water use is high, storage life is medium. Local production: Manufactured nationwide; requires continuous frozen storage. Notes: Dairy and sugar base both carry significant water footprints; quality declines after 2\u20134 months.",
       "metadata": {
         "slug": "ice-cream",
         "name": "Ice Cream (Regular, Prepackaged)",
         "category": "dairy",
-        "price_usd": 5.953,
+        "price_usd": 5.854,
         "price_unit": "per half gallon",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "medium"
       }
     },
     {
       "id": "yogurt",
-      "text": "Yogurt (category: dairy, slug: yogurt) Serving size reference: 100g. Current price: $1.587 per 8 oz (as of 2026-06, BLS average price series). Per 100g: 61 kcal, 3.5g protein, 3.2g fat, 4.7g carbs, 4.7g sugars. Micronutrients per 100g: 0.05mg iron, 0.59mg zinc, 0.37mcg B12, 7mcg folate. Per dollar spent: 5.0g protein per dollar, 87 calories per dollar, 0.1mg iron per dollar, 0.8mg zinc per dollar, 0.53mcg B12 per dollar, 10mcg folate per dollar. Sustainability: water use is high, storage life is short. Local production: Common in dairy-producing states; widely manufactured nationwide.",
+      "text": "Yogurt (category: dairy, slug: yogurt) Serving size reference: 100g. Current price: $1.584 per 8 oz (as of 2026-08, BLS average price series). Per 100g: 61 kcal, 3.5g protein, 3.2g fat, 4.7g carbs, 4.7g sugars. Micronutrients per 100g: 0.05mg iron, 0.59mg zinc, 0.37mcg B12, 7mcg folate, 121mg calcium, 155mg potassium, 12mg magnesium, 27mcg RAE vitamin A, 0.5mg vitamin C, 0.1mcg vitamin D, 0.06mg vitamin E, 0.2mcg vitamin K. Per dollar spent: 5.0g protein per dollar, 87 calories per dollar, 0.07mg iron per dollar, 0.84mg zinc per dollar, 0.53mcg B12 per dollar, 10mcg folate per dollar, 173mg calcium per dollar, 222mg potassium per dollar, 17mg magnesium per dollar, 39mcg RAE vitamin A per dollar, 0.7mg vitamin C per dollar, 0.1mcg vitamin D per dollar, 0.09mg vitamin E per dollar, 0.3mcg vitamin K per dollar. Sustainability: water use is high, storage life is short. Local production: Common in dairy-producing states; widely manufactured nationwide.",
       "metadata": {
         "slug": "yogurt",
         "name": "Yogurt",
         "category": "dairy",
-        "price_usd": 1.587,
+        "price_usd": 1.584,
         "price_unit": "per 8 oz",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "high",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "lettuce-romaine",
-      "text": "Lettuce (Romaine) (category: produce, slug: lettuce-romaine) Serving size reference: 100g. Current price: $4.021 per lb (as of 2026-06, BLS average price series). Per 100g: 17 kcal, 1.2g protein, 0.3g fat, 3.3g carbs, 2.1g fiber, 1.2g sugars. Micronutrients per 100g: 0.97mg iron, 0.23mg zinc, 136mcg folate. Per dollar spent: 1.4g protein per dollar, 19 calories per dollar, 2.4g fiber per dollar, 1.1mg iron per dollar, 0.3mg zinc per dollar, 153mcg folate per dollar. Sustainability: water use is low, storage life is short. Local production: Grown mainly in CA and AZ. Very short shelf life; highly perishable..",
+      "text": "Lettuce (Romaine) (category: produce, slug: lettuce-romaine) Serving size reference: 100g. Current price: $3.286 per lb (as of 2026-08, BLS average price series). Per 100g: 17 kcal, 1.2g protein, 0.3g fat, 3.3g carbs, 2.1g fiber, 1.2g sugars. Micronutrients per 100g: 0.97mg iron, 0.23mg zinc, 136mcg folate, 33mg calcium, 247mg potassium, 14mg magnesium, 436mcg RAE vitamin A, 4.0mg vitamin C, 0.13mg vitamin E, 102.5mcg vitamin K. Per dollar spent: 1.7g protein per dollar, 23 calories per dollar, 2.9g fiber per dollar, 1.34mg iron per dollar, 0.32mg zinc per dollar, 188mcg folate per dollar, 46mg calcium per dollar, 341mg potassium per dollar, 19mg magnesium per dollar, 602mcg RAE vitamin A per dollar, 5.5mg vitamin C per dollar, 0.18mg vitamin E per dollar, 141.5mcg vitamin K per dollar. Sustainability: water use is low, storage life is short. Local production: Grown mainly in CA and AZ. Very short shelf life; highly perishable..",
       "metadata": {
         "slug": "lettuce-romaine",
         "name": "Lettuce (Romaine)",
         "category": "produce",
-        "price_usd": 4.021,
+        "price_usd": 3.286,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "low",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "grapefruit",
-      "text": "Grapefruit (category: produce, slug: grapefruit) Serving size reference: 100g. Current price: $1.634 per lb (as of 2026-06, BLS average price series). Per 100g: 30 kcal, 0.6g protein, 0.1g fat, 7.5g carbs, 1.1g fiber. Micronutrients per 100g: 0.12mg iron, 0.07mg zinc, 9mcg folate. Per dollar spent: 1.5g protein per dollar, 83 calories per dollar, 3.0g fiber per dollar, 0.3mg iron per dollar, 0.2mg zinc per dollar, 25mcg folate per dollar. Sustainability: water use is low, storage life is medium. Local production: Grown mainly in FL, TX, and CA. Keeps 2\u20133 weeks refrigerated..",
+      "text": "Grapefruit (category: produce, slug: grapefruit) Serving size reference: 100g. Current price: $1.604 per lb (as of 2026-08, BLS average price series). Per 100g: 30 kcal, 0.6g protein, 0.1g fat, 7.5g carbs, 1.1g fiber. Micronutrients per 100g: 0.12mg iron, 0.07mg zinc, 9mcg folate, 15mg calcium, 127mg potassium, 8mg magnesium, 13mcg RAE vitamin A, 37.0mg vitamin C. Per dollar spent: 1.6g protein per dollar, 85 calories per dollar, 3.1g fiber per dollar, 0.34mg iron per dollar, 0.20mg zinc per dollar, 25mcg folate per dollar, 42mg calcium per dollar, 359mg potassium per dollar, 23mg magnesium per dollar, 37mcg RAE vitamin A per dollar, 104.6mg vitamin C per dollar. Sustainability: water use is low, storage life is medium. Local production: Grown mainly in FL, TX, and CA. Keeps 2\u20133 weeks refrigerated..",
       "metadata": {
         "slug": "grapefruit",
         "name": "Grapefruit",
         "category": "produce",
-        "price_usd": 1.634,
+        "price_usd": 1.604,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "low",
         "storage_life_tier": "medium"
       }
     },
     {
       "id": "lemons",
-      "text": "Lemons (category: produce, slug: lemons) Serving size reference: 100g. Current price: $2.109 per lb (as of 2026-06, BLS average price series). Per 100g: 29 kcal, 1.1g protein, 0.3g fat, 9.3g carbs, 2.8g fiber, 2.5g sugars. Micronutrients per 100g: 0.60mg iron, 0.06mg zinc, 11mcg folate. Per dollar spent: 2.4g protein per dollar, 62 calories per dollar, 6.0g fiber per dollar, 1.3mg iron per dollar, 0.1mg zinc per dollar, 24mcg folate per dollar. Sustainability: water use is low, storage life is medium. Local production: Grown mainly in CA and AZ. Keeps 3\u20134 weeks refrigerated..",
+      "text": "Lemons (category: produce, slug: lemons) Serving size reference: 100g. Current price: $2.114 per lb (as of 2026-08, BLS average price series). Per 100g: 29 kcal, 1.1g protein, 0.3g fat, 9.3g carbs, 2.8g fiber, 2.5g sugars. Micronutrients per 100g: 0.60mg iron, 0.06mg zinc, 11mcg folate, 26mg calcium, 138mg potassium, 8mg magnesium, 1mcg RAE vitamin A, 53.0mg vitamin C, 0.15mg vitamin E. Per dollar spent: 2.4g protein per dollar, 62 calories per dollar, 6.0g fiber per dollar, 1.29mg iron per dollar, 0.13mg zinc per dollar, 24mcg folate per dollar, 56mg calcium per dollar, 296mg potassium per dollar, 17mg magnesium per dollar, 2mcg RAE vitamin A per dollar, 113.7mg vitamin C per dollar, 0.32mg vitamin E per dollar. Sustainability: water use is low, storage life is medium. Local production: Grown mainly in CA and AZ. Keeps 3\u20134 weeks refrigerated..",
       "metadata": {
         "slug": "lemons",
         "name": "Lemons",
         "category": "produce",
-        "price_usd": 2.109,
+        "price_usd": 2.114,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "low",
         "storage_life_tier": "medium"
       }
     },
     {
       "id": "strawberries",
-      "text": "Strawberries (category: produce, slug: strawberries) Serving size reference: 100g. Current price: $2.516 per 12 oz (as of 2026-06, BLS average price series). Per 100g: 32 kcal, 0.7g protein, 0.3g fat, 7.7g carbs, 2.0g fiber, 4.9g sugars. Micronutrients per 100g: 0.41mg iron, 0.14mg zinc, 24mcg folate. Per dollar spent: 0.9g protein per dollar, 43 calories per dollar, 2.7g fiber per dollar, 0.6mg iron per dollar, 0.2mg zinc per dollar, 32mcg folate per dollar. Sustainability: water use is low, storage life is short. Local production: Grown mainly in CA and FL. Highly perishable; best within 1\u20133 days of purchase..",
+      "text": "Strawberries (category: produce, slug: strawberries) Serving size reference: 100g. Current price: $2.578 per 12 oz (as of 2026-08, BLS average price series). Per 100g: 32 kcal, 0.7g protein, 0.3g fat, 7.7g carbs, 2.0g fiber, 4.9g sugars. Micronutrients per 100g: 0.41mg iron, 0.14mg zinc, 24mcg folate, 16mg calcium, 153mg potassium, 13mg magnesium, 1mcg RAE vitamin A, 58.8mg vitamin C, 0.29mg vitamin E, 2.2mcg vitamin K. Per dollar spent: 0.9g protein per dollar, 42 calories per dollar, 2.6g fiber per dollar, 0.54mg iron per dollar, 0.18mg zinc per dollar, 32mcg folate per dollar, 21mg calcium per dollar, 202mg potassium per dollar, 17mg magnesium per dollar, 1mcg RAE vitamin A per dollar, 77.6mg vitamin C per dollar, 0.38mg vitamin E per dollar, 2.9mcg vitamin K per dollar. Sustainability: water use is low, storage life is short. Local production: Grown mainly in CA and FL. Highly perishable; best within 1\u20133 days of purchase..",
       "metadata": {
         "slug": "strawberries",
         "name": "Strawberries",
         "category": "produce",
-        "price_usd": 2.516,
+        "price_usd": 2.578,
         "price_unit": "per 12 oz",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "low",
         "storage_life_tier": "short"
       }
     },
     {
       "id": "cookies-chocolate-chip",
-      "text": "Cookies (Chocolate Chip) (category: grain, slug: cookies-chocolate-chip) Serving size reference: 100g. Current price: $4.964 per lb (as of 2026-06, BLS average price series). Per 100g: 444 kcal, 3.6g protein, 19.8g fat, 65.8g carbs, 1.8g fiber, 37.1g sugars. Micronutrients per 100g: 4.07mg iron, 0.54mg zinc, 27mcg folate. Per dollar spent: 3.3g protein per dollar, 406 calories per dollar, 1.6g fiber per dollar, 3.7mg iron per dollar, 0.5mg zinc per dollar, 25mcg folate per dollar. Sustainability: water use is medium, storage life is long. Local production: Manufactured nationwide; ingredients (wheat, butter, eggs, sugar) sourced regionally. Notes: Medium water footprint reflects dairy and sugar inputs; packaged cookies keep 6\u20139 months.",
+      "text": "Cookies (Chocolate Chip) (category: grain, slug: cookies-chocolate-chip) Serving size reference: 100g. Current price: $5.214 per lb (as of 2026-08, BLS average price series). Per 100g: 444 kcal, 3.6g protein, 19.8g fat, 65.8g carbs, 1.8g fiber, 37.1g sugars. Micronutrients per 100g: 4.07mg iron, 0.54mg zinc, 27mcg folate, 17mg calcium, 130mg potassium, 29mg magnesium, 1.55mg vitamin E, 2.4mcg vitamin K. Per dollar spent: 3.2g protein per dollar, 386 calories per dollar, 1.6g fiber per dollar, 3.54mg iron per dollar, 0.47mg zinc per dollar, 23mcg folate per dollar, 15mg calcium per dollar, 113mg potassium per dollar, 25mg magnesium per dollar, 1.35mg vitamin E per dollar, 2.1mcg vitamin K per dollar. Sustainability: water use is medium, storage life is long. Local production: Manufactured nationwide; ingredients (wheat, butter, eggs, sugar) sourced regionally. Notes: Medium water footprint reflects dairy and sugar inputs; packaged cookies keep 6\u20139 months.",
       "metadata": {
         "slug": "cookies-chocolate-chip",
         "name": "Cookies (Chocolate Chip)",
         "category": "grain",
-        "price_usd": 4.964,
+        "price_usd": 5.214,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "medium",
         "storage_life_tier": "long"
       }
     },
     {
       "id": "corn-canned",
-      "text": "Corn (Canned, Any Style) (category: pantry, slug: corn-canned) Serving size reference: 100g. Current price: $1.286 per lb (as of 2026-06, BLS average price series). Per 100g: 72 kcal, 1.7g protein, 0.4g fat, 18.1g carbs, 1.2g fiber, 3.2g sugars. Micronutrients per 100g: 0.38mg iron, 0.53mg zinc, 45mcg folate. Per dollar spent: 6.1g protein per dollar, 254 calories per dollar, 4.2g fiber per dollar, 1.3mg iron per dollar, 1.9mg zinc per dollar, 159mcg folate per dollar. Sustainability: water use is low, storage life is long. Local production: Corn grown widely in the Midwest (IA, IL, NE, MN). Canned for long shelf stability..",
+      "text": "Corn (Canned, Any Style) (category: pantry, slug: corn-canned) Serving size reference: 100g. Current price: $1.274 per lb (as of 2026-08, BLS average price series). Per 100g: 72 kcal, 1.7g protein, 0.4g fat, 18.1g carbs, 1.2g fiber, 3.2g sugars. Micronutrients per 100g: 0.38mg iron, 0.53mg zinc, 45mcg folate, 3mg calcium, 134mg potassium, 17mg magnesium, 4mcg RAE vitamin A, 4.6mg vitamin C, 0.07mg vitamin E. Per dollar spent: 6.2g protein per dollar, 256 calories per dollar, 4.3g fiber per dollar, 1.35mg iron per dollar, 1.89mg zinc per dollar, 160mcg folate per dollar, 11mg calcium per dollar, 477mg potassium per dollar, 61mg magnesium per dollar, 14mcg RAE vitamin A per dollar, 16.4mg vitamin C per dollar, 0.25mg vitamin E per dollar. Sustainability: water use is low, storage life is long. Local production: Corn grown widely in the Midwest (IA, IL, NE, MN). Canned for long shelf stability..",
       "metadata": {
         "slug": "corn-canned",
         "name": "Corn (Canned, Any Style)",
         "category": "pantry",
-        "price_usd": 1.286,
+        "price_usd": 1.274,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "low",
         "storage_life_tier": "long"
       }
     },
     {
       "id": "potato-chips",
-      "text": "Potato Chips (category: pantry, slug: potato-chips) Serving size reference: 100g. Current price: $6.632 per lb (as of 2026-06, BLS average price series). Per 100g: 532 kcal, 6.4g protein, 34.0g fat, 53.8g carbs, 3.1g fiber, 0.3g sugars. Micronutrients per 100g: 1.28mg iron, 1.09mg zinc, 29mcg folate. Per dollar spent: 4.4g protein per dollar, 364 calories per dollar, 2.1g fiber per dollar, 0.9mg iron per dollar, 0.8mg zinc per dollar, 20mcg folate per dollar. Sustainability: water use is low, storage life is long. Local production: Potatoes grown widely in ID, WA, WI; chips manufactured regionally. Keeps ~2\u20133 months unopened..",
+      "text": "Potato Chips (category: pantry, slug: potato-chips) Serving size reference: 100g. Current price: $6.751 per lb (as of 2026-08, BLS average price series). Per 100g: 532 kcal, 6.4g protein, 34.0g fat, 53.8g carbs, 3.1g fiber, 0.3g sugars. Micronutrients per 100g: 1.28mg iron, 1.09mg zinc, 29mcg folate, 21mg calcium, 1196mg potassium, 63mg magnesium, 21.6mg vitamin C, 10.45mg vitamin E, 22.1mcg vitamin K. Per dollar spent: 4.3g protein per dollar, 357 calories per dollar, 2.1g fiber per dollar, 0.86mg iron per dollar, 0.73mg zinc per dollar, 19mcg folate per dollar, 14mg calcium per dollar, 804mg potassium per dollar, 42mg magnesium per dollar, 14.5mg vitamin C per dollar, 7.02mg vitamin E per dollar, 14.8mcg vitamin K per dollar. Sustainability: water use is low, storage life is long. Local production: Potatoes grown widely in ID, WA, WI; chips manufactured regionally. Keeps ~2\u20133 months unopened..",
       "metadata": {
         "slug": "potato-chips",
         "name": "Potato Chips",
         "category": "pantry",
-        "price_usd": 6.632,
+        "price_usd": 6.751,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "low",
         "storage_life_tier": "long"
       }
     },
     {
       "id": "sugar-all-sizes",
-      "text": "Sugar (White, All Sizes) (category: pantry, slug: sugar-all-sizes) Serving size reference: 100g. Current price: $1.018 per lb (as of 2026-06, BLS average price series). Per 100g: 387 kcal, 100.0g carbs, 99.8g sugars. Micronutrients per 100g: 0.05mg iron, 0.01mg zinc. Per dollar spent: 0.0g protein per dollar, 1725 calories per dollar, 0.2mg iron per dollar, 0.0mg zinc per dollar. Sustainability: water use is medium, storage life is long. Local production: Derived from sugarcane (FL, LA, TX) or sugar beets (MN, ID, ND). Indefinite shelf life when dry.. Notes: Water footprint reflects sugarcane or beet cultivation; sugarcane is higher.",
+      "text": "Sugar (White, All Sizes) (category: pantry, slug: sugar-all-sizes) Serving size reference: 100g. Current price: $1.024 per lb (as of 2026-08, BLS average price series). Per 100g: 387 kcal, 100.0g carbs, 99.8g sugars. Micronutrients per 100g: 0.05mg iron, 0.01mg zinc, 1mg calcium, 2mg potassium. Per dollar spent: 0.0g protein per dollar, 1714 calories per dollar, 0.22mg iron per dollar, 0.04mg zinc per dollar, 4mg calcium per dollar, 9mg potassium per dollar. Sustainability: water use is medium, storage life is long. Local production: Derived from sugarcane (FL, LA, TX) or sugar beets (MN, ID, ND). Indefinite shelf life when dry.. Notes: Water footprint reflects sugarcane or beet cultivation; sugarcane is higher.",
       "metadata": {
         "slug": "sugar-all-sizes",
         "name": "Sugar (White, All Sizes)",
         "category": "pantry",
-        "price_usd": 1.018,
+        "price_usd": 1.024,
         "price_unit": "per lb",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "medium",
         "storage_life_tier": "long"
       }
     },
     {
       "id": "soft-drinks-2l",
-      "text": "Soft Drinks (2 Liter) (category: beverage, slug: soft-drinks-2l) Serving size reference: 100ml. Current price: $2.196 per 2 liters (as of 2026-06, BLS average price series). Per 100g: 42 kcal, 0.2g fat, 10.4g carbs, 9.9g sugars. Micronutrients per 100g: 0.02mg iron, 0.09mg zinc. Per dollar spent: 0.0g protein per dollar, 383 calories per dollar, 0.2mg iron per dollar, 0.8mg zinc per dollar. Sustainability: water use is low, storage life is long. Local production: Manufactured nationally; primary ingredient is water with corn-syrup sweetener.. Notes: Low direct water footprint as a product; corn syrup adds indirect footprint.",
+      "text": "Soft Drinks (2 Liter) (category: beverage, slug: soft-drinks-2l) Serving size reference: 100ml. Current price: $2.228 per 2 liters (as of 2026-08, BLS average price series). Per 100g: 42 kcal, 0.2g fat, 10.4g carbs, 9.9g sugars. Micronutrients per 100g: 0.02mg iron, 0.09mg zinc, 1mg calcium, 5mg potassium. Per dollar spent: 0.0g protein per dollar, 377 calories per dollar, 0.18mg iron per dollar, 0.81mg zinc per dollar, 9mg calcium per dollar, 45mg potassium per dollar. Sustainability: water use is low, storage life is long. Local production: Manufactured nationally; primary ingredient is water with corn-syrup sweetener.. Notes: Low direct water footprint as a product; corn syrup adds indirect footprint.",
       "metadata": {
         "slug": "soft-drinks-2l",
         "name": "Soft Drinks (2 Liter)",
         "category": "beverage",
-        "price_usd": 2.196,
+        "price_usd": 2.228,
         "price_unit": "per 2 liters",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "low",
         "storage_life_tier": "long"
       }
     },
     {
       "id": "soft-drinks-cans",
-      "text": "Soft Drinks (12-Pack Cans) (category: beverage, slug: soft-drinks-cans) Serving size reference: 100ml. Current price: $0.612 per 12 oz (as of 2026-06, BLS average price series). Per 100g: 42 kcal, 0.2g fat, 10.4g carbs, 9.9g sugars. Micronutrients per 100g: 0.02mg iron, 0.09mg zinc. Per dollar spent: 0.0g protein per dollar, 233 calories per dollar, 0.1mg iron per dollar, 0.5mg zinc per dollar. Sustainability: water use is low, storage life is long. Local production: Manufactured nationally; primary ingredient is water with corn-syrup sweetener.. Notes: Low direct water footprint as a product; corn syrup adds indirect footprint.",
+      "text": "Soft Drinks (12-Pack Cans) (category: beverage, slug: soft-drinks-cans) Serving size reference: 100ml. Current price: $0.603 per 12 oz (as of 2026-08, BLS average price series). Per 100g: 42 kcal, 0.2g fat, 10.4g carbs, 9.9g sugars. Micronutrients per 100g: 0.02mg iron, 0.09mg zinc, 1mg calcium, 5mg potassium. Per dollar spent: 0.0g protein per dollar, 237 calories per dollar, 0.11mg iron per dollar, 0.51mg zinc per dollar, 6mg calcium per dollar, 28mg potassium per dollar. Sustainability: water use is low, storage life is long. Local production: Manufactured nationally; primary ingredient is water with corn-syrup sweetener.. Notes: Low direct water footprint as a product; corn syrup adds indirect footprint.",
       "metadata": {
         "slug": "soft-drinks-cans",
         "name": "Soft Drinks (12-Pack Cans)",
         "category": "beverage",
-        "price_usd": 0.612,
+        "price_usd": 0.603,
         "price_unit": "per 12 oz",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "low",
         "storage_life_tier": "long"
       }
     },
     {
       "id": "beer",
-      "text": "Beer (Malt Beverages, All Types) (category: beverage, slug: beer) Serving size reference: 100ml. Current price: $1.882 per 16 oz (as of 2026-06, BLS average price series). Per 100g: 43 kcal, 0.5g protein, 3.5g carbs. Micronutrients per 100g: 0.02mg iron, 0.01mg zinc, 0.02mcg B12, 6mcg folate. Per dollar spent: 1.2g protein per dollar, 114 calories per dollar, 0.1mg iron per dollar, 0.0mg zinc per dollar, 0.05mcg B12 per dollar, 16mcg folate per dollar. Sustainability: water use is medium, storage life is long. Local production: Brewed widely across the US; primary ingredients are malted barley, hops, water.. Notes: Water footprint mainly from barley cultivation; beer is lower than wine per liter.",
+      "text": "Beer (Malt Beverages, All Types) (category: beverage, slug: beer) Serving size reference: 100ml. Current price: $1.879 per 16 oz (as of 2026-08, BLS average price series). Per 100g: 43 kcal, 0.5g protein, 3.5g carbs. Micronutrients per 100g: 0.02mg iron, 0.01mg zinc, 0.02mcg B12, 6mcg folate, 4mg calcium, 27mg potassium, 6mg magnesium. Per dollar spent: 1.2g protein per dollar, 114 calories per dollar, 0.05mg iron per dollar, 0.03mg zinc per dollar, 0.05mcg B12 per dollar, 16mcg folate per dollar, 11mg calcium per dollar, 71mg potassium per dollar, 16mg magnesium per dollar. Sustainability: water use is medium, storage life is long. Local production: Brewed widely across the US; primary ingredients are malted barley, hops, water.. Notes: Water footprint mainly from barley cultivation; beer is lower than wine per liter.",
       "metadata": {
         "slug": "beer",
         "name": "Beer (Malt Beverages, All Types)",
         "category": "beverage",
-        "price_usd": 1.882,
+        "price_usd": 1.879,
         "price_unit": "per 16 oz",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "medium",
         "storage_life_tier": "long"
       }
     },
     {
       "id": "wine",
-      "text": "Wine (Red and White Table) (category: beverage, slug: wine) Serving size reference: 100ml. Current price: $13.804 per liter (as of 2026-06, BLS average price series). Per 100g: 85 kcal, 0.1g protein, 2.6g carbs, 0.6g sugars. Micronutrients per 100g: 0.46mg iron, 0.14mg zinc, 1mcg folate. Per dollar spent: 0.1g protein per dollar, 62 calories per dollar, 0.3mg iron per dollar, 0.1mg zinc per dollar, 1mcg folate per dollar. Sustainability: water use is medium, storage life is long. Local production: Produced mainly in CA, WA, OR. Stable for months to years depending on variety.. Notes: Water footprint reflects grape cultivation; varies significantly by region and variety.",
+      "text": "Wine (Red and White Table) (category: beverage, slug: wine) Serving size reference: 100ml. Current price: $13.747 per liter (as of 2026-08, BLS average price series). Per 100g: 85 kcal, 0.1g protein, 2.6g carbs, 0.6g sugars. Micronutrients per 100g: 0.46mg iron, 0.14mg zinc, 1mcg folate, 8mg calcium, 127mg potassium, 12mg magnesium, 0.4mcg vitamin K. Per dollar spent: 0.1g protein per dollar, 62 calories per dollar, 0.33mg iron per dollar, 0.10mg zinc per dollar, 1mcg folate per dollar, 6mg calcium per dollar, 92mg potassium per dollar, 9mg magnesium per dollar, 0.3mcg vitamin K per dollar. Sustainability: water use is medium, storage life is long. Local production: Produced mainly in CA, WA, OR. Stable for months to years depending on variety.. Notes: Water footprint reflects grape cultivation; varies significantly by region and variety.",
       "metadata": {
         "slug": "wine",
         "name": "Wine (Red and White Table)",
         "category": "beverage",
-        "price_usd": 13.804,
+        "price_usd": 13.747,
         "price_unit": "per liter",
         "price_verified": true,
-        "as_of": "2026-06",
+        "as_of": "2026-08",
         "water_use_tier": "medium",
         "storage_life_tier": "long"
       }
     },
     {
       "id": "vodka",
-      "text": "Vodka (category: beverage, slug: vodka) Serving size reference: 100ml. Current price: $12.499 per liter (as of 2024-04, BLS average price series). Per 100g: 231 kcal. Micronutrients per 100g: 0.12mg iron, 0.07mg zinc. Per dollar spent: 0.0g protein per dollar, 185 calories per dollar, 0.1mg iron per dollar, 0.1mg zinc per dollar. Sustainability: water use is medium, storage life is long. Local production: Distilled nationwide from grain (corn, wheat) or potatoes; essentially indefinite shelf life sealed.. Notes: Water footprint from grain or potato base; distillation process adds minimal water.",
+      "text": "Vodka (category: beverage, slug: vodka) Serving size reference: 100ml. Current price: $12.499 per liter (as of 2024-04, BLS average price series). Per 100g: 231 kcal. Micronutrients per 100g: 0.01mg iron, 1mg potassium. Per dollar spent: 0.0g protein per dollar, 185 calories per dollar, 0.01mg iron per dollar, 1mg potassium per dollar. Sustainability: water use is medium, storage life is long. Local production: Distilled nationwide from grain (corn, wheat) or potatoes; essentially indefinite shelf life sealed.. Notes: Water footprint from grain or potato base; distillation process adds minimal water.",
       "metadata": {
         "slug": "vodka",
         "name": "Vodka",

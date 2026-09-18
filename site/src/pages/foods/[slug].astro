@@ -37,6 +37,27 @@ const description = `What ${food.display_name} actually costs: current price, pr
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
 
+// Public-health-priority micronutrients, shown in a collapsible section so
+// the receipt stays readable -- the always-visible section above already
+// covers iron/zinc/B12/folate.
+const extraMicronutrients = [
+  { key: 'calcium_mg', perDollarKey: 'calcium_mg_per_dollar', label: 'Calcium', unit: 'mg' },
+  { key: 'potassium_mg', perDollarKey: 'potassium_mg_per_dollar', label: 'Potassium', unit: 'mg' },
+  { key: 'magnesium_mg', perDollarKey: 'magnesium_mg_per_dollar', label: 'Magnesium', unit: 'mg' },
+  { key: 'vitamin_a_mcg', perDollarKey: 'vitamin_a_mcg_per_dollar', label: 'Vitamin A', unit: 'µg RAE' },
+  { key: 'vitamin_c_mg', perDollarKey: 'vitamin_c_mg_per_dollar', label: 'Vitamin C', unit: 'mg' },
+  { key: 'vitamin_d_mcg', perDollarKey: 'vitamin_d_mcg_per_dollar', label: 'Vitamin D', unit: 'µg' },
+  { key: 'vitamin_e_mg', perDollarKey: 'vitamin_e_mg_per_dollar', label: 'Vitamin E', unit: 'mg' },
+  { key: 'vitamin_k_mcg', perDollarKey: 'vitamin_k_mcg_per_dollar', label: 'Vitamin K', unit: 'µg' },
+] as const;
+
+const visibleExtraMicronutrients = food.nutrition_per_100g
+  ? extraMicronutrients.filter((m) => {
+      const val = food.nutrition_per_100g![m.key];
+      return val != null && val > 0;
+    })
+  : [];
+
 const jsonLd: Record<string, unknown> = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -197,6 +218,25 @@ const jsonLd: Record<string, unknown> = {
               <span class="line-value">{food.nutrition_per_100g.folate_mcg} µg</span>
             </div>
           )}
+          {visibleExtraMicronutrients.length > 0 && (
+            <details class="micro-details">
+              <summary>Full nutrient profile ({visibleExtraMicronutrients.length} more)</summary>
+              {visibleExtraMicronutrients.map((m) => {
+                const perDollar = food.value_metrics[m.perDollarKey];
+                return (
+                  <div class="line-item line-item--muted">
+                    <span class="line-label">{m.label}</span>
+                    <span class="line-dots" aria-hidden="true"></span>
+                    <span class="line-value">
+                      {food.nutrition_per_100g![m.key]} {m.unit}
+                      {perDollar != null && perDollar > 0 ? ` · ${perDollar} ${m.unit}/$` : ''}
+                    </span>
+                  </div>
+                );
+              })}
+            </details>
+          )}
+
           <p class="as-of">nutrition source: USDA FoodData Central{food.nutrition_per_100g.source_fdc_id ? ` (FDC #${food.nutrition_per_100g.source_fdc_id})` : ''}</p>
         </>
       )}
@@ -315,6 +355,23 @@ const jsonLd: Record<string, unknown> = {
     background: var(--paper-edge);
     padding: 0.6rem 0.75rem;
     margin-top: 0.5rem;
+  }
+
+  .micro-details {
+    margin-top: 0.25rem;
+  }
+  .micro-details summary {
+    cursor: pointer;
+    font-size: 0.82rem;
+    color: var(--ink-faded);
+    padding: 0.4rem 0;
+    list-style: revert;
+  }
+  .micro-details summary:hover {
+    color: var(--ink);
+  }
+  .micro-details .line-item {
+    padding-left: 0.25rem;
   }
 
   .as-of, .citation {
