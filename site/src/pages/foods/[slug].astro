@@ -38,13 +38,15 @@ const description = `What ${food.display_name} actually costs: current price, pr
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
 
 // All micronutrients live behind a collapsible "full nutrient profile" so
-// the receipt stays readable -- only the macros (calories/protein/carbs/
-// fiber/sugars) and the two headline per-dollar metrics stay always-visible.
-// perDollarKey is null for "nutrients of excess" (sodium, cholesterol,
-// saturated/trans fat) -- nobody wants more of those per dollar, so they're
-// informational-only. showZero is true for the same group, since a real
-// zero there is meaningful (e.g. "0mg cholesterol"), unlike a true
-// micronutrient reading 0, which usually just means FDC didn't analyze it.
+// the receipt stays readable -- only the macros (calories/protein/total fat/
+// total carbs, the label-style fat and carb breakdowns, and the two headline
+// per-dollar metrics stay always-visible. Saturated/trans fat moved into the
+// always-visible fat breakdown -- see the "Nutrition per 100g" markup below.
+// perDollarKey is null for "nutrients of excess" (sodium, cholesterol) --
+// nobody wants more of those per dollar, so they're informational-only.
+// showZero is true for the same group, since a real zero there is
+// meaningful (e.g. "0mg cholesterol"), unlike a true micronutrient reading
+// 0, which usually just means FDC didn't analyze it.
 const micronutrients = [
   { key: 'iron_mg', perDollarKey: 'iron_mg_per_dollar', label: 'Iron', unit: 'mg' },
   { key: 'zinc_mg', perDollarKey: 'zinc_mg_per_dollar', label: 'Zinc', unit: 'mg' },
@@ -69,8 +71,6 @@ const micronutrients = [
   { key: 'manganese_mg', perDollarKey: 'manganese_mg_per_dollar', label: 'Manganese', unit: 'mg' },
   { key: 'sodium_mg', perDollarKey: null, label: 'Sodium', unit: 'mg', showZero: true },
   { key: 'cholesterol_mg', perDollarKey: null, label: 'Cholesterol', unit: 'mg', showZero: true },
-  { key: 'saturated_fat_g', perDollarKey: null, label: 'Saturated Fat', unit: 'g', showZero: true },
-  { key: 'trans_fat_g', perDollarKey: null, label: 'Trans Fat', unit: 'g', showZero: true },
 ] as const;
 
 const visibleMicronutrients = food.nutrition_per_100g
@@ -169,17 +169,32 @@ const jsonLd: Record<string, unknown> = {
             <span class="line-value">{food.nutrition_per_100g.protein_g ?? '—'} g</span>
           </div>
           <div class="line-item line-item--muted">
-            <span class="line-label">Carbs</span>
+            <span class="line-label">Total Fat</span>
+            <span class="line-dots" aria-hidden="true"></span>
+            <span class="line-value">{food.nutrition_per_100g.fat_g ?? '—'} g</span>
+          </div>
+          <div class="line-item line-item--muted line-item--sub">
+            <span class="line-label">Saturated Fat</span>
+            <span class="line-dots" aria-hidden="true"></span>
+            <span class="line-value">{food.nutrition_per_100g.saturated_fat_g ?? '—'} g</span>
+          </div>
+          <div class="line-item line-item--muted line-item--sub">
+            <span class="line-label">Trans Fat</span>
+            <span class="line-dots" aria-hidden="true"></span>
+            <span class="line-value">{food.nutrition_per_100g.trans_fat_g ?? '—'} g</span>
+          </div>
+          <div class="line-item line-item--muted">
+            <span class="line-label">Total Carbohydrate</span>
             <span class="line-dots" aria-hidden="true"></span>
             <span class="line-value">{food.nutrition_per_100g.carbs_g ?? '—'} g</span>
           </div>
-          <div class="line-item line-item--muted">
-            <span class="line-label">Fiber</span>
+          <div class="line-item line-item--muted line-item--sub">
+            <span class="line-label">Dietary Fiber</span>
             <span class="line-dots" aria-hidden="true"></span>
             <span class="line-value">{food.nutrition_per_100g.fiber_g ?? '—'} g</span>
           </div>
-          <div class="line-item line-item--muted">
-            <span class="line-label">Sugars</span>
+          <div class="line-item line-item--muted line-item--sub">
+            <span class="line-label">Total Sugars</span>
             <span class="line-dots" aria-hidden="true"></span>
             <span class="line-value">{food.nutrition_per_100g.sugars_g ?? '—'} g</span>
           </div>
@@ -303,6 +318,14 @@ const jsonLd: Record<string, unknown> = {
   .line-item--muted {
     color: var(--thermal-gray);
     font-size: 0.88rem;
+  }
+  .line-item--sub {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    font-size: 0.8rem;
+  }
+  .line-item--sub .line-label {
+    padding-left: 1rem;
   }
   .line-label { flex-shrink: 0; }
   .line-dots {
