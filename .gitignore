@@ -24,6 +24,7 @@ infra/cdk-outputs.json
 
 # RAG artifacts
 rag/chroma_db/
+rag/embeddings.json
 
 # Editors
 .idea/
