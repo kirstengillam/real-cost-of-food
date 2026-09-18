@@ -35,9 +35,12 @@ NUTRIENT_IDS = {
     "energy_kcal": 1008,
     "protein_g": 1003,
     "fat_g": 1004,
+    "saturated_fat_g": 1258,
+    "trans_fat_g": 1257,
     "carbs_g": 1005,
     "fiber_g": 1079,
     "sugars_g": 2000,
+    "cholesterol_mg": 1253,
     "sodium_mg": 1093,
     "iron_mg": 1089,
     "zinc_mg": 1095,
@@ -53,6 +56,17 @@ NUTRIENT_IDS = {
     "vitamin_d_mcg": 1114,  # D2 + D3
     "vitamin_e_mg": 1109,   # alpha-tocopherol
     "vitamin_k_mcg": 1185,  # phylloquinone
+    # Remaining B vitamins and minerals with reliable FDC coverage for whole
+    # foods (biotin, iodine, fluoride excluded -- too sparsely populated).
+    "thiamin_mg": 1165,
+    "riboflavin_mg": 1166,
+    "niacin_mg": 1167,
+    "vitamin_b6_mg": 1175,
+    "pantothenic_acid_mg": 1170,
+    "phosphorus_mg": 1091,
+    "selenium_mcg": 1103,
+    "copper_mg": 1098,
+    "manganese_mg": 1101,
 }
 
 

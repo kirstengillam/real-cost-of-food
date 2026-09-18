@@ -37,10 +37,19 @@ const description = `What ${food.display_name} actually costs: current price, pr
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
 
-// Public-health-priority micronutrients, shown in a collapsible section so
-// the receipt stays readable -- the always-visible section above already
-// covers iron/zinc/B12/folate.
-const extraMicronutrients = [
+// All micronutrients live behind a collapsible "full nutrient profile" so
+// the receipt stays readable -- only the macros (calories/protein/carbs/
+// fiber/sugars) and the two headline per-dollar metrics stay always-visible.
+// perDollarKey is null for "nutrients of excess" (sodium, cholesterol,
+// saturated/trans fat) -- nobody wants more of those per dollar, so they're
+// informational-only. showZero is true for the same group, since a real
+// zero there is meaningful (e.g. "0mg cholesterol"), unlike a true
+// micronutrient reading 0, which usually just means FDC didn't analyze it.
+const micronutrients = [
+  { key: 'iron_mg', perDollarKey: 'iron_mg_per_dollar', label: 'Iron', unit: 'mg' },
+  { key: 'zinc_mg', perDollarKey: 'zinc_mg_per_dollar', label: 'Zinc', unit: 'mg' },
+  { key: 'vitamin_b12_mcg', perDollarKey: 'vitamin_b12_mcg_per_dollar', label: 'Vitamin B12', unit: 'µg' },
+  { key: 'folate_mcg', perDollarKey: 'folate_mcg_per_dollar', label: 'Folate', unit: 'µg' },
   { key: 'calcium_mg', perDollarKey: 'calcium_mg_per_dollar', label: 'Calcium', unit: 'mg' },
   { key: 'potassium_mg', perDollarKey: 'potassium_mg_per_dollar', label: 'Potassium', unit: 'mg' },
   { key: 'magnesium_mg', perDollarKey: 'magnesium_mg_per_dollar', label: 'Magnesium', unit: 'mg' },
@@ -49,12 +58,25 @@ const extraMicronutrients = [
   { key: 'vitamin_d_mcg', perDollarKey: 'vitamin_d_mcg_per_dollar', label: 'Vitamin D', unit: 'µg' },
   { key: 'vitamin_e_mg', perDollarKey: 'vitamin_e_mg_per_dollar', label: 'Vitamin E', unit: 'mg' },
   { key: 'vitamin_k_mcg', perDollarKey: 'vitamin_k_mcg_per_dollar', label: 'Vitamin K', unit: 'µg' },
+  { key: 'thiamin_mg', perDollarKey: 'thiamin_mg_per_dollar', label: 'Thiamin (B1)', unit: 'mg' },
+  { key: 'riboflavin_mg', perDollarKey: 'riboflavin_mg_per_dollar', label: 'Riboflavin (B2)', unit: 'mg' },
+  { key: 'niacin_mg', perDollarKey: 'niacin_mg_per_dollar', label: 'Niacin (B3)', unit: 'mg' },
+  { key: 'vitamin_b6_mg', perDollarKey: 'vitamin_b6_mg_per_dollar', label: 'Vitamin B6', unit: 'mg' },
+  { key: 'pantothenic_acid_mg', perDollarKey: 'pantothenic_acid_mg_per_dollar', label: 'Pantothenic Acid (B5)', unit: 'mg' },
+  { key: 'phosphorus_mg', perDollarKey: 'phosphorus_mg_per_dollar', label: 'Phosphorus', unit: 'mg' },
+  { key: 'selenium_mcg', perDollarKey: 'selenium_mcg_per_dollar', label: 'Selenium', unit: 'µg' },
+  { key: 'copper_mg', perDollarKey: 'copper_mg_per_dollar', label: 'Copper', unit: 'mg' },
+  { key: 'manganese_mg', perDollarKey: 'manganese_mg_per_dollar', label: 'Manganese', unit: 'mg' },
+  { key: 'sodium_mg', perDollarKey: null, label: 'Sodium', unit: 'mg', showZero: true },
+  { key: 'cholesterol_mg', perDollarKey: null, label: 'Cholesterol', unit: 'mg', showZero: true },
+  { key: 'saturated_fat_g', perDollarKey: null, label: 'Saturated Fat', unit: 'g', showZero: true },
+  { key: 'trans_fat_g', perDollarKey: null, label: 'Trans Fat', unit: 'g', showZero: true },
 ] as const;
 
-const visibleExtraMicronutrients = food.nutrition_per_100g
-  ? extraMicronutrients.filter((m) => {
+const visibleMicronutrients = food.nutrition_per_100g
+  ? micronutrients.filter((m) => {
       const val = food.nutrition_per_100g![m.key];
-      return val != null && val > 0;
+      return 'showZero' in m ? val != null : val != null && val > 0;
     })
   : [];
 
@@ -133,35 +155,6 @@ const jsonLd: Record<string, unknown> = {
                 : '—'}
             </span>
           </div>
-          {food.value_metrics.iron_mg_per_dollar != null && (
-            <div class="line-item">
-              <span class="line-label">Iron per dollar</span>
-              <span class="line-dots" aria-hidden="true"></span>
-              <span class="line-value">{food.value_metrics.iron_mg_per_dollar} mg</span>
-            </div>
-          )}
-          {food.value_metrics.zinc_mg_per_dollar != null && (
-            <div class="line-item">
-              <span class="line-label">Zinc per dollar</span>
-              <span class="line-dots" aria-hidden="true"></span>
-              <span class="line-value">{food.value_metrics.zinc_mg_per_dollar} mg</span>
-            </div>
-          )}
-          {food.value_metrics.vitamin_b12_mcg_per_dollar != null && food.value_metrics.vitamin_b12_mcg_per_dollar > 0 && (
-            <div class="line-item">
-              <span class="line-label">Vitamin B12 per dollar</span>
-              <span class="line-dots" aria-hidden="true"></span>
-              <span class="line-value">{food.value_metrics.vitamin_b12_mcg_per_dollar} µg</span>
-            </div>
-          )}
-          {food.value_metrics.folate_mcg_per_dollar != null && food.value_metrics.folate_mcg_per_dollar > 0 && (
-            <div class="line-item">
-              <span class="line-label">Folate per dollar</span>
-              <span class="line-dots" aria-hidden="true"></span>
-              <span class="line-value">{food.value_metrics.folate_mcg_per_dollar} µg</span>
-            </div>
-          )}
-
           <div class="divider" aria-hidden="true"></div>
           <h2 class="section-heading">Nutrition per 100g</h2>
 
@@ -190,39 +183,11 @@ const jsonLd: Record<string, unknown> = {
             <span class="line-dots" aria-hidden="true"></span>
             <span class="line-value">{food.nutrition_per_100g.sugars_g ?? '—'} g</span>
           </div>
-          {food.nutrition_per_100g.iron_mg != null && (
-            <div class="line-item line-item--muted">
-              <span class="line-label">Iron</span>
-              <span class="line-dots" aria-hidden="true"></span>
-              <span class="line-value">{food.nutrition_per_100g.iron_mg} mg</span>
-            </div>
-          )}
-          {food.nutrition_per_100g.zinc_mg != null && (
-            <div class="line-item line-item--muted">
-              <span class="line-label">Zinc</span>
-              <span class="line-dots" aria-hidden="true"></span>
-              <span class="line-value">{food.nutrition_per_100g.zinc_mg} mg</span>
-            </div>
-          )}
-          {food.nutrition_per_100g.vitamin_b12_mcg != null && food.nutrition_per_100g.vitamin_b12_mcg > 0 && (
-            <div class="line-item line-item--muted">
-              <span class="line-label">Vitamin B12</span>
-              <span class="line-dots" aria-hidden="true"></span>
-              <span class="line-value">{food.nutrition_per_100g.vitamin_b12_mcg} µg</span>
-            </div>
-          )}
-          {food.nutrition_per_100g.folate_mcg != null && food.nutrition_per_100g.folate_mcg > 0 && (
-            <div class="line-item line-item--muted">
-              <span class="line-label">Folate</span>
-              <span class="line-dots" aria-hidden="true"></span>
-              <span class="line-value">{food.nutrition_per_100g.folate_mcg} µg</span>
-            </div>
-          )}
-          {visibleExtraMicronutrients.length > 0 && (
+          {visibleMicronutrients.length > 0 && (
             <details class="micro-details">
-              <summary>Full nutrient profile ({visibleExtraMicronutrients.length} more)</summary>
-              {visibleExtraMicronutrients.map((m) => {
-                const perDollar = food.value_metrics[m.perDollarKey];
+              <summary>Full nutrient profile ({visibleMicronutrients.length} more)</summary>
+              {visibleMicronutrients.map((m) => {
+                const perDollar = m.perDollarKey ? food.value_metrics[m.perDollarKey] : null;
                 return (
                   <div class="line-item line-item--muted">
                     <span class="line-label">{m.label}</span>

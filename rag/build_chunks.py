@@ -29,6 +29,27 @@ MICRONUTRIENT_CHUNK_FIELDS = [
     ("vitamin_d_mcg", 1, "mcg", "vitamin D"),
     ("vitamin_e_mg", 2, "mg", "vitamin E"),
     ("vitamin_k_mcg", 1, "mcg", "vitamin K"),
+    ("thiamin_mg", 2, "mg", "thiamin"),
+    ("riboflavin_mg", 2, "mg", "riboflavin"),
+    ("niacin_mg", 1, "mg", "niacin"),
+    ("vitamin_b6_mg", 2, "mg", "B6"),
+    ("pantothenic_acid_mg", 2, "mg", "pantothenic acid"),
+    ("phosphorus_mg", 0, "mg", "phosphorus"),
+    ("selenium_mcg", 1, "mcg", "selenium"),
+    ("copper_mg", 2, "mg", "copper"),
+    ("manganese_mg", 2, "mg", "manganese"),
+]
+
+# "Nutrients of excess" -- informational per-100g only, no "per dollar" value
+# metric (nobody wants more sodium/cholesterol/saturated fat per dollar).
+# Zero is a real, meaningful value here (unlike the micronutrients above,
+# where a bare 0 from FDC usually just means "not analyzed"), so these use
+# an `is not None` check rather than truthiness.
+EXCESS_NUTRIENT_CHUNK_FIELDS = [
+    ("sodium_mg", 0, "mg", "sodium"),
+    ("cholesterol_mg", 0, "mg", "cholesterol"),
+    ("saturated_fat_g", 1, "g", "saturated fat"),
+    ("trans_fat_g", 1, "g", "trans fat"),
 ]
 
 
@@ -68,9 +89,16 @@ def format_nutrition(n: dict) -> str:
         val = n.get(key)
         if val:
             micros.append(f"{val:.{decimals}f}{unit} {label}")
+    excess = []
+    for key, decimals, unit, label in EXCESS_NUTRIENT_CHUNK_FIELDS:
+        val = n.get(key)
+        if val is not None:
+            excess.append(f"{val:.{decimals}f}{unit} {label}")
     result = "Per 100g: " + ", ".join(parts) + "."
     if micros:
         result += " Micronutrients per 100g: " + ", ".join(micros) + "."
+    if excess:
+        result += " Also per 100g: " + ", ".join(excess) + "."
     return result
 
 

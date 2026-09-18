@@ -56,9 +56,12 @@ CREATE TABLE IF NOT EXISTS nutrition (
     energy_kcal       REAL,
     protein_g         REAL,
     fat_g             REAL,
+    saturated_fat_g   REAL,
+    trans_fat_g       REAL,
     carbs_g           REAL,
     fiber_g           REAL,
     sugars_g          REAL,
+    cholesterol_mg    REAL,
     sodium_mg         REAL,
     iron_mg           REAL,
     zinc_mg           REAL,
@@ -72,6 +75,15 @@ CREATE TABLE IF NOT EXISTS nutrition (
     vitamin_d_mcg     REAL,   -- D2 + D3
     vitamin_e_mg      REAL,   -- alpha-tocopherol
     vitamin_k_mcg     REAL,   -- phylloquinone
+    thiamin_mg        REAL,
+    riboflavin_mg     REAL,
+    niacin_mg         REAL,
+    vitamin_b6_mg     REAL,
+    pantothenic_acid_mg REAL,
+    phosphorus_mg     REAL,
+    selenium_mcg      REAL,
+    copper_mg         REAL,
+    manganese_mg      REAL,
     fetched_at        TEXT NOT NULL
 );
 
@@ -149,6 +161,21 @@ MIGRATIONS = [
     """ALTER TABLE nutrition ADD COLUMN vitamin_d_mcg REAL;""",
     """ALTER TABLE nutrition ADD COLUMN vitamin_e_mg REAL;""",
     """ALTER TABLE nutrition ADD COLUMN vitamin_k_mcg REAL;""",
+    # Migration 4: remaining B vitamins, remaining minerals, and the
+    # "nutrient of excess" fields (sodium was already collected but never
+    # displayed; saturated/trans fat and cholesterol are new).
+    """ALTER TABLE nutrition ADD COLUMN saturated_fat_g REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN trans_fat_g REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN cholesterol_mg REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN thiamin_mg REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN riboflavin_mg REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN niacin_mg REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN vitamin_b6_mg REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN pantothenic_acid_mg REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN phosphorus_mg REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN selenium_mcg REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN copper_mg REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN manganese_mg REAL;""",
 ]
 
 

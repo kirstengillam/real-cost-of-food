@@ -51,9 +51,13 @@ YEAR_LOOKBACK = 2
 # FDC extraction actually returns.
 NUTRIENT_COLUMNS = list(NUTRIENT_IDS.keys())
 
-# Macro fields that don't get a "per dollar" value metric or a spot in the
-# RAG micronutrient summary -- everything else in NUTRIENT_COLUMNS does.
-_MACRO_KEYS = {"energy_kcal", "protein_g", "fat_g", "carbs_g", "fiber_g", "sugars_g", "sodium_mg"}
+# Macro + "nutrient of excess" fields that don't get a "per dollar" value
+# metric (it makes no sense to want more sodium or saturated fat per dollar)
+# -- everything else in NUTRIENT_COLUMNS is a true micronutrient and gets one.
+_MACRO_KEYS = {
+    "energy_kcal", "protein_g", "fat_g", "saturated_fat_g", "trans_fat_g",
+    "carbs_g", "fiber_g", "sugars_g", "cholesterol_mg", "sodium_mg",
+}
 MICRONUTRIENT_KEYS = [k for k in NUTRIENT_COLUMNS if k not in _MACRO_KEYS]
 
 def upsert_food_row(conn, food: FoodSeed) -> None:
@@ -234,9 +238,13 @@ def export_json(conn) -> None:
                 "energy_kcal": nutrition_row["energy_kcal"],
                 "protein_g": nutrition_row["protein_g"],
                 "fat_g": nutrition_row["fat_g"],
+                "saturated_fat_g": nutrition_row["saturated_fat_g"],
+                "trans_fat_g": nutrition_row["trans_fat_g"],
                 "carbs_g": nutrition_row["carbs_g"],
                 "fiber_g": nutrition_row["fiber_g"],
                 "sugars_g": nutrition_row["sugars_g"],
+                "cholesterol_mg": nutrition_row["cholesterol_mg"],
+                "sodium_mg": nutrition_row["sodium_mg"],
                 **{key: nutrition_row[key] for key in MICRONUTRIENT_KEYS},
                 "source_fdc_id": nutrition_row["fdc_id"],
             } if nutrition_row else None,

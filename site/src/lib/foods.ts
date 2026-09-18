@@ -20,9 +20,13 @@ export interface FoodNutrition {
   energy_kcal: number | null;
   protein_g: number | null;
   fat_g: number | null;
+  saturated_fat_g: number | null;
+  trans_fat_g: number | null;
   carbs_g: number | null;
   fiber_g: number | null;
   sugars_g: number | null;
+  cholesterol_mg: number | null;
+  sodium_mg: number | null;
   iron_mg: number | null;
   zinc_mg: number | null;
   vitamin_b12_mcg: number | null;
@@ -35,6 +39,15 @@ export interface FoodNutrition {
   vitamin_d_mcg: number | null;
   vitamin_e_mg: number | null;
   vitamin_k_mcg: number | null;
+  thiamin_mg: number | null;
+  riboflavin_mg: number | null;
+  niacin_mg: number | null;
+  vitamin_b6_mg: number | null;
+  pantothenic_acid_mg: number | null;
+  phosphorus_mg: number | null;
+  selenium_mcg: number | null;
+  copper_mg: number | null;
+  manganese_mg: number | null;
   source_fdc_id: number | null;
 }
 
@@ -54,6 +67,15 @@ export interface FoodValueMetrics {
   vitamin_d_mcg_per_dollar: number | null;
   vitamin_e_mg_per_dollar: number | null;
   vitamin_k_mcg_per_dollar: number | null;
+  thiamin_mg_per_dollar: number | null;
+  riboflavin_mg_per_dollar: number | null;
+  niacin_mg_per_dollar: number | null;
+  vitamin_b6_mg_per_dollar: number | null;
+  pantothenic_acid_mg_per_dollar: number | null;
+  phosphorus_mg_per_dollar: number | null;
+  selenium_mcg_per_dollar: number | null;
+  copper_mg_per_dollar: number | null;
+  manganese_mg_per_dollar: number | null;
   note: string;
 }
 
