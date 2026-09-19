@@ -186,6 +186,11 @@ FOODS: list[FoodSeed] = [
         fdc_data_type="SR Legacy",
         serving_unit="100g",
         price_verified=True,
+        per_dollar_suppressed_reason=(
+            "This BLS category is a catch-all for beef cuts outside roasts, steaks and ground beef, and USDA has no "
+            "single matching nutrition record, so per-dollar figures aren't shown. The nutrition below is for corned "
+            "beef brisket and is only a rough stand-in."
+        ),
         notes="BLS aggregate for uncooked beef cuts not in roast/steak/ground categories.",
     ),
     FoodSeed(
@@ -352,6 +357,8 @@ FOODS: list[FoodSeed] = [
         cpi_series_id=None,
         fdc_query="pork fresh ham whole raw",
         fdc_data_type="SR Legacy",
+        fdc_id=168295,  # "Pork, cured, ham, boneless, extra lean and regular, unheated" -- was 168222 FRESH (uncured) ham (sodium 47 vs
+                        # ~1280 mg; 245 vs 162 kcal). BLS "Ham, boneless, excluding canned" is cured.
         serving_unit="100g",
         price_verified=True,
     ),
@@ -420,6 +427,8 @@ FOODS: list[FoodSeed] = [
         cpi_series_id=None,
         fdc_query="cheese american processed",
         fdc_data_type="SR Legacy",
+        fdc_id=170853,  # "Cheese, pasteurized process, American, fortified with vitamin D" -- fdc_query was matching 171254 "Cheese spread"
+                        # (290 kcal / 16.4g protein vs 366 kcal / 18.1g for processed American slices/blocks).
         serving_unit="100g",
         price_verified=True,
     ),
@@ -608,6 +617,7 @@ FOODS: list[FoodSeed] = [
         cpi_series_id="CUUR0000SS02011",      # cu: SS02011 — White bread
         fdc_query="bread white commercially prepared",
         fdc_data_type="SR Legacy",
+        fdc_id=174924,  # "Bread, white, commercially prepared" -- fdc_query was matching 174925, the TOASTED version (290 vs 266 kcal).
         serving_unit="100g",
 
         price_verified=True,
@@ -634,8 +644,10 @@ FOODS: list[FoodSeed] = [
         avg_price_series_id="APU0000701312",  # ap: 701312 — Rice, white, long grain, uncooked, per lb.
         avg_price_unit="per lb",
         cpi_series_id="CUUR0000SS01031",      # cu: SS01031 — Rice
-        fdc_query="rice white long grain unenriched raw",
+        fdc_query="rice white long grain enriched raw",
         fdc_data_type="SR Legacy",
+        fdc_id=168877,  # "Rice, white, long-grain, regular, raw, enriched" -- was 169756 unenriched (folate 8 vs 231 ug, iron 0.8 vs 4.3 mg);
+                        # nearly all US white rice is enriched.
         serving_unit="100g dry",
 
         price_verified=True,
@@ -648,8 +660,10 @@ FOODS: list[FoodSeed] = [
         avg_price_series_id="APU0000701111",  # ap: 701111 — Flour, white, all purpose, per lb.
         avg_price_unit="per lb",
         cpi_series_id="CUUR0000SEFA01",       # cu: SEFA01 — Flour and prepared flour mixes
-        fdc_query="wheat flour white all purpose unenriched",
+        fdc_query="wheat flour white all purpose enriched",
         fdc_data_type="SR Legacy",
+        fdc_id=168894,  # "Wheat flour, white, all-purpose, enriched, bleached" -- was 169761 unenriched (folate 26 vs 183 ug, iron 1.2 vs 4.6 mg);
+                        # US all-purpose flour is enriched.
         serving_unit="100g",
 
         price_verified=True,
@@ -662,8 +676,10 @@ FOODS: list[FoodSeed] = [
         avg_price_series_id="APU0000701322",  # ap: 701322 — Spaghetti and macaroni, per lb.
         avg_price_unit="per lb",
         cpi_series_id=None, #"CUUR0000SEFA03",       # cu: SEFA03 — Rice, pasta, cornmeal
-        fdc_query="spaghetti dry unenriched",
+        fdc_query="pasta dry enriched",
         fdc_data_type="SR Legacy",
+        fdc_id=169736,  # "Pasta, dry, enriched" -- was 168927 unenriched (folate 18 vs 237 ug, iron 1.3 vs 3.3 mg);
+                        # US dry pasta is enriched.
         serving_unit="100g dry",
 
         price_verified=True,
@@ -694,6 +710,8 @@ FOODS: list[FoodSeed] = [
         cpi_series_id=None,
         fdc_query="corn sweet yellow canned",
         fdc_data_type="SR Legacy",
+        fdc_id=168541,  # "Corn, sweet, white, canned, whole kernel, regular pack, solids and liquids" -- was 169346 cream style, NO SALT ADDED
+                        # (sodium 3 vs ~213 mg). BLS prices canned corn per lb of can contents (liquid included).
         serving_unit="100g",
         price_verified=True,
     ),

@@ -15,8 +15,10 @@ Supported avg_price_unit strings (must match foods_seed.py exactly):
                          whole milk is close enough to water density for this
                          purpose -- if you add other per-gallon liquids with very
                          different density, add a specific conversion, don't reuse this)
-    "per half gallon" -> ice cream; 1/2 gal = 1892 ml; density ~0.55 g/ml for
-                         regular ice cream (air-incorporated; USDA ~553g/half-gal)
+    "per half gallon" -> ice cream; 1/2 gal = 8 cups; FDC #167575 (ice cream, vanilla)
+                         lists 1/2 cup = 66 g, so 8 cups = 1056 g (density ~0.56 g/ml,
+                         air-incorporated). This was previously 553 g -- roughly half the
+                         real weight -- which understated every per-dollar metric ~47%.
     "per 2 liters"    -> cola (2000 ml; density ~1.0 g/ml for water-like soda)
     "per 16 oz"       -> OJ frozen concentrate (16 fl oz = 473.18 ml; density
                          ~1.05 g/ml for juice concentrate)
@@ -33,7 +35,7 @@ number. Add new units explicitly as new foods need them.
 LB_TO_GRAMS = 453.592
 DOZEN_EGGS_TO_GRAMS = 600.0            # 12 x ~50g large egg (USDA large egg = 50g)
 GALLON_TO_GRAMS_WATER_DENSITY = 3780.0 # approx, fine for whole milk
-HALF_GALLON_ICE_CREAM_TO_GRAMS = 553.0 # USDA: ~553g per half-gallon regular ice cream
+HALF_GALLON_ICE_CREAM_TO_GRAMS = 1056.0 # FDC #167575: 1/2 cup = 66 g -> 8 cups per half-gallon
 TWO_LITERS_TO_GRAMS = 2000.0           # cola; density ~1.0 g/ml
 SIXTEEN_OZ_TO_GRAMS = 496.8            # 16 fl oz x 1.05 g/ml (OJ concentrate density)
 TWELVE_OZ_DRY_TO_GRAMS = 340.2         # strawberries dry pint; oz here is weight, not fl oz
@@ -97,3 +99,7 @@ if __name__ == "__main__":
     # => 75.6g / $2.58 = ~29.3 g protein per dollar. Confirm below.
     assert abs(egg_protein_per_dollar - 29.30) < 0.5, f"Sanity check failed: got {egg_protein_per_dollar}"
     print("Sanity check passed.")
+    # Ice cream: $5.854 per half-gallon buys 1056 g; 3.5 g protein/100g -> 36.96 g total / 5.854 = ~6.31 g/$
+    ice_cream_protein = nutrient_per_dollar(3.5, 5.854, "per half gallon")
+    assert abs(ice_cream_protein - 6.31) < 0.05, f"Ice cream sanity check failed: got {ice_cream_protein}"
+    print("Ice cream sanity check passed.")
