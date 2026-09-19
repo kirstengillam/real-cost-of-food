@@ -37,6 +37,14 @@ NUTRIENT_IDS = {
     "fat_g": 1004,
     "saturated_fat_g": 1258,
     "trans_fat_g": 1257,
+    "monounsaturated_fat_g": 1292,
+    "polyunsaturated_fat_g": 1293,
+    # Omega-3 components. FDC has no total-omega-3 nutrient, and older SR Legacy
+    # records only report undifferentiated 18:3, so ALA is often absent -- we
+    # store each component as-is rather than summing a misleading "total".
+    "omega3_ala_g": 1404,
+    "omega3_epa_g": 1278,
+    "omega3_dha_g": 1272,
     "carbs_g": 1005,
     "fiber_g": 1079,
     "sugars_g": 2000,
@@ -67,6 +75,7 @@ NUTRIENT_IDS = {
     "selenium_mcg": 1103,
     "copper_mg": 1098,
     "manganese_mg": 1101,
+    "choline_mg": 1180,
 }
 
 

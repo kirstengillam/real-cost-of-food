@@ -122,12 +122,19 @@ def fake_lookup_food(query, data_type):
     )
 
 
+def fake_lookup_food_by_id(fdc_id):
+    """Pinned-fdc_id foods resolve through the same mock table via their seed fdc_query."""
+    food = next(f for f in FOODS if f.fdc_id == fdc_id)
+    return fake_lookup_food(food.fdc_query, food.fdc_data_type)
+
+
 def run():
     test_db_path = DEFAULT_DB_PATH.parent / "test_real_cost_of_food.db"
     test_db_path.unlink(missing_ok=True)
 
     with patch("run_etl.fetch_series", fake_fetch_series), \
          patch("run_etl.lookup_food", fake_lookup_food), \
+         patch("run_etl.lookup_food_by_id", fake_lookup_food_by_id), \
          patch("run_etl.DEFAULT_DB_PATH", test_db_path), \
          patch("seed_sustainability.DEFAULT_DB_PATH", test_db_path), \
          patch("run_etl.EXPORT_PATH", DEFAULT_DB_PATH.parent / "test_foods_export.json"):
@@ -171,6 +178,13 @@ def run():
     dry_beans = foods_by_slug["dry-beans"]
     assert dry_beans["price"]["price_source"] == "bls_avg_price", dry_beans["price"]
     assert dry_beans["value_metrics"]["protein_g_per_dollar"] is not None
+
+    # coffee has a real BLS price but a mismatched nutrition basis (dry grounds vs brewed) -> no per-dollar metrics
+    coffee = foods_by_slug["coffee"]
+    assert coffee["price"]["price_source"] == "bls_avg_price"
+    assert coffee["value_metrics"]["suppressed_reason"], coffee["value_metrics"]
+    assert all(v is None for k, v in coffee["value_metrics"].items() if k.endswith("_per_dollar")), coffee["value_metrics"]
+    assert eggs["value_metrics"]["suppressed_reason"] is None
 
     # soft-drinks-2l exercises the "per 2 liters" unit path (price_verified=False -> estimate, no value metrics)
     soft_drinks = foods_by_slug["soft-drinks-2l"]

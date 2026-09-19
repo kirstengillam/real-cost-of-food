@@ -38,6 +38,7 @@ MICRONUTRIENT_CHUNK_FIELDS = [
     ("selenium_mcg", 1, "mcg", "selenium"),
     ("copper_mg", 2, "mg", "copper"),
     ("manganese_mg", 2, "mg", "manganese"),
+    ("choline_mg", 0, "mg", "choline"),
 ]
 
 # "Nutrients of excess" -- informational per-100g only, no "per dollar" value
@@ -50,10 +51,23 @@ EXCESS_NUTRIENT_CHUNK_FIELDS = [
     ("cholesterol_mg", 0, "mg", "cholesterol"),
     ("saturated_fat_g", 1, "g", "saturated fat"),
     ("trans_fat_g", 1, "g", "trans fat"),
+    ("monounsaturated_fat_g", 1, "g", "monounsaturated fat"),
+    ("polyunsaturated_fat_g", 1, "g", "polyunsaturated fat"),
+]
+
+# Omega-3 components are stored separately (FDC has no total-omega-3 value, and
+# ALA is missing from many older records), so a bare 0/None means "not reported"
+# -- only state the ones that are actually present and nonzero.
+OMEGA3_CHUNK_FIELDS = [
+    ("omega3_ala_g", 3, "g", "ALA"),
+    ("omega3_epa_g", 3, "g", "EPA"),
+    ("omega3_dha_g", 3, "g", "DHA"),
 ]
 
 
 def format_value_metrics(vm: dict, price_unit: str) -> str:
+    if vm and vm.get("suppressed_reason"):
+        return f"Per-dollar value metrics are not available for this food: {vm['suppressed_reason']}"
     if not vm or vm.get("protein_g_per_dollar") is None:
         return "Value metrics unavailable (price not verified)."
     parts = []
@@ -94,11 +108,18 @@ def format_nutrition(n: dict) -> str:
         val = n.get(key)
         if val is not None:
             excess.append(f"{val:.{decimals}f}{unit} {label}")
+    omega3 = []
+    for key, decimals, unit, label in OMEGA3_CHUNK_FIELDS:
+        val = n.get(key)
+        if val:
+            omega3.append(f"{val:.{decimals}f}{unit} {label}")
     result = "Per 100g: " + ", ".join(parts) + "."
     if micros:
         result += " Micronutrients per 100g: " + ", ".join(micros) + "."
     if excess:
         result += " Also per 100g: " + ", ".join(excess) + "."
+    if omega3:
+        result += " Omega-3 fats per 100g: " + ", ".join(omega3) + "."
     return result
 
 

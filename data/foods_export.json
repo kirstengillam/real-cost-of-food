@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T00:53:24.585581+00:00",
+  "generated_at": "2026-09-19T22:08:52.968213+00:00",
   "foods": [
     {
       "slug": "eggs",
@@ -19,6 +19,11 @@
         "fat_g": 9.51,
         "saturated_fat_g": 3.126,
         "trans_fat_g": 0.038,
+        "monounsaturated_fat_g": 3.658,
+        "polyunsaturated_fat_g": 1.911,
+        "omega3_ala_g": 0.036,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.058,
         "carbs_g": 0.72,
         "fiber_g": 0.0,
         "sugars_g": 0.37,
@@ -45,6 +50,7 @@
         "selenium_mcg": 30.7,
         "copper_mg": 0.072,
         "manganese_mg": 0.028,
+        "choline_mg": 293.8,
         "source_fdc_id": 171287
       },
       "value_metrics": {
@@ -72,7 +78,9 @@
         "selenium_mcg_per_dollar": 81.07,
         "copper_mg_per_dollar": 0.19,
         "manganese_mg_per_dollar": 0.07,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 775.81,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "medium",
@@ -113,6 +121,11 @@
         "fat_g": 3.25,
         "saturated_fat_g": 1.865,
         "trans_fat_g": null,
+        "monounsaturated_fat_g": 0.812,
+        "polyunsaturated_fat_g": 0.195,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 4.8,
         "fiber_g": 0.0,
         "sugars_g": 5.05,
@@ -139,6 +152,7 @@
         "selenium_mcg": 3.7,
         "copper_mg": 0.025,
         "manganese_mg": 0.004,
+        "choline_mg": 14.3,
         "source_fdc_id": 171265
       },
       "value_metrics": {
@@ -166,7 +180,9 @@
         "selenium_mcg_per_dollar": 33.07,
         "copper_mg_per_dollar": 0.22,
         "manganese_mg_per_dollar": 0.04,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 127.79,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -207,6 +223,11 @@
         "fat_g": 20.0,
         "saturated_fat_g": 7.581,
         "trans_fat_g": 1.18,
+        "monounsaturated_fat_g": 8.848,
+        "polyunsaturated_fat_g": 0.521,
+        "omega3_ala_g": 0.051,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -233,6 +254,7 @@
         "selenium_mcg": 15.0,
         "copper_mg": 0.061,
         "manganese_mg": 0.01,
+        "choline_mg": 56.4,
         "source_fdc_id": 174036
       },
       "value_metrics": {
@@ -260,7 +282,9 @@
         "selenium_mcg_per_dollar": 9.83,
         "copper_mg_per_dollar": 0.04,
         "manganese_mg_per_dollar": 0.01,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 36.95,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -301,6 +325,11 @@
         "fat_g": 2.62,
         "saturated_fat_g": 0.563,
         "trans_fat_g": 0.007,
+        "monounsaturated_fat_g": 0.689,
+        "polyunsaturated_fat_g": 0.424,
+        "omega3_ala_g": 0.013,
+        "omega3_epa_g": 0.003,
+        "omega3_dha_g": 0.004,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -327,6 +356,7 @@
         "selenium_mcg": 22.8,
         "copper_mg": 0.037,
         "manganese_mg": 0.011,
+        "choline_mg": 82.1,
         "source_fdc_id": 171077
       },
       "value_metrics": {
@@ -354,7 +384,9 @@
         "selenium_mcg_per_dollar": 24.78,
         "copper_mg_per_dollar": 0.04,
         "manganese_mg_per_dollar": 0.01,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 89.24,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "medium",
@@ -395,6 +427,11 @@
         "fat_g": 37.13,
         "saturated_fat_g": 12.615,
         "trans_fat_g": 0.147,
+        "monounsaturated_fat_g": 15.922,
+        "polyunsaturated_fat_g": 5.757,
+        "omega3_ala_g": 0.217,
+        "omega3_epa_g": 0.004,
+        "omega3_dha_g": 0.005,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.35,
@@ -421,6 +458,7 @@
         "selenium_mcg": 20.1,
         "copper_mg": 0.046,
         "manganese_mg": 0.012,
+        "choline_mg": 47.8,
         "source_fdc_id": 168277
       },
       "value_metrics": {
@@ -448,7 +486,9 @@
         "selenium_mcg_per_dollar": 13.8,
         "copper_mg_per_dollar": 0.03,
         "manganese_mg_per_dollar": 0.01,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 32.83,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "medium",
@@ -489,6 +529,11 @@
         "fat_g": 0.33,
         "saturated_fat_g": 0.112,
         "trans_fat_g": 0.0,
+        "monounsaturated_fat_g": 0.032,
+        "polyunsaturated_fat_g": 0.073,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 22.84,
         "fiber_g": 2.6,
         "sugars_g": 12.23,
@@ -515,6 +560,7 @@
         "selenium_mcg": 1.0,
         "copper_mg": 0.078,
         "manganese_mg": 0.27,
+        "choline_mg": 9.8,
         "source_fdc_id": 173944
       },
       "value_metrics": {
@@ -542,7 +588,9 @@
         "selenium_mcg_per_dollar": 6.96,
         "copper_mg_per_dollar": 0.54,
         "manganese_mg_per_dollar": 1.88,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 68.2,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "medium",
@@ -583,6 +631,11 @@
         "fat_g": 0.2,
         "saturated_fat_g": 0.028,
         "trans_fat_g": 0.0,
+        "monounsaturated_fat_g": 0.031,
+        "polyunsaturated_fat_g": 0.083,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 3.89,
         "fiber_g": 1.2,
         "sugars_g": 2.63,
@@ -609,6 +662,7 @@
         "selenium_mcg": 0.0,
         "copper_mg": 0.059,
         "manganese_mg": 0.114,
+        "choline_mg": 6.7,
         "source_fdc_id": 170457
       },
       "value_metrics": {
@@ -636,7 +690,9 @@
         "selenium_mcg_per_dollar": 0.0,
         "copper_mg_per_dollar": 0.14,
         "manganese_mg_per_dollar": 0.26,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 15.37,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "low",
@@ -677,6 +733,11 @@
         "fat_g": 4.0,
         "saturated_fat_g": 0.764,
         "trans_fat_g": null,
+        "monounsaturated_fat_g": 0.796,
+        "polyunsaturated_fat_g": 2.09,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 54.5,
         "fiber_g": 2.9,
         "sugars_g": 6.2,
@@ -703,6 +764,7 @@
         "selenium_mcg": 31.0,
         "copper_mg": 0.138,
         "manganese_mg": 0.421,
+        "choline_mg": 16.0,
         "source_fdc_id": 174925
       },
       "value_metrics": {
@@ -730,7 +792,9 @@
         "selenium_mcg_per_dollar": 77.13,
         "copper_mg_per_dollar": 0.34,
         "manganese_mg_per_dollar": 1.05,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 39.81,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "low",
@@ -771,6 +835,11 @@
         "fat_g": 33.31,
         "saturated_fat_g": 18.867,
         "trans_fat_g": null,
+        "monounsaturated_fat_g": 9.391,
+        "polyunsaturated_fat_g": 0.942,
+        "omega3_ala_g": 0.108,
+        "omega3_epa_g": 0.01,
+        "omega3_dha_g": 0.001,
         "carbs_g": 3.37,
         "fiber_g": 0.0,
         "sugars_g": 0.48,
@@ -797,6 +866,7 @@
         "selenium_mcg": 28.5,
         "copper_mg": 0.03,
         "manganese_mg": 0.027,
+        "choline_mg": 16.5,
         "source_fdc_id": 173414
       },
       "value_metrics": {
@@ -824,7 +894,9 @@
         "selenium_mcg_per_dollar": 21.61,
         "copper_mg_per_dollar": 0.02,
         "manganese_mg_per_dollar": 0.02,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 12.51,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -860,65 +932,73 @@
         "as_of": "2026-08"
       },
       "nutrition_per_100g": {
-        "energy_kcal": 62.0,
-        "protein_g": 5.25,
-        "fat_g": 0.9,
-        "saturated_fat_g": 0.109,
+        "energy_kcal": 347.0,
+        "protein_g": 21.42,
+        "fat_g": 1.23,
+        "saturated_fat_g": 0.235,
         "trans_fat_g": 0.0,
-        "carbs_g": 11.6,
-        "fiber_g": null,
-        "sugars_g": null,
+        "monounsaturated_fat_g": 0.229,
+        "polyunsaturated_fat_g": 0.407,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
+        "carbs_g": 62.55,
+        "fiber_g": 15.5,
+        "sugars_g": 2.11,
         "cholesterol_mg": 0.0,
-        "sodium_mg": 153.0,
-        "iron_mg": 1.97,
-        "zinc_mg": 0.5,
+        "sodium_mg": 12.0,
+        "iron_mg": 5.07,
+        "zinc_mg": 2.28,
         "vitamin_b12_mcg": 0.0,
-        "folate_mcg": 118.0,
-        "calcium_mg": 43.0,
-        "potassium_mg": 307.0,
-        "magnesium_mg": 53.0,
+        "folate_mcg": 525.0,
+        "calcium_mg": 113.0,
+        "potassium_mg": 1393.0,
+        "magnesium_mg": 176.0,
         "vitamin_a_mcg": 0.0,
-        "vitamin_c_mg": 21.7,
+        "vitamin_c_mg": 6.3,
         "vitamin_d_mcg": 0.0,
-        "vitamin_e_mg": null,
-        "vitamin_k_mcg": null,
-        "thiamin_mg": 0.23,
-        "riboflavin_mg": 0.175,
-        "niacin_mg": 2.28,
-        "vitamin_b6_mg": 0.171,
-        "pantothenic_acid_mg": 0.74,
-        "phosphorus_mg": 94.0,
-        "selenium_mcg": 0.6,
-        "copper_mg": 0.32,
-        "manganese_mg": 0.366,
-        "source_fdc_id": 170086
+        "vitamin_e_mg": 0.21,
+        "vitamin_k_mcg": 5.6,
+        "thiamin_mg": 0.713,
+        "riboflavin_mg": 0.212,
+        "niacin_mg": 1.174,
+        "vitamin_b6_mg": 0.474,
+        "pantothenic_acid_mg": 0.785,
+        "phosphorus_mg": 411.0,
+        "selenium_mcg": 27.9,
+        "copper_mg": 0.893,
+        "manganese_mg": 1.148,
+        "choline_mg": 66.2,
+        "source_fdc_id": 175199
       },
       "value_metrics": {
-        "protein_g_per_dollar": 14.61,
-        "calories_per_dollar": 172.51,
-        "fiber_g_per_dollar": null,
-        "iron_mg_per_dollar": 5.48,
-        "zinc_mg_per_dollar": 1.39,
+        "protein_g_per_dollar": 59.6,
+        "calories_per_dollar": 965.5,
+        "fiber_g_per_dollar": 43.13,
+        "iron_mg_per_dollar": 14.11,
+        "zinc_mg_per_dollar": 6.34,
         "vitamin_b12_mcg_per_dollar": 0.0,
-        "folate_mcg_per_dollar": 328.32,
-        "calcium_mg_per_dollar": 119.64,
-        "potassium_mg_per_dollar": 854.2,
-        "magnesium_mg_per_dollar": 147.47,
+        "folate_mcg_per_dollar": 1460.77,
+        "calcium_mg_per_dollar": 314.41,
+        "potassium_mg_per_dollar": 3875.9,
+        "magnesium_mg_per_dollar": 489.71,
         "vitamin_a_mcg_per_dollar": 0.0,
-        "vitamin_c_mg_per_dollar": 60.38,
+        "vitamin_c_mg_per_dollar": 17.53,
         "vitamin_d_mcg_per_dollar": 0.0,
-        "vitamin_e_mg_per_dollar": null,
-        "vitamin_k_mcg_per_dollar": null,
-        "thiamin_mg_per_dollar": 0.64,
-        "riboflavin_mg_per_dollar": 0.49,
-        "niacin_mg_per_dollar": 6.34,
-        "vitamin_b6_mg_per_dollar": 0.48,
-        "pantothenic_acid_mg_per_dollar": 2.06,
-        "phosphorus_mg_per_dollar": 261.55,
-        "selenium_mcg_per_dollar": 1.67,
-        "copper_mg_per_dollar": 0.89,
-        "manganese_mg_per_dollar": 1.02,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "vitamin_e_mg_per_dollar": 0.58,
+        "vitamin_k_mcg_per_dollar": 15.58,
+        "thiamin_mg_per_dollar": 1.98,
+        "riboflavin_mg_per_dollar": 0.59,
+        "niacin_mg_per_dollar": 3.27,
+        "vitamin_b6_mg_per_dollar": 1.32,
+        "pantothenic_acid_mg_per_dollar": 2.18,
+        "phosphorus_mg_per_dollar": 1143.57,
+        "selenium_mcg_per_dollar": 77.63,
+        "copper_mg_per_dollar": 2.48,
+        "manganese_mg_per_dollar": 3.19,
+        "choline_mg_per_dollar": 184.2,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "low",
@@ -959,6 +1039,11 @@
         "fat_g": 0.15,
         "saturated_fat_g": 0.017,
         "trans_fat_g": 0.0,
+        "monounsaturated_fat_g": 0.03,
+        "polyunsaturated_fat_g": 0.031,
+        "omega3_ala_g": null,
+        "omega3_epa_g": null,
+        "omega3_dha_g": null,
         "carbs_g": 12.54,
         "fiber_g": 2.2,
         "sugars_g": 8.5,
@@ -985,6 +1070,7 @@
         "selenium_mcg": 0.0,
         "copper_mg": 0.039,
         "manganese_mg": 0.029,
+        "choline_mg": 8.4,
         "source_fdc_id": 169917
       },
       "value_metrics": {
@@ -1012,7 +1098,9 @@
         "selenium_mcg_per_dollar": 0.0,
         "copper_mg_per_dollar": 0.1,
         "manganese_mg_per_dollar": 0.08,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 22.29,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "low",
@@ -1053,6 +1141,11 @@
         "fat_g": 0.09,
         "saturated_fat_g": 0.025,
         "trans_fat_g": 0.0,
+        "monounsaturated_fat_g": 0.002,
+        "polyunsaturated_fat_g": 0.042,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 17.49,
         "fiber_g": 2.1,
         "sugars_g": 0.82,
@@ -1079,6 +1172,7 @@
         "selenium_mcg": 0.4,
         "copper_mg": 0.11,
         "manganese_mg": 0.153,
+        "choline_mg": 12.1,
         "source_fdc_id": 170026
       },
       "value_metrics": {
@@ -1106,7 +1200,9 @@
         "selenium_mcg_per_dollar": 1.86,
         "copper_mg_per_dollar": 0.51,
         "manganese_mg_per_dollar": 0.71,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 56.23,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "low",
@@ -1147,6 +1243,11 @@
         "fat_g": 0.14,
         "saturated_fat_g": 0.018,
         "trans_fat_g": 0.0,
+        "monounsaturated_fat_g": 0.006,
+        "polyunsaturated_fat_g": 0.074,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 2.97,
         "fiber_g": 1.2,
         "sugars_g": 1.97,
@@ -1173,6 +1274,7 @@
         "selenium_mcg": 0.1,
         "copper_mg": 0.025,
         "manganese_mg": 0.125,
+        "choline_mg": 6.7,
         "source_fdc_id": 169248
       },
       "value_metrics": {
@@ -1200,7 +1302,9 @@
         "selenium_mcg_per_dollar": 0.31,
         "copper_mg_per_dollar": 0.08,
         "manganese_mg_per_dollar": 0.39,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 20.66,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "low",
@@ -1241,6 +1345,11 @@
         "fat_g": 3.5,
         "saturated_fat_g": 0.722,
         "trans_fat_g": 0.02,
+        "monounsaturated_fat_g": 0.62,
+        "polyunsaturated_fat_g": 1.592,
+        "omega3_ala_g": 0.137,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 42.71,
         "fiber_g": 6.0,
         "sugars_g": 4.34,
@@ -1267,6 +1376,7 @@
         "selenium_mcg": 25.7,
         "copper_mg": 0.227,
         "manganese_mg": 2.174,
+        "choline_mg": 27.2,
         "source_fdc_id": 172688
       },
       "value_metrics": {
@@ -1294,7 +1404,9 @@
         "selenium_mcg_per_dollar": 41.42,
         "copper_mg_per_dollar": 0.37,
         "manganese_mg_per_dollar": 3.5,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 43.84,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "low",
@@ -1335,6 +1447,11 @@
         "fat_g": 0.66,
         "saturated_fat_g": 0.18,
         "trans_fat_g": null,
+        "monounsaturated_fat_g": 0.206,
+        "polyunsaturated_fat_g": 0.177,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 79.95,
         "fiber_g": 1.3,
         "sugars_g": 0.12,
@@ -1361,6 +1478,7 @@
         "selenium_mcg": 15.1,
         "copper_mg": 0.22,
         "manganese_mg": 1.088,
+        "choline_mg": 5.8,
         "source_fdc_id": 169756
       },
       "value_metrics": {
@@ -1388,7 +1506,9 @@
         "selenium_mcg_per_dollar": 61.66,
         "copper_mg_per_dollar": 0.9,
         "manganese_mg_per_dollar": 4.44,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 23.68,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "medium",
@@ -1429,6 +1549,11 @@
         "fat_g": 0.98,
         "saturated_fat_g": 0.155,
         "trans_fat_g": null,
+        "monounsaturated_fat_g": 0.087,
+        "polyunsaturated_fat_g": 0.413,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 76.31,
         "fiber_g": 2.7,
         "sugars_g": 0.27,
@@ -1455,6 +1580,7 @@
         "selenium_mcg": 33.9,
         "copper_mg": 0.144,
         "manganese_mg": 0.682,
+        "choline_mg": 10.4,
         "source_fdc_id": 169761
       },
       "value_metrics": {
@@ -1482,7 +1608,9 @@
         "selenium_mcg_per_dollar": 280.63,
         "copper_mg_per_dollar": 1.19,
         "manganese_mg_per_dollar": 5.65,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 86.09,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "low",
@@ -1523,6 +1651,11 @@
         "fat_g": 1.51,
         "saturated_fat_g": 0.277,
         "trans_fat_g": 0.0,
+        "monounsaturated_fat_g": 0.171,
+        "polyunsaturated_fat_g": 0.564,
+        "omega3_ala_g": 0.024,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 74.67,
         "fiber_g": 3.2,
         "sugars_g": 2.67,
@@ -1549,6 +1682,7 @@
         "selenium_mcg": 63.2,
         "copper_mg": 0.289,
         "manganese_mg": 0.917,
+        "choline_mg": null,
         "source_fdc_id": 168927
       },
       "value_metrics": {
@@ -1576,7 +1710,9 @@
         "selenium_mcg_per_dollar": 208.65,
         "copper_mg_per_dollar": 0.95,
         "manganese_mg_per_dollar": 3.03,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": null,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "low",
@@ -1617,6 +1753,11 @@
         "fat_g": 0.0,
         "saturated_fat_g": 0.0,
         "trans_fat_g": null,
+        "monounsaturated_fat_g": 0.0,
+        "polyunsaturated_fat_g": 0.0,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 0.17,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -1643,34 +1784,37 @@
         "selenium_mcg": 0.0,
         "copper_mg": 0.005,
         "manganese_mg": 0.032,
+        "choline_mg": 0.0,
         "source_fdc_id": 171881
       },
       "value_metrics": {
-        "protein_g_per_dollar": 0.15,
-        "calories_per_dollar": 0.98,
-        "fiber_g_per_dollar": 0.0,
-        "iron_mg_per_dollar": 0.01,
-        "zinc_mg_per_dollar": 0.01,
-        "vitamin_b12_mcg_per_dollar": 0.0,
-        "folate_mcg_per_dollar": 0.0,
-        "calcium_mg_per_dollar": 0.98,
-        "potassium_mg_per_dollar": 24.39,
-        "magnesium_mg_per_dollar": 1.95,
-        "vitamin_a_mcg_per_dollar": 0.0,
-        "vitamin_c_mg_per_dollar": 0.0,
-        "vitamin_d_mcg_per_dollar": 0.0,
-        "vitamin_e_mg_per_dollar": 0.0,
-        "vitamin_k_mcg_per_dollar": 0.0,
-        "thiamin_mg_per_dollar": 0.01,
-        "riboflavin_mg_per_dollar": 0.0,
-        "niacin_mg_per_dollar": 0.39,
-        "vitamin_b6_mg_per_dollar": 0.0,
-        "pantothenic_acid_mg_per_dollar": 0.0,
-        "phosphorus_mg_per_dollar": 1.46,
-        "selenium_mcg_per_dollar": 0.0,
-        "copper_mg_per_dollar": 0.0,
-        "manganese_mg_per_dollar": 0.02,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "protein_g_per_dollar": null,
+        "calories_per_dollar": null,
+        "fiber_g_per_dollar": null,
+        "iron_mg_per_dollar": null,
+        "zinc_mg_per_dollar": null,
+        "vitamin_b12_mcg_per_dollar": null,
+        "folate_mcg_per_dollar": null,
+        "calcium_mg_per_dollar": null,
+        "potassium_mg_per_dollar": null,
+        "magnesium_mg_per_dollar": null,
+        "vitamin_a_mcg_per_dollar": null,
+        "vitamin_c_mg_per_dollar": null,
+        "vitamin_d_mcg_per_dollar": null,
+        "vitamin_e_mg_per_dollar": null,
+        "vitamin_k_mcg_per_dollar": null,
+        "thiamin_mg_per_dollar": null,
+        "riboflavin_mg_per_dollar": null,
+        "niacin_mg_per_dollar": null,
+        "vitamin_b6_mg_per_dollar": null,
+        "pantothenic_acid_mg_per_dollar": null,
+        "phosphorus_mg_per_dollar": null,
+        "selenium_mcg_per_dollar": null,
+        "copper_mg_per_dollar": null,
+        "manganese_mg_per_dollar": null,
+        "choline_mg_per_dollar": null,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": "The price is for dry ground coffee, but USDA only publishes nutrition for brewed coffee (and instant powder), so the two can't be compared per dollar."
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -1711,6 +1855,11 @@
         "fat_g": 0.25,
         "saturated_fat_g": 0.059,
         "trans_fat_g": 0.0,
+        "monounsaturated_fat_g": 0.05,
+        "polyunsaturated_fat_g": 0.063,
+        "omega3_ala_g": 0.017,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 35.19,
         "fiber_g": 1.0,
         "sugars_g": 29.68,
@@ -1737,6 +1886,7 @@
         "selenium_mcg": 0.4,
         "copper_mg": 0.059,
         "manganese_mg": 0.116,
+        "choline_mg": 20.0,
         "source_fdc_id": 169923
       },
       "value_metrics": {
@@ -1764,7 +1914,9 @@
         "selenium_mcg_per_dollar": 0.41,
         "copper_mg_per_dollar": 0.06,
         "manganese_mg_per_dollar": 0.12,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 20.63,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "medium",
@@ -1805,6 +1957,11 @@
         "fat_g": 15.06,
         "saturated_fat_g": 4.31,
         "trans_fat_g": 0.097,
+        "monounsaturated_fat_g": 6.24,
+        "polyunsaturated_fat_g": 3.23,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.01,
+        "omega3_dha_g": 0.03,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -1831,6 +1988,7 @@
         "selenium_mcg": 14.4,
         "copper_mg": 0.048,
         "manganese_mg": 0.019,
+        "choline_mg": 59.7,
         "source_fdc_id": 171447
       },
       "value_metrics": {
@@ -1858,7 +2016,9 @@
         "selenium_mcg_per_dollar": 32.46,
         "copper_mg_per_dollar": 0.11,
         "manganese_mg_per_dollar": 0.04,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 134.58,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "medium",
@@ -1899,6 +2059,11 @@
         "fat_g": 20.0,
         "saturated_fat_g": 7.581,
         "trans_fat_g": 1.18,
+        "monounsaturated_fat_g": 8.848,
+        "polyunsaturated_fat_g": 0.521,
+        "omega3_ala_g": 0.051,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -1925,6 +2090,7 @@
         "selenium_mcg": 15.0,
         "copper_mg": 0.061,
         "manganese_mg": 0.01,
+        "choline_mg": 56.4,
         "source_fdc_id": 174036
       },
       "value_metrics": {
@@ -1952,7 +2118,9 @@
         "selenium_mcg_per_dollar": 9.51,
         "copper_mg_per_dollar": 0.04,
         "manganese_mg_per_dollar": 0.01,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 35.74,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -1993,6 +2161,11 @@
         "fat_g": 6.21,
         "saturated_fat_g": 2.354,
         "trans_fat_g": 0.233,
+        "monounsaturated_fat_g": 2.938,
+        "polyunsaturated_fat_g": 0.299,
+        "omega3_ala_g": 0.01,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -2019,6 +2192,7 @@
         "selenium_mcg": 21.8,
         "copper_mg": 0.063,
         "manganese_mg": 0.011,
+        "choline_mg": 68.7,
         "source_fdc_id": 169566
       },
       "value_metrics": {
@@ -2046,7 +2220,9 @@
         "selenium_mcg_per_dollar": 10.56,
         "copper_mg_per_dollar": 0.03,
         "manganese_mg_per_dollar": 0.01,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 33.26,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -2087,6 +2263,11 @@
         "fat_g": 2.69,
         "saturated_fat_g": 1.032,
         "trans_fat_g": 0.113,
+        "monounsaturated_fat_g": 0.995,
+        "polyunsaturated_fat_g": 0.108,
+        "omega3_ala_g": 0.015,
+        "omega3_epa_g": 0.002,
+        "omega3_dha_g": 0.0,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -2113,6 +2294,7 @@
         "selenium_mcg": 21.1,
         "copper_mg": 0.068,
         "manganese_mg": 0.009,
+        "choline_mg": 65.1,
         "source_fdc_id": 169429
       },
       "value_metrics": {
@@ -2140,7 +2322,9 @@
         "selenium_mcg_per_dollar": 7.47,
         "copper_mg_per_dollar": 0.02,
         "manganese_mg_per_dollar": 0.0,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 23.05,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -2181,6 +2365,11 @@
         "fat_g": 14.9,
         "saturated_fat_g": 4.73,
         "trans_fat_g": null,
+        "monounsaturated_fat_g": 7.18,
+        "polyunsaturated_fat_g": 0.53,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 0.14,
         "fiber_g": 0.0,
         "sugars_g": null,
@@ -2207,6 +2396,7 @@
         "selenium_mcg": 19.0,
         "copper_mg": 0.11,
         "manganese_mg": 0.02,
+        "choline_mg": null,
         "source_fdc_id": 170199
       },
       "value_metrics": {
@@ -2234,7 +2424,9 @@
         "selenium_mcg_per_dollar": 10.59,
         "copper_mg_per_dollar": 0.06,
         "manganese_mg_per_dollar": 0.01,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": null,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -2275,6 +2467,11 @@
         "fat_g": 20.0,
         "saturated_fat_g": 7.581,
         "trans_fat_g": 1.18,
+        "monounsaturated_fat_g": 8.848,
+        "polyunsaturated_fat_g": 0.521,
+        "omega3_ala_g": 0.051,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -2301,6 +2498,7 @@
         "selenium_mcg": 15.0,
         "copper_mg": 0.061,
         "manganese_mg": 0.01,
+        "choline_mg": 56.4,
         "source_fdc_id": 174036
       },
       "value_metrics": {
@@ -2328,7 +2526,9 @@
         "selenium_mcg_per_dollar": 10.04,
         "copper_mg_per_dollar": 0.04,
         "manganese_mg_per_dollar": 0.01,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 37.77,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -2369,6 +2569,11 @@
         "fat_g": 5.0,
         "saturated_fat_g": 2.182,
         "trans_fat_g": 0.22,
+        "monounsaturated_fat_g": 1.994,
+        "polyunsaturated_fat_g": 0.257,
+        "omega3_ala_g": 0.029,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -2395,6 +2600,7 @@
         "selenium_mcg": 17.4,
         "copper_mg": 0.078,
         "manganese_mg": 0.01,
+        "choline_mg": 70.9,
         "source_fdc_id": 171790
       },
       "value_metrics": {
@@ -2422,7 +2628,9 @@
         "selenium_mcg_per_dollar": 9.21,
         "copper_mg_per_dollar": 0.04,
         "manganese_mg_per_dollar": 0.01,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 37.51,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -2463,6 +2671,11 @@
         "fat_g": 3.99,
         "saturated_fat_g": 1.748,
         "trans_fat_g": 0.213,
+        "monounsaturated_fat_g": 2.16,
+        "polyunsaturated_fat_g": 0.287,
+        "omega3_ala_g": 0.003,
+        "omega3_epa_g": 0.002,
+        "omega3_dha_g": 0.0,
         "carbs_g": 0.21,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -2489,6 +2702,7 @@
         "selenium_mcg": 26.0,
         "copper_mg": 0.093,
         "manganese_mg": 0.014,
+        "choline_mg": 74.6,
         "source_fdc_id": 170809
       },
       "value_metrics": {
@@ -2516,7 +2730,9 @@
         "selenium_mcg_per_dollar": 13.73,
         "copper_mg_per_dollar": 0.05,
         "manganese_mg_per_dollar": 0.01,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 39.41,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -2557,6 +2773,11 @@
         "fat_g": 18.57,
         "saturated_fat_g": 7.492,
         "trans_fat_g": null,
+        "monounsaturated_fat_g": 7.95,
+        "polyunsaturated_fat_g": 0.706,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -2583,6 +2804,7 @@
         "selenium_mcg": 19.9,
         "copper_mg": 0.082,
         "manganese_mg": 0.013,
+        "choline_mg": 79.9,
         "source_fdc_id": 168668
       },
       "value_metrics": {
@@ -2610,7 +2832,9 @@
         "selenium_mcg_per_dollar": 9.55,
         "copper_mg_per_dollar": 0.04,
         "manganese_mg_per_dollar": 0.01,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 38.36,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -2651,6 +2875,11 @@
         "fat_g": 4.96,
         "saturated_fat_g": 1.699,
         "trans_fat_g": null,
+        "monounsaturated_fat_g": 2.09,
+        "polyunsaturated_fat_g": 0.213,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -2677,6 +2906,7 @@
         "selenium_mcg": 27.7,
         "copper_mg": 0.098,
         "manganese_mg": 0.014,
+        "choline_mg": 92.8,
         "source_fdc_id": 174058
       },
       "value_metrics": {
@@ -2704,7 +2934,9 @@
         "selenium_mcg_per_dollar": 14.02,
         "copper_mg_per_dollar": 0.05,
         "manganese_mg_per_dollar": 0.01,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 46.98,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -2745,6 +2977,11 @@
         "fat_g": 6.59,
         "saturated_fat_g": 2.301,
         "trans_fat_g": 0.185,
+        "monounsaturated_fat_g": 2.94,
+        "polyunsaturated_fat_g": 0.309,
+        "omega3_ala_g": 0.0,
+        "omega3_epa_g": null,
+        "omega3_dha_g": null,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -2771,6 +3008,7 @@
         "selenium_mcg": 33.3,
         "copper_mg": 0.136,
         "manganese_mg": 0.018,
+        "choline_mg": 83.5,
         "source_fdc_id": 172128
       },
       "value_metrics": {
@@ -2798,7 +3036,9 @@
         "selenium_mcg_per_dollar": 16.19,
         "copper_mg_per_dollar": 0.07,
         "manganese_mg_per_dollar": 0.01,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 40.6,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -2839,6 +3079,11 @@
         "fat_g": 6.59,
         "saturated_fat_g": 2.301,
         "trans_fat_g": 0.185,
+        "monounsaturated_fat_g": 2.94,
+        "polyunsaturated_fat_g": 0.309,
+        "omega3_ala_g": 0.0,
+        "omega3_epa_g": null,
+        "omega3_dha_g": null,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -2865,6 +3110,7 @@
         "selenium_mcg": 33.3,
         "copper_mg": 0.136,
         "manganese_mg": 0.018,
+        "choline_mg": 83.5,
         "source_fdc_id": 172128
       },
       "value_metrics": {
@@ -2892,7 +3138,9 @@
         "selenium_mcg_per_dollar": 15.58,
         "copper_mg_per_dollar": 0.06,
         "manganese_mg_per_dollar": 0.01,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 39.08,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -2933,6 +3181,11 @@
         "fat_g": 14.28,
         "saturated_fat_g": 5.763,
         "trans_fat_g": null,
+        "monounsaturated_fat_g": 6.115,
+        "polyunsaturated_fat_g": 0.543,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -2959,6 +3212,7 @@
         "selenium_mcg": 21.8,
         "copper_mg": 0.066,
         "manganese_mg": 0.013,
+        "choline_mg": 83.2,
         "source_fdc_id": 168728
       },
       "value_metrics": {
@@ -2986,7 +3240,9 @@
         "selenium_mcg_per_dollar": 6.89,
         "copper_mg_per_dollar": 0.02,
         "manganese_mg_per_dollar": 0.0,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 26.29,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -3027,6 +3283,11 @@
         "fat_g": 9.03,
         "saturated_fat_g": 2.993,
         "trans_fat_g": 0.092,
+        "monounsaturated_fat_g": 3.548,
+        "polyunsaturated_fat_g": 1.19,
+        "omega3_ala_g": 0.046,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -3053,6 +3314,7 @@
         "selenium_mcg": 33.8,
         "copper_mg": 0.063,
         "manganese_mg": 0.007,
+        "choline_mg": 55.8,
         "source_fdc_id": 168238
       },
       "value_metrics": {
@@ -3080,7 +3342,9 @@
         "selenium_mcg_per_dollar": 36.17,
         "copper_mg_per_dollar": 0.07,
         "manganese_mg_per_dollar": 0.01,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 59.71,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "medium",
@@ -3121,6 +3385,11 @@
         "fat_g": 14.95,
         "saturated_fat_g": 5.28,
         "trans_fat_g": null,
+        "monounsaturated_fat_g": 6.63,
+        "polyunsaturated_fat_g": 1.55,
+        "omega3_ala_g": null,
+        "omega3_epa_g": null,
+        "omega3_dha_g": null,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": null,
@@ -3147,6 +3416,7 @@
         "selenium_mcg": 28.4,
         "copper_mg": 0.064,
         "manganese_mg": 0.011,
+        "choline_mg": null,
         "source_fdc_id": 167888
       },
       "value_metrics": {
@@ -3174,7 +3444,9 @@
         "selenium_mcg_per_dollar": 34.47,
         "copper_mg_per_dollar": 0.08,
         "manganese_mg_per_dollar": 0.01,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": null,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "medium",
@@ -3215,6 +3487,11 @@
         "fat_g": 11.04,
         "saturated_fat_g": 2.365,
         "trans_fat_g": 0.069,
+        "monounsaturated_fat_g": 2.756,
+        "polyunsaturated_fat_g": 0.964,
+        "omega3_ala_g": 0.039,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -3241,6 +3518,7 @@
         "selenium_mcg": 35.5,
         "copper_mg": 0.065,
         "manganese_mg": 0.008,
+        "choline_mg": 54.8,
         "source_fdc_id": 168242
       },
       "value_metrics": {
@@ -3268,7 +3546,9 @@
         "selenium_mcg_per_dollar": 32.83,
         "copper_mg_per_dollar": 0.06,
         "manganese_mg_per_dollar": 0.01,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 50.68,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "medium",
@@ -3309,6 +3589,11 @@
         "fat_g": 14.01,
         "saturated_fat_g": 4.86,
         "trans_fat_g": null,
+        "monounsaturated_fat_g": 6.25,
+        "polyunsaturated_fat_g": 1.5,
+        "omega3_ala_g": null,
+        "omega3_epa_g": null,
+        "omega3_dha_g": null,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -3335,6 +3620,7 @@
         "selenium_mcg": 32.0,
         "copper_mg": 0.054,
         "manganese_mg": 0.009,
+        "choline_mg": null,
         "source_fdc_id": 167889
       },
       "value_metrics": {
@@ -3362,7 +3648,9 @@
         "selenium_mcg_per_dollar": 32.03,
         "copper_mg_per_dollar": 0.05,
         "manganese_mg_per_dollar": 0.01,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": null,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "medium",
@@ -3403,6 +3691,11 @@
         "fat_g": 18.87,
         "saturated_fat_g": 6.54,
         "trans_fat_g": null,
+        "monounsaturated_fat_g": 8.38,
+        "polyunsaturated_fat_g": 2.01,
+        "omega3_ala_g": null,
+        "omega3_epa_g": null,
+        "omega3_dha_g": null,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": null,
@@ -3429,6 +3722,7 @@
         "selenium_mcg": 29.4,
         "copper_mg": 0.065,
         "manganese_mg": 0.023,
+        "choline_mg": null,
         "source_fdc_id": 168222
       },
       "value_metrics": {
@@ -3456,7 +3750,9 @@
         "selenium_mcg_per_dollar": 24.78,
         "copper_mg_per_dollar": 0.05,
         "manganese_mg_per_dollar": 0.02,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": null,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "medium",
@@ -3497,6 +3793,11 @@
         "fat_g": 15.95,
         "saturated_fat_g": 4.366,
         "trans_fat_g": 0.06,
+        "monounsaturated_fat_g": 6.619,
+        "polyunsaturated_fat_g": 3.352,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.004,
+        "omega3_dha_g": 0.01,
         "carbs_g": 0.17,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -3523,6 +3824,7 @@
         "selenium_mcg": 18.0,
         "copper_mg": 0.054,
         "manganese_mg": 0.016,
+        "choline_mg": 41.6,
         "source_fdc_id": 172378
       },
       "value_metrics": {
@@ -3550,7 +3852,9 @@
         "selenium_mcg_per_dollar": 48.89,
         "copper_mg_per_dollar": 0.15,
         "manganese_mg_per_dollar": 0.04,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 112.98,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "medium",
@@ -3591,6 +3895,11 @@
         "fat_g": 21.23,
         "saturated_fat_g": 13.327,
         "trans_fat_g": null,
+        "monounsaturated_fat_g": 6.219,
+        "polyunsaturated_fat_g": 0.624,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 8.73,
         "fiber_g": 0.0,
         "sugars_g": 7.32,
@@ -3617,6 +3926,7 @@
         "selenium_mcg": 11.3,
         "copper_mg": 0.033,
         "manganese_mg": 0.02,
+        "choline_mg": 36.2,
         "source_fdc_id": 171254
       },
       "value_metrics": {
@@ -3644,7 +3954,9 @@
         "selenium_mcg_per_dollar": 10.8,
         "copper_mg_per_dollar": 0.03,
         "manganese_mg_per_dollar": 0.02,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 34.59,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -3685,6 +3997,11 @@
         "fat_g": 81.11,
         "saturated_fat_g": 51.368,
         "trans_fat_g": 3.278,
+        "monounsaturated_fat_g": 21.021,
+        "polyunsaturated_fat_g": 3.043,
+        "omega3_ala_g": 0.315,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 0.06,
         "fiber_g": 0.0,
         "sugars_g": 0.06,
@@ -3711,6 +4028,7 @@
         "selenium_mcg": 1.0,
         "copper_mg": 0.0,
         "manganese_mg": 0.0,
+        "choline_mg": 18.8,
         "source_fdc_id": 173410
       },
       "value_metrics": {
@@ -3738,7 +4056,9 @@
         "selenium_mcg_per_dollar": 1.13,
         "copper_mg_per_dollar": 0.0,
         "manganese_mg_per_dollar": 0.0,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 21.21,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -3779,6 +4099,11 @@
         "fat_g": 0.97,
         "saturated_fat_g": 0.633,
         "trans_fat_g": null,
+        "monounsaturated_fat_g": 0.277,
+        "polyunsaturated_fat_g": 0.035,
+        "omega3_ala_g": 0.004,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 4.99,
         "fiber_g": 0.0,
         "sugars_g": 5.2,
@@ -3805,6 +4130,7 @@
         "selenium_mcg": 3.3,
         "copper_mg": 0.01,
         "manganese_mg": 0.003,
+        "choline_mg": 17.7,
         "source_fdc_id": 170872
       },
       "value_metrics": {
@@ -3832,7 +4158,9 @@
         "selenium_mcg_per_dollar": 33.57,
         "copper_mg_per_dollar": 0.1,
         "manganese_mg_per_dollar": 0.03,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 180.06,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -3873,6 +4201,11 @@
         "fat_g": 11.0,
         "saturated_fat_g": 6.79,
         "trans_fat_g": null,
+        "monounsaturated_fat_g": 2.969,
+        "polyunsaturated_fat_g": 0.452,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.003,
+        "omega3_dha_g": 0.0,
         "carbs_g": 23.6,
         "fiber_g": 0.7,
         "sugars_g": 21.22,
@@ -3899,6 +4232,7 @@
         "selenium_mcg": 1.8,
         "copper_mg": 0.023,
         "manganese_mg": 0.008,
+        "choline_mg": 26.0,
         "source_fdc_id": 167575
       },
       "value_metrics": {
@@ -3926,7 +4260,9 @@
         "selenium_mcg_per_dollar": 1.7,
         "copper_mg_per_dollar": 0.02,
         "manganese_mg_per_dollar": 0.01,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 24.56,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -3967,6 +4303,11 @@
         "fat_g": 3.25,
         "saturated_fat_g": 2.096,
         "trans_fat_g": null,
+        "monounsaturated_fat_g": 0.893,
+        "polyunsaturated_fat_g": 0.092,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 4.66,
         "fiber_g": 0.0,
         "sugars_g": 4.66,
@@ -3993,6 +4334,7 @@
         "selenium_mcg": 2.2,
         "copper_mg": 0.009,
         "manganese_mg": 0.004,
+        "choline_mg": 15.2,
         "source_fdc_id": 171284
       },
       "value_metrics": {
@@ -4020,7 +4362,9 @@
         "selenium_mcg_per_dollar": 3.15,
         "copper_mg_per_dollar": 0.01,
         "manganese_mg_per_dollar": 0.01,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 21.76,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "high",
@@ -4061,6 +4405,11 @@
         "fat_g": 0.3,
         "saturated_fat_g": 0.039,
         "trans_fat_g": 0.0,
+        "monounsaturated_fat_g": 0.012,
+        "polyunsaturated_fat_g": 0.16,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 3.29,
         "fiber_g": 2.1,
         "sugars_g": 1.19,
@@ -4087,6 +4436,7 @@
         "selenium_mcg": 0.4,
         "copper_mg": 0.048,
         "manganese_mg": 0.155,
+        "choline_mg": 9.9,
         "source_fdc_id": 169247
       },
       "value_metrics": {
@@ -4114,7 +4464,9 @@
         "selenium_mcg_per_dollar": 0.55,
         "copper_mg_per_dollar": 0.07,
         "manganese_mg_per_dollar": 0.21,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 13.67,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "low",
@@ -4155,6 +4507,11 @@
         "fat_g": 0.1,
         "saturated_fat_g": 0.014,
         "trans_fat_g": 0.0,
+        "monounsaturated_fat_g": 0.013,
+        "polyunsaturated_fat_g": 0.024,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 7.5,
         "fiber_g": 1.1,
         "sugars_g": null,
@@ -4181,6 +4538,7 @@
         "selenium_mcg": 1.4,
         "copper_mg": 0.044,
         "manganese_mg": 0.01,
+        "choline_mg": null,
         "source_fdc_id": 174675
       },
       "value_metrics": {
@@ -4208,7 +4566,9 @@
         "selenium_mcg_per_dollar": 3.96,
         "copper_mg_per_dollar": 0.12,
         "manganese_mg_per_dollar": 0.03,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": null,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "low",
@@ -4249,6 +4609,11 @@
         "fat_g": 0.3,
         "saturated_fat_g": 0.039,
         "trans_fat_g": 0.0,
+        "monounsaturated_fat_g": 0.011,
+        "polyunsaturated_fat_g": 0.089,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 9.32,
         "fiber_g": 2.8,
         "sugars_g": 2.5,
@@ -4275,6 +4640,7 @@
         "selenium_mcg": 0.4,
         "copper_mg": 0.037,
         "manganese_mg": 0.03,
+        "choline_mg": 5.1,
         "source_fdc_id": 167746
       },
       "value_metrics": {
@@ -4302,7 +4668,9 @@
         "selenium_mcg_per_dollar": 0.86,
         "copper_mg_per_dollar": 0.08,
         "manganese_mg_per_dollar": 0.06,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 10.94,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "low",
@@ -4343,6 +4711,11 @@
         "fat_g": 0.3,
         "saturated_fat_g": 0.015,
         "trans_fat_g": 0.0,
+        "monounsaturated_fat_g": 0.043,
+        "polyunsaturated_fat_g": 0.155,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 7.68,
         "fiber_g": 2.0,
         "sugars_g": 4.89,
@@ -4369,6 +4742,7 @@
         "selenium_mcg": 0.4,
         "copper_mg": 0.048,
         "manganese_mg": 0.386,
+        "choline_mg": 5.7,
         "source_fdc_id": 167762
       },
       "value_metrics": {
@@ -4396,7 +4770,9 @@
         "selenium_mcg_per_dollar": 0.53,
         "copper_mg_per_dollar": 0.06,
         "manganese_mg_per_dollar": 0.51,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 7.52,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "low",
@@ -4437,6 +4813,11 @@
         "fat_g": 19.77,
         "saturated_fat_g": 9.751,
         "trans_fat_g": 0.055,
+        "monounsaturated_fat_g": 6.973,
+        "polyunsaturated_fat_g": 1.786,
+        "omega3_ala_g": 0.051,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 65.75,
         "fiber_g": 1.8,
         "sugars_g": 37.1,
@@ -4463,6 +4844,7 @@
         "selenium_mcg": 3.1,
         "copper_mg": 0.227,
         "manganese_mg": 0.423,
+        "choline_mg": null,
         "source_fdc_id": 172717
       },
       "value_metrics": {
@@ -4490,7 +4872,9 @@
         "selenium_mcg_per_dollar": 2.7,
         "copper_mg_per_dollar": 0.2,
         "manganese_mg_per_dollar": 0.37,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": null,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "medium",
@@ -4531,6 +4915,11 @@
         "fat_g": 0.42,
         "saturated_fat_g": 0.065,
         "trans_fat_g": 0.0,
+        "monounsaturated_fat_g": 0.123,
+        "polyunsaturated_fat_g": 0.198,
+        "omega3_ala_g": null,
+        "omega3_epa_g": null,
+        "omega3_dha_g": null,
         "carbs_g": 18.13,
         "fiber_g": 1.2,
         "sugars_g": 3.23,
@@ -4557,6 +4946,7 @@
         "selenium_mcg": 0.4,
         "copper_mg": 0.052,
         "manganese_mg": 0.039,
+        "choline_mg": 20.3,
         "source_fdc_id": 169346
       },
       "value_metrics": {
@@ -4584,7 +4974,9 @@
         "selenium_mcg_per_dollar": 1.42,
         "copper_mg_per_dollar": 0.19,
         "manganese_mg_per_dollar": 0.14,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 72.27,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "low",
@@ -4625,6 +5017,11 @@
         "fat_g": 33.98,
         "saturated_fat_g": 3.4,
         "trans_fat_g": 0.084,
+        "monounsaturated_fat_g": 18.963,
+        "polyunsaturated_fat_g": 8.282,
+        "omega3_ala_g": 0.34,
+        "omega3_epa_g": 0.001,
+        "omega3_dha_g": 0.0,
         "carbs_g": 53.83,
         "fiber_g": 3.1,
         "sugars_g": 0.33,
@@ -4651,6 +5048,7 @@
         "selenium_mcg": 2.5,
         "copper_mg": 0.234,
         "manganese_mg": 0.43,
+        "choline_mg": 12.1,
         "source_fdc_id": 169677
       },
       "value_metrics": {
@@ -4678,7 +5076,9 @@
         "selenium_mcg_per_dollar": 1.68,
         "copper_mg_per_dollar": 0.16,
         "manganese_mg_per_dollar": 0.29,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 8.13,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "low",
@@ -4719,6 +5119,11 @@
         "fat_g": 0.0,
         "saturated_fat_g": 0.0,
         "trans_fat_g": null,
+        "monounsaturated_fat_g": 0.0,
+        "polyunsaturated_fat_g": 0.0,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 99.98,
         "fiber_g": 0.0,
         "sugars_g": 99.8,
@@ -4745,6 +5150,7 @@
         "selenium_mcg": 0.6,
         "copper_mg": 0.007,
         "manganese_mg": 0.004,
+        "choline_mg": 0.0,
         "source_fdc_id": 169655
       },
       "value_metrics": {
@@ -4772,7 +5178,9 @@
         "selenium_mcg_per_dollar": 2.66,
         "copper_mg_per_dollar": 0.03,
         "manganese_mg_per_dollar": 0.02,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 0.0,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "medium",
@@ -4813,6 +5221,11 @@
         "fat_g": 0.25,
         "saturated_fat_g": 0.0,
         "trans_fat_g": 0.0,
+        "monounsaturated_fat_g": 0.0,
+        "polyunsaturated_fat_g": 0.0,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 10.36,
         "fiber_g": 0.0,
         "sugars_g": 9.94,
@@ -4839,6 +5252,7 @@
         "selenium_mcg": 0.1,
         "copper_mg": 0.007,
         "manganese_mg": 0.003,
+        "choline_mg": 0.3,
         "source_fdc_id": 174852
       },
       "value_metrics": {
@@ -4866,7 +5280,9 @@
         "selenium_mcg_per_dollar": 0.9,
         "copper_mg_per_dollar": 0.06,
         "manganese_mg_per_dollar": 0.03,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 2.69,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "low",
@@ -4907,6 +5323,11 @@
         "fat_g": 0.25,
         "saturated_fat_g": 0.0,
         "trans_fat_g": 0.0,
+        "monounsaturated_fat_g": 0.0,
+        "polyunsaturated_fat_g": 0.0,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 10.36,
         "fiber_g": 0.0,
         "sugars_g": 9.94,
@@ -4933,6 +5354,7 @@
         "selenium_mcg": 0.1,
         "copper_mg": 0.007,
         "manganese_mg": 0.003,
+        "choline_mg": 0.3,
         "source_fdc_id": 174852
       },
       "value_metrics": {
@@ -4960,7 +5382,9 @@
         "selenium_mcg_per_dollar": 0.56,
         "copper_mg_per_dollar": 0.04,
         "manganese_mg_per_dollar": 0.02,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 1.69,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "low",
@@ -5001,6 +5425,11 @@
         "fat_g": 0.0,
         "saturated_fat_g": 0.0,
         "trans_fat_g": 0.0,
+        "monounsaturated_fat_g": 0.0,
+        "polyunsaturated_fat_g": 0.0,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 3.55,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -5027,6 +5456,7 @@
         "selenium_mcg": 0.6,
         "copper_mg": 0.005,
         "manganese_mg": 0.008,
+        "choline_mg": 10.1,
         "source_fdc_id": 168746
       },
       "value_metrics": {
@@ -5054,7 +5484,9 @@
         "selenium_mcg_per_dollar": 1.59,
         "copper_mg_per_dollar": 0.01,
         "manganese_mg_per_dollar": 0.02,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 26.71,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "medium",
@@ -5095,6 +5527,11 @@
         "fat_g": 0.0,
         "saturated_fat_g": 0.0,
         "trans_fat_g": 0.0,
+        "monounsaturated_fat_g": 0.0,
+        "polyunsaturated_fat_g": 0.0,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 2.61,
         "fiber_g": 0.0,
         "sugars_g": 0.62,
@@ -5121,6 +5558,7 @@
         "selenium_mcg": 0.2,
         "copper_mg": 0.011,
         "manganese_mg": 0.132,
+        "choline_mg": 5.7,
         "source_fdc_id": 173190
       },
       "value_metrics": {
@@ -5148,7 +5586,9 @@
         "selenium_mcg_per_dollar": 0.15,
         "copper_mg_per_dollar": 0.01,
         "manganese_mg_per_dollar": 0.1,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": 4.15,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "medium",
@@ -5189,6 +5629,11 @@
         "fat_g": 0.0,
         "saturated_fat_g": 0.0,
         "trans_fat_g": 0.0,
+        "monounsaturated_fat_g": 0.0,
+        "polyunsaturated_fat_g": 0.0,
+        "omega3_ala_g": null,
+        "omega3_epa_g": 0.0,
+        "omega3_dha_g": 0.0,
         "carbs_g": 0.0,
         "fiber_g": 0.0,
         "sugars_g": 0.0,
@@ -5215,6 +5660,7 @@
         "selenium_mcg": 0.0,
         "copper_mg": 0.01,
         "manganese_mg": 0.0,
+        "choline_mg": null,
         "source_fdc_id": 174818
       },
       "value_metrics": {
@@ -5242,7 +5688,9 @@
         "selenium_mcg_per_dollar": 0.0,
         "copper_mg_per_dollar": 0.01,
         "manganese_mg_per_dollar": 0.0,
-        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision."
+        "choline_mg_per_dollar": null,
+        "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+        "suppressed_reason": null
       },
       "sustainability": {
         "water_use_tier": "medium",

@@ -69,9 +69,22 @@ const micronutrients = [
   { key: 'selenium_mcg', perDollarKey: 'selenium_mcg_per_dollar', label: 'Selenium', unit: 'µg' },
   { key: 'copper_mg', perDollarKey: 'copper_mg_per_dollar', label: 'Copper', unit: 'mg' },
   { key: 'manganese_mg', perDollarKey: 'manganese_mg_per_dollar', label: 'Manganese', unit: 'mg' },
+  { key: 'choline_mg', perDollarKey: 'choline_mg_per_dollar', label: 'Choline', unit: 'mg' },
   { key: 'sodium_mg', perDollarKey: null, label: 'Sodium', unit: 'mg', showZero: true },
   { key: 'cholesterol_mg', perDollarKey: null, label: 'Cholesterol', unit: 'mg', showZero: true },
 ] as const;
+
+// Omega-3 components nest under polyunsaturated fat. FDC has no total-omega-3
+// value and older records often omit ALA, so only components actually reported
+// (> 0) are shown -- never a summed total.
+const omega3Candidates = [
+  { key: 'omega3_ala_g', label: 'ALA (omega-3)' },
+  { key: 'omega3_epa_g', label: 'EPA (omega-3)' },
+  { key: 'omega3_dha_g', label: 'DHA (omega-3)' },
+] as const;
+const omega3Rows = food.nutrition_per_100g
+  ? omega3Candidates.filter((o) => (food.nutrition_per_100g![o.key] ?? 0) > 0)
+  : [];
 
 const visibleMicronutrients = food.nutrition_per_100g
   ? micronutrients.filter((m) => {
@@ -137,6 +150,10 @@ const jsonLd: Record<string, unknown> = {
 
       {food.nutrition_per_100g && (
         <>
+          {food.value_metrics.suppressed_reason ? (
+            <p class="disclosure">{food.value_metrics.suppressed_reason}</p>
+          ) : (
+            <>
           <div class="line-item">
             <span class="line-label">Protein per dollar</span>
             <span class="line-dots" aria-hidden="true"></span>
@@ -155,6 +172,8 @@ const jsonLd: Record<string, unknown> = {
                 : '—'}
             </span>
           </div>
+            </>
+          )}
           <div class="divider" aria-hidden="true"></div>
           <h2 class="section-heading">Nutrition per 100g</h2>
 
@@ -182,6 +201,23 @@ const jsonLd: Record<string, unknown> = {
             <span class="line-label">Trans Fat</span>
             <span class="line-dots" aria-hidden="true"></span>
             <span class="line-value">{food.nutrition_per_100g.trans_fat_g ?? '—'} g</span>
+          </div>
+          <div class="line-item line-item--muted line-item--sub">
+            <span class="line-label">Polyunsaturated Fat</span>
+            <span class="line-dots" aria-hidden="true"></span>
+            <span class="line-value">{food.nutrition_per_100g.polyunsaturated_fat_g ?? '—'} g</span>
+          </div>
+          {omega3Rows.map((o) => (
+            <div class="line-item line-item--muted line-item--sub2">
+              <span class="line-label">{o.label}</span>
+              <span class="line-dots" aria-hidden="true"></span>
+              <span class="line-value">{food.nutrition_per_100g![o.key]} g</span>
+            </div>
+          ))}
+          <div class="line-item line-item--muted line-item--sub">
+            <span class="line-label">Monounsaturated Fat</span>
+            <span class="line-dots" aria-hidden="true"></span>
+            <span class="line-value">{food.nutrition_per_100g.monounsaturated_fat_g ?? '—'} g</span>
           </div>
           <div class="line-item line-item--muted">
             <span class="line-label">Total Carbohydrate</span>
@@ -326,6 +362,14 @@ const jsonLd: Record<string, unknown> = {
   }
   .line-item--sub .line-label {
     padding-left: 1rem;
+  }
+  .line-item--sub2 {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    font-size: 0.75rem;
+  }
+  .line-item--sub2 .line-label {
+    padding-left: 2rem;
   }
   .line-label { flex-shrink: 0; }
   .line-dots {

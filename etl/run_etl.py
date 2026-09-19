@@ -56,6 +56,8 @@ NUTRIENT_COLUMNS = list(NUTRIENT_IDS.keys())
 # -- everything else in NUTRIENT_COLUMNS is a true micronutrient and gets one.
 _MACRO_KEYS = {
     "energy_kcal", "protein_g", "fat_g", "saturated_fat_g", "trans_fat_g",
+    "monounsaturated_fat_g", "polyunsaturated_fat_g",
+    "omega3_ala_g", "omega3_epa_g", "omega3_dha_g",
     "carbs_g", "fiber_g", "sugars_g", "cholesterol_mg", "sodium_mg",
 }
 MICRONUTRIENT_KEYS = [k for k in NUTRIENT_COLUMNS if k not in _MACRO_KEYS]
@@ -63,18 +65,20 @@ MICRONUTRIENT_KEYS = [k for k in NUTRIENT_COLUMNS if k not in _MACRO_KEYS]
 def upsert_food_row(conn, food: FoodSeed) -> None:
     conn.execute(
         """
-        INSERT INTO foods (slug, display_name, category, serving_unit, avg_price_unit, price_verified, notes)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO foods (slug, display_name, category, serving_unit, avg_price_unit, price_verified, notes,
+                           per_dollar_suppressed_reason)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         ON CONFLICT(slug) DO UPDATE SET
             display_name=excluded.display_name,
             category=excluded.category,
             serving_unit=excluded.serving_unit,
             avg_price_unit=excluded.avg_price_unit,
             price_verified=excluded.price_verified,
-            notes=excluded.notes
+            notes=excluded.notes,
+            per_dollar_suppressed_reason=excluded.per_dollar_suppressed_reason
         """,
         (food.slug, food.display_name, food.category, food.serving_unit,
-         food.avg_price_unit, int(food.price_verified), food.notes),
+         food.avg_price_unit, int(food.price_verified), food.notes, food.per_dollar_suppressed_reason),
     )
 
 
@@ -201,6 +205,7 @@ def export_json(conn) -> None:
         if (
             price_row and price_row["avg_price_usd"] and price_row["price_source"] == "bls_avg_price"
             and nutrition_row and nutrition_row["protein_g"] is not None
+            and not f["per_dollar_suppressed_reason"]
         ):
             try:
                 protein_per_dollar = nutrient_per_dollar(
@@ -240,6 +245,11 @@ def export_json(conn) -> None:
                 "fat_g": nutrition_row["fat_g"],
                 "saturated_fat_g": nutrition_row["saturated_fat_g"],
                 "trans_fat_g": nutrition_row["trans_fat_g"],
+                "monounsaturated_fat_g": nutrition_row["monounsaturated_fat_g"],
+                "polyunsaturated_fat_g": nutrition_row["polyunsaturated_fat_g"],
+                "omega3_ala_g": nutrition_row["omega3_ala_g"],
+                "omega3_epa_g": nutrition_row["omega3_epa_g"],
+                "omega3_dha_g": nutrition_row["omega3_dha_g"],
                 "carbs_g": nutrition_row["carbs_g"],
                 "fiber_g": nutrition_row["fiber_g"],
                 "sugars_g": nutrition_row["sugars_g"],
@@ -254,6 +264,7 @@ def export_json(conn) -> None:
                 "fiber_g_per_dollar": fiber_per_dollar,
                 **{f"{key}_per_dollar": micronutrient_per_dollar.get(key) for key in MICRONUTRIENT_KEYS},
                 "note": "Computed only when price_source='bls_avg_price'. Null for estimated prices to avoid implying false precision.",
+                "suppressed_reason": f["per_dollar_suppressed_reason"],
             },
             "sustainability": {
                 "water_use_tier": sustainability_row["water_use_tier"],

@@ -22,6 +22,11 @@ export interface FoodNutrition {
   fat_g: number | null;
   saturated_fat_g: number | null;
   trans_fat_g: number | null;
+  monounsaturated_fat_g: number | null;
+  polyunsaturated_fat_g: number | null;
+  omega3_ala_g: number | null;
+  omega3_epa_g: number | null;
+  omega3_dha_g: number | null;
   carbs_g: number | null;
   fiber_g: number | null;
   sugars_g: number | null;
@@ -48,6 +53,7 @@ export interface FoodNutrition {
   selenium_mcg: number | null;
   copper_mg: number | null;
   manganese_mg: number | null;
+  choline_mg: number | null;
   source_fdc_id: number | null;
 }
 
@@ -76,7 +82,9 @@ export interface FoodValueMetrics {
   selenium_mcg_per_dollar: number | null;
   copper_mg_per_dollar: number | null;
   manganese_mg_per_dollar: number | null;
+  choline_mg_per_dollar: number | null;
   note: string;
+  suppressed_reason: string | null;
 }
 
 export interface FoodSustainability {

@@ -33,7 +33,8 @@ CREATE TABLE IF NOT EXISTS foods (
     serving_unit      TEXT NOT NULL,
     avg_price_unit    TEXT,
     price_verified    INTEGER NOT NULL DEFAULT 0,
-    notes             TEXT
+    notes             TEXT,
+    per_dollar_suppressed_reason TEXT   -- non-NULL = price/nutrition bases don't match; no per-dollar metrics
 );
 
 CREATE TABLE IF NOT EXISTS price_snapshots (
@@ -58,6 +59,11 @@ CREATE TABLE IF NOT EXISTS nutrition (
     fat_g             REAL,
     saturated_fat_g   REAL,
     trans_fat_g       REAL,
+    monounsaturated_fat_g REAL,
+    polyunsaturated_fat_g REAL,
+    omega3_ala_g      REAL,   -- 18:3 n-3
+    omega3_epa_g      REAL,   -- 20:5 n-3
+    omega3_dha_g      REAL,   -- 22:6 n-3
     carbs_g           REAL,
     fiber_g           REAL,
     sugars_g          REAL,
@@ -84,6 +90,7 @@ CREATE TABLE IF NOT EXISTS nutrition (
     selenium_mcg      REAL,
     copper_mg         REAL,
     manganese_mg      REAL,
+    choline_mg        REAL,
     fetched_at        TEXT NOT NULL
 );
 
@@ -176,6 +183,15 @@ MIGRATIONS = [
     """ALTER TABLE nutrition ADD COLUMN selenium_mcg REAL;""",
     """ALTER TABLE nutrition ADD COLUMN copper_mg REAL;""",
     """ALTER TABLE nutrition ADD COLUMN manganese_mg REAL;""",
+    # Migration 5: fat-type breakdown, omega-3 components, choline, and the
+    # per-dollar suppression flag for foods whose price and nutrition bases differ.
+    """ALTER TABLE nutrition ADD COLUMN monounsaturated_fat_g REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN polyunsaturated_fat_g REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN omega3_ala_g REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN omega3_epa_g REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN omega3_dha_g REAL;""",
+    """ALTER TABLE nutrition ADD COLUMN choline_mg REAL;""",
+    """ALTER TABLE foods ADD COLUMN per_dollar_suppressed_reason TEXT;""",
 ]
 
 

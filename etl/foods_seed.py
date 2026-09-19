@@ -54,6 +54,11 @@ class FoodSeed:
                                          # this after manually verifying the fdc_id via
                                          # https://fdc.nal.usda.gov/food-search once fdc_query
                                          # has been confirmed to mismatch.
+    per_dollar_suppressed_reason: Optional[str] = None
+                                         # Set when the BLS price basis and the FDC nutrition basis
+                                         # can't be compared (e.g. price per lb of dry grounds vs
+                                         # nutrition for brewed coffee). run_etl.py then leaves every
+                                         # per-dollar metric null and the site shows this text instead.
 
 
 FOODS: list[FoodSeed] = [
@@ -124,6 +129,8 @@ FOODS: list[FoodSeed] = [
         cpi_series_id="CUUR0000SS14022",      # cu: SS14022 — Dried beans, peas, and lentils
         fdc_query="beans pinto mature seeds raw",
         fdc_data_type="SR Legacy",
+        fdc_id=175199,  # "Beans, pinto, mature seeds, raw" -- fdc_query was matching 170086 "Beans, pinto,
+                        # mature seeds, sprouted, raw" (62 kcal / 5g protein per 100g, ~4x too low for dry beans).
         serving_unit="100g dry",
 
         price_verified=True,
@@ -731,6 +738,10 @@ FOODS: list[FoodSeed] = [
         serving_unit="100ml brewed",
 
         price_verified=True,
+        per_dollar_suppressed_reason=(
+            "The price is for dry ground coffee, but USDA only publishes nutrition for brewed coffee "
+            "(and instant powder), so the two can't be compared per dollar."
+        ),
         # notes="ID from official ap.item; confirm live. Nutrition query reflects brewed coffee, not dry grounds.",
     ),
     FoodSeed(
